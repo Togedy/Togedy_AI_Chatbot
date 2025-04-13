@@ -1,57 +1,51 @@
-import os
-import pdfplumber
+import camelot
 import pandas as pd
-from config_file import PDF_PATH
+import os
+from config_file import PDF_PATHS
 
-# PDF 파일 경로 설정
-pdf_path = PDF_PATH
-output_text_csv = os.path.splitext(pdf_path)[0] + "_text.csv"
-output_table_csv = os.path.splitext(pdf_path)[0] + "_table.csv"
+# 설정
+PAGE_LIMIT = 10  # -1이면 전체 페이지 처리
 
-# 결과 저장을 위한 리스트
-text_data = []
-table_data = []
+for PDF_PATH in PDF_PATHS:
+    if not os.path.exists(PDF_PATH):
+        print(f"PDF 파일이 존재하지 않습니다: {PDF_PATH}")
+        continue
 
-# PDF에서 텍스트 및 표 추출
-with pdfplumber.open(pdf_path) as pdf:
-    for i, page in enumerate(pdf.pages):
-        # 텍스트 데이터 추출 및 저장
-        text = page.extract_text()
-        if text:
-            text_data.append(["Page", i + 1, text.strip()])
+    print(f"\n파일 처리 시작: {PDF_PATH}")
 
-        # 표 데이터 추출 및 병합된 셀 보정
-        tables = page.extract_tables()
-        for table in tables:
-            max_columns = max(len(row) for row in table if row)  # 가장 긴 행의 열 개수
-            
-            for row in table:
-                if not row:
-                    continue  # 빈 행은 스킵
-                
-                # 빈 칸을 이전 행의 값으로 채움 (병합된 셀 보정)
-                cleaned_row = []
-                for col_index, col in enumerate(row):
-                    if col and col.strip():
-                        cleaned_row.append(col.strip())
-                    elif len(table_data) > 0 and col_index < len(table_data[-1]):
-                        cleaned_row.append(table_data[-1][col_index])  # 이전 행의 값을 채움
-                    else:
-                        cleaned_row.append("없음")  # 완전히 비어 있는 경우만 '없음' 처리
-                
-                # 열 개수가 부족하면 '없음'으로 채우기
-                while len(cleaned_row) < max_columns:
-                    cleaned_row.append("없음")
+    base_name = os.path.splitext(os.path.basename(PDF_PATH))[0]
+    output_dir = os.path.dirname(PDF_PATH)
+    OUTPUT_CSV = os.path.join(output_dir, f"{base_name}_tables.csv")
+    OUTPUT_CLEANED_CSV = os.path.join(output_dir, f"{base_name}_tables_cleaned.csv")
 
-                table_data.append([i + 1] + cleaned_row)  # 페이지 번호 추가
+    # Camelot으로 테이블 읽기
+    page_range = '1-end' if PAGE_LIMIT == -1 else f'1-{PAGE_LIMIT}'
+    tables = camelot.read_pdf(PDF_PATH, pages=page_range, flavor='lattice')  # 'lattice'는 라인 기반
 
-# 텍스트 CSV 저장
-df_text = pd.DataFrame(text_data, columns=["Type", "Page", "Content"])
-df_text.to_csv(output_text_csv, index=False, encoding="utf-8-sig")
+    if tables.n == 0:
+        print("테이블을 추출할 수 없습니다.")
+        continue
 
-# 표 CSV 저장
-df_table = pd.DataFrame(table_data)
-df_table.to_csv(output_table_csv, index=False, encoding="utf-8-sig")
+    # 모든 테이블 합치기
+    df_list = []
+    for i, table in enumerate(tables):
+        df = table.df
+        df.insert(0, "Page", table.page)
+        df_list.append(df)
 
-print(f"텍스트 데이터가 {output_text_csv} 파일에 저장되었습니다.")
-print(f"표 데이터가 {output_table_csv} 파일에 저장되었습니다.")
+    result_df = pd.concat(df_list, ignore_index=True)
+    result_df.to_csv(OUTPUT_CSV, index=False, encoding="utf-8-sig")
+    print(f"원본 테이블 저장 완료: {OUTPUT_CSV}")
+
+    # 정제
+    df_cleaned = result_df.dropna(how='all')
+
+    if df_cleaned.columns.str.contains('Unnamed').any():
+        df_cleaned.columns = df_cleaned.iloc[0]
+        df_cleaned = df_cleaned[1:]
+
+    df_cleaned = df_cleaned.apply(lambda col: col.map(lambda x: str(x).strip() if pd.notnull(x) else x))
+    df_cleaned.reset_index(drop=True, inplace=True)
+
+    df_cleaned.to_csv(OUTPUT_CLEANED_CSV, index=False, encoding="utf-8-sig")
+    print(f"정제된 테이블 저장 완료: {OUTPUT_CLEANED_CSV}")
