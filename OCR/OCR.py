@@ -1,7 +1,7 @@
 import camelot
 import pandas as pd
 import os
-from config_file import PDF_PATHS
+from OCR.config_file import PDF_PATHS
 
 # 설정
 PAGE_LIMIT = 10  # -1이면 전체 페이지 처리
