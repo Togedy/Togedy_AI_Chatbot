@@ -1,8 +1,5 @@
-from predict import predict_ner
+from predict import predict
 
-sentence = input("문장을 입력하세요: ")
-results = predict_ner(sentence)
-
-print("\n[단어]       [예측 라벨]")
-for token, label in results:
-    print(f"{token:<10} {label}")
+if __name__ == "__main__":
+    sentence = "건국대 2025학년도 자기추천 전형 알려줘"
+    print(predict(sentence))
