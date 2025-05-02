@@ -1,17 +1,7 @@
-B-UNI # 학교 이름
+B-UNI
 I-UNI
-B-TYPE # 전형 유형(수시, 정시, 논술등)
-I-TYPE
-B-SUBJECT # 학과 및 전공명
-I-SUBJECT
-B-SCORE # 점수(내신 1.2 또는 백분위 95점 등)
-I-SCORE
-B-DATE # 날짜
+B-DATE
 I-DATE
-B-LOCATION # 장소
-I-LOCATION
-B-DOCUMENT # 서류 (자소서, 추천서 등)
-I-DOCUMENT
-B-DEADLINE # 마감일
-I-DEADLINE
+B-KEYWORD
+I-KEYWORD
 O
