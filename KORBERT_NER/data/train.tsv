@@ -1,7 +1,3665 @@
-0   2025학년도  B-DATE
-1   건국대학교  B-UNI
-2   컴퓨터공학부    
-3   논술 
-4   전형에 
-5   대해 
-6   알려줘
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+있어	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+있어	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+알려줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+입시요강	B-KEYWORD
+파일	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
+입학요강	B-KEYWORD
+중요	O
+정보	O
+뭐가	O
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+건국대	B-UNI
+전형요약	B-KEYWORD
+좀	O
+정리해줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+알려줘	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+시작해	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+일정이	O
+궁금해	O
+	
+2025년	B-DATE
+정시모집	B-KEYWORD
+기한	I-KEYWORD
+이	O
+알려줘	O
+	
+건국대학교	B-UNI
+입학전형	B-KEYWORD
+내용	I-KEYWORD
+알려줘	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+전형	B-KEYWORD
+유형	I-KEYWORD
+뭐야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU자기추천	B-KEYWORD
+전형이	I-KEYWORD
+언제야	O
+	
+KU논술	B-KEYWORD
+전형	I-KEYWORD
+은	O
+언제	O
+알려줘	O
+	
+2025학년도	B-DATE
+수시일정	B-KEYWORD
+알려줘	O
+	
