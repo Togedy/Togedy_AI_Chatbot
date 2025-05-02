@@ -1,5 +1,5 @@
 import torch
-from transformers import BertTokenizer, BertForTokenClassification
+from transformers import AutoTokenizer, BertForTokenClassification
 from utils import get_label_list
 
 label_path = "./KORBERT_NER/data/label.txt"
@@ -7,7 +7,7 @@ label_list = get_label_list(label_path)
 id2label = {i: label for i, label in enumerate(label_list)}
 
 model_name = "skt/kobert-base-v1"
-tokenizer = BertTokenizer.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 model = BertForTokenClassification.from_pretrained(model_name, num_labels=len(label_list))
 model.eval()
 
