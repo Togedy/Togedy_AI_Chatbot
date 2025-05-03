@@ -1,35 +1,41 @@
 import torch
-from transformers import BertForTokenClassification, Trainer, TrainingArguments, AutoTokenizer
+from transformers import BertForTokenClassification, BertTokenizer, Trainer, TrainingArguments
+from utils import get_label_list, compute_metrics
 from data_loader import load_and_cache_examples
-from utils import compute_metrics, get_label_list
 
-MODEL_NAME = "skt/kobert-base-v1"
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=False)
-label_list = get_label_list("./KORBERT_NER/data/label.txt")
-num_labels = len(label_list)
+# 모델명과 라벨 경로
+model_name = "skt/kobert-base-v1"
+label_path = "./KORBERT_NER/data/label.txt"
 
+# 라벨 리스트 및 tokenizer
+label_list = get_label_list(label_path)
+tokenizer = BertTokenizer.from_pretrained(model_name)
+
+# 데이터셋 로드
 train_dataset = load_and_cache_examples(tokenizer, label_list, mode="train")
-eval_dataset = load_and_cache_examples(tokenizer, label_list, mode="test")
 
-model = BertForTokenClassification.from_pretrained(MODEL_NAME, num_labels=num_labels)
+# 모델 준비
+model = BertForTokenClassification.from_pretrained(model_name, num_labels=len(label_list))
 
+# 학습 인자
 training_args = TrainingArguments(
-    output_dir="./KORBERT_NER/results",
+    output_dir="./results",
     num_train_epochs=3,
     per_device_train_batch_size=16,
-    per_device_eval_batch_size=16,
-    logging_dir="./KORBERT_NER/logs",
+    logging_dir="./logs",
     logging_steps=10,
-    evaluation_strategy="epoch",
-    save_strategy="epoch"
+    save_steps=500,
+    evaluation_strategy="no"
 )
 
+# Trainer 구성 (eval_dataset 없이)
 trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=train_dataset,
-    eval_dataset=eval_dataset,
+    tokenizer=tokenizer,
     compute_metrics=compute_metrics
 )
 
+# 학습 수행
 trainer.train()
