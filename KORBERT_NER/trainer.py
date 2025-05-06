@@ -21,8 +21,8 @@ model = AutoModelForTokenClassification.from_pretrained(model_name, num_labels=l
 # 학습 인자
 training_args = TrainingArguments(
     output_dir="./KORBERT_NER/model",
-    num_train_epochs=3,
-    per_device_train_batch_size=16,
+    num_train_epochs=10,
+    per_device_train_batch_size=8,
     logging_dir="./logs",
     logging_steps=10,
     save_steps=0,
@@ -44,7 +44,7 @@ trainer.train()
 # 모델 저장
 model.save_pretrained("./KORBERT_NER/model")
 
-# ✅ tokenizer 저장: save_vocabulary만 사용
+# tokenizer 저장: save_vocabulary만 사용
 vocab_path = os.path.join("./KORBERT_NER/tokenizer")
 os.makedirs(vocab_path, exist_ok=True)
 tokenizer.save_vocabulary(vocab_path)

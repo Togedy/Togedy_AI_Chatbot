@@ -1,3665 +1,5858 @@
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+2023학년도에	B-DATE
+KU는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
 	
+KU	B-UNI
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+2024학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025년	B-DATE
+KU	B-UNI
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+지원자격	B-KEYWORD
+조건은?	O
 	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대	B-UNI
-2025학년도	B-DATE
+2023학년도	B-DATE
 수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+전형일정	B-KEYWORD
+알려줘.	O
 	
 2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대	B-UNI
+2024학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
 2025학년도	B-DATE
+건국대학교	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
 수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
 	
+KU	B-UNI
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+2025학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2024학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+정시모집은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대	B-UNI
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
+2023학년도	B-DATE
+건국대	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+학생부교과은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2024학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025학년도	B-DATE
+정시모집은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
 	
+2023학년도에	B-DATE
+KU는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
 2025학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+2025학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2023학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025년	B-DATE
+2024학년도에	B-DATE
+KU는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU	B-UNI
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
+2024학년도	B-DATE
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2024학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+정시모집은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+모집요강은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
+2023학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025년	B-DATE
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+지원자격	B-KEYWORD
+조건은?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
+건국대	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+학생부교과은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대	B-UNI
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
+모집요강	B-KEYWORD
+관련해서	O
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+학생부교과은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+수시모집은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
+전형일정	B-KEYWORD
+관련해서	O
+KU	B-UNI
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
+학생부교과은	B-KEYWORD
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
+지원자격	B-KEYWORD
+관련해서	O
+KU	B-UNI
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+모집요강	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
 	
 2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+모집요강은	B-KEYWORD
+언제야?	O
 	
 2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+KU논술전형은	B-UNI
+언제야?	O
 	
 건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+건국대	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
 	
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
 건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+정시모집은	B-KEYWORD
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+KU	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
+2023학년도	B-DATE
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+정시모집은	B-KEYWORD
+언제야?	O
 	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+KU	B-UNI
+2023학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
+건국대	B-UNI
+2023학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+KU	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+건국대	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+지원자격은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+모집요강은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+전형일정	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+건국대학교	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
 	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
+2025학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+KU	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+2024학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+학생부교과은	B-KEYWORD
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
+KU논술전형은	B-UNI
 2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+전형일정은	B-KEYWORD
+언제야?	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+2025학년도에	B-DATE
+KU는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+2023학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
+학생부교과은	B-KEYWORD
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+정시모집은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대	B-UNI
-2025학년도	B-DATE
+2023학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+지원자격은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+전형일정	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
 수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+2024학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+2023학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+2023학년도	B-DATE
+KU	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+2023학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+학생부교과은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+2025학년도에	B-DATE
+건국대는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+2025학년도	B-DATE
+KU	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
 	
-2025년	B-DATE
+2025학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+2023학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+정시모집은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+모집요강은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
+2024학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+2024학년도에	B-DATE
+KU는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU논술전형은	B-UNI
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+건국대	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+수시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+모집요강은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2024학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
+KU	B-UNI
+2024학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도	B-DATE
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+KU논술전형은	B-UNI
+언제야?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+2024학년도	B-DATE
+건국대학교	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+KU	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
 2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+2023학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+정시모집은	B-KEYWORD
+언제야?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+KU	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
+모집요강	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+2025학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
+KU	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
+KU논술전형은	B-UNI
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+2025학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
 2025학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2024학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+학생부교과은	B-KEYWORD
+언제야?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+전형일정	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+모집요강	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+KU논술전형	B-UNI
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
 2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+학생부교과은	B-KEYWORD
+언제야?	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+학생부교과은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
+2023학년도	B-DATE
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+전형일정	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
+2023학년도	B-DATE
+건국대학교	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+2023학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+KU	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+모집요강은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+정시모집은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+건국대	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+2025학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+학생부교과은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
 2025학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
 수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+지원자격	B-KEYWORD
+조건은?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
+2024학년도에	B-DATE
+건국대는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
+수시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
+지원자격	B-KEYWORD
+관련해서	O
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+2024학년도에	B-DATE
+건국대는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
+전형일정	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+2023학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2024학년도	B-DATE
+건국대학교	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
 	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+건국대학교	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+2024학년도	B-DATE
+KU	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2023학년도	B-DATE
+KU	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+건국대	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+2023학년도에	B-DATE
+KU는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+KU	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
+건국대	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+건국대학교	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+지원자격	B-KEYWORD
+조건은?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+KU	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+모집요강은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+2025학년도에	B-DATE
+KU는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
+2025학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-건국대	B-UNI
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
 정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+지원자격	B-KEYWORD
+조건은?	O
 	
-건국대	B-UNI
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+2025학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
+전형일정	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도	B-DATE
+건국대	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
 	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+건국대학교	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
 	
+학생부교과은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+건국대는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+전형일정	B-KEYWORD
+관련해서	O
 건국대	B-UNI
 2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
+모집요강	B-KEYWORD
+궁금해.	O
 	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
+건국대	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
 	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
+2023학년도	B-DATE
+KU	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+학생부교과은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-있어	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+2024학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-있어	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-알려줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-언제야	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-입시요강	B-KEYWORD
-파일	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
-	
-입학요강	B-KEYWORD
-중요	O
-정보	O
-뭐가	O
-알려줘	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-건국대	B-UNI
-전형요약	B-KEYWORD
-좀	O
-정리해줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-2025학년도	B-DATE
-건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-알려줘	O
-	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-시작해	O
-	
-건국대	B-UNI
-2025학년도	B-DATE
-수시모집	B-KEYWORD
-일정이	O
-궁금해	O
-	
-2025년	B-DATE
-정시모집	B-KEYWORD
-기한	I-KEYWORD
-이	O
-알려줘	O
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
 건국대학교	B-UNI
-입학전형	B-KEYWORD
-내용	I-KEYWORD
-알려줘	O
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+학생부교과은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+전형일정	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+KU논술전형은	B-UNI
+언제야?	O
+	
+모집요강은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+지원자격은	B-KEYWORD
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+2024학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+수시모집은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+모집요강은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
 2025학년도	B-DATE
 건국대	B-UNI
-전형	B-KEYWORD
-유형	I-KEYWORD
-뭐야	O
+정시모집은	B-KEYWORD
+언제야?	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+KU논술전형은	B-UNI
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
 	
-KU자기추천	B-KEYWORD
-전형이	I-KEYWORD
-언제야	O
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
 	
-KU논술	B-KEYWORD
-전형	I-KEYWORD
-은	O
-언제	O
-알려줘	O
+건국대학교	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
 	
 2025학년도	B-DATE
-수시일정	B-KEYWORD
-알려줘	O
+건국대학교	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+학생부교과은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+전형일정	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+전형일정	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2025학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+수시모집은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+수시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU논술전형은	B-UNI
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+학생부교과은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도	B-DATE
+건국대	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+수시모집은	B-KEYWORD
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+건국대는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+건국대	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+2024학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+2023학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+학생부교과은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도에	B-DATE
+건국대는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+전형일정	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+2024학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+모집요강은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+정시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+수시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2024학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+수시모집은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2025학년도	B-DATE
+건국대학교	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도	B-DATE
+KU	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형은	B-UNI
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+모집요강은	B-KEYWORD
+언제야?	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+2025학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+정시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+건국대는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+2024학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+수시모집은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+학생부교과	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+2023학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+KU	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+전형일정은	B-KEYWORD
+2023학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+모집요강은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+정시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+건국대는	B-UNI
+지원자격로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+2024학년도	B-DATE
+전형일정	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+2023학년도에	B-DATE
+정시모집	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+학생부교과은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+정시모집은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+지원자격은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+학생부교과은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+학생부교과	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+KU논술전형	B-UNI
+전형일정	B-KEYWORD
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2024학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+수시모집	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+지원자격은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+KU논술전형에	B-UNI
+대해	O
+알려줘.	O
+	
+2023학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+KU논술전형	B-UNI
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2025학년도에	B-DATE
+KU논술전형	B-UNI
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+정시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+수시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도에	B-DATE
+건국대는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+전형일정	B-KEYWORD
+가능한지	O
+KU에	B-UNI
+대해	O
+알려줘.	O
+	
+수시모집은	B-KEYWORD
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도	B-DATE
+건국대	B-UNI
+지원자격은	B-KEYWORD
+언제야?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+2023학년도에	B-DATE
+KU는	B-UNI
+정시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+2024학년도	B-DATE
+지원자격	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+학생부교과로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도에	B-DATE
+건국대는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+전형일정	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2023학년도에	B-DATE
+지원자격	B-KEYWORD
+가능한지	O
+건국대에	B-UNI
+대해	O
+알려줘.	O
+	
+KU	B-UNI
+모집요강	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+건국대학교는	B-UNI
+수시모집로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+KU	B-UNI
+모집요강에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대학교	B-UNI
+지원자격에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2024학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+2023학년도	B-DATE
+건국대학교	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+2024학년도	B-DATE
+건국대학교	B-UNI
+학생부교과은	B-KEYWORD
+언제야?	O
+	
+2025학년도	B-DATE
+KU	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+2023학년도	B-DATE
+학생부교과	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+학생부교과은	B-KEYWORD
+2024학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+수시모집은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대학교	B-UNI
+전형일정에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+학생부교과에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도에	B-DATE
+KU는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+지원자격은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+수시모집	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+전형일정은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+모집요강로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+KU논술전형은	B-UNI
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2023학년도에	B-DATE
+학생부교과	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+모집요강	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+KU	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
+	
+지원자격	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2025학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2025학년도에	B-DATE
+모집요강	B-KEYWORD
+가능한지	O
+건국대학교에	B-UNI
+대해	O
+알려줘.	O
+	
+2024학년도에	B-DATE
+건국대학교는	B-UNI
+KU논술전형로	B-UNI
+학생을	O
+모집해?	O
+	
+KU논술전형은	B-UNI
+2023학년도	B-DATE
+KU에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집은	B-KEYWORD
+2025학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+2025학년도	B-DATE
+건국대	B-UNI
+정시모집은	B-KEYWORD
+언제야?	O
+	
+건국대	B-UNI
+수시모집에	B-KEYWORD
+대해	O
+알려줘.	O
+	
+2025학년도에	B-DATE
+KU는	B-UNI
+전형일정로	B-KEYWORD
+학생을	O
+모집해?	O
+	
+건국대	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+전형일정은	B-KEYWORD
+언제야?	O
+	
+전형일정은	B-KEYWORD
+2025학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+건국대	B-UNI
+지원자격	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+건국대학교	B-UNI
+수시모집	B-KEYWORD
+지원자격	B-KEYWORD
+조건은?	O
+	
+2024학년도	B-DATE
+KU	B-UNI
+KU논술전형은	B-UNI
+언제야?	O
+	
+수시모집은	B-KEYWORD
+2024학년도	B-DATE
+건국대학교에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+수시모집은	B-KEYWORD
+2023학년도	B-DATE
+건국대에서	B-UNI
+어떻게	O
+진행돼?	O
+	
+KU	B-UNI
+KU논술전형	B-UNI
+지원자격	B-KEYWORD
+조건은?	O
+	
+정시모집	B-KEYWORD
+관련해서	O
+건국대	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+궁금해.	O
+	
+건국대학교	B-UNI
+2023학년도	B-DATE
+모집요강	B-KEYWORD
+전형일정	B-KEYWORD
+알려줘.	O
 	
