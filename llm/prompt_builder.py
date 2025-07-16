@@ -1,60 +1,64 @@
-def build_prompt(query: dict, retrieved_docs: list) -> str:
+from typing import List, Dict
+
+
+def build_ner_prompt(question: str, ner_result: Dict[str, List[str]]) -> str:
     """
-    GPT 입력용 프롬프트 생성
+    사용자의 멀티 질문을 NER 결과를 바탕으로 구조화된 (UNI, TYPE, KEYWORD) 조합으로 재정렬하도록 GPT에게 요청하는 프롬프트 생성.
     """
-    lines = ["[입시 정보]"]
+    ner_text = f"""NER 라벨링 결과:
+UNI: {ner_result.get("UNI", [])}
+TYPE: {ner_result.get("TYPE", [])}
+KEYWORD: {ner_result.get("KEYWORD", [])}
 
-    for doc in retrieved_docs:
-        univ_kr = uni_name_kr(doc["university"])
-        page_info = f"{univ_kr} {doc['source'].replace('_text.txt', '')} p.{doc['page']}"
-        lines.append(f"\n출처: {page_info}")
-        lines.append(f"내용: {doc['text'].strip()[:1000]}")  # 길이 제한
+사용자 질문:
+"{question}"
 
-    # 사용자 질문
-    user_question = build_user_question(query)
-    lines.append(f"\n질문: {user_question}")
-    lines.append("→ 위 내용을 참고하여 정확하고 간결하게 요약해 주세요.")
+위 질문에서 사용자가 의미한 각 조합을 다음 형식으로 묶어서 JSON 배열로 만들어줘:
 
-    return "\n".join(lines)
+예시:
+[
+  {{
+    "UNI": "서울대",
+    "TYPE": "수시",
+    "KEYWORD": "모집인원"
+  }},
+  {{
+    "UNI": "연세대",
+    "TYPE": "정시",
+    "KEYWORD": "모집일정"
+  }}
+]
+
+주의:
+- 누락된 항목이 없도록 의미 있는 조합을 완성해줘.
+- 다른 텍스트 없이 JSON만 출력해줘.
+"""
+    return ner_text
 
 
-def build_user_question(query: dict) -> str:
+def build_answer_prompt(
+    question_before: str,
+    question_after: Dict[str, List[str]],
+    documents: List[str]
+) -> str:
     """
-    GPT에게 던질 사용자 질문 생성
-    (형식이나 문장을 이 함수에서 제어)
-
-    Args:
-        query: {
-            "UNI": "yonsei",
-            "TYPE": "susi",
-            "KEYWORD": "논술"
-        }
-
-    Returns:
-        str: 생성된 질문 문장
+    GPT가 답변을 생성할 수 있도록 문서 정보와 질문 키워드를 포함한 프롬프트 생성
     """
-    univ = uni_name_kr(query.get("UNI", ""))
-    type_ = query.get("TYPE", "")
-    keyword = query.get("KEYWORD", "")
+    doc_text = "\n\n".join([f"[문서 {i+1}]\n{doc}" for i, doc in enumerate(documents)])
 
-    if univ and keyword and type_:
-        return f"{univ}의 {type_} 전형 중 '{keyword}'에 대해 알려줘"
-    elif univ and keyword:
-        return f"{univ}의 '{keyword}'에 대해 알려줘"
-    elif keyword:
-        return f"'{keyword}'에 대해 알려줘"
-    else:
-        return "입시 관련 정보를 알려줘"
+    prompt = f"""
+[사용자 질문 원문]
+{question_before}
 
+[질문 키워드 정리 결과]
+UNI: {question_after.get("UNI", [])}
+TYPE: {question_after.get("TYPE", [])}
+KEYWORD: {question_after.get("KEYWORD", [])}
 
-def uni_name_kr(eng_name: str) -> str:
-    mapping = {
-        "yonsei": "연세대학교",
-        "korea": "고려대학교",
-        "sogang": "서강대학교",
-        "skku": "성균관대학교",
-        "hanyang": "한양대학교",
-        "seoul": "서울대학교",
-        "konkuk": "건국대학교"
-    }
-    return mapping.get(eng_name.lower(), eng_name)
+[참고 문서]
+{doc_text}
+
+위 내용을 바탕으로 사용자의 질문에 대해 존댓말로 답변해줘.  
+답변은 명확하고 간결하게 정리해줘.
+"""
+    return prompt
