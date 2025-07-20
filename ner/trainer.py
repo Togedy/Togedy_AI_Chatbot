@@ -1,104 +1,137 @@
-# ner/trainer.py
-
-from transformers import BertTokenizerFast, BertForTokenClassification, Trainer, TrainingArguments
-from datasets import load_dataset, ClassLabel
 import os
-import numpy as np
-from sklearn.metrics import classification_report
 import torch
+from transformers import (
+    AutoTokenizer,
+    AutoModelForTokenClassification,
+    TrainingArguments,
+    Trainer
+)
+from datasets import load_dataset
+from utils import compute_metrics, compute_class_weights
 
-LABEL_PATH = "./data/label.txt"
-MODEL_SAVE_PATH = "./ner/model_save"
-PRETRAINED_MODEL = "skt/kobert-base-v1"
+# Load labels
+label_file = "./data/label.txt"
+with open(label_file, "r", encoding="utf-8") as f:
+    labels = [line.strip() for line in f.readlines()]
+label_to_id = {label: i for i, label in enumerate(labels)}
+id_to_label = {i: label for label, i in label_to_id.items()}
+num_labels = len(labels)
 
-def load_labels():
-    with open(LABEL_PATH, "r", encoding="utf-8") as f:
-        return [line.strip() for line in f.readlines()]
+# Load tokenizer & model
+model_name = "skt/kobert-base-v1"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForTokenClassification.from_pretrained(model_name, num_labels=num_labels)
 
-def compute_metrics(pred):
-    labels = pred.label_ids
-    preds = np.argmax(pred.predictions, axis=2)
-    label_list = load_labels()
+# Load dataset
+data_files = {
+    "train": "./data/train.tsv",
+    "test": "./data/test.tsv"
+}
+raw_datasets = load_dataset("csv", data_files=data_files, delimiter="\t", quoting=3, column_names=["tokens", "labels"])
 
-    true_labels = [[label_list[l] for l in sent] for sent in labels]
-    pred_labels = [[label_list[p] for p in sent] for sent in preds]
+# Remove None data
+raw_datasets = raw_datasets.filter(lambda example: example["tokens"] is not None and example["labels"] is not None)
 
-    report = classification_report(true_labels, pred_labels, output_dict=True, zero_division=0)
-    return {
-        "precision": report["micro avg"]["precision"],
-        "recall": report["micro avg"]["recall"],
-        "f1": report["micro avg"]["f1-score"],
-    }
+# Preprocessing
+label_all_tokens = True
 
-def tokenize_and_align_labels(example, tokenizer, label2id):
-    tokens = []
+def tokenize_and_align_labels(example):
+    if example["tokens"] is None or example["labels"] is None:
+        return {}
+
+    tokens = example["tokens"].split()
+    labels_ = example["labels"].split()
+
+    tokenized_inputs = tokenizer(
+        tokens,
+        truncation=True,
+        padding="max_length",
+        max_length=128,
+        is_split_into_words=True
+    )
+
+    word_ids = tokenized_inputs.word_ids()
+    previous_word_idx = None
     label_ids = []
 
-    for word, label in zip(example["tokens"], example["ner_tags"]):
-        word_tokens = tokenizer.tokenize(word)
-        tokens.extend(word_tokens)
-        label_ids.extend([label2id[label]] + [-100] * (len(word_tokens) - 1))
+    for word_idx in word_ids:
+        if word_idx is None or word_idx >= len(labels_):
+            label_ids.append(-100)
+        elif word_idx != previous_word_idx:
+            label_ids.append(label_to_id.get(labels_[word_idx], 0))
+        else:
+            label_ids.append(label_to_id.get(labels_[word_idx], 0) if label_all_tokens else -100)
+        previous_word_idx = word_idx
 
-    return tokenizer(" ".join(example["tokens"]), truncation=True, padding="max_length", max_length=128,
-                     is_split_into_words=True, return_tensors="pt"), label_ids
+    tokenized_inputs["labels"] = label_ids
+    return tokenized_inputs
 
-def train():
-    # 데이터셋 준비
-    label_list = load_labels()
-    label2id = {label: i for i, label in enumerate(label_list)}
-    id2label = {i: label for i, label in enumerate(label_list)}
+# Tokenize dataset
+tokenized_datasets = raw_datasets.map(
+    tokenize_and_align_labels,
+    remove_columns=["tokens", "labels"]
+)
 
-    dataset = load_dataset("csv", data_files={"train": "./data/train.tsv", "test": "./data/test.tsv"}, delimiter="\t")
-    dataset = dataset.map(lambda example: {"tokens": example["token"].split(), "ner_tags": example["label"].split()})
+# Compute class weights
+train_labels = [label for row in raw_datasets["train"] for label in row["labels"].split()]
+class_weights = compute_class_weights(labels, {"train": train_labels})
+class_weights_tensor = torch.tensor(class_weights, dtype=torch.float)
 
-    tokenizer = BertTokenizerFast.from_pretrained(PRETRAINED_MODEL)
-    model = BertForTokenClassification.from_pretrained(PRETRAINED_MODEL, num_labels=len(label_list),
-                                                       id2label=id2label, label2id=label2id)
+# Wrap model with weighted loss and no token_type_ids
+class WeightedTokenClassificationModel(torch.nn.Module):
+    def __init__(self, base_model, class_weights):
+        super().__init__()
+        self.base_model = base_model
+        self.loss_fct = torch.nn.CrossEntropyLoss(weight=class_weights)
 
-    def preprocess(example):
-        encoding = tokenizer(example["tokens"], is_split_into_words=True, padding="max_length",
-                             truncation=True, max_length=128)
-        labels = []
-        word_ids = encoding.word_ids()
-        for word_idx in word_ids:
-            if word_idx is None:
-                labels.append(-100)
-            else:
-                labels.append(label2id[example["ner_tags"][word_idx]])
-        encoding["labels"] = labels
-        return encoding
+    def forward(self, input_ids=None, attention_mask=None, labels=None, **kwargs):
+        # Explicitly remove token_type_ids for KoBERT
+        if "token_type_ids" in kwargs:
+            kwargs.pop("token_type_ids")
 
-    tokenized_dataset = dataset.map(preprocess, batched=False)
+        outputs = self.base_model(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            **kwargs
+        )
+        logits = outputs.logits
 
-    args = TrainingArguments(
-        output_dir="./ner/results",
-        evaluation_strategy="epoch",
-        save_strategy="epoch",
-        logging_dir="./ner/logs",
-        per_device_train_batch_size=16,
-        per_device_eval_batch_size=16,
-        num_train_epochs=3,
-        weight_decay=0.01,
-        save_total_limit=1,
-        load_best_model_at_end=True,
-        logging_steps=10,
-    )
+        if labels is not None:
+            loss = self.loss_fct(logits.view(-1, logits.shape[-1]), labels.view(-1))
+            return {"loss": loss, "logits": logits}
+        else:
+            return {"logits": logits}
 
-    trainer = Trainer(
-        model=model,
-        args=args,
-        train_dataset=tokenized_dataset["train"],
-        eval_dataset=tokenized_dataset["test"],
-        tokenizer=tokenizer,
-        compute_metrics=compute_metrics
-    )
+# Wrap model
+wrapped_model = WeightedTokenClassificationModel(model, class_weights_tensor)
 
-    trainer.train()
+# Training arguments
+training_args = TrainingArguments(
+    output_dir="./results",
+    evaluation_strategy="epoch",  # transformers>=4.46부터는 eval_strategy 사용 가능
+    save_strategy="epoch",
+    logging_dir="./logs",
+    logging_strategy="epoch",
+    num_train_epochs=3,
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=16,
+    learning_rate=5e-5,
+    weight_decay=0.01,
+    save_total_limit=1,
+    load_best_model_at_end=True,
+    metric_for_best_model="f1",
+    remove_unused_columns=False
+)
 
-    # 저장
-    model.save_pretrained(MODEL_SAVE_PATH)
-    tokenizer.save_pretrained(MODEL_SAVE_PATH)
-    print(f"모델 저장 완료: {MODEL_SAVE_PATH}")
+# Trainer
+trainer = Trainer(
+    model=wrapped_model,
+    args=training_args,
+    train_dataset=tokenized_datasets["train"],
+    eval_dataset=tokenized_datasets["test"],
+    tokenizer=tokenizer,
+    compute_metrics=compute_metrics
+)
 
-if __name__ == "__main__":
-    train()
+# Train
+trainer.train()
