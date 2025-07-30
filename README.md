@@ -26,6 +26,7 @@ Togedy\_AI\_Chatbot/
 ├── ocr/                      # 실제 텍스트 및 표 추출기
 ├── test\_cases/               # 흐름 시뮬레이션 테스트
 ├── university/               # 대학별 수시/정시 OCR 자료
+├── utils/                    # 공통 유틸 (현재 사용 안함)
 └── requirements.txt
 
 ````
@@ -89,19 +90,7 @@ python ner/test.py --sentence "서울대 정시 모집인원 알려줘"
 
 ---
 
-## 🧩 향후 과제
-
-* 서버 연동 (FastAPI 또는 Flask)
-* 사용자 세션별 대화 흐름 유지
-* Retrieval + GPT 답변 정밀도 개선
-* 사용자 친화 UI 연동 (예: Streamlit, 웹앱 등)
-
----
-
 ## 👨‍💻 Contributors
 
-* NER 모델, LLM 프롬프트 파이프라인: **\[작성자 이름]**
-* OCR 및 문서 전처리: 완료
-* 서버 통신/배포: (서버 담당자 예정)
-
-```
+* NER 모델, LLM 프롬프트 파이프라인: 노진우
+* OCR 및 문서 전처리: 노진우
