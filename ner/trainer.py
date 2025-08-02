@@ -1,147 +1,141 @@
-# trainer.py
-
 import os
 import torch
 from transformers import (
     AutoTokenizer,
     AutoModelForTokenClassification,
+    Trainer,
     TrainingArguments,
-    Trainer
+    DataCollatorForTokenClassification
 )
-from datasets import load_dataset
-from utils import compute_metrics, compute_class_weights
+from datasets import DatasetDict
+from sklearn.metrics import classification_report
+from data_loader import load_dataset
+from utils import compute_class_weights, get_label_list
 
-# Set device
+LABEL_PATH = "./data/label.txt"
+MODEL_CHECKPOINT = "skt/kobert-base-v1"
+TRAIN_PATH = "./data/train.tsv"
+TEST_PATH = "./data/test.tsv"
+SAVE_PATH = "./results"
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Using device: {device}")
+print(f"\n✅ Using device: {device}")
 
-# Load labels
-label_file = "./data/label.txt"
-with open(label_file, "r", encoding="utf-8") as f:
-    labels = [line.strip() for line in f.readlines()]
-label_to_id = {label: i for i, label in enumerate(labels)}
-id_to_label = {i: label for label, i in label_to_id.items()}
-num_labels = len(labels)
+label_list, label_to_id, id_to_label = get_label_list(LABEL_PATH)
+print(f"✅ Loaded {len(label_list)} labels")
 
-# Load tokenizer & model
-model_name = "skt/kobert-base-v1"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForTokenClassification.from_pretrained(model_name, num_labels=num_labels)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_CHECKPOINT, use_fast=False)
+print(f"✅ Tokenizer loaded (Fast: {tokenizer.is_fast})")
 
-# Load dataset
-data_files = {
-    "train": "./data/train.tsv",
-    "test": "./data/test.tsv"
-}
-raw_datasets = load_dataset("csv", data_files=data_files, delimiter="\t", quoting=3, column_names=["tokens", "labels"])
-raw_datasets = raw_datasets.filter(lambda example: example["tokens"] is not None and example["labels"] is not None)
+model = AutoModelForTokenClassification.from_pretrained(
+    MODEL_CHECKPOINT,
+    num_labels=len(label_list),
+)
+model.to(device)
+print("✅ Model loaded")
 
-# Tokenize
-label_all_tokens = True
+print("📂 Loading dataset...")
+raw_datasets = load_dataset(TRAIN_PATH, TEST_PATH, valid_ratio=0.1)
+print(f"✅ Dataset sizes: Train={len(raw_datasets['train'])}, Val={len(raw_datasets['validation'])}, Test={len(raw_datasets['test'])}")
+
 def tokenize_and_align_labels(example):
-    if example["tokens"] is None or example["labels"] is None:
-        return {}
+    tokens = example["tokens"]
+    labels_ = example["labels"]
 
-    tokens = example["tokens"].split()
-    labels_ = example["labels"].split()
+    if len(tokens) != len(labels_):
+        print(f"⚠️ Token-label length mismatch: tokens={len(tokens)} labels={len(labels_)}")
+        return {"input_ids": [], "attention_mask": [], "labels": [], "ignore": True}
 
     tokenized_inputs = tokenizer(
         tokens,
-        truncation=True,
+        is_split_into_words=True,
         padding="max_length",
+        truncation=True,
         max_length=128,
-        is_split_into_words=True
+        return_tensors="pt"
     )
 
-    word_ids = tokenized_inputs.word_ids()
-    previous_word_idx = None
+    input_ids = tokenized_inputs["input_ids"][0].tolist()
+    attention_mask = tokenized_inputs["attention_mask"][0].tolist()
+
     label_ids = []
-
-    for word_idx in word_ids:
-        if word_idx is None or word_idx >= len(labels_):
+    token_index = 0
+    for token in tokenizer.convert_ids_to_tokens(input_ids):
+        if token in ["[CLS]", "[SEP]", "[PAD]"]:
             label_ids.append(-100)
-        elif word_idx != previous_word_idx:
-            label_ids.append(label_to_id.get(labels_[word_idx], 0))
+        elif token.startswith("##"):
+            label_ids.append(label_to_id.get(labels_[token_index - 1], label_to_id["O"]))
         else:
-            label_ids.append(label_to_id.get(labels_[word_idx], 0) if label_all_tokens else -100)
-        previous_word_idx = word_idx
+            if token_index < len(labels_):
+                label_ids.append(label_to_id.get(labels_[token_index], label_to_id["O"]))
+                token_index += 1
+            else:
+                label_ids.append(-100)
 
-    tokenized_inputs["labels"] = label_ids
-    return tokenized_inputs
+    return {
+        "input_ids": input_ids,
+        "attention_mask": attention_mask,
+        "labels": label_ids,
+        "ignore": False
+    }
 
-tokenized_datasets = raw_datasets.map(
-    tokenize_and_align_labels,
-    remove_columns=["tokens", "labels"]
-)
+print("🔄 Tokenizing and aligning labels...")
+tokenized_dict = raw_datasets.map(tokenize_and_align_labels, remove_columns=["tokens", "labels"])
+filtered_dict = {k: v.filter(lambda x: not x["ignore"]) for k, v in tokenized_dict.items()}
+tokenized_datasets = DatasetDict(filtered_dict)
 
-# Compute class weights
-train_labels = [label for row in raw_datasets["train"] for label in row["labels"].split()]
-class_weights = compute_class_weights(labels, {"train": train_labels})
-class_weights_tensor = torch.tensor(class_weights, dtype=torch.float).to(device)
+data_collator = DataCollatorForTokenClassification(tokenizer)
 
-# Custom loss model
-class WeightedTokenClassificationModel(torch.nn.Module):
-    def __init__(self, base_model, class_weights):
-        super().__init__()
-        self.base_model = base_model
-        self.loss_fct = torch.nn.CrossEntropyLoss(weight=class_weights)
+# ✅ 수정된 부분
+class_weights = compute_class_weights(label_list, tokenized_datasets["train"]).to(device)
 
-    def forward(self, input_ids=None, attention_mask=None, labels=None, **kwargs):
-        if "token_type_ids" in kwargs:
-            kwargs.pop("token_type_ids")
+def compute_metrics(pred):
+    predictions, labels = pred
+    predictions = predictions.argmax(axis=-1)
+    true_labels, true_predictions = [], []
+    for prediction, label in zip(predictions, labels):
+        for p, l in zip(prediction, label):
+            if l != -100:
+                true_labels.append(id_to_label[l])
+                true_predictions.append(id_to_label[p])
+    print("\n📊 Classification Report:")
+    print(classification_report(true_labels, true_predictions))
+    return {}
 
-        outputs = self.base_model(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            **kwargs
-        )
+from torch.nn import CrossEntropyLoss
+class CustomTrainer(Trainer):
+    def compute_loss(self, model, inputs, return_outputs=False):
+        labels = inputs.pop("labels")
+        outputs = model(**inputs)
         logits = outputs.logits
+        loss_fct = CrossEntropyLoss(weight=class_weights, ignore_index=-100)
+        loss = loss_fct(logits.view(-1, model.config.num_labels), labels.view(-1))
+        return (loss, outputs) if return_outputs else loss
 
-        if labels is not None:
-            loss = self.loss_fct(logits.view(-1, logits.shape[-1]), labels.view(-1))
-            return {"loss": loss, "logits": logits}
-        else:
-            return {"logits": logits}
-
-# Wrap model and move to device
-wrapped_model = WeightedTokenClassificationModel(model, class_weights_tensor).to(device)
-
-# Training arguments
 training_args = TrainingArguments(
-    output_dir="./results",
+    output_dir=SAVE_PATH,
     evaluation_strategy="epoch",
     save_strategy="epoch",
-    logging_dir="./logs",
-    logging_strategy="epoch",
+    logging_dir=f"{SAVE_PATH}/logs",
+    logging_steps=50,
+    per_device_train_batch_size=8,
+    per_device_eval_batch_size=8,
     num_train_epochs=3,
-    per_device_train_batch_size=16,
-    per_device_eval_batch_size=16,
-    learning_rate=5e-5,
     weight_decay=0.01,
-    save_total_limit=1,
+    save_total_limit=2,
     load_best_model_at_end=True,
-    metric_for_best_model="f1",
-    remove_unused_columns=False
+    metric_for_best_model="eval_loss",
+    greater_is_better=False
 )
 
-# Trainer
-trainer = Trainer(
-    model=wrapped_model,
+trainer = CustomTrainer(
+    model=model,
     args=training_args,
     train_dataset=tokenized_datasets["train"],
-    eval_dataset=tokenized_datasets["test"],
+    eval_dataset=tokenized_datasets["validation"],
     tokenizer=tokenizer,
+    data_collator=data_collator,
     compute_metrics=compute_metrics
 )
 
-# Train
 trainer.train()
-
-# Save model and tokenizer (wrapped + raw model both)
-print("✅ 모델 저장 시도")
-trainer.save_model("./results")
-tokenizer.save_pretrained("./results")
-model.save_pretrained("./results")
-print("✅ 모델 저장 완료")
-
-
