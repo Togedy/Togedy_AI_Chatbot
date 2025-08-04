@@ -56,7 +56,7 @@ def predict(sentence, tokenizer, model, id_to_label):
 
 def test_single_sentence():
     print("▶ 예시 문장 테스트")
-    sentence = "한양대 건국대, 수시 전형 일정 알려줘"
+    sentence = "한양대 수시 모집인원?"
     tokenizer, model, id_to_label = load_ner_model()
     tokens, tags = predict(sentence, tokenizer, model, id_to_label)
     print("Tokens:", tokens)
