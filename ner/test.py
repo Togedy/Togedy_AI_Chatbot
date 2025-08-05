@@ -5,7 +5,7 @@ from postprocess import postprocess_ner_output
 
 LABEL_PATH = "./data/label.txt"
 MODEL_NAME = "skt/kobert-base-v1"
-MODEL_PATH = "./results/checkpoint-1680"
+MODEL_PATH = "./results/checkpoint-8439"
 
 def load_ner_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=False)  # KoBERT는 fast tokenizer 없음
@@ -56,7 +56,7 @@ def predict(sentence, tokenizer, model, id_to_label):
 
 def test_single_sentence():
     print("▶ 예시 문장 테스트")
-    sentence = "한양대 수시 모집인원?"
+    sentence = "한양대, 건국대 수시 논술 모집인원 알려줘"
     tokenizer, model, id_to_label = load_ner_model()
     tokens, tags = predict(sentence, tokenizer, model, id_to_label)
     print("Tokens:", tokens)

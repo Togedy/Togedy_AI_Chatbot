@@ -7,7 +7,7 @@ from utils import get_label_list
 from postprocess import postprocess_ner_output
 
 LABEL_PATH = "./data/label.txt"
-MODEL_PATH = "./results/checkpoint-1680"
+MODEL_PATH = "./results/checkpoint-8439"
 MODEL_NAME = "skt/kobert-base-v1"
 TEST_PATH = "./data/test.tsv"
 

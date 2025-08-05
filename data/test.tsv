@@ -1,13860 +1,7945 @@
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-한양대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-한양대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-연세대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-연세대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-고려대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-고려대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-고려대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서울대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-서울대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-서강대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-서강대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-성균관대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-성균관대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-성균관대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-건국대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-건국대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-건국대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-중앙대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-중앙대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-중앙대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-중앙대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-홍익대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-홍익대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-홍익대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-모집인원	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-등록일정	B-KEYWORD
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-제출서류	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형방법	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-최저학력기준	B-KEYWORD
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-모집인원	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-전형일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-합격자 발표일	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-등록일정	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-모집인원	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-제출서류	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-전형방법	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-최저학력기준	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
-의	O
- 	O
-정시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-합격자 발표일	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-제출서류	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전형일정	B-KEYWORD
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-전형방법	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-최저학력기준	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
-에	O
-서	O
- 	O
-합격자 발표일	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-등록일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-모집인원	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-제출서류	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
-의	O
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
- 	O
-전형일정	B-KEYWORD
-이	O
- 	O
-궁	O
-금	O
-해	O
-	
-경희대	B-UNI
- 	O
-정시	B-TYPE
- 	O
-기	O
-준	O
- 	O
-전형방법	B-KEYWORD
-이	O
- 	O
-뭐	O
-야	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
-에	O
-서	O
- 	O
-최저학력기준	B-KEYWORD
-에	O
- 	O
-대	O
-해	O
- 	O
-알	O
-려	O
-줘	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-합격자 발표일	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
-경희대	B-UNI
- 	O
-수시	B-TYPE
- 	O
-전	O
-형	O
-의	O
- 	O
-등록일정	B-KEYWORD
-은	O
- 	O
-어	O
-떻	O
-게	O
- 	O
-돼	O
-?	O
-	
+지원자수	B-KEYWORD
+서울대	B-UNI
+없어?	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+특기자전형	B-KEYWORD
+건국대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+어떻게	O
+돼?	O
+
+일정	B-KEYWORD
+정시	B-TYPE
+연대	B-UNI
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+성균관대	B-UNI
+어디서	O
+해?	O
+
+정시	B-TYPE
+건대	B-UNI
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+건국대	B-UNI
+알려줘	O
+
+서강대	B-UNI
+있어?	O
+
+건국대	B-UNI
+어디서	O
+해?	O
+
+있어?	O
+
+어디서	O
+해?	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+연대	B-UNI
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+서울대	B-UNI
+수시	B-TYPE
+어디서	O
+해?	O
+
+어디서	O
+해?	O
+
+수시	B-TYPE
+알려줘	O
+
+궁금해	O
+
+어디서	O
+해?	O
+
+고려대	B-UNI
+학생부종합	B-KEYWORD
+언제	O
+시작해?	O
+
+정시	B-TYPE
+건대	B-UNI
+언제	O
+시작해?	O
+
+궁금해	O
+
+어디서	O
+해?	O
+
+서강대	B-UNI
+일정	B-KEYWORD
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+모집인원	B-KEYWORD
+응시하고	O
+싶어	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+연대	B-UNI
+어디서	O
+해?	O
+
+건대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+없어?	O
+
+합격자수	B-KEYWORD
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+있어?	O
+
+지원자수	B-KEYWORD
+정시	B-TYPE
+건대	B-UNI
+응시하고	O
+싶어	O
+
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+어디서	O
+해?	O
+
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+성균관대	B-UNI
+기출문제	B-KEYWORD
+있어?	O
+
+궁금해	O
+
+특기자전형	B-KEYWORD
+정리해줘	O
+
+전공안내	B-KEYWORD
+연세대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+없어?	O
+
+건국대	B-UNI
+기출문제	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+알려줘	O
+
+건대	B-UNI
+있어?	O
+
+제출서류	B-KEYWORD
+연대	B-UNI
+정리해줘	O
+
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+없어?	O
+
+없어?	O
+
+연세대	B-UNI
+확인하고	O
+싶어	O
+
+없어?	O
+
+정시	B-TYPE
+성대	B-UNI
+있어?	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+고대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+어디서	O
+해?	O
+
+컴퓨터공학과	B-KEYWORD
+언제	O
+시작해?	O
+
+언제	O
+시작해?	O
+
+있어?	O
+
+합격자수	B-KEYWORD
+수시	B-TYPE
+서강대	B-UNI
+어디서	O
+해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+전형	B-KEYWORD
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+언제	O
+시작해?	O
+
+수시	B-TYPE
+정리해줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+성균관대	B-UNI
+정리해줘	O
+
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+면접일정	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+한양대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+정리해줘	O
+
+학생부종합	B-KEYWORD
+고대	B-UNI
+수시	B-TYPE
+있어?	O
+
+경영학과	B-KEYWORD
+연대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+건대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+성대	B-UNI
+어떻게	O
+돼?	O
+
+없어?	O
+
+전형방법	B-KEYWORD
+건국대	B-UNI
+정시	B-TYPE
+있어?	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+알려줘	O
+
+자기소개서	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+성대	B-UNI
+정시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+궁금해	O
+
+수시	B-TYPE
+궁금해	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+정리해줘	O
+
+모집인원	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+궁금해	O
+
+한양대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+궁금해	O
+
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+면접일정	B-KEYWORD
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+기출문제	B-KEYWORD
+정리해줘	O
+
+논술전형	B-KEYWORD
+연대	B-UNI
+있어?	O
+
+정시	B-TYPE
+한양대	B-UNI
+학생부종합	B-KEYWORD
+어디서	O
+해?	O
+
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+응시하고	O
+싶어	O
+
+서강대	B-UNI
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+고려대	B-UNI
+언제	O
+시작해?	O
+
+건대	B-UNI
+알려줘	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+알려줘	O
+
+합격자수	B-KEYWORD
+알려줘	O
+
+알려줘	O
+
+궁금해	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+없어?	O
+
+궁금해	O
+
+확인하고	O
+싶어	O
+
+고려대	B-UNI
+학생부종합	B-KEYWORD
+없어?	O
+
+한양대	B-UNI
+응시하고	O
+싶어	O
+
+일정	B-KEYWORD
+정리해줘	O
+
+전형	B-KEYWORD
+정시	B-TYPE
+없어?	O
+
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+건대	B-UNI
+전공안내	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+없어?	O
+
+알려줘	O
+
+건국대	B-UNI
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+건국대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+성대	B-UNI
+합격자수	B-KEYWORD
+언제	O
+시작해?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+건대	B-UNI
+어떻게	O
+돼?	O
+
+전형방법	B-KEYWORD
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+있어?	O
+
+없어?	O
+
+서울대	B-UNI
+어디서	O
+해?	O
+
+궁금해	O
+
+고려대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+한양대	B-UNI
+정시	B-TYPE
+알려줘	O
+
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+전형	B-KEYWORD
+수시	B-TYPE
+언제	O
+시작해?	O
+
+정리해줘	O
+
+응시하고	O
+싶어	O
+
+궁금해	O
+
+건대	B-UNI
+합격자수	B-KEYWORD
+어디서	O
+해?	O
+
+합격자수	B-KEYWORD
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+한양대	B-UNI
+경영학과	B-KEYWORD
+언제	O
+시작해?	O
+
+건대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+수시	B-TYPE
+건국대	B-UNI
+정리해줘	O
+
+특기자전형	B-KEYWORD
+연대	B-UNI
+수시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+성대	B-UNI
+학생부종합	B-KEYWORD
+있어?	O
+
+궁금해	O
+
+있어?	O
+
+정리해줘	O
+
+고려대	B-UNI
+정리해줘	O
+
+응시하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+수시	B-TYPE
+건국대	B-UNI
+합격자수	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+고대	B-UNI
+궁금해	O
+
+건국대	B-UNI
+언제	O
+시작해?	O
+
+학생부종합	B-KEYWORD
+서울대	B-UNI
+궁금해	O
+
+없어?	O
+
+건국대	B-UNI
+궁금해	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+없어?	O
+
+없어?	O
+
+합격자수	B-KEYWORD
+있어?	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+건국대	B-UNI
+어디서	O
+해?	O
+
+확인하고	O
+싶어	O
+
+연세대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+궁금해	O
+
+전형방법	B-KEYWORD
+연대	B-UNI
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+있어?	O
+
+궁금해	O
+
+컴퓨터공학과	B-KEYWORD
+성대	B-UNI
+정시	B-TYPE
+없어?	O
+
+고대	B-UNI
+모집인원	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+정시	B-TYPE
+고대	B-UNI
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+응시하고	O
+싶어	O
+
+지원자수	B-KEYWORD
+고대	B-UNI
+응시하고	O
+싶어	O
+
+전형	B-KEYWORD
+연대	B-UNI
+언제	O
+시작해?	O
+
+응시하고	O
+싶어	O
+
+알려줘	O
+
+성대	B-UNI
+궁금해	O
+
+정시	B-TYPE
+건대	B-UNI
+궁금해	O
+
+알려줘	O
+
+전형방법	B-KEYWORD
+정리해줘	O
+
+건국대	B-UNI
+면접일정	B-KEYWORD
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+전형방법	B-KEYWORD
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+컴퓨터공학과	B-KEYWORD
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+궁금해	O
+
+건대	B-UNI
+응시하고	O
+싶어	O
+
+서강대	B-UNI
+지원자수	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+응시하고	O
+싶어	O
+
+건대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+면접일정	B-KEYWORD
+고대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+고대	B-UNI
+어디서	O
+해?	O
+
+없어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+기출문제	B-KEYWORD
+없어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+언제	O
+시작해?	O
+
+면접일정	B-KEYWORD
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+어디서	O
+해?	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+없어?	O
+
+정리해줘	O
+
+정리해줘	O
+
+확인하고	O
+싶어	O
+
+경영학과	B-KEYWORD
+없어?	O
+
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+어디서	O
+해?	O
+
+있어?	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+제출서류	B-KEYWORD
+수시	B-TYPE
+서울대	B-UNI
+없어?	O
+
+건국대	B-UNI
+정시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+연대	B-UNI
+없어?	O
+
+모집인원	B-KEYWORD
+정리해줘	O
+
+학생부종합	B-KEYWORD
+어디서	O
+해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+있어?	O
+
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+알려줘	O
+
+합격자수	B-KEYWORD
+한양대	B-UNI
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+있어?	O
+
+고려대	B-UNI
+없어?	O
+
+합격자수	B-KEYWORD
+고대	B-UNI
+알려줘	O
+
+궁금해	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+정리해줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+정리해줘	O
+
+일정	B-KEYWORD
+서강대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+언제	O
+시작해?	O
+
+지원자수	B-KEYWORD
+수시	B-TYPE
+건대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+특기자전형	B-KEYWORD
+확인하고	O
+싶어	O
+
+전형방법	B-KEYWORD
+수시	B-TYPE
+서울대	B-UNI
+없어?	O
+
+수시	B-TYPE
+서강대	B-UNI
+알려줘	O
+
+있어?	O
+
+정시	B-TYPE
+궁금해	O
+
+정시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+서울대	B-UNI
+합격자수	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+언제	O
+시작해?	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+건대	B-UNI
+학생부종합	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+서강대	B-UNI
+언제	O
+시작해?	O
+
+없어?	O
+
+지원자수	B-KEYWORD
+수시	B-TYPE
+건대	B-UNI
+없어?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+건국대	B-UNI
+언제	O
+시작해?	O
+
+고대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+알려줘	O
+
+고대	B-UNI
+없어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+어디서	O
+해?	O
+
+연대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+건국대	B-UNI
+전형방법	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+없어?	O
+
+수시	B-TYPE
+궁금해	O
+
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+언제	O
+시작해?	O
+
+수시	B-TYPE
+건대	B-UNI
+정리해줘	O
+
+궁금해	O
+
+경영학과	B-KEYWORD
+한양대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+건국대	B-UNI
+언제	O
+시작해?	O
+
+건국대	B-UNI
+면접일정	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+자기소개서	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+궁금해	O
+
+없어?	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+건대	B-UNI
+응시하고	O
+싶어	O
+
+성대	B-UNI
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+성대	B-UNI
+확인하고	O
+싶어	O
+
+지원자수	B-KEYWORD
+정시	B-TYPE
+건대	B-UNI
+없어?	O
+
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+궁금해	O
+
+전공안내	B-KEYWORD
+고대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+언제	O
+시작해?	O
+
+정리해줘	O
+
+서강대	B-UNI
+있어?	O
+
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+기출문제	B-KEYWORD
+서울대	B-UNI
+수시	B-TYPE
+궁금해	O
+
+연대	B-UNI
+지원자수	B-KEYWORD
+확인하고	O
+싶어	O
+
+있어?	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+건국대	B-UNI
+어디서	O
+해?	O
+
+있어?	O
+
+경영학과	B-KEYWORD
+고려대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+알려줘	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+있어?	O
+
+정시	B-TYPE
+서울대	B-UNI
+전형방법	B-KEYWORD
+정리해줘	O
+
+면접일정	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+고려대	B-UNI
+궁금해	O
+
+컴퓨터공학과	B-KEYWORD
+고대	B-UNI
+정리해줘	O
+
+알려줘	O
+
+없어?	O
+
+수시	B-TYPE
+있어?	O
+
+어디서	O
+해?	O
+
+수시	B-TYPE
+서울대	B-UNI
+없어?	O
+
+언제	O
+시작해?	O
+
+건국대	B-UNI
+정시	B-TYPE
+논술전형	B-KEYWORD
+언제	O
+시작해?	O
+
+전형방법	B-KEYWORD
+서울대	B-UNI
+없어?	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+한양대	B-UNI
+경영학과	B-KEYWORD
+언제	O
+시작해?	O
+
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+논술전형	B-KEYWORD
+수시	B-TYPE
+서강대	B-UNI
+어디서	O
+해?	O
+
+지원자수	B-KEYWORD
+연세대	B-UNI
+수시	B-TYPE
+어디서	O
+해?	O
+
+확인하고	O
+싶어	O
+
+논술전형	B-KEYWORD
+응시하고	O
+싶어	O
+
+건대	B-UNI
+정시	B-TYPE
+없어?	O
+
+합격자수	B-KEYWORD
+연대	B-UNI
+있어?	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+서강대	B-UNI
+언제	O
+시작해?	O
+
+궁금해	O
+
+확인하고	O
+싶어	O
+
+건대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+궁금해	O
+
+있어?	O
+
+수시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+수시	B-TYPE
+있어?	O
+
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+전형방법	B-KEYWORD
+성대	B-UNI
+확인하고	O
+싶어	O
+
+어떻게	O
+돼?	O
+
+없어?	O
+
+있어?	O
+
+학생부종합	B-KEYWORD
+있어?	O
+
+면접일정	B-KEYWORD
+서울대	B-UNI
+궁금해	O
+
+수시	B-TYPE
+언제	O
+시작해?	O
+
+전공안내	B-KEYWORD
+연세대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+연대	B-UNI
+확인하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+확인하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+경영학과	B-KEYWORD
+정시	B-TYPE
+어디서	O
+해?	O
+
+경영학과	B-KEYWORD
+언제	O
+시작해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+있어?	O
+
+면접일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+확인하고	O
+싶어	O
+
+건대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+어디서	O
+해?	O
+
+서강대	B-UNI
+기출문제	B-KEYWORD
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+건대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+확인하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+수시	B-TYPE
+고대	B-UNI
+궁금해	O
+
+논술전형	B-KEYWORD
+있어?	O
+
+수능최저	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+알려줘	O
+
+건국대	B-UNI
+응시하고	O
+싶어	O
+
+정리해줘	O
+
+합격자수	B-KEYWORD
+한양대	B-UNI
+확인하고	O
+싶어	O
+
+한양대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+있어?	O
+
+어디서	O
+해?	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+언제	O
+시작해?	O
+
+알려줘	O
+
+정시	B-TYPE
+성대	B-UNI
+있어?	O
+
+확인하고	O
+싶어	O
+
+건국대	B-UNI
+없어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+성균관대	B-UNI
+정리해줘	O
+
+응시하고	O
+싶어	O
+
+성균관대	B-UNI
+알려줘	O
+
+수시	B-TYPE
+알려줘	O
+
+전형	B-KEYWORD
+건대	B-UNI
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+있어?	O
+
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+정리해줘	O
+
+언제	O
+시작해?	O
+
+궁금해	O
+
+정시	B-TYPE
+없어?	O
+
+서울대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+모집인원	B-KEYWORD
+어디서	O
+해?	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+고려대	B-UNI
+궁금해	O
+
+수시	B-TYPE
+연세대	B-UNI
+특기자전형	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+고대	B-UNI
+있어?	O
+
+수능최저	B-KEYWORD
+건국대	B-UNI
+수시	B-TYPE
+없어?	O
+
+언제	O
+시작해?	O
+
+일정	B-KEYWORD
+연세대	B-UNI
+어떻게	O
+돼?	O
+
+연대	B-UNI
+논술전형	B-KEYWORD
+정리해줘	O
+
+언제	O
+시작해?	O
+
+학생부종합	B-KEYWORD
+확인하고	O
+싶어	O
+
+있어?	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+서강대	B-UNI
+확인하고	O
+싶어	O
+
+고대	B-UNI
+컴퓨터공학과	B-KEYWORD
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+없어?	O
+
+제출서류	B-KEYWORD
+건대	B-UNI
+궁금해	O
+
+논술전형	B-KEYWORD
+언제	O
+시작해?	O
+
+수시	B-TYPE
+연대	B-UNI
+경영학과	B-KEYWORD
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+언제	O
+시작해?	O
+
+경영학과	B-KEYWORD
+한양대	B-UNI
+정시	B-TYPE
+알려줘	O
+
+컴퓨터공학과	B-KEYWORD
+건대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+성균관대	B-UNI
+면접일정	B-KEYWORD
+언제	O
+시작해?	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+성균관대	B-UNI
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+학생부종합	B-KEYWORD
+서울대	B-UNI
+정시	B-TYPE
+없어?	O
+
+궁금해	O
+
+성균관대	B-UNI
+어떻게	O
+돼?	O
+
+합격자수	B-KEYWORD
+성균관대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+전공안내	B-KEYWORD
+없어?	O
+
+확인하고	O
+싶어	O
+
+성균관대	B-UNI
+기출문제	B-KEYWORD
+없어?	O
+
+한양대	B-UNI
+지원자수	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+궁금해	O
+
+알려줘	O
+
+합격자수	B-KEYWORD
+수시	B-TYPE
+성균관대	B-UNI
+알려줘	O
+
+언제	O
+시작해?	O
+
+일정	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+정시	B-TYPE
+있어?	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+궁금해	O
+
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+알려줘	O
+
+정시	B-TYPE
+서울대	B-UNI
+논술전형	B-KEYWORD
+어디서	O
+해?	O
+
+수능최저	B-KEYWORD
+수시	B-TYPE
+궁금해	O
+
+기출문제	B-KEYWORD
+정시	B-TYPE
+건국대	B-UNI
+어디서	O
+해?	O
+
+건대	B-UNI
+수시	B-TYPE
+있어?	O
+
+정시	B-TYPE
+궁금해	O
+
+모집인원	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+서울대	B-UNI
+없어?	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+연대	B-UNI
+알려줘	O
+
+궁금해	O
+
+고려대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+건국대	B-UNI
+제출서류	B-KEYWORD
+궁금해	O
+
+고려대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+건국대	B-UNI
+수능최저	B-KEYWORD
+없어?	O
+
+서강대	B-UNI
+전형방법	B-KEYWORD
+궁금해	O
+
+성균관대	B-UNI
+언제	O
+시작해?	O
+
+기출문제	B-KEYWORD
+궁금해	O
+
+자기소개서	B-KEYWORD
+어디서	O
+해?	O
+
+있어?	O
+
+정시	B-TYPE
+고려대	B-UNI
+어디서	O
+해?	O
+
+전형	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+서강대	B-UNI
+확인하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+건국대	B-UNI
+자기소개서	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+응시하고	O
+싶어	O
+
+성균관대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+어디서	O
+해?	O
+
+한양대	B-UNI
+수시	B-TYPE
+없어?	O
+
+논술전형	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+수시	B-TYPE
+건대	B-UNI
+기출문제	B-KEYWORD
+없어?	O
+
+고려대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+알려줘	O
+
+컴퓨터공학과	B-KEYWORD
+연대	B-UNI
+정리해줘	O
+
+고려대	B-UNI
+수능최저	B-KEYWORD
+정시	B-TYPE
+어디서	O
+해?	O
+
+정리해줘	O
+
+어디서	O
+해?	O
+
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+특기자전형	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+전형방법	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+궁금해	O
+
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+고려대	B-UNI
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+컴퓨터공학과	B-KEYWORD
+수시	B-TYPE
+고대	B-UNI
+어디서	O
+해?	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+서울대	B-UNI
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+궁금해	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+연대	B-UNI
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+있어?	O
+
+궁금해	O
+
+궁금해	O
+
+수시	B-TYPE
+고대	B-UNI
+없어?	O
+
+지원자수	B-KEYWORD
+어디서	O
+해?	O
+
+고대	B-UNI
+알려줘	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+기출문제	B-KEYWORD
+연대	B-UNI
+언제	O
+시작해?	O
+
+없어?	O
+
+건대	B-UNI
+전공안내	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+응시하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+한양대	B-UNI
+있어?	O
+
+서울대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+정리해줘	O
+
+논술전형	B-KEYWORD
+서울대	B-UNI
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어	O
+
+고려대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+없어?	O
+
+서강대	B-UNI
+수시	B-TYPE
+어디서	O
+해?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+서강대	B-UNI
+어디서	O
+해?	O
+
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+연대	B-UNI
+알려줘	O
+
+자기소개서	B-KEYWORD
+정시	B-TYPE
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+수능최저	B-KEYWORD
+어디서	O
+해?	O
+
+수시	B-TYPE
+고대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+합격자수	B-KEYWORD
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+서울대	B-UNI
+알려줘	O
+
+건대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+언제	O
+시작해?	O
+
+건국대	B-UNI
+전형방법	B-KEYWORD
+정시	B-TYPE
+있어?	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+성균관대	B-UNI
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+서강대	B-UNI
+어디서	O
+해?	O
+
+정리해줘	O
+
+서강대	B-UNI
+경영학과	B-KEYWORD
+정시	B-TYPE
+정리해줘	O
+
+연대	B-UNI
+면접일정	B-KEYWORD
+언제	O
+시작해?	O
+
+건국대	B-UNI
+알려줘	O
+
+정리해줘	O
+
+정시	B-TYPE
+없어?	O
+
+서강대	B-UNI
+언제	O
+시작해?	O
+
+수시	B-TYPE
+기출문제	B-KEYWORD
+서울대	B-UNI
+언제	O
+시작해?	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+언제	O
+시작해?	O
+
+있어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+알려줘	O
+
+전형방법	B-KEYWORD
+응시하고	O
+싶어	O
+
+고대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+연대	B-UNI
+전형방법	B-KEYWORD
+정시	B-TYPE
+어디서	O
+해?	O
+
+정시	B-TYPE
+성대	B-UNI
+정리해줘	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+건대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+확인하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+학생부종합	B-KEYWORD
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+어디서	O
+해?	O
+
+서울대	B-UNI
+모집인원	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+응시하고	O
+싶어	O
+
+고려대	B-UNI
+알려줘	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+정리해줘	O
+
+면접일정	B-KEYWORD
+고대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+일정	B-KEYWORD
+정시	B-TYPE
+없어?	O
+
+건대	B-UNI
+없어?	O
+
+일정	B-KEYWORD
+정시	B-TYPE
+서울대	B-UNI
+어디서	O
+해?	O
+
+확인하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+경영학과	B-KEYWORD
+연세대	B-UNI
+언제	O
+시작해?	O
+
+정리해줘	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+응시하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+연세대	B-UNI
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+컴퓨터공학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+수능최저	B-KEYWORD
+언제	O
+시작해?	O
+
+건국대	B-UNI
+모집인원	B-KEYWORD
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+알려줘	O
+
+합격자수	B-KEYWORD
+건대	B-UNI
+없어?	O
+
+궁금해	O
+
+연세대	B-UNI
+정시	B-TYPE
+알려줘	O
+
+정시	B-TYPE
+합격자수	B-KEYWORD
+건국대	B-UNI
+어디서	O
+해?	O
+
+없어?	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+컴퓨터공학과	B-KEYWORD
+서강대	B-UNI
+알려줘	O
+
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+고려대	B-UNI
+언제	O
+시작해?	O
+
+경영학과	B-KEYWORD
+서강대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+어떻게	O
+돼?	O
+
+수능최저	B-KEYWORD
+연세대	B-UNI
+정시	B-TYPE
+알려줘	O
+
+전형	B-KEYWORD
+고대	B-UNI
+수시	B-TYPE
+궁금해	O
+
+서강대	B-UNI
+없어?	O
+
+연세대	B-UNI
+기출문제	B-KEYWORD
+어디서	O
+해?	O
+
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+자기소개서	B-KEYWORD
+확인하고	O
+싶어	O
+
+성균관대	B-UNI
+경영학과	B-KEYWORD
+없어?	O
+
+정시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+서울대	B-UNI
+컴퓨터공학과	B-KEYWORD
+없어?	O
+
+컴퓨터공학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+정시	B-TYPE
+궁금해	O
+
+성대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+궁금해	O
+
+고대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+합격자수	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+경영학과	B-KEYWORD
+연대	B-UNI
+있어?	O
+
+합격자수	B-KEYWORD
+건대	B-UNI
+알려줘	O
+
+면접일정	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+논술전형	B-KEYWORD
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+연대	B-UNI
+응시하고	O
+싶어	O
+
+궁금해	O
+
+없어?	O
+
+건국대	B-UNI
+전공안내	B-KEYWORD
+정시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+학생부종합	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+알려줘	O
+
+정시	B-TYPE
+성대	B-UNI
+어떻게	O
+돼?	O
+
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+연대	B-UNI
+특기자전형	B-KEYWORD
+없어?	O
+
+없어?	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+건대	B-UNI
+응시하고	O
+싶어	O
+
+성대	B-UNI
+없어?	O
+
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+서강대	B-UNI
+알려줘	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+어디서	O
+해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+수시	B-TYPE
+연세대	B-UNI
+응시하고	O
+싶어	O
+
+모집인원	B-KEYWORD
+연대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+건대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+건국대	B-UNI
+경영학과	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+전공안내	B-KEYWORD
+건국대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+궁금해	O
+
+수시	B-TYPE
+연세대	B-UNI
+알려줘	O
+
+정시	B-TYPE
+연세대	B-UNI
+제출서류	B-KEYWORD
+어디서	O
+해?	O
+
+서울대	B-UNI
+확인하고	O
+싶어	O
+
+궁금해	O
+
+수시	B-TYPE
+궁금해	O
+
+어떻게	O
+돼?	O
+
+있어?	O
+
+고대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+고대	B-UNI
+정리해줘	O
+
+고대	B-UNI
+확인하고	O
+싶어	O
+
+연대	B-UNI
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+전형	B-KEYWORD
+어디서	O
+해?	O
+
+고대	B-UNI
+학생부종합	B-KEYWORD
+정리해줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+정시	B-TYPE
+서강대	B-UNI
+알려줘	O
+
+면접일정	B-KEYWORD
+알려줘	O
+
+어디서	O
+해?	O
+
+한양대	B-UNI
+지원자수	B-KEYWORD
+알려줘	O
+
+일정	B-KEYWORD
+고대	B-UNI
+어디서	O
+해?	O
+
+건대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+알려줘	O
+
+정리해줘	O
+
+논술전형	B-KEYWORD
+서강대	B-UNI
+알려줘	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+응시하고	O
+싶어	O
+
+연세대	B-UNI
+있어?	O
+
+지원자수	B-KEYWORD
+있어?	O
+
+응시하고	O
+싶어	O
+
+고대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+알려줘	O
+
+궁금해	O
+
+수시	B-TYPE
+성대	B-UNI
+전형방법	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+어떻게	O
+돼?	O
+
+수능최저	B-KEYWORD
+있어?	O
+
+연세대	B-UNI
+수시	B-TYPE
+있어?	O
+
+연대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+언제	O
+시작해?	O
+
+성대	B-UNI
+응시하고	O
+싶어	O
+
+모집인원	B-KEYWORD
+건국대	B-UNI
+궁금해	O
+
+연대	B-UNI
+합격자수	B-KEYWORD
+정시	B-TYPE
+정리해줘	O
+
+언제	O
+시작해?	O
+
+컴퓨터공학과	B-KEYWORD
+고려대	B-UNI
+어디서	O
+해?	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+성대	B-UNI
+정리해줘	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+알려줘	O
+
+전형	B-KEYWORD
+한양대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+학생부종합	B-KEYWORD
+고려대	B-UNI
+어디서	O
+해?	O
+
+정시	B-TYPE
+고대	B-UNI
+컴퓨터공학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+알려줘	O
+
+수시	B-TYPE
+없어?	O
+
+논술전형	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+정시	B-TYPE
+서강대	B-UNI
+논술전형	B-KEYWORD
+없어?	O
+
+연대	B-UNI
+수시	B-TYPE
+있어?	O
+
+연대	B-UNI
+논술전형	B-KEYWORD
+정시	B-TYPE
+정리해줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+건국대	B-UNI
+없어?	O
+
+정리해줘	O
+
+수시	B-TYPE
+있어?	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+어디서	O
+해?	O
+
+고대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+있어?	O
+
+정시	B-TYPE
+궁금해	O
+
+알려줘	O
+
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+연세대	B-UNI
+전형방법	B-KEYWORD
+있어?	O
+
+정리해줘	O
+
+어떻게	O
+돼?	O
+
+어디서	O
+해?	O
+
+정리해줘	O
+
+모집인원	B-KEYWORD
+서울대	B-UNI
+응시하고	O
+싶어	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+고려대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+어떻게	O
+돼?	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+건대	B-UNI
+없어?	O
+
+자기소개서	B-KEYWORD
+없어?	O
+
+정시	B-TYPE
+고려대	B-UNI
+수능최저	B-KEYWORD
+확인하고	O
+싶어	O
+
+알려줘	O
+
+정시	B-TYPE
+정리해줘	O
+
+어디서	O
+해?	O
+
+정리해줘	O
+
+자기소개서	B-KEYWORD
+고대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+경영학과	B-KEYWORD
+서강대	B-UNI
+알려줘	O
+
+궁금해	O
+
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+궁금해	O
+
+언제	O
+시작해?	O
+
+궁금해	O
+
+수시	B-TYPE
+성대	B-UNI
+정리해줘	O
+
+전형방법	B-KEYWORD
+건대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+없어?	O
+
+일정	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+확인하고	O
+싶어	O
+
+있어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+있어?	O
+
+특기자전형	B-KEYWORD
+정시	B-TYPE
+성균관대	B-UNI
+궁금해	O
+
+응시하고	O
+싶어	O
+
+성대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+없어?	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+한양대	B-UNI
+궁금해	O
+
+응시하고	O
+싶어	O
+
+서강대	B-UNI
+궁금해	O
+
+정시	B-TYPE
+서울대	B-UNI
+어디서	O
+해?	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+특기자전형	B-KEYWORD
+정리해줘	O
+
+한양대	B-UNI
+경영학과	B-KEYWORD
+어디서	O
+해?	O
+
+합격자수	B-KEYWORD
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+언제	O
+시작해?	O
+
+건국대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+서울대	B-UNI
+어디서	O
+해?	O
+
+기출문제	B-KEYWORD
+알려줘	O
+
+알려줘	O
+
+어디서	O
+해?	O
+
+성대	B-UNI
+정리해줘	O
+
+정시	B-TYPE
+건대	B-UNI
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+합격자수	B-KEYWORD
+언제	O
+시작해?	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+언제	O
+시작해?	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+성대	B-UNI
+확인하고	O
+싶어	O
+
+전형방법	B-KEYWORD
+있어?	O
+
+건국대	B-UNI
+전형방법	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+언제	O
+시작해?	O
+
+언제	O
+시작해?	O
+
+알려줘	O
+
+자기소개서	B-KEYWORD
+서울대	B-UNI
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+고대	B-UNI
+있어?	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+궁금해	O
+
+정리해줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+자기소개서	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+알려줘	O
+
+성대	B-UNI
+전형방법	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+성대	B-UNI
+없어?	O
+
+제출서류	B-KEYWORD
+정시	B-TYPE
+한양대	B-UNI
+언제	O
+시작해?	O
+
+고대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+전형	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+궁금해	O
+
+언제	O
+시작해?	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+기출문제	B-KEYWORD
+고려대	B-UNI
+수시	B-TYPE
+어디서	O
+해?	O
+
+고대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+모집인원	B-KEYWORD
+한양대	B-UNI
+정시	B-TYPE
+있어?	O
+
+경영학과	B-KEYWORD
+고려대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+없어?	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+정리해줘	O
+
+정리해줘	O
+
+합격자수	B-KEYWORD
+궁금해	O
+
+전공안내	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+성균관대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+고대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+궁금해	O
+
+어디서	O
+해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+있어?	O
+
+특기자전형	B-KEYWORD
+정시	B-TYPE
+한양대	B-UNI
+있어?	O
+
+기출문제	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+어디서	O
+해?	O
+
+수시	B-TYPE
+없어?	O
+
+궁금해	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+서울대	B-UNI
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+건대	B-UNI
+알려줘	O
+
+어디서	O
+해?	O
+
+제출서류	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+있어?	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+연세대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+궁금해	O
+
+수시	B-TYPE
+어디서	O
+해?	O
+
+경영학과	B-KEYWORD
+성균관대	B-UNI
+확인하고	O
+싶어	O
+
+궁금해	O
+
+언제	O
+시작해?	O
+
+건대	B-UNI
+합격자수	B-KEYWORD
+정시	B-TYPE
+있어?	O
+
+서울대	B-UNI
+정리해줘	O
+
+연대	B-UNI
+있어?	O
+
+어디서	O
+해?	O
+
+한양대	B-UNI
+없어?	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+합격자수	B-KEYWORD
+정시	B-TYPE
+있어?	O
+
+수시	B-TYPE
+정리해줘	O
+
+고대	B-UNI
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+성균관대	B-UNI
+없어?	O
+
+연세대	B-UNI
+응시하고	O
+싶어	O
+
+서강대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+성대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+있어?	O
+
+제출서류	B-KEYWORD
+응시하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+어디서	O
+해?	O
+
+고대	B-UNI
+전공안내	B-KEYWORD
+없어?	O
+
+기출문제	B-KEYWORD
+연세대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+고대	B-UNI
+합격자수	B-KEYWORD
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+언제	O
+시작해?	O
+
+제출서류	B-KEYWORD
+한양대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+한양대	B-UNI
+정시	B-TYPE
+없어?	O
+
+면접일정	B-KEYWORD
+수시	B-TYPE
+궁금해	O
+
+연세대	B-UNI
+어떻게	O
+돼?	O
+
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+확인하고	O
+싶어	O
+
+없어?	O
+
+연대	B-UNI
+면접일정	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+한양대	B-UNI
+궁금해	O
+
+정시	B-TYPE
+있어?	O
+
+서강대	B-UNI
+없어?	O
+
+기출문제	B-KEYWORD
+건대	B-UNI
+확인하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+없어?	O
+
+지원자수	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+어디서	O
+해?	O
+
+확인하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+어떻게	O
+돼?	O
+
+있어?	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+성대	B-UNI
+어떻게	O
+돼?	O
+
+확인하고	O
+싶어	O
+
+고대	B-UNI
+전형방법	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+없어?	O
+
+있어?	O
+
+전형	B-KEYWORD
+없어?	O
+
+특기자전형	B-KEYWORD
+한양대	B-UNI
+알려줘	O
+
+특기자전형	B-KEYWORD
+수시	B-TYPE
+서강대	B-UNI
+궁금해	O
+
+건국대	B-UNI
+기출문제	B-KEYWORD
+정시	B-TYPE
+언제	O
+시작해?	O
+
+알려줘	O
+
+수시	B-TYPE
+서울대	B-UNI
+정리해줘	O
+
+언제	O
+시작해?	O
+
+모집인원	B-KEYWORD
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+전형방법	B-KEYWORD
+성균관대	B-UNI
+수시	B-TYPE
+없어?	O
+
+전공안내	B-KEYWORD
+정시	B-TYPE
+고대	B-UNI
+언제	O
+시작해?	O
+
+정리해줘	O
+
+지원자수	B-KEYWORD
+정시	B-TYPE
+언제	O
+시작해?	O
+
+건국대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+고대	B-UNI
+어디서	O
+해?	O
+
+전공안내	B-KEYWORD
+정시	B-TYPE
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+있어?	O
+
+학생부종합	B-KEYWORD
+있어?	O
+
+정시	B-TYPE
+성대	B-UNI
+없어?	O
+
+지원자수	B-KEYWORD
+연대	B-UNI
+응시하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+고려대	B-UNI
+응시하고	O
+싶어	O
+
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+경영학과	B-KEYWORD
+건대	B-UNI
+어디서	O
+해?	O
+
+알려줘	O
+
+언제	O
+시작해?	O
+
+논술전형	B-KEYWORD
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+연세대	B-UNI
+궁금해	O
+
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+자기소개서	B-KEYWORD
+응시하고	O
+싶어	O
+
+모집인원	B-KEYWORD
+정리해줘	O
+
+건국대	B-UNI
+알려줘	O
+
+수시	B-TYPE
+연세대	B-UNI
+모집인원	B-KEYWORD
+언제	O
+시작해?	O
+
+궁금해	O
+
+서강대	B-UNI
+경영학과	B-KEYWORD
+정시	B-TYPE
+언제	O
+시작해?	O
+
+제출서류	B-KEYWORD
+없어?	O
+
+건국대	B-UNI
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+언제	O
+시작해?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+건국대	B-UNI
+논술전형	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+알려줘	O
+
+어디서	O
+해?	O
+
+어디서	O
+해?	O
+
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+어떻게	O
+돼?	O
+
+언제	O
+시작해?	O
+
+알려줘	O
+
+성대	B-UNI
+모집인원	B-KEYWORD
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+확인하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+성균관대	B-UNI
+없어?	O
+
+자기소개서	B-KEYWORD
+연세대	B-UNI
+궁금해	O
+
+정시	B-TYPE
+연대	B-UNI
+기출문제	B-KEYWORD
+어디서	O
+해?	O
+
+성균관대	B-UNI
+자기소개서	B-KEYWORD
+응시하고	O
+싶어	O
+
+수능최저	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+경영학과	B-KEYWORD
+건국대	B-UNI
+궁금해	O
+
+없어?	O
+
+궁금해	O
+
+알려줘	O
+
+정리해줘	O
+
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+고대	B-UNI
+모집인원	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+정시	B-TYPE
+언제	O
+시작해?	O
+
+지원자수	B-KEYWORD
+연대	B-UNI
+있어?	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+지원자수	B-KEYWORD
+성균관대	B-UNI
+응시하고	O
+싶어	O
+
+건국대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+정리해줘	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+한양대	B-UNI
+응시하고	O
+싶어	O
+
+성대	B-UNI
+어떻게	O
+돼?	O
+
+고대	B-UNI
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+고려대	B-UNI
+논술전형	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+수능최저	B-KEYWORD
+응시하고	O
+싶어	O
+
+고려대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+확인하고	O
+싶어	O
+
+고려대	B-UNI
+수능최저	B-KEYWORD
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+궁금해	O
+
+응시하고	O
+싶어	O
+
+있어?	O
+
+전형	B-KEYWORD
+수시	B-TYPE
+서강대	B-UNI
+알려줘	O
+
+기출문제	B-KEYWORD
+있어?	O
+
+수능최저	B-KEYWORD
+수시	B-TYPE
+궁금해	O
+
+어디서	O
+해?	O
+
+수시	B-TYPE
+한양대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+없어?	O
+
+지원자수	B-KEYWORD
+정시	B-TYPE
+연세대	B-UNI
+알려줘	O
+
+전형	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+궁금해	O
+
+수시	B-TYPE
+건국대	B-UNI
+없어?	O
+
+성대	B-UNI
+모집인원	B-KEYWORD
+어디서	O
+해?	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+서강대	B-UNI
+정리해줘	O
+
+정시	B-TYPE
+언제	O
+시작해?	O
+
+지원자수	B-KEYWORD
+수시	B-TYPE
+건대	B-UNI
+어디서	O
+해?	O
+
+궁금해	O
+
+면접일정	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+있어?	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+확인하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+없어?	O
+
+전공안내	B-KEYWORD
+어떻게	O
+돼?	O
+
+어디서	O
+해?	O
+
+궁금해	O
+
+연대	B-UNI
+논술전형	B-KEYWORD
+있어?	O
+
+학생부종합	B-KEYWORD
+알려줘	O
+
+일정	B-KEYWORD
+수시	B-TYPE
+성균관대	B-UNI
+있어?	O
+
+연대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+있어?	O
+
+자기소개서	B-KEYWORD
+한양대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+학생부종합	B-KEYWORD
+어디서	O
+해?	O
+
+수능최저	B-KEYWORD
+수시	B-TYPE
+건대	B-UNI
+없어?	O
+
+정시	B-TYPE
+있어?	O
+
+연대	B-UNI
+면접일정	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+없어?	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+있어?	O
+
+자기소개서	B-KEYWORD
+연대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+논술전형	B-KEYWORD
+고려대	B-UNI
+있어?	O
+
+제출서류	B-KEYWORD
+성균관대	B-UNI
+어떻게	O
+돼?	O
+
+성대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+언제	O
+시작해?	O
+
+합격자수	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+연세대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+경영학과	B-KEYWORD
+서강대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+기출문제	B-KEYWORD
+한양대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+없어?	O
+
+궁금해	O
+
+수시	B-TYPE
+성대	B-UNI
+기출문제	B-KEYWORD
+없어?	O
+
+서강대	B-UNI
+궁금해	O
+
+수시	B-TYPE
+궁금해	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+없어?	O
+
+궁금해	O
+
+정시	B-TYPE
+연대	B-UNI
+전공안내	B-KEYWORD
+응시하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+연대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+컴퓨터공학과	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+건국대	B-UNI
+어떻게	O
+돼?	O
+
+전형	B-KEYWORD
+언제	O
+시작해?	O
+
+건대	B-UNI
+수능최저	B-KEYWORD
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+전형방법	B-KEYWORD
+수시	B-TYPE
+한양대	B-UNI
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+서울대	B-UNI
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+언제	O
+시작해?	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+고대	B-UNI
+없어?	O
+
+특기자전형	B-KEYWORD
+정시	B-TYPE
+건대	B-UNI
+언제	O
+시작해?	O
+
+서강대	B-UNI
+컴퓨터공학과	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+면접일정	B-KEYWORD
+정시	B-TYPE
+어디서	O
+해?	O
+
+연대	B-UNI
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+고대	B-UNI
+정리해줘	O
+
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+성균관대	B-UNI
+언제	O
+시작해?	O
+
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+궁금해	O
+
+논술전형	B-KEYWORD
+알려줘	O
+
+궁금해	O
+
+어디서	O
+해?	O
+
+정시	B-TYPE
+성균관대	B-UNI
+전형	B-KEYWORD
+확인하고	O
+싶어	O
+
+궁금해	O
+
+고대	B-UNI
+알려줘	O
+
+어디서	O
+해?	O
+
+한양대	B-UNI
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+합격자수	B-KEYWORD
+있어?	O
+
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+연세대	B-UNI
+기출문제	B-KEYWORD
+정리해줘	O
+
+면접일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+고대	B-UNI
+궁금해	O
+
+없어?	O
+
+정시	B-TYPE
+언제	O
+시작해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+서강대	B-UNI
+언제	O
+시작해?	O
+
+한양대	B-UNI
+컴퓨터공학과	B-KEYWORD
+정시	B-TYPE
+없어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+성균관대	B-UNI
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+궁금해	O
+
+어디서	O
+해?	O
+
+정시	B-TYPE
+연대	B-UNI
+궁금해	O
+
+성균관대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+알려줘	O
+
+합격자수	B-KEYWORD
+언제	O
+시작해?	O
+
+어디서	O
+해?	O
+
+건국대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+일정	B-KEYWORD
+알려줘	O
+
+없어?	O
+
+한양대	B-UNI
+확인하고	O
+싶어	O
+
+서강대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+없어?	O
+
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+어디서	O
+해?	O
+
+알려줘	O
+
+없어?	O
+
+어디서	O
+해?	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+알려줘	O
+
+컴퓨터공학과	B-KEYWORD
+수시	B-TYPE
+건대	B-UNI
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+학생부종합	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+전형	B-KEYWORD
+수시	B-TYPE
+궁금해	O
+
+정리해줘	O
+
+없어?	O
+
+어떻게	O
+돼?	O
+
+연대	B-UNI
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+건대	B-UNI
+일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+알려줘	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+없어?	O
+
+알려줘	O
+
+합격자수	B-KEYWORD
+고려대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+합격자수	B-KEYWORD
+고대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+고대	B-UNI
+수능최저	B-KEYWORD
+언제	O
+시작해?	O
+
+어떻게	O
+돼?	O
+
+고대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+없어?	O
+
+확인하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+연대	B-UNI
+전형	B-KEYWORD
+어디서	O
+해?	O
+
+모집인원	B-KEYWORD
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+제출서류	B-KEYWORD
+알려줘	O
+
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+어디서	O
+해?	O
+
+서강대	B-UNI
+기출문제	B-KEYWORD
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+특기자전형	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+한양대	B-UNI
+전형방법	B-KEYWORD
+정리해줘	O
+
+경영학과	B-KEYWORD
+확인하고	O
+싶어	O
+
+궁금해	O
+
+수시	B-TYPE
+정리해줘	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+알려줘	O
+
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+건대	B-UNI
+언제	O
+시작해?	O
+
+건국대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+언제	O
+시작해?	O
+
+어떻게	O
+돼?	O
+
+확인하고	O
+싶어	O
+
+성대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+응시하고	O
+싶어	O
+
+한양대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+건대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+어디서	O
+해?	O
+
+어떻게	O
+돼?	O
+
+면접일정	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+서강대	B-UNI
+자기소개서	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+한양대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+정시	B-TYPE
+성균관대	B-UNI
+수능최저	B-KEYWORD
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+없어?	O
+
+성균관대	B-UNI
+일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+서강대	B-UNI
+수시	B-TYPE
+어디서	O
+해?	O
+
+정시	B-TYPE
+건국대	B-UNI
+알려줘	O
+
+수시	B-TYPE
+없어?	O
+
+제출서류	B-KEYWORD
+한양대	B-UNI
+수시	B-TYPE
+있어?	O
+
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+궁금해	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+없어?	O
+
+일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+수능최저	B-KEYWORD
+한양대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+어디서	O
+해?	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+정리해줘	O
+
+건대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+알려줘	O
+
+건대	B-UNI
+수시	B-TYPE
+있어?	O
+
+전공안내	B-KEYWORD
+정시	B-TYPE
+연대	B-UNI
+확인하고	O
+싶어	O
+
+한양대	B-UNI
+제출서류	B-KEYWORD
+정시	B-TYPE
+없어?	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+정시	B-TYPE
+궁금해	O
+
+언제	O
+시작해?	O
+
+정시	B-TYPE
+연대	B-UNI
+합격자수	B-KEYWORD
+알려줘	O
+
+컴퓨터공학과	B-KEYWORD
+연세대	B-UNI
+정리해줘	O
+
+연대	B-UNI
+전형	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+고려대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+건대	B-UNI
+있어?	O
+
+연대	B-UNI
+정시	B-TYPE
+없어?	O
+
+성균관대	B-UNI
+언제	O
+시작해?	O
+
+서울대	B-UNI
+어떻게	O
+돼?	O
+
+있어?	O
+
+전공안내	B-KEYWORD
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+수능최저	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+성대	B-UNI
+어디서	O
+해?	O
+
+지원자수	B-KEYWORD
+수시	B-TYPE
+한양대	B-UNI
+없어?	O
+
+서강대	B-UNI
+면접일정	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+알려줘	O
+
+전형방법	B-KEYWORD
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+고대	B-UNI
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+궁금해	O
+
+연세대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+궁금해	O
+
+한양대	B-UNI
+알려줘	O
+
+기출문제	B-KEYWORD
+한양대	B-UNI
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+어디서	O
+해?	O
+
+연세대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+성대	B-UNI
+전공안내	B-KEYWORD
+확인하고	O
+싶어	O
+
+컴퓨터공학과	B-KEYWORD
+한양대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+건대	B-UNI
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+연대	B-UNI
+정시	B-TYPE
+어디서	O
+해?	O
+
+고대	B-UNI
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+경영학과	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+한양대	B-UNI
+지원자수	B-KEYWORD
+없어?	O
+
+논술전형	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+없어?	O
+
+논술전형	B-KEYWORD
+정시	B-TYPE
+성대	B-UNI
+확인하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+응시하고	O
+싶어	O
+
+알려줘	O
+
+모집인원	B-KEYWORD
+있어?	O
+
+면접일정	B-KEYWORD
+연세대	B-UNI
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+학생부종합	B-KEYWORD
+연대	B-UNI
+궁금해	O
+
+궁금해	O
+
+알려줘	O
+
+정리해줘	O
+
+고려대	B-UNI
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+있어?	O
+
+지원자수	B-KEYWORD
+알려줘	O
+
+제출서류	B-KEYWORD
+연세대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+연세대	B-UNI
+있어?	O
+
+컴퓨터공학과	B-KEYWORD
+수시	B-TYPE
+언제	O
+시작해?	O
+
+건대	B-UNI
+합격자수	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+서강대	B-UNI
+없어?	O
+
+성균관대	B-UNI
+알려줘	O
+
+없어?	O
+
+기출문제	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+어디서	O
+해?	O
+
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+컴퓨터공학과	B-KEYWORD
+건대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+서강대	B-UNI
+전공안내	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+기출문제	B-KEYWORD
+어디서	O
+해?	O
+
+고대	B-UNI
+있어?	O
+
+정리해줘	O
+
+합격자수	B-KEYWORD
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+언제	O
+시작해?	O
+
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+연대	B-UNI
+논술전형	B-KEYWORD
+궁금해	O
+
+어떻게	O
+돼?	O
+
+지원자수	B-KEYWORD
+서강대	B-UNI
+어디서	O
+해?	O
+
+서강대	B-UNI
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+어디서	O
+해?	O
+
+전공안내	B-KEYWORD
+응시하고	O
+싶어	O
+
+일정	B-KEYWORD
+정시	B-TYPE
+없어?	O
+
+수시	B-TYPE
+건대	B-UNI
+확인하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+있어?	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+알려줘	O
+
+어떻게	O
+돼?	O
+
+없어?	O
+
+한양대	B-UNI
+지원자수	B-KEYWORD
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+궁금해	O
+
+알려줘	O
+
+언제	O
+시작해?	O
+
+정시	B-TYPE
+고대	B-UNI
+면접일정	B-KEYWORD
+어디서	O
+해?	O
+
+수능최저	B-KEYWORD
+한양대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+서강대	B-UNI
+없어?	O
+
+서울대	B-UNI
+지원자수	B-KEYWORD
+확인하고	O
+싶어	O
+
+궁금해	O
+
+언제	O
+시작해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+있어?	O
+
+서강대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+있어?	O
+
+정리해줘	O
+
+자기소개서	B-KEYWORD
+있어?	O
+
+어디서	O
+해?	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+제출서류	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+연세대	B-UNI
+알려줘	O
+
+궁금해	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+고대	B-UNI
+있어?	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+고려대	B-UNI
+정리해줘	O
+
+제출서류	B-KEYWORD
+수시	B-TYPE
+언제	O
+시작해?	O
+
+궁금해	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+건대	B-UNI
+어떻게	O
+돼?	O
+
+언제	O
+시작해?	O
+
+수능최저	B-KEYWORD
+정리해줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+연대	B-UNI
+어떻게	O
+돼?	O
+
+응시하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+고대	B-UNI
+지원자수	B-KEYWORD
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+성균관대	B-UNI
+전형	B-KEYWORD
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+한양대	B-UNI
+없어?	O
+
+합격자수	B-KEYWORD
+응시하고	O
+싶어	O
+
+지원자수	B-KEYWORD
+언제	O
+시작해?	O
+
+지원자수	B-KEYWORD
+알려줘	O
+
+궁금해	O
+
+성대	B-UNI
+알려줘	O
+
+특기자전형	B-KEYWORD
+수시	B-TYPE
+언제	O
+시작해?	O
+
+고려대	B-UNI
+면접일정	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+수시	B-TYPE
+서강대	B-UNI
+궁금해	O
+
+정시	B-TYPE
+합격자수	B-KEYWORD
+건대	B-UNI
+알려줘	O
+
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+고려대	B-UNI
+궁금해	O
+
+알려줘	O
+
+건국대	B-UNI
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+건대	B-UNI
+수능최저	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+언제	O
+시작해?	O
+
+정시	B-TYPE
+한양대	B-UNI
+있어?	O
+
+모집인원	B-KEYWORD
+수시	B-TYPE
+건국대	B-UNI
+없어?	O
+
+알려줘	O
+
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+연대	B-UNI
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+궁금해	O
+
+확인하고	O
+싶어	O
+
+궁금해	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+성대	B-UNI
+있어?	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+성대	B-UNI
+궁금해	O
+
+서강대	B-UNI
+없어?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+궁금해	O
+
+정시	B-TYPE
+없어?	O
+
+연대	B-UNI
+궁금해	O
+
+건대	B-UNI
+어디서	O
+해?	O
+
+일정	B-KEYWORD
+수시	B-TYPE
+고대	B-UNI
+응시하고	O
+싶어	O
+
+성대	B-UNI
+전공안내	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+언제	O
+시작해?	O
+
+학생부종합	B-KEYWORD
+연세대	B-UNI
+어떻게	O
+돼?	O
+
+지원자수	B-KEYWORD
+응시하고	O
+싶어	O
+
+정리해줘	O
+
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+면접일정	B-KEYWORD
+정리해줘	O
+
+건대	B-UNI
+지원자수	B-KEYWORD
+정시	B-TYPE
+정리해줘	O
+
+응시하고	O
+싶어	O
+
+성대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+특기자전형	B-KEYWORD
+궁금해	O
+
+특기자전형	B-KEYWORD
+정시	B-TYPE
+없어?	O
+
+면접일정	B-KEYWORD
+건국대	B-UNI
+정시	B-TYPE
+있어?	O
+
+언제	O
+시작해?	O
+
+전공안내	B-KEYWORD
+확인하고	O
+싶어	O
+
+고대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+어디서	O
+해?	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+없어?	O
+
+고려대	B-UNI
+수능최저	B-KEYWORD
+없어?	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+고대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+언제	O
+시작해?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+언제	O
+시작해?	O
+
+건국대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+알려줘	O
+
+있어?	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+서강대	B-UNI
+없어?	O
+
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+건대	B-UNI
+지원자수	B-KEYWORD
+없어?	O
+
+정시	B-TYPE
+연세대	B-UNI
+전공안내	B-KEYWORD
+없어?	O
+
+전공안내	B-KEYWORD
+연세대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+기출문제	B-KEYWORD
+확인하고	O
+싶어	O
+
+고려대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+확인하고	O
+싶어	O
+
+연세대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어	O
+
+지원자수	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+궁금해	O
+
+연세대	B-UNI
+정리해줘	O
+
+학생부종합	B-KEYWORD
+알려줘	O
+
+없어?	O
+
+수시	B-TYPE
+알려줘	O
+
+건대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+어디서	O
+해?	O
+
+모집인원	B-KEYWORD
+고려대	B-UNI
+어디서	O
+해?	O
+
+면접일정	B-KEYWORD
+수시	B-TYPE
+언제	O
+시작해?	O
+
+논술전형	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+기출문제	B-KEYWORD
+궁금해	O
+
+알려줘	O
+
+어디서	O
+해?	O
+
+기출문제	B-KEYWORD
+정시	B-TYPE
+서울대	B-UNI
+없어?	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+없어?	O
+
+성대	B-UNI
+논술전형	B-KEYWORD
+정시	B-TYPE
+궁금해	O
+
+전공안내	B-KEYWORD
+언제	O
+시작해?	O
+
+고대	B-UNI
+합격자수	B-KEYWORD
+정시	B-TYPE
+궁금해	O
+
+확인하고	O
+싶어	O
+
+합격자수	B-KEYWORD
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+면접일정	B-KEYWORD
+서울대	B-UNI
+정시	B-TYPE
+있어?	O
+
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+궁금해	O
+
+기출문제	B-KEYWORD
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+전공안내	B-KEYWORD
+어떻게	O
+돼?	O
+
+전형방법	B-KEYWORD
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+특기자전형	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+연세대	B-UNI
+어디서	O
+해?	O
+
+있어?	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+고려대	B-UNI
+알려줘	O
+
+자기소개서	B-KEYWORD
+정시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+기출문제	B-KEYWORD
+언제	O
+시작해?	O
+
+건국대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+서울대	B-UNI
+컴퓨터공학과	B-KEYWORD
+정시	B-TYPE
+있어?	O
+
+성대	B-UNI
+없어?	O
+
+없어?	O
+
+모집인원	B-KEYWORD
+성대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+성균관대	B-UNI
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+성대	B-UNI
+모집인원	B-KEYWORD
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+경영학과	B-KEYWORD
+없어?	O
+
+경영학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+자기소개서	B-KEYWORD
+정시	B-TYPE
+성대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+서울대	B-UNI
+학생부종합	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+정리해줘	O
+
+정시	B-TYPE
+없어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+알려줘	O
+
+기출문제	B-KEYWORD
+있어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+궁금해	O
+
+어디서	O
+해?	O
+
+자기소개서	B-KEYWORD
+성균관대	B-UNI
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+있어?	O
+
+연세대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+경영학과	B-KEYWORD
+연세대	B-UNI
+있어?	O
+
+없어?	O
+
+언제	O
+시작해?	O
+
+합격자수	B-KEYWORD
+성대	B-UNI
+정리해줘	O
+
+없어?	O
+
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+면접일정	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+전형방법	B-KEYWORD
+정시	B-TYPE
+있어?	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+연세대	B-UNI
+알려줘	O
+
+제출서류	B-KEYWORD
+정시	B-TYPE
+언제	O
+시작해?	O
+
+건국대	B-UNI
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+수능최저	B-KEYWORD
+확인하고	O
+싶어	O
+
+연세대	B-UNI
+정시	B-TYPE
+있어?	O
+
+서울대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+정리해줘	O
+
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+있어?	O
+
+한양대	B-UNI
+일정	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+정리해줘	O
+
+학생부종합	B-KEYWORD
+정시	B-TYPE
+궁금해	O
+
+궁금해	O
+
+일정	B-KEYWORD
+연대	B-UNI
+수시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+정리해줘	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+정리해줘	O
+
+제출서류	B-KEYWORD
+서울대	B-UNI
+알려줘	O
+
+궁금해	O
+
+수시	B-TYPE
+정리해줘	O
+
+수능최저	B-KEYWORD
+수시	B-TYPE
+건대	B-UNI
+응시하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+언제	O
+시작해?	O
+
+일정	B-KEYWORD
+어디서	O
+해?	O
+
+어디서	O
+해?	O
+
+연대	B-UNI
+경영학과	B-KEYWORD
+수시	B-TYPE
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+궁금해	O
+
+정리해줘	O
+
+건국대	B-UNI
+언제	O
+시작해?	O
+
+확인하고	O
+싶어	O
+
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+기출문제	B-KEYWORD
+정리해줘	O
+
+어디서	O
+해?	O
+
+전형방법	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+건대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+서울대	B-UNI
+일정	B-KEYWORD
+응시하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+건대	B-UNI
+알려줘	O
+
+합격자수	B-KEYWORD
+고려대	B-UNI
+언제	O
+시작해?	O
+
+고려대	B-UNI
+기출문제	B-KEYWORD
+알려줘	O
+
+일정	B-KEYWORD
+정시	B-TYPE
+어디서	O
+해?	O
+
+궁금해	O
+
+모집인원	B-KEYWORD
+있어?	O
+
+언제	O
+시작해?	O
+
+논술전형	B-KEYWORD
+성대	B-UNI
+있어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+궁금해	O
+
+정리해줘	O
+
+수시	B-TYPE
+성대	B-UNI
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+일정	B-KEYWORD
+서울대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+수시	B-TYPE
+어디서	O
+해?	O
+
+모집인원	B-KEYWORD
+정시	B-TYPE
+서울대	B-UNI
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+경영학과	B-KEYWORD
+연세대	B-UNI
+있어?	O
+
+정시	B-TYPE
+정리해줘	O
+
+서울대	B-UNI
+전공안내	B-KEYWORD
+정시	B-TYPE
+언제	O
+시작해?	O
+
+컴퓨터공학과	B-KEYWORD
+서울대	B-UNI
+알려줘	O
+
+한양대	B-UNI
+알려줘	O
+
+정시	B-TYPE
+없어?	O
+
+전공안내	B-KEYWORD
+언제	O
+시작해?	O
+
+궁금해	O
+
+특기자전형	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+알려줘	O
+
+수시	B-TYPE
+서울대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+정리해줘	O
+
+지원자수	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+정리해줘	O
+
+정리해줘	O
+
+언제	O
+시작해?	O
+
+성대	B-UNI
+경영학과	B-KEYWORD
+궁금해	O
+
+고려대	B-UNI
+어디서	O
+해?	O
+
+성대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+어디서	O
+해?	O
+
+전형방법	B-KEYWORD
+고려대	B-UNI
+정시	B-TYPE
+없어?	O
+
+논술전형	B-KEYWORD
+수시	B-TYPE
+궁금해	O
+
+연세대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+알려줘	O
+
+전형	B-KEYWORD
+정시	B-TYPE
+성대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+고려대	B-UNI
+언제	O
+시작해?	O
+
+응시하고	O
+싶어	O
+
+있어?	O
+
+있어?	O
+
+연세대	B-UNI
+수능최저	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+정리해줘	O
+
+궁금해	O
+
+수능최저	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+궁금해	O
+
+응시하고	O
+싶어	O
+
+학생부종합	B-KEYWORD
+정시	B-TYPE
+연대	B-UNI
+어떻게	O
+돼?	O
+
+학생부종합	B-KEYWORD
+언제	O
+시작해?	O
+
+합격자수	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+정시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+언제	O
+시작해?	O
+
+알려줘	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+연세대	B-UNI
+언제	O
+시작해?	O
+
+확인하고	O
+싶어	O
+
+고대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+궁금해	O
+
+정시	B-TYPE
+한양대	B-UNI
+어디서	O
+해?	O
+
+일정	B-KEYWORD
+없어?	O
+
+자기소개서	B-KEYWORD
+성대	B-UNI
+응시하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+궁금해	O
+
+정시	B-TYPE
+연대	B-UNI
+어디서	O
+해?	O
+
+한양대	B-UNI
+학생부종합	B-KEYWORD
+정리해줘	O
+
+면접일정	B-KEYWORD
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+고대	B-UNI
+확인하고	O
+싶어	O
+
+고대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+어디서	O
+해?	O
+
+한양대	B-UNI
+없어?	O
+
+서강대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+고려대	B-UNI
+면접일정	B-KEYWORD
+정시	B-TYPE
+언제	O
+시작해?	O
+
+수시	B-TYPE
+고려대	B-UNI
+있어?	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+고려대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+연세대	B-UNI
+자기소개서	B-KEYWORD
+있어?	O
+
+전공안내	B-KEYWORD
+어떻게	O
+돼?	O
+
+전형	B-KEYWORD
+한양대	B-UNI
+정시	B-TYPE
+있어?	O
+
+어떻게	O
+돼?	O
+
+기출문제	B-KEYWORD
+건국대	B-UNI
+있어?	O
+
+컴퓨터공학과	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+어디서	O
+해?	O
+
+정시	B-TYPE
+연세대	B-UNI
+궁금해	O
+
+건국대	B-UNI
+알려줘	O
+
+알려줘	O
+
+어떻게	O
+돼?	O
+
+궁금해	O
+
+정리해줘	O
+
+정시	B-TYPE
+언제	O
+시작해?	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+어디서	O
+해?	O
+
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+컴퓨터공학과	B-KEYWORD
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+정리해줘	O
+
+정시	B-TYPE
+한양대	B-UNI
+논술전형	B-KEYWORD
+궁금해	O
+
+지원자수	B-KEYWORD
+연세대	B-UNI
+수시	B-TYPE
+있어?	O
+
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+정리해줘	O
+
+있어?	O
+
+확인하고	O
+싶어	O
+
+언제	O
+시작해?	O
+
+정시	B-TYPE
+알려줘	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+면접일정	B-KEYWORD
+건대	B-UNI
+확인하고	O
+싶어	O
+
+연세대	B-UNI
+일정	B-KEYWORD
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+궁금해	O
+
+성대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+궁금해	O
+
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+컴퓨터공학과	B-KEYWORD
+정리해줘	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+있어?	O
+
+서울대	B-UNI
+응시하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+성균관대	B-UNI
+경영학과	B-KEYWORD
+정시	B-TYPE
+있어?	O
+
+있어?	O
+
+있어?	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+서울대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+고대	B-UNI
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+궁금해	O
+
+성대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+서강대	B-UNI
+전공안내	B-KEYWORD
+정리해줘	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+언제	O
+시작해?	O
+
+알려줘	O
+
+전형	B-KEYWORD
+연세대	B-UNI
+없어?	O
+
+고려대	B-UNI
+일정	B-KEYWORD
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+특기자전형	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+서강대	B-UNI
+언제	O
+시작해?	O
+
+논술전형	B-KEYWORD
+알려줘	O
+
+면접일정	B-KEYWORD
+고려대	B-UNI
+있어?	O
+
+정시	B-TYPE
+연대	B-UNI
+언제	O
+시작해?	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+정리해줘	O
+
+궁금해	O
+
+고려대	B-UNI
+일정	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+지원자수	B-KEYWORD
+정시	B-TYPE
+고대	B-UNI
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+제출서류	B-KEYWORD
+없어?	O
+
+정리해줘	O
+
+서강대	B-UNI
+합격자수	B-KEYWORD
+언제	O
+시작해?	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+한양대	B-UNI
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+없어?	O
+
+있어?	O
+
+성대	B-UNI
+어디서	O
+해?	O
+
+모집인원	B-KEYWORD
+언제	O
+시작해?	O
+
+정시	B-TYPE
+궁금해	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+알려줘	O
+
+알려줘	O
+
+연대	B-UNI
+합격자수	B-KEYWORD
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+논술전형	B-KEYWORD
+연대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+제출서류	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+응시하고	O
+싶어	O
+
+연세대	B-UNI
+경영학과	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+건국대	B-UNI
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+궁금해	O
+
+전공안내	B-KEYWORD
+수시	B-TYPE
+어디서	O
+해?	O
+
+고대	B-UNI
+기출문제	B-KEYWORD
+확인하고	O
+싶어	O
+
+성대	B-UNI
+수시	B-TYPE
+궁금해	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+고려대	B-UNI
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+궁금해	O
+
+기출문제	B-KEYWORD
+건대	B-UNI
+응시하고	O
+싶어	O
+
+고려대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+연대	B-UNI
+궁금해	O
+
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+정시	B-TYPE
+없어?	O
+
+건대	B-UNI
+어떻게	O
+돼?	O
+
+알려줘	O
+
+학생부종합	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+연대	B-UNI
+어디서	O
+해?	O
+
+알려줘	O
+
+궁금해	O
+
+일정	B-KEYWORD
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+고대	B-UNI
+정시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+성균관대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+있어?	O
+
+지원자수	B-KEYWORD
+고대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+연세대	B-UNI
+수능최저	B-KEYWORD
+알려줘	O
+
+학생부종합	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+있어?	O
+
+건대	B-UNI
+수시	B-TYPE
+어디서	O
+해?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+건대	B-UNI
+언제	O
+시작해?	O
+
+정리해줘	O
+
+면접일정	B-KEYWORD
+수시	B-TYPE
+한양대	B-UNI
+확인하고	O
+싶어	O
+
+건대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+서강대	B-UNI
+없어?	O
+
+서강대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+정리해줘	O
+
+건대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+궁금해	O
+
+확인하고	O
+싶어	O
+
+기출문제	B-KEYWORD
+건대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+전형방법	B-KEYWORD
+서울대	B-UNI
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+면접일정	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+서강대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+어디서	O
+해?	O
+
+정시	B-TYPE
+고려대	B-UNI
+제출서류	B-KEYWORD
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+건대	B-UNI
+없어?	O
+
+수시	B-TYPE
+건국대	B-UNI
+합격자수	B-KEYWORD
+있어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+모집인원	B-KEYWORD
+수시	B-TYPE
+성대	B-UNI
+응시하고	O
+싶어	O
+
+전형방법	B-KEYWORD
+정리해줘	O
+
+면접일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+건대	B-UNI
+없어?	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+알려줘	O
+
+알려줘	O
+
+알려줘	O
+
+합격자수	B-KEYWORD
+한양대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+언제	O
+시작해?	O
+
+확인하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+응시하고	O
+싶어	O
+
+궁금해	O
+
+고대	B-UNI
+수능최저	B-KEYWORD
+알려줘	O
+
+있어?	O
+
+궁금해	O
+
+한양대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+확인하고	O
+싶어	O
+
+고대	B-UNI
+수시	B-TYPE
+궁금해	O
+
+알려줘	O
+
+궁금해	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+일정	B-KEYWORD
+언제	O
+시작해?	O
+
+연세대	B-UNI
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+건국대	B-UNI
+없어?	O
+
+수시	B-TYPE
+건대	B-UNI
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+확인하고	O
+싶어	O
+
+고대	B-UNI
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+연세대	B-UNI
+경영학과	B-KEYWORD
+정리해줘	O
+
+고대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+확인하고	O
+싶어	O
+
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+서울대	B-UNI
+수시	B-TYPE
+없어?	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+알려줘	O
+
+어떻게	O
+돼?	O
+
+정리해줘	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+건대	B-UNI
+응시하고	O
+싶어	O
+
+기출문제	B-KEYWORD
+수시	B-TYPE
+서강대	B-UNI
+정리해줘	O
+
+고대	B-UNI
+수능최저	B-KEYWORD
+수시	B-TYPE
+궁금해	O
+
+서강대	B-UNI
+합격자수	B-KEYWORD
+정시	B-TYPE
+있어?	O
+
+면접일정	B-KEYWORD
+건국대	B-UNI
+정시	B-TYPE
+어디서	O
+해?	O
+
+전형	B-KEYWORD
+고려대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+고려대	B-UNI
+어디서	O
+해?	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+한양대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+기출문제	B-KEYWORD
+서강대	B-UNI
+정시	B-TYPE
+알려줘	O
+
+알려줘	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+없어?	O
+
+일정	B-KEYWORD
+정시	B-TYPE
+연대	B-UNI
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+연대	B-UNI
+전형	B-KEYWORD
+있어?	O
+
+건국대	B-UNI
+전공안내	B-KEYWORD
+정시	B-TYPE
+정리해줘	O
+
+고려대	B-UNI
+있어?	O
+
+어떻게	O
+돼?	O
+
+알려줘	O
+
+기출문제	B-KEYWORD
+연대	B-UNI
+정시	B-TYPE
+언제	O
+시작해?	O
+
+정시	B-TYPE
+정리해줘	O
+
+합격자수	B-KEYWORD
+없어?	O
+
+궁금해	O
+
+확인하고	O
+싶어	O
+
+건대	B-UNI
+궁금해	O
+
+확인하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+경영학과	B-KEYWORD
+정시	B-TYPE
+건대	B-UNI
+응시하고	O
+싶어	O
+
+연대	B-UNI
+정시	B-TYPE
+궁금해	O
+
+수시	B-TYPE
+서강대	B-UNI
+전공안내	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+고려대	B-UNI
+없어?	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+건대	B-UNI
+언제	O
+시작해?	O
+
+응시하고	O
+싶어	O
+
+없어?	O
+
+전형방법	B-KEYWORD
+알려줘	O
+
+정리해줘	O
+
+정시	B-TYPE
+성균관대	B-UNI
+어디서	O
+해?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+정리해줘	O
+
+언제	O
+시작해?	O
+
+없어?	O
+
+연대	B-UNI
+궁금해	O
+
+한양대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+확인하고	O
+싶어	O
+
+서울대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+응시하고	O
+싶어	O
+
+서강대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+어디서	O
+해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+고대	B-UNI
+없어?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+정리해줘	O
+
+경영학과	B-KEYWORD
+수시	B-TYPE
+연세대	B-UNI
+확인하고	O
+싶어	O
+
+정리해줘	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+있어?	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+어디서	O
+해?	O
+
+정시	B-TYPE
+건대	B-UNI
+궁금해	O
+
+수시	B-TYPE
+없어?	O
+
+성균관대	B-UNI
+없어?	O
+
+어떻게	O
+돼?	O
+
+있어?	O
+
+성대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+서강대	B-UNI
+학생부종합	B-KEYWORD
+정리해줘	O
+
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+어디서	O
+해?	O
+
+수시	B-TYPE
+어디서	O
+해?	O
+
+일정	B-KEYWORD
+연대	B-UNI
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+건국대	B-UNI
+학생부종합	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+성균관대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+고려대	B-UNI
+어떻게	O
+돼?	O
+
+없어?	O
+
+서울대	B-UNI
+어디서	O
+해?	O
+
+서강대	B-UNI
+알려줘	O
+
+궁금해	O
+
+일정	B-KEYWORD
+정시	B-TYPE
+서울대	B-UNI
+없어?	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+고대	B-UNI
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+고대	B-UNI
+응시하고	O
+싶어	O
+
+합격자수	B-KEYWORD
+서울대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+연대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+정리해줘	O
+
+어떻게	O
+돼?	O
+
+궁금해	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+고대	B-UNI
+궁금해	O
+
+전형방법	B-KEYWORD
+정시	B-TYPE
+어디서	O
+해?	O
+
+궁금해	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+성대	B-UNI
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+응시하고	O
+싶어	O
+
+컴퓨터공학과	B-KEYWORD
+수시	B-TYPE
+연세대	B-UNI
+어디서	O
+해?	O
+
+고대	B-UNI
+합격자수	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+건대	B-UNI
+경영학과	B-KEYWORD
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+궁금해	O
+
+기출문제	B-KEYWORD
+응시하고	O
+싶어	O
+
+궁금해	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+알려줘	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+고대	B-UNI
+어떻게	O
+돼?	O
+
+어디서	O
+해?	O
+
+응시하고	O
+싶어	O
+
+정리해줘	O
+
+성대	B-UNI
+전형방법	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+서울대	B-UNI
+있어?	O
+
+기출문제	B-KEYWORD
+있어?	O
+
+정리해줘	O
+
+제출서류	B-KEYWORD
+건국대	B-UNI
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+경영학과	B-KEYWORD
+한양대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+응시하고	O
+싶어	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+어디서	O
+해?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+언제	O
+시작해?	O
+
+성대	B-UNI
+자기소개서	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+연대	B-UNI
+응시하고	O
+싶어	O
+
+경영학과	B-KEYWORD
+한양대	B-UNI
+정시	B-TYPE
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+없어?	O
+
+건대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+있어?	O
+
+지원자수	B-KEYWORD
+없어?	O
+
+확인하고	O
+싶어	O
+
+건국대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+어디서	O
+해?	O
+
+서울대	B-UNI
+제출서류	B-KEYWORD
+없어?	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+고대	B-UNI
+알려줘	O
+
+지원자수	B-KEYWORD
+언제	O
+시작해?	O
+
+응시하고	O
+싶어	O
+
+서울대	B-UNI
+어디서	O
+해?	O
+
+수시	B-TYPE
+기출문제	B-KEYWORD
+성대	B-UNI
+언제	O
+시작해?	O
+
+정시	B-TYPE
+서울대	B-UNI
+있어?	O
+
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+건국대	B-UNI
+전공안내	B-KEYWORD
+확인하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+확인하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+건국대	B-UNI
+면접일정	B-KEYWORD
+어디서	O
+해?	O
+
+궁금해	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+없어?	O
+
+모집인원	B-KEYWORD
+정시	B-TYPE
+건국대	B-UNI
+어떻게	O
+돼?	O
+
+정리해줘	O
+
+정리해줘	O
+
+있어?	O
+
+전형	B-KEYWORD
+건국대	B-UNI
+알려줘	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+제출서류	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+언제	O
+시작해?	O
+
+수시	B-TYPE
+한양대	B-UNI
+수능최저	B-KEYWORD
+응시하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+있어?	O
+
+수시	B-TYPE
+언제	O
+시작해?	O
+
+컴퓨터공학과	B-KEYWORD
+성균관대	B-UNI
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+정리해줘	O
+
+한양대	B-UNI
+있어?	O
+
+정리해줘	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+성대	B-UNI
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+궁금해	O
+
+서울대	B-UNI
+응시하고	O
+싶어	O
+
+있어?	O
+
+정시	B-TYPE
+한양대	B-UNI
+전공안내	B-KEYWORD
+궁금해	O
+
+정리해줘	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+건대	B-UNI
+어디서	O
+해?	O
+
+언제	O
+시작해?	O
+
+언제	O
+시작해?	O
+
+정시	B-TYPE
+연세대	B-UNI
+응시하고	O
+싶어	O
+
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+성균관대	B-UNI
+제출서류	B-KEYWORD
+없어?	O
+
+알려줘	O
+
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+궁금해	O
+
+컴퓨터공학과	B-KEYWORD
+수시	B-TYPE
+정리해줘	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+한양대	B-UNI
+정리해줘	O
+
+정시	B-TYPE
+연대	B-UNI
+없어?	O
+
+연대	B-UNI
+정리해줘	O
+
+정리해줘	O
+
+수시	B-TYPE
+연대	B-UNI
+모집인원	B-KEYWORD
+응시하고	O
+싶어	O
+
+수시	B-TYPE
+연세대	B-UNI
+없어?	O
+
+서강대	B-UNI
+어디서	O
+해?	O
+
+건국대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+언제	O
+시작해?	O
+
+건국대	B-UNI
+언제	O
+시작해?	O
+
+서울대	B-UNI
+응시하고	O
+싶어	O
+
+알려줘	O
+
+정시	B-TYPE
+한양대	B-UNI
+있어?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+서울대	B-UNI
+어디서	O
+해?	O
+
+확인하고	O
+싶어	O
+
+서울대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+있어?	O
+
+확인하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+있어?	O
+
+수시	B-TYPE
+고대	B-UNI
+전형방법	B-KEYWORD
+응시하고	O
+싶어	O
+
+궁금해	O
+
+경영학과	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+합격자수	B-KEYWORD
+궁금해	O
+
+궁금해	O
+
+논술전형	B-KEYWORD
+수시	B-TYPE
+알려줘	O
+
+전공안내	B-KEYWORD
+연세대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+건대	B-UNI
+경영학과	B-KEYWORD
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+알려줘	O
+
+수시	B-TYPE
+어디서	O
+해?	O
+
+없어?	O
+
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+알려줘	O
+
+응시하고	O
+싶어	O
+
+서강대	B-UNI
+궁금해	O
+
+건대	B-UNI
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+있어?	O
+
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+있어?	O
+
+수시	B-TYPE
+고려대	B-UNI
+궁금해	O
+
+정리해줘	O
+
+건대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+정시	B-TYPE
+없어?	O
+
+정리해줘	O
+
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+어디서	O
+해?	O
+
+지원자수	B-KEYWORD
+성균관대	B-UNI
+수시	B-TYPE
+알려줘	O
+
+모집인원	B-KEYWORD
+성균관대	B-UNI
+궁금해	O
+
+성대	B-UNI
+논술전형	B-KEYWORD
+어디서	O
+해?	O
+
+지원자수	B-KEYWORD
+없어?	O
+
+궁금해	O
+
+건대	B-UNI
+정시	B-TYPE
+알려줘	O
+
+특기자전형	B-KEYWORD
+궁금해	O
+
+합격자수	B-KEYWORD
+어디서	O
+해?	O
+
+알려줘	O
+
+건대	B-UNI
+확인하고	O
+싶어	O
+
+궁금해	O
+
+응시하고	O
+싶어	O
+
+특기자전형	B-KEYWORD
+수시	B-TYPE
+연세대	B-UNI
+언제	O
+시작해?	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+서울대	B-UNI
+있어?	O
+
+연대	B-UNI
+컴퓨터공학과	B-KEYWORD
+없어?	O
+
+서강대	B-UNI
+기출문제	B-KEYWORD
+정시	B-TYPE
+궁금해	O
+
+일정	B-KEYWORD
+정시	B-TYPE
+한양대	B-UNI
+없어?	O
+
+고려대	B-UNI
+응시하고	O
+싶어	O
+
+면접일정	B-KEYWORD
+수시	B-TYPE
+고려대	B-UNI
+궁금해	O
+
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+자기소개서	B-KEYWORD
+고대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+정리해줘	O
+
+건대	B-UNI
+없어?	O
+
+정리해줘	O
+
+연대	B-UNI
+수시	B-TYPE
+정리해줘	O
+
+서울대	B-UNI
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+연세대	B-UNI
+어디서	O
+해?	O
+
+전형	B-KEYWORD
+정시	B-TYPE
+연세대	B-UNI
+없어?	O
+
+자기소개서	B-KEYWORD
+서울대	B-UNI
+정시	B-TYPE
+어디서	O
+해?	O
+
+정시	B-TYPE
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+고대	B-UNI
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+없어?	O
+
+수시	B-TYPE
+정리해줘	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+기출문제	B-KEYWORD
+서울대	B-UNI
+정시	B-TYPE
+응시하고	O
+싶어	O
+
+건대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+없어?	O
+
+언제	O
+시작해?	O
+
+고대	B-UNI
+경영학과	B-KEYWORD
+정시	B-TYPE
+정리해줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+확인하고	O
+싶어	O
+
+전공안내	B-KEYWORD
+건대	B-UNI
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+연대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+응시하고	O
+싶어	O
+
+기출문제	B-KEYWORD
+수시	B-TYPE
+어떻게	O
+돼?	O
+
+궁금해	O
+
+수시	B-TYPE
+있어?	O
+
+전형방법	B-KEYWORD
+건국대	B-UNI
+궁금해	O
+
+정시	B-TYPE
+합격자수	B-KEYWORD
+성균관대	B-UNI
+알려줘	O
+
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+궁금해	O
+
+궁금해	O
+
+기출문제	B-KEYWORD
+연대	B-UNI
+없어?	O
+
+정시	B-TYPE
+서강대	B-UNI
+있어?	O
+
+한양대	B-UNI
+정리해줘	O
+
+수시	B-TYPE
+성대	B-UNI
+전공안내	B-KEYWORD
+없어?	O
+
+수능최저	B-KEYWORD
+정시	B-TYPE
+서울대	B-UNI
+알려줘	O
+
+응시하고	O
+싶어	O
+
+응시하고	O
+싶어	O
+
+있어?	O
+
+궁금해	O
+
+수시	B-TYPE
+연대	B-UNI
+기출문제	B-KEYWORD
+정리해줘	O
+
+건대	B-UNI
+자기소개서	B-KEYWORD
+없어?	O
+
+면접일정	B-KEYWORD
+건국대	B-UNI
+궁금해	O
+
+일정	B-KEYWORD
+궁금해	O
+
+컴퓨터공학과	B-KEYWORD
+고대	B-UNI
+정시	B-TYPE
+확인하고	O
+싶어	O
+
+건대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+지원자수	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+정리해줘	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+연세대	B-UNI
+알려줘	O
+
+성균관대	B-UNI
+정리해줘	O
+
+언제	O
+시작해?	O
+
+수시	B-TYPE
+서강대	B-UNI
+전형	B-KEYWORD
+있어?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+언제	O
+시작해?	O
+
+수능최저	B-KEYWORD
+궁금해	O
+
+정리해줘	O
+
+모집인원	B-KEYWORD
+정시	B-TYPE
+알려줘	O
+
+전형방법	B-KEYWORD
+정시	B-TYPE
+건국대	B-UNI
+확인하고	O
+싶어	O
+
+수시	B-TYPE
+확인하고	O
+싶어	O
+
+건대	B-UNI
+궁금해	O
+
+고대	B-UNI
+논술전형	B-KEYWORD
+수시	B-TYPE
+있어?	O
+
+어디서	O
+해?	O
+
+알려줘	O
+
+경영학과	B-KEYWORD
+있어?	O
+
+궁금해	O
+
+정리해줘	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+궁금해	O
+
+전공안내	B-KEYWORD
+확인하고	O
+싶어	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+있어?	O
+
+정시	B-TYPE
+없어?	O
+
+정시	B-TYPE
+건국대	B-UNI
+없어?	O
+
+정시	B-TYPE
+면접일정	B-KEYWORD
+연세대	B-UNI
+궁금해	O
+
+논술전형	B-KEYWORD
+서울대	B-UNI
+수시	B-TYPE
+없어?	O
+
+서강대	B-UNI
+궁금해	O
+
+면접일정	B-KEYWORD
+정시	B-TYPE
+궁금해	O
+
+모집인원	B-KEYWORD
+건대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+모집인원	B-KEYWORD
+정리해줘	O
+
+수시	B-TYPE
+고려대	B-UNI
+확인하고	O
+싶어	O
+
+없어?	O
+
+언제	O
+시작해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+언제	O
+시작해?	O
+
+성대	B-UNI
+언제	O
+시작해?	O
+
+건국대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+있어?	O
+
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+어떻게	O
+돼?	O
+
+어떻게	O
+돼?	O
+
+건대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+한양대	B-UNI
+확인하고	O
+싶어	O
+
+학생부종합	B-KEYWORD
+확인하고	O
+싶어	O
+
+고대	B-UNI
+알려줘	O
+
+어떻게	O
+돼?	O
+
+성대	B-UNI
+합격자수	B-KEYWORD
+수시	B-TYPE
+없어?	O
+
+정리해줘	O
+
+전공안내	B-KEYWORD
+정시	B-TYPE
+고대	B-UNI
+없어?	O
+
+합격자수	B-KEYWORD
+정시	B-TYPE
+건대	B-UNI
+알려줘	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+응시하고	O
+싶어	O
+
+건대	B-UNI
+정시	B-TYPE
+알려줘	O
+
