@@ -1,0 +1,9169 @@
+고대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+면접일정	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+경영학과	B-KEYWORD
+수능최저	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+관련	O
+전형	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+전형방법	B-KEYWORD
+특기자전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+일정	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+전형	B-KEYWORD
+합격자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+수시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+모집인원	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+경쟁률	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+기출문제	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성대	B-UNI
+학생부종합	B-KEYWORD
+논술전형	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+논술전형	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건대	B-UNI
+정시	B-TYPE
+관련	O
+일정	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+학생부종합	B-KEYWORD
+전형방법	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+경쟁률	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+자기소개서	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+한양대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+모집인원	B-KEYWORD
+수능최저	B-KEYWORD
+어디서	O
+확인해?	O
+
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+전형	B-KEYWORD
+면접일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+면접일정	B-KEYWORD
+제출서류	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+학생부종합	B-KEYWORD
+전공안내	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+기출문제	B-KEYWORD
+제출서류	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+전형방법	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+한양대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+제출서류	B-KEYWORD
+특기자전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+제출서류	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+기출문제	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+경쟁률	B-KEYWORD
+특기자전형	B-KEYWORD
+궁금해	O
+
+일정	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+경쟁률	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+자기소개서	B-KEYWORD
+경영학과	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+전공안내	B-KEYWORD
+제출서류	B-KEYWORD
+지원	O
+가능한가요?	O
+
+경영학과	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+합격자수	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+정시	B-TYPE
+관련	O
+기출문제	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+정시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+수시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+지원자수	B-KEYWORD
+전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+자기소개서	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+경쟁률	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+건대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+전형방법	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+학생부종합	B-KEYWORD
+합격자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+어떻게	O
+돼?	O
+
+고대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+모집인원	B-KEYWORD
+수능최저	B-KEYWORD
+지원	O
+가능한가요?	O
+
+컴퓨터공학과	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+전형방법	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+관련	O
+논술전형	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+모집인원	B-KEYWORD
+학생부종합	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+논술전형	B-KEYWORD
+지원자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+자기소개서	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+전형	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+전공안내	B-KEYWORD
+전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연세대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+논술전형	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+논술전형	B-KEYWORD
+자기소개서	B-KEYWORD
+어디서	O
+확인해?	O
+
+건국대	B-UNI
+특기자전형	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수능최저	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+자기소개서	B-KEYWORD
+합격자수	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+정시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+관련	O
+모집인원	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+면접일정	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건대	B-UNI
+특기자전형	B-KEYWORD
+자기소개서	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+경영학과	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+일정	B-KEYWORD
+전형방법	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+논술전형	B-KEYWORD
+지원자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+수능최저	B-KEYWORD
+기출문제	B-KEYWORD
+지원	O
+가능한가요?	O
+
+경쟁률	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+모집인원	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+지원자수	B-KEYWORD
+경영학과	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+학생부종합	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+지원자수	B-KEYWORD
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+일정	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+전형방법	B-KEYWORD
+합격자수	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+자기소개서	B-KEYWORD
+전형방법	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+정시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+일정	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+합격자수	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+수시	B-TYPE
+관련	O
+논술전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+일정	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+전형방법	B-KEYWORD
+특기자전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고대	B-UNI
+자기소개서	B-KEYWORD
+일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+지원자수	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+경영학과	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+전공안내	B-KEYWORD
+자기소개서	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연세대	B-UNI
+경쟁률	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+컴퓨터공학과	B-KEYWORD
+지원자수	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+정시	B-TYPE
+관련	O
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+다	O
+알려줘	O
+
+경쟁률	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+논술전형	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+자기소개서	B-KEYWORD
+합격자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+지원자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+다	O
+알려줘	O
+
+건대	B-UNI
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+경영학과	B-KEYWORD
+다	O
+알려줘	O
+
+전공안내	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+지원자수	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+제출서류	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+학생부종합	B-KEYWORD
+합격자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+합격자수	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+특기자전형	B-KEYWORD
+일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+특기자전형	B-KEYWORD
+나왔어?	O
+
+경영학과	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+특기자전형	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+관련	O
+전형방법	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+전공안내	B-KEYWORD
+자기소개서	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+궁금해	O
+
+성균관대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+다	O
+알려줘	O
+
+고려대	B-UNI
+기출문제	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+특기자전형	B-KEYWORD
+경영학과	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+특기자전형	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+지원자수	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+수능최저	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+정시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+특기자전형	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+합격자수	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+일정	B-KEYWORD
+특기자전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+전형방법	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+경영학과	B-KEYWORD
+정보	O
+알려줘	O
+
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+수능최저	B-KEYWORD
+논술전형	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+모집인원	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+지원자수	B-KEYWORD
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+전공안내	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+제출서류	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+자기소개서	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+지원자수	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+모집인원	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+전공안내	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+전형	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+수능최저	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+모집인원	B-KEYWORD
+특기자전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+기출문제	B-KEYWORD
+특기자전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+정보	O
+알려줘	O
+
+건대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성대	B-UNI
+면접일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+제출서류	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+궁금해	O
+
+특기자전형	B-KEYWORD
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+전형방법	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+다	O
+알려줘	O
+
+학생부종합	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+수능최저	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+논술전형	B-KEYWORD
+수능최저	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+특기자전형	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+정시	B-TYPE
+경쟁률	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+모집인원	B-KEYWORD
+전형방법	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+제출서류	B-KEYWORD
+특기자전형	B-KEYWORD
+궁금해	O
+
+성대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+경영학과	B-KEYWORD
+지원자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+논술전형	B-KEYWORD
+다	O
+알려줘	O
+
+전공안내	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+일정	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+연세대	B-UNI
+일정	B-KEYWORD
+전형방법	B-KEYWORD
+지원	O
+가능한가요?	O
+
+한양대	B-UNI
+경쟁률	B-KEYWORD
+전공안내	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고대	B-UNI
+전형방법	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+특기자전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+경쟁률	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+경영학과	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+수능최저	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+특기자전형	B-KEYWORD
+모집인원	B-KEYWORD
+궁금해	O
+
+고려대	B-UNI
+전공안내	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+정보	O
+알려줘	O
+
+건대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전공안내	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+경영학과	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+연세대	B-UNI
+일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+수능최저	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+논술전형	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+지원자수	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+면접일정	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+연세대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+컴퓨터공학과	B-KEYWORD
+일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+제출서류	B-KEYWORD
+지원자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+일정	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+수능최저	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+합격자수	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+자기소개서	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+고대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+합격자수	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+관련	O
+자기소개서	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+경쟁률	B-KEYWORD
+모집인원	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+제출서류	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+학생부종합	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+학생부종합	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+경영학과	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+일정	B-KEYWORD
+합격자수	B-KEYWORD
+궁금해	O
+
+제출서류	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+면접일정	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+경쟁률	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+기출문제	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+제출서류	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+경쟁률	B-KEYWORD
+합격자수	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+전형방법	B-KEYWORD
+다	O
+알려줘	O
+
+전형방법	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+수능최저	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+관련	O
+수능최저	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+모집인원	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+컴퓨터공학과	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+전공안내	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+수시	B-TYPE
+관련	O
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+건대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+경영학과	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+모집인원	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+면접일정	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+자기소개서	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+컴퓨터공학과	B-KEYWORD
+모집인원	B-KEYWORD
+지원	O
+가능한가요?	O
+
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+논술전형	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+경영학과	B-KEYWORD
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+제출서류	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+수능최저	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+경영학과	B-KEYWORD
+기출문제	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+면접일정	B-KEYWORD
+전공안내	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+전형	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+경쟁률	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+정시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+합격자수	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+모집인원	B-KEYWORD
+논술전형	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+전형	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+경영학과	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+경영학과	B-KEYWORD
+특기자전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+기출문제	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+경쟁률	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서강대	B-UNI
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서강대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+전형	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+특기자전형	B-KEYWORD
+자기소개서	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+논술전형	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+일정	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+특기자전형	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+수능최저	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+자기소개서	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+컴퓨터공학과	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+학생부종합	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+경쟁률	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+전형	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+전공안내	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+경영학과	B-KEYWORD
+학생부종합	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+수능최저	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+일정	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+제출서류	B-KEYWORD
+모집인원	B-KEYWORD
+궁금해	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+고려대	B-UNI
+경영학과	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+기출문제	B-KEYWORD
+모집인원	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연세대	B-UNI
+일정	B-KEYWORD
+특기자전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연세대	B-UNI
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+성대	B-UNI
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+지원자수	B-KEYWORD
+모집인원	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+한양대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+자기소개서	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+일정	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+일정	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+다	O
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+관련	O
+경쟁률	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+합격자수	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+컴퓨터공학과	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+경쟁률	B-KEYWORD
+지원자수	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+기출문제	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+지원자수	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+모집인원	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+건국대	B-UNI
+학생부종합	B-KEYWORD
+지원자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+합격자수	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+고대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+수능최저	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+수능최저	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+제출서류	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+수능최저	B-KEYWORD
+자기소개서	B-KEYWORD
+궁금해	O
+
+성균관대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+특기자전형	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+경쟁률	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+자기소개서	B-KEYWORD
+특기자전형	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+다	O
+알려줘	O
+
+건대	B-UNI
+정시	B-TYPE
+관련	O
+합격자수	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+논술전형	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+서강대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+특기자전형	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형	B-KEYWORD
+모집인원	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+지원자수	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+경쟁률	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+기출문제	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+경영학과	B-KEYWORD
+기출문제	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+모집인원	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+경쟁률	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+모집인원	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+건국대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+수능최저	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+논술전형	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+자기소개서	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+나왔어?	O
+
+수능최저	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+논술전형	B-KEYWORD
+기출문제	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+논술전형	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+기출문제	B-KEYWORD
+제출서류	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+전공안내	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+지원자수	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+논술전형	B-KEYWORD
+경쟁률	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+자기소개서	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연세대	B-UNI
+면접일정	B-KEYWORD
+일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+건국대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+지원자수	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+건국대	B-UNI
+기출문제	B-KEYWORD
+제출서류	B-KEYWORD
+궁금해	O
+
+전공안내	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+고려대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+전공안내	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+논술전형	B-KEYWORD
+일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+정시	B-TYPE
+관련	O
+수능최저	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+전형	B-KEYWORD
+지원자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+제출서류	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+컴퓨터공학과	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+한양대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+논술전형	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+다	O
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+전형	B-KEYWORD
+지원자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+모집인원	B-KEYWORD
+제출서류	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+수능최저	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+관련	O
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+논술전형	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+건국대	B-UNI
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+논술전형	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+기출문제	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+수능최저	B-KEYWORD
+전형방법	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+관련	O
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+합격자수	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+자기소개서	B-KEYWORD
+일정	B-KEYWORD
+다	O
+알려줘	O
+
+컴퓨터공학과	B-KEYWORD
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+경쟁률	B-KEYWORD
+경영학과	B-KEYWORD
+궁금해	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+궁금해	O
+
+논술전형	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+특기자전형	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+컴퓨터공학과	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+학생부종합	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+자기소개서	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+경영학과	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+전형방법	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+지원자수	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+지원자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+합격자수	B-KEYWORD
+전공안내	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+자기소개서	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+전형	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+제출서류	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+특기자전형	B-KEYWORD
+전형	B-KEYWORD
+궁금해	O
+
+고대	B-UNI
+정시	B-TYPE
+관련	O
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+논술전형	B-KEYWORD
+경영학과	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+기출문제	B-KEYWORD
+특기자전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+학생부종합	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+합격자수	B-KEYWORD
+자기소개서	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+수능최저	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+특기자전형	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+전형방법	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+수시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+수능최저	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+모집인원	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+경영학과	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건대	B-UNI
+자기소개서	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+모집인원	B-KEYWORD
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+논술전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+정보	O
+알려줘	O
+
+건대	B-UNI
+전공안내	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+수능최저	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+경쟁률	B-KEYWORD
+자기소개서	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+전형	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+기출문제	B-KEYWORD
+자기소개서	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+일정	B-KEYWORD
+지원자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+관련	O
+전형방법	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+수시	B-TYPE
+관련	O
+제출서류	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전형방법	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+제출서류	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+논술전형	B-KEYWORD
+일정	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+학생부종합	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+자기소개서	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+나왔어?	O
+
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+자기소개서	B-KEYWORD
+경영학과	B-KEYWORD
+정보	O
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+제출서류	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+자기소개서	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+면접일정	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+제출서류	B-KEYWORD
+논술전형	B-KEYWORD
+알려줄래?	O
+
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+면접일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+수능최저	B-KEYWORD
+지원자수	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+전형	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+경영학과	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+자기소개서	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+전형방법	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+학생부종합	B-KEYWORD
+합격자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+학생부종합	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성대	B-UNI
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+궁금해	O
+
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+합격자수	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+합격자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+수능최저	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+경영학과	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+경쟁률	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+전형	B-KEYWORD
+논술전형	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+자기소개서	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연세대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+관련	O
+일정	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+모집인원	B-KEYWORD
+지원자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+정시	B-TYPE
+논술전형	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+수시	B-TYPE
+제출서류	B-KEYWORD
+기출문제	B-KEYWORD
+다	O
+알려줘	O
+
+논술전형	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+특기자전형	B-KEYWORD
+전형방법	B-KEYWORD
+확인하고	O
+싶어요	O
+
+모집인원	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+논술전형	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+지원자수	B-KEYWORD
+알려줄래?	O
+
+경영학과	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+면접일정	B-KEYWORD
+기출문제	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+경쟁률	B-KEYWORD
+자기소개서	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+정시	B-TYPE
+관련	O
+합격자수	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+정시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+합격자수	B-KEYWORD
+수능최저	B-KEYWORD
+다	O
+알려줘	O
+
+건대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+정시	B-TYPE
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+경영학과	B-KEYWORD
+수능최저	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+지원자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고대	B-UNI
+경쟁률	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+건국대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+일정	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+전공안내	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+경쟁률	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+논술전형	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+특기자전형	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+기출문제	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+일정	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+자기소개서	B-KEYWORD
+특기자전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+기출문제	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+경쟁률	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+학생부종합	B-KEYWORD
+전형방법	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연대	B-UNI
+논술전형	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+기출문제	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+성대	B-UNI
+일정	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+전형	B-KEYWORD
+수능최저	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+모집인원	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+학생부종합	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성대	B-UNI
+경영학과	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+모집인원	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+모집인원	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연세대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+논술전형	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서울대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+지원자수	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+모집인원	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+전공안내	B-KEYWORD
+특기자전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+수시	B-TYPE
+관련	O
+전형	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+논술전형	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+지원자수	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+전공안내	B-KEYWORD
+일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+지원자수	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+논술전형	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+일정	B-KEYWORD
+전공안내	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+면접일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+수능최저	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+기출문제	B-KEYWORD
+수능최저	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+수능최저	B-KEYWORD
+모집인원	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+경쟁률	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+합격자수	B-KEYWORD
+지원자수	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+특기자전형	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+학생부종합	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+지원자수	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+제출서류	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+학생부종합	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+학생부종합	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서강대	B-UNI
+면접일정	B-KEYWORD
+전공안내	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+면접일정	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+논술전형	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+정시	B-TYPE
+관련	O
+합격자수	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+학생부종합	B-KEYWORD
+일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+모집인원	B-KEYWORD
+특기자전형	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+경쟁률	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+정시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+수능최저	B-KEYWORD
+전공안내	B-KEYWORD
+어떻게	O
+돼?	O
+
+논술전형	B-KEYWORD
+일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+전공안내	B-KEYWORD
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+모집인원	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+제출서류	B-KEYWORD
+지원자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+기출문제	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+고대	B-UNI
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+서강대	B-UNI
+수시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+합격자수	B-KEYWORD
+모집인원	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+논술전형	B-KEYWORD
+학생부종합	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+기출문제	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+일정	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+수시	B-TYPE
+관련	O
+전공안내	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+경영학과	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+기출문제	B-KEYWORD
+특기자전형	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+전형방법	B-KEYWORD
+합격자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+정시	B-TYPE
+관련	O
+논술전형	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+기출문제	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+경쟁률	B-KEYWORD
+전형방법	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+자기소개서	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+자기소개서	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+정시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+합격자수	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+논술전형	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+수시	B-TYPE
+관련	O
+수능최저	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+경쟁률	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+경쟁률	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+전공안내	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+지원자수	B-KEYWORD
+알려줄래?	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+전공안내	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+기출문제	B-KEYWORD
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+학생부종합	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+특기자전형	B-KEYWORD
+제출서류	B-KEYWORD
+궁금해	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+논술전형	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+전형	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+자기소개서	B-KEYWORD
+전형방법	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+모집인원	B-KEYWORD
+전형	B-KEYWORD
+궁금해	O
+
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+일정	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+제출서류	B-KEYWORD
+전형방법	B-KEYWORD
+지원	O
+가능한가요?	O
+
+학생부종합	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+기출문제	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+지원자수	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+일정	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+자기소개서	B-KEYWORD
+일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+합격자수	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+기출문제	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서강대	B-UNI
+수시	B-TYPE
+관련	O
+자기소개서	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+합격자수	B-KEYWORD
+모집인원	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+특기자전형	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+정시	B-TYPE
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+경영학과	B-KEYWORD
+합격자수	B-KEYWORD
+궁금해	O
+
+연세대	B-UNI
+일정	B-KEYWORD
+제출서류	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고대	B-UNI
+전형	B-KEYWORD
+특기자전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+지원자수	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+학생부종합	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+논술전형	B-KEYWORD
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+면접일정	B-KEYWORD
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전공안내	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+자기소개서	B-KEYWORD
+전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+전형	B-KEYWORD
+특기자전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+일정	B-KEYWORD
+수능최저	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+합격자수	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+학생부종합	B-KEYWORD
+모집인원	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+지원자수	B-KEYWORD
+수능최저	B-KEYWORD
+지원	O
+가능한가요?	O
+
+경영학과	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+일정	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+수능최저	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+면접일정	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+연세대	B-UNI
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+궁금해	O
+
+성대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+한양대	B-UNI
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+궁금해	O
+
+성대	B-UNI
+기출문제	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+수능최저	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+논술전형	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+기출문제	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+전공안내	B-KEYWORD
+지원자수	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+특기자전형	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+자기소개서	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+경쟁률	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+논술전형	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+경영학과	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+기출문제	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+학생부종합	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연세대	B-UNI
+제출서류	B-KEYWORD
+전공안내	B-KEYWORD
+지원	O
+가능한가요?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+서강대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+경쟁률	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+학생부종합	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형	B-KEYWORD
+전형방법	B-KEYWORD
+정보	O
+알려줘	O
+
+고대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+전공안내	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+면접일정	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+정시	B-TYPE
+관련	O
+수능최저	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+학생부종합	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+일정	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+특기자전형	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+수시	B-TYPE
+관련	O
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+고대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+합격자수	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+고대	B-UNI
+경쟁률	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+특기자전형	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+정시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+일정	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+연세대	B-UNI
+수시	B-TYPE
+관련	O
+자기소개서	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+모집인원	B-KEYWORD
+전공안내	B-KEYWORD
+지원	O
+가능한가요?	O
+
+한양대	B-UNI
+전형	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+전형방법	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+수능최저	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+제출서류	B-KEYWORD
+정보	O
+알려줘	O
+
+고려대	B-UNI
+전형	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+제출서류	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+기출문제	B-KEYWORD
+수능최저	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+전형	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+수시	B-TYPE
+관련	O
+지원자수	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+일정	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+정시	B-TYPE
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+제출서류	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+고대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+자기소개서	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+학생부종합	B-KEYWORD
+전형	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+학생부종합	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+제출서류	B-KEYWORD
+논술전형	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+관련	O
+자기소개서	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+지원자수	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+수시	B-TYPE
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+일정	B-KEYWORD
+지원자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+일정	B-KEYWORD
+수능최저	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+일정	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+정시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+고려대	B-UNI
+수능최저	B-KEYWORD
+일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+학생부종합	B-KEYWORD
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+정시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+제출서류	B-KEYWORD
+전공안내	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+수시	B-TYPE
+관련	O
+기출문제	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+일정	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성대	B-UNI
+정시	B-TYPE
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+수능최저	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+모집인원	B-KEYWORD
+논술전형	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+논술전형	B-KEYWORD
+학생부종합	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연대	B-UNI
+자기소개서	B-KEYWORD
+지원자수	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+수시	B-TYPE
+관련	O
+수능최저	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+컴퓨터공학과	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+연세대	B-UNI
+수능최저	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+면접일정	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+서강대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+경쟁률	B-KEYWORD
+기출문제	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+정시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+지원자수	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줄래?	O
+
+서울대	B-UNI
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+면접일정	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+연세대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+논술전형	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+관련	O
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+정시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+모집인원	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+자기소개서	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+합격자수	B-KEYWORD
+다	O
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+경영학과	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+컴퓨터공학과	B-KEYWORD
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+전형방법	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+정시	B-TYPE
+논술전형	B-KEYWORD
+모집인원	B-KEYWORD
+합격자수	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+컴퓨터공학과	B-KEYWORD
+전형방법	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서울대	B-UNI
+특기자전형	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+정보	O
+알려줘	O
+
+논술전형	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줄래?	O
+
+건국대	B-UNI
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+일정	B-KEYWORD
+수능최저	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+특기자전형	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+지원자수	B-KEYWORD
+정보	O
+알려줘	O
+
+고대	B-UNI
+전형	B-KEYWORD
+전공안내	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+전형	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+정보	O
+알려줘	O
+
+건국대	B-UNI
+컴퓨터공학과	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연세대	B-UNI
+수시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+학생부종합	B-KEYWORD
+정보	O
+알려줘	O
+
+건대	B-UNI
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+제출서류	B-KEYWORD
+기출문제	B-KEYWORD
+정보	O
+알려줘	O
+
+전형방법	B-KEYWORD
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+수시	B-TYPE
+학생부종합	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+논술전형	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+정시	B-TYPE
+학생부종합	B-KEYWORD
+전형방법	B-KEYWORD
+알려줄래?	O
+
+건대	B-UNI
+정시	B-TYPE
+관련	O
+면접일정	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+수능최저	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+정시	B-TYPE
+경쟁률	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+합격자수	B-KEYWORD
+지원자수	B-KEYWORD
+다	O
+알려줘	O
+
+기출문제	B-KEYWORD
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+고대	B-UNI
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+일정	B-KEYWORD
+나왔어?	O
+
+성대	B-UNI
+기출문제	B-KEYWORD
+특기자전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+자기소개서	B-KEYWORD
+특기자전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+한양대	B-UNI
+정시	B-TYPE
+관련	O
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+지원자수	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+수능최저	B-KEYWORD
+제출서류	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+관련	O
+전공안내	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+수능최저	B-KEYWORD
+지원자수	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+정시	B-TYPE
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+연대	B-UNI
+면접일정	B-KEYWORD
+특기자전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+수시	B-TYPE
+관련	O
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+지원	O
+가능한가요?	O
+
+합격자수	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+전공안내	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+수능최저	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+논술전형	B-KEYWORD
+특기자전형	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+지원자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+전형방법	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+학생부종합	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고대	B-UNI
+자기소개서	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서울대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+기출문제	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+경영학과	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+모집인원	B-KEYWORD
+기출문제	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형방법	B-KEYWORD
+전공안내	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+경쟁률	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+전형방법	B-KEYWORD
+지원자수	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+기출문제	B-KEYWORD
+지원자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+경영학과	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+수시	B-TYPE
+관련	O
+합격자수	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+모집인원	B-KEYWORD
+정보	O
+알려줘	O
+
+고대	B-UNI
+경영학과	B-KEYWORD
+전형방법	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+경영학과	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+특기자전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+성대	B-UNI
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+논술전형	B-KEYWORD
+특기자전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+학생부종합	B-KEYWORD
+합격자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+서강대	B-UNI
+정시	B-TYPE
+논술전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+고려대	B-UNI
+컴퓨터공학과	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성대	B-UNI
+면접일정	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+건국대	B-UNI
+기출문제	B-KEYWORD
+경영학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+제출서류	B-KEYWORD
+전형방법	B-KEYWORD
+알려줄래?	O
+
+기출문제	B-KEYWORD
+경영학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+한양대	B-UNI
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+서강대	B-UNI
+정시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+관련	O
+특기자전형	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+경쟁률	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+모집인원	B-KEYWORD
+자기소개서	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+지원자수	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+일정	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+전공안내	B-KEYWORD
+합격자수	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+정시	B-TYPE
+관련	O
+수능최저	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서울대	B-UNI
+정시	B-TYPE
+관련	O
+전형	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+기출문제	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+성균관대	B-UNI
+학생부종합	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+경영학과	B-KEYWORD
+제출서류	B-KEYWORD
+정보	O
+알려줘	O
+
+고대	B-UNI
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+일정	B-KEYWORD
+다	O
+알려줘	O
+
+성균관대	B-UNI
+정시	B-TYPE
+관련	O
+논술전형	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+정시	B-TYPE
+자기소개서	B-KEYWORD
+수능최저	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+나왔어?	O
+
+건국대	B-UNI
+전형	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+경쟁률	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+제출서류	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+경쟁률	B-KEYWORD
+전형방법	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+정시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+연대	B-UNI
+정시	B-TYPE
+논술전형	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+정시	B-TYPE
+지원자수	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+수능최저	B-KEYWORD
+전형방법	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+수시	B-TYPE
+관련	O
+자기소개서	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+수시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+궁금해	O
+
+서울대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+나왔어?	O
+
+수시	B-TYPE
+전공안내	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+건국대	B-UNI
+제출서류	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서울대	B-UNI
+자기소개서	B-KEYWORD
+학생부종합	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+특기자전형	B-KEYWORD
+경쟁률	B-KEYWORD
+어디서	O
+확인해?	O
+
+건대	B-UNI
+특기자전형	B-KEYWORD
+학생부종합	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+건대	B-UNI
+수시	B-TYPE
+수능최저	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+모집인원	B-KEYWORD
+특기자전형	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+합격자수	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+한양대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+전형	B-KEYWORD
+다	O
+알려줘	O
+
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+제출서류	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+전형	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+자기소개서	B-KEYWORD
+다	O
+알려줘	O
+
+건국대	B-UNI
+기출문제	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서강대	B-UNI
+모집인원	B-KEYWORD
+지원자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+수능최저	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+연대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+전형	B-KEYWORD
+수능최저	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+면접일정	B-KEYWORD
+자기소개서	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+기출문제	B-KEYWORD
+전형	B-KEYWORD
+궁금해	O
+
+학생부종합	B-KEYWORD
+합격자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+지원자수	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+수능최저	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+일정	B-KEYWORD
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+기출문제	B-KEYWORD
+일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+합격자수	B-KEYWORD
+전형방법	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+전형	B-KEYWORD
+정보	O
+알려줘	O
+
+정시	B-TYPE
+자기소개서	B-KEYWORD
+합격자수	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+지원자수	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+일정	B-KEYWORD
+면접일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+고대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+건국대	B-UNI
+수시	B-TYPE
+모집인원	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+일정	B-KEYWORD
+전형방법	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+컴퓨터공학과	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+서강대	B-UNI
+학생부종합	B-KEYWORD
+자기소개서	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+전공안내	B-KEYWORD
+제출서류	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서울대	B-UNI
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성균관대	B-UNI
+자기소개서	B-KEYWORD
+지원자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+나왔어?	O
+
+컴퓨터공학과	B-KEYWORD
+지원자수	B-KEYWORD
+어떻게	O
+돼?	O
+
+고려대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+특기자전형	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+논술전형	B-KEYWORD
+기출문제	B-KEYWORD
+정보	O
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+논술전형	B-KEYWORD
+나왔어?	O
+
+경쟁률	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+면접일정	B-KEYWORD
+모집인원	B-KEYWORD
+어떻게	O
+돼?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+특기자전형	B-KEYWORD
+정보	O
+알려줘	O
+
+연대	B-UNI
+전형방법	B-KEYWORD
+수능최저	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+수시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+수능최저	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+자기소개서	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+정시	B-TYPE
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+전형방법	B-KEYWORD
+제출서류	B-KEYWORD
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+전형방법	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+수시	B-TYPE
+특기자전형	B-KEYWORD
+전형방법	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+경영학과	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+면접일정	B-KEYWORD
+수능최저	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+고려대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+기출문제	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+경쟁률	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+서강대	B-UNI
+수시	B-TYPE
+지원자수	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+경쟁률	B-KEYWORD
+모집인원	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+면접일정	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+기출문제	B-KEYWORD
+면접일정	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건대	B-UNI
+전형방법	B-KEYWORD
+지원자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+성대	B-UNI
+지원자수	B-KEYWORD
+합격자수	B-KEYWORD
+어디서	O
+확인해?	O
+
+경영학과	B-KEYWORD
+논술전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+서강대	B-UNI
+일정	B-KEYWORD
+학생부종합	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+일정	B-KEYWORD
+전공안내	B-KEYWORD
+정보	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+경영학과	B-KEYWORD
+알려줄래?	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+학생부종합	B-KEYWORD
+제출서류	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+수능최저	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+전형	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+지원자수	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+모집인원	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+특기자전형	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+경영학과	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+경쟁률	B-KEYWORD
+수능최저	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+특기자전형	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+논술전형	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+면접일정	B-KEYWORD
+다	O
+알려줘	O
+
+건대	B-UNI
+경쟁률	B-KEYWORD
+특기자전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+정시	B-TYPE
+관련	O
+학생부종합	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+수시	B-TYPE
+경영학과	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+정시	B-TYPE
+관련	O
+경영학과	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+정시	B-TYPE
+관련	O
+전형	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+성균관대	B-UNI
+경영학과	B-KEYWORD
+합격자수	B-KEYWORD
+궁금해	O
+
+한양대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+전형	B-KEYWORD
+알려줘	O
+
+성대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+경영학과	B-KEYWORD
+다	O
+알려줘	O
+
+성대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+전공안내	B-KEYWORD
+알려줘	O
+
+건대	B-UNI
+전형방법	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+면접일정	B-KEYWORD
+수능최저	B-KEYWORD
+어떻게	O
+돼?	O
+
+건대	B-UNI
+수시	B-TYPE
+관련	O
+합격자수	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+학생부종합	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+건국대	B-UNI
+합격자수	B-KEYWORD
+지원자수	B-KEYWORD
+지원	O
+가능한가요?	O
+
+한양대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+알려줘	O
+
+논술전형	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+일정	B-KEYWORD
+특기자전형	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+면접일정	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+지원	O
+가능한가요?	O
+
+서강대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+컴퓨터공학과	B-KEYWORD
+기출문제	B-KEYWORD
+정보	O
+알려줘	O
+
+전형방법	B-KEYWORD
+자기소개서	B-KEYWORD
+어떻게	O
+돼?	O
+
+경영학과	B-KEYWORD
+학생부종합	B-KEYWORD
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+수시	B-TYPE
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+건국대	B-UNI
+지원자수	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고려대	B-UNI
+제출서류	B-KEYWORD
+경쟁률	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연세대	B-UNI
+수능최저	B-KEYWORD
+지원자수	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서강대	B-UNI
+지원자수	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+정시	B-TYPE
+관련	O
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줘	O
+
+서강대	B-UNI
+지원자수	B-KEYWORD
+전형방법	B-KEYWORD
+어디서	O
+확인해?	O
+
+수시	B-TYPE
+경영학과	B-KEYWORD
+학생부종합	B-KEYWORD
+알려줄래?	O
+
+한양대	B-UNI
+전공안내	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전공안내	B-KEYWORD
+전형	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+성대	B-UNI
+수시	B-TYPE
+관련	O
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줘	O
+
+연세대	B-UNI
+경쟁률	B-KEYWORD
+학생부종합	B-KEYWORD
+어디서	O
+확인해?	O
+
+성균관대	B-UNI
+합격자수	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+지원자수	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+연대	B-UNI
+정시	B-TYPE
+경영학과	B-KEYWORD
+전형방법	B-KEYWORD
+다	O
+알려줘	O
+
+서울대	B-UNI
+기출문제	B-KEYWORD
+학생부종합	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+수능최저	B-KEYWORD
+모집인원	B-KEYWORD
+지원	O
+가능한가요?	O
+
+정시	B-TYPE
+경영학과	B-KEYWORD
+기출문제	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+학생부종합	B-KEYWORD
+논술전형	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+경쟁률	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+수시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+경쟁률	B-KEYWORD
+알려줄래?	O
+
+성균관대	B-UNI
+수시	B-TYPE
+경쟁률	B-KEYWORD
+전형방법	B-KEYWORD
+나왔어?	O
+
+연대	B-UNI
+논술전형	B-KEYWORD
+일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+특기자전형	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+서울대	B-UNI
+논술전형	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+수시	B-TYPE
+수능최저	B-KEYWORD
+일정	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+경영학과	B-KEYWORD
+면접일정	B-KEYWORD
+궁금해	O
+
+기출문제	B-KEYWORD
+면접일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+성균관대	B-UNI
+경영학과	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전공안내	B-KEYWORD
+일정	B-KEYWORD
+정보	O
+알려줘	O
+
+성대	B-UNI
+자기소개서	B-KEYWORD
+논술전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+논술전형	B-KEYWORD
+지원자수	B-KEYWORD
+알려줄래?	O
+
+고대	B-UNI
+정시	B-TYPE
+관련	O
+수능최저	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+건국대	B-UNI
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+
+고대	B-UNI
+전공안내	B-KEYWORD
+경쟁률	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연대	B-UNI
+지원자수	B-KEYWORD
+수능최저	B-KEYWORD
+어디서	O
+확인해?	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전공안내	B-KEYWORD
+모집인원	B-KEYWORD
+정보	O
+알려줘	O
+
+서울대	B-UNI
+수시	B-TYPE
+면접일정	B-KEYWORD
+기출문제	B-KEYWORD
+전형방법	B-KEYWORD
+다	O
+알려줘	O
+
+서강대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+합격자수	B-KEYWORD
+알려줘	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+특기자전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+경영학과	B-KEYWORD
+다	O
+알려줘	O
+
+건국대	B-UNI
+논술전형	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+연대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전형방법	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+경쟁률	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+확인하고	O
+싶어요	O
+
+서울대	B-UNI
+정시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+지원자수	B-KEYWORD
+면접일정	B-KEYWORD
+정보	O
+알려줘	O
+
+연세대	B-UNI
+면접일정	B-KEYWORD
+학생부종합	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연세대	B-UNI
+정시	B-TYPE
+관련	O
+컴퓨터공학과	B-KEYWORD
+기출문제	B-KEYWORD
+알려줘	O
+
+고대	B-UNI
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연세대	B-UNI
+논술전형	B-KEYWORD
+경영학과	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+합격자수	B-KEYWORD
+특기자전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+합격자수	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+특기자전형	B-KEYWORD
+경쟁률	B-KEYWORD
+어떻게	O
+돼?	O
+
+연세대	B-UNI
+수시	B-TYPE
+기출문제	B-KEYWORD
+면접일정	B-KEYWORD
+알려줘	O
+
+한양대	B-UNI
+합격자수	B-KEYWORD
+논술전형	B-KEYWORD
+궁금해	O
+
+연대	B-UNI
+정시	B-TYPE
+전형방법	B-KEYWORD
+경쟁률	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+제출서류	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+고대	B-UNI
+정시	B-TYPE
+컴퓨터공학과	B-KEYWORD
+전형방법	B-KEYWORD
+나왔어?	O
+
+서울대	B-UNI
+정시	B-TYPE
+합격자수	B-KEYWORD
+학생부종합	B-KEYWORD
+나왔어?	O
+
+한양대	B-UNI
+수능최저	B-KEYWORD
+자기소개서	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+수시	B-TYPE
+합격자수	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+성균관대	B-UNI
+정시	B-TYPE
+모집인원	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+연세대	B-UNI
+자기소개서	B-KEYWORD
+기출문제	B-KEYWORD
+어디서	O
+확인해?	O
+
+제출서류	B-KEYWORD
+전형	B-KEYWORD
+어떻게	O
+돼?	O
+
+서강대	B-UNI
+자기소개서	B-KEYWORD
+전공안내	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+수시	B-TYPE
+학생부종합	B-KEYWORD
+모집인원	B-KEYWORD
+다	O
+알려줘	O
+
+컴퓨터공학과	B-KEYWORD
+면접일정	B-KEYWORD
+어떻게	O
+돼?	O
+
+건국대	B-UNI
+특기자전형	B-KEYWORD
+면접일정	B-KEYWORD
+확인하고	O
+싶어요	O
+
+연대	B-UNI
+정시	B-TYPE
+제출서류	B-KEYWORD
+전공안내	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+지원자수	B-KEYWORD
+모집인원	B-KEYWORD
+확인하고	O
+싶어요	O
+
+정시	B-TYPE
+전형	B-KEYWORD
+중	O
+전형방법	B-KEYWORD
+컴퓨터공학과	B-KEYWORD
+정보	O
+알려줘	O
+
+서강대	B-UNI
+특기자전형	B-KEYWORD
+수능최저	B-KEYWORD
+확인하고	O
+싶어요	O
+
+건국대	B-UNI
+정시	B-TYPE
+일정	B-KEYWORD
+기출문제	B-KEYWORD
+나왔어?	O
+
+고려대	B-UNI
+수시	B-TYPE
+일정	B-KEYWORD
+제출서류	B-KEYWORD
+나왔어?	O
+
+건대	B-UNI
+수시	B-TYPE
+전형방법	B-KEYWORD
+전공안내	B-KEYWORD
+다	O
+알려줘	O
+
+건국대	B-UNI
+일정	B-KEYWORD
+제출서류	B-KEYWORD
+어디서	O
+확인해?	O
+
+서울대	B-UNI
+모집인원	B-KEYWORD
+경쟁률	B-KEYWORD
+궁금해	O
+
+건국대	B-UNI
+수시	B-TYPE
+특기자전형	B-KEYWORD
+논술전형	B-KEYWORD
+학생부종합	B-KEYWORD
+다	O
+알려줘	O
+
+한양대	B-UNI
+수시	B-TYPE
+자기소개서	B-KEYWORD
+제출서류	B-KEYWORD
+알려줘	O
+
+서울대	B-UNI
+경쟁률	B-KEYWORD
+특기자전형	B-KEYWORD
+어디서	O
+확인해?	O
+
+고려대	B-UNI
+합격자수	B-KEYWORD
+전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+성대	B-UNI
+학생부종합	B-KEYWORD
+기출문제	B-KEYWORD
+확인하고	O
+싶어요	O
+
+성균관대	B-UNI
+모집인원	B-KEYWORD
+논술전형	B-KEYWORD
+지원	O
+가능한가요?	O
+
+연대	B-UNI
+모집인원	B-KEYWORD
+일정	B-KEYWORD
+궁금해	O
+
+건대	B-UNI
+학생부종합	B-KEYWORD
+자기소개서	B-KEYWORD
+어디서	O
+확인해?	O
+
+연세대	B-UNI
+정시	B-TYPE
+면접일정	B-KEYWORD
+경영학과	B-KEYWORD
+다	O
+알려줘	O
+
+수시	B-TYPE
+전형	B-KEYWORD
+중	O
+전공안내	B-KEYWORD
+자기소개서	B-KEYWORD
+정보	O
+알려줘	O
+
+성균관대	B-UNI
+기출문제	B-KEYWORD
+모집인원	B-KEYWORD
+궁금해	O
+
+성균관대	B-UNI
+전공안내	B-KEYWORD
+기출문제	B-KEYWORD
+궁금해	O
+

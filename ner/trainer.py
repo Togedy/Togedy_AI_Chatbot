@@ -15,7 +15,7 @@ from utils import compute_class_weights, get_label_list
 LABEL_PATH = "./data/label.txt"
 MODEL_CHECKPOINT = "skt/kobert-base-v1"
 TRAIN_PATH = "./data/train.tsv"
-TEST_PATH = "./data/test.tsv"
+TEST_PATH = "./data/eval_test.tsv"
 SAVE_PATH = "./results"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -120,7 +120,7 @@ training_args = TrainingArguments(
     logging_steps=50,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
-    num_train_epochs=3,
+    num_train_epochs=5,
     weight_decay=0.01,
     save_total_limit=2,
     load_best_model_at_end=True,
