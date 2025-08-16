@@ -1,0 +1,15 @@
+{
+  "UNI_SLUG": {
+    "서울대": "seoul",
+    "연세대": "yonsei",
+    "고려대": "korea",
+    "서강대": "sogang",
+    "성균관대": "skku",
+    "한양대": "hanyang",
+    "건국대": "konkuk"
+  },
+  "TYPE_SLUG": {
+    "수시": "susi",
+    "정시": "jungsi"
+  }
+}
