@@ -180,6 +180,6 @@ def main(
     return out
 
 if __name__ == "__main__":
-    sentence = os.getenv("QUESTION", "건국대 정시 경제학부 정원은 ?")
+    sentence = os.getenv("QUESTION", "건국대 수시 컴퓨터공학부 모집정원은?")
     result = main(sentence, True)
     print(json.dumps(result, ensure_ascii=False, indent=2))
