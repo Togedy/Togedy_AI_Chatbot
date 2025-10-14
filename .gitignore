@@ -1,3 +1,8 @@
 .env
 university/
-results/
+KORBERT_NER_KEYWORD/data/
+KORBERT_NER_KEYWORD/results_keyword/
+KORBERT_NER_TYPE/data/
+KORBERT_NER_TYPE/results/
+KORBERT_NER_UNI/data
+KORBERT_NER_UNI/results
