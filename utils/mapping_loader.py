@@ -9,6 +9,18 @@ from typing import Dict
 NORMAL_PATH = os.getenv("NORMALIZATION_PATH", "data/normalization_dict.json")
 SLUG_PATH   = os.getenv("SLUG_MAP_PATH",       "data/slug_map.json")
 
+# ===== [1] 기본 내장 매핑 딕셔너리 =====
+# 공식 한글 대학명만 포함 (별칭/약칭 제외)
+_DEFAULT_UNI_SLUG = {
+    "건국대": "konkuk",
+    "고려대": "korea",
+    "서강대": "sogang",
+    "서울대": "seoul",
+    "성균관대": "skku",
+    "연세대": "yonsei",
+    "한양대": "hanyang"
+}
+
 @lru_cache(maxsize=None)
 def load_normalization(path: str = NORMAL_PATH) -> Dict:
     if os.path.exists(path):
@@ -18,10 +30,15 @@ def load_normalization(path: str = NORMAL_PATH) -> Dict:
 
 @lru_cache(maxsize=None)
 def load_slugmap(path: str = SLUG_PATH) -> Dict:
+    # 파일이 있으면 JSON 우선
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"UNI_SLUG": {}, "TYPE_SLUG": {"수시": "susi", "정시": "jungsi"}}
+    # 없으면 기본값 + 내장 딕셔너리 반환
+    return {
+        "UNI_SLUG": _DEFAULT_UNI_SLUG,
+        "TYPE_SLUG": {"수시": "susi", "정시": "jungsi"}
+    }
 
 def normalize_uni(name: str) -> str:
     n = (name or "").strip()
