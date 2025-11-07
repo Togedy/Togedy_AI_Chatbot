@@ -51,7 +51,6 @@ def score_pages(pages: List[str], keywords: List[str], k: int = 5) -> List[Tuple
     if not kw_clean:
         return []
 
-    # 결합 쿼리(루스 OR) + 개별 키워드 평균 혼합
     query_joined = " ".join(kw_clean)
     s_join = cosine_similarity(vect.transform([query_joined]), X)[0]
     indiv = [cosine_similarity(vect.transform([kw]), X)[0] for kw in kw_clean]
@@ -63,26 +62,19 @@ def score_pages(pages: List[str], keywords: List[str], k: int = 5) -> List[Tuple
     return ranked[:k]
 
 # ---------------------------
-# 폴더/경로 해석 (별칭 미사용)
+# 폴더/경로 해석
 # ---------------------------
 def get_uni_slug(uni_name: str) -> str:
-    """
-    - 공식 한글 대학명을 normalize_uni로 정규화 후 uni_to_slug로 변환.
-    - 매핑 실패 시 공백 제거 원문을 폴백(프로젝트에 한글 폴더가 있는 경우 대비).
-    """
     if not uni_name:
         return ""
-    canon = normalize_uni(uni_name)  # 없으면 입력 그대로 반환
-    slug = uni_to_slug(canon)        # 없으면 ""
+    canon = normalize_uni(uni_name)
+    slug = uni_to_slug(canon)
     return slug or canon.replace(" ", "")
 
 def get_type_folder(type_text: str) -> str:
-    """
-    - normalize_type으로 '정시'/'수시' 표준화 후 type_to_slug('jungsi'/'susi').
-    """
     if not type_text:
         return ""
-    canon = normalize_type(type_text)  # '', '정시', '수시'
+    canon = normalize_type(type_text)
     return type_to_slug(canon) or ""
 
 def resolve_text_path(uni_slug: str, type_folder: str) -> str:
@@ -91,7 +83,7 @@ def resolve_text_path(uni_slug: str, type_folder: str) -> str:
     return os.path.join(THIS, "university", uni_slug, f"{type_folder}_text.txt")
 
 # ---------------------------
-# 단일 질의 처리
+# 단일 질의 처리 (페어별 Top3 탐색 포함)
 # ---------------------------
 def search_top_pages_for_query(
     text: str,
@@ -102,27 +94,17 @@ def search_top_pages_for_query(
     gemini_model: str,
     top_pages: int = 5
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], Dict[str, Any]]:
-    """
-    반환:
-      rows: CSV 행들
-      stats: {'pairs': int, 'docs_found': int, 'pages_scored': int}
-      ner_dump: {'uni': list, 'type': list|str, 'keywords': list, 'decision': str}
-    """
-    # 1) NER 추출 (extract_all.py와 동일한 컴포넌트)
+
     ner_uni = uni_ex.extract_uni(text)
     ner_type = type_ex.extract_type(text)
     ner_kw   = kw_ex.extract_keywords(text)
 
-    # 2) LLM 재정렬 (대학/전형/키워드 매칭쌍 생성)
     pairs = gemini_sort(api_key, gemini_model, ner_uni, ner_type, ner_kw)
-
-    # 3) 최종 분류 (문서탐색/재질문/답변 생성 등)
     decision = final_bucket(ner_uni, ner_kw)
 
     stats = {"pairs": len(pairs), "docs_found": 0, "pages_scored": 0}
     rows: List[Dict[str, Any]] = []
 
-    # 3-1) 문서탐색이 아니면 검색 스킵
     if decision != "문서탐색":
         rows.append({
             "input_query": text,
@@ -137,7 +119,7 @@ def search_top_pages_for_query(
         ner_dump = {"uni": ner_uni, "type": ner_type, "keywords": ner_kw, "decision": decision}
         return rows, stats, ner_dump
 
-    # 4) 문서탐색인 경우에만 검색 수행
+    # ---- 문서탐색 로직 (페어별 Top3)
     for p in pairs:
         u = p.get("UNI")
         t = p.get("TYPE", "")
@@ -167,7 +149,10 @@ def search_top_pages_for_query(
             raw = f.read()
         pages = split_text_into_pages(raw)
         stats["pages_scored"] += len(pages)
+
+        # 각 (UNI, TYPE) 쌍별 Top3만 추출
         ranking = score_pages(pages, klist, k=top_pages)
+        ranking = ranking[:3] if ranking else []
 
         if not ranking:
             rows.append({
@@ -203,10 +188,8 @@ def search_top_pages_for_query(
 def write_csv(path: str, rows: List[Dict[str, Any]]):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     cols = [
-        "input_query",
-        "ner_uni", "ner_type", "ner_keywords",
-        "decision",
-        "matched_uni", "matched_type", "matched_keywords",
+        "input_query", "ner_uni", "ner_type", "ner_keywords",
+        "decision", "matched_uni", "matched_type", "matched_keywords",
         "doc_path", "page_index", "score", "snippet"
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
@@ -235,10 +218,10 @@ def fmt_sec(s: float) -> str:
 # ---------------------------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i","--input", default="test.txt", help="질문 목록 파일 경로")
-    ap.add_argument("-o","--output", default="hits.csv", help="CSV 저장 경로")
-    ap.add_argument("--topn", type=int, default=10, help="키워드 추출 상위 N")
-    ap.add_argument("--pages", type=int, default=5, help="문서당 상위 페이지 개수")
+    ap.add_argument("-i","--input", default="test.txt")
+    ap.add_argument("-o","--output", default="hits.csv")
+    ap.add_argument("--topn", type=int, default=10)
+    ap.add_argument("--pages", type=int, default=5)
     args = ap.parse_args()
 
     api_key, gemini_model = load_env()
@@ -247,29 +230,25 @@ def main():
     kw_ex = KeywordExtractorBridge(topn=args.topn)
 
     queries = read_questions(args.input)
-    all_rows: List[Dict[str, Any]] = []
-    per_durations: List[float] = []
+    all_rows, per_durations = [], []
     total_start = time.perf_counter()
 
     for qi, q in enumerate(queries, 1):
         t0 = time.perf_counter()
-        rows, stats, ner = search_top_pages_for_query(
-            q, uni_ex, type_ex, kw_ex, api_key, gemini_model, top_pages=args.pages
-        )
+        rows, stats, ner = search_top_pages_for_query(q, uni_ex, type_ex, kw_ex, api_key, gemini_model, top_pages=args.pages)
         all_rows.extend(rows)
         dt = time.perf_counter() - t0
         per_durations.append(dt)
 
-        # ---- 콘솔 출력: (입력) → (NER) → (최종분류) → (요약) → (Top 미리보기)
         print(f"\n[{qi:03d}] 입력 문장: {q}")
-        print(f"     NER 추출 → UNI:{ner.get('uni') or []}  TYPE:{ner.get('type') or []}  KEYWORD:{ner.get('keywords') or []}")
+        print(f"     NER 추출 → UNI:{ner.get('uni')}  TYPE:{ner.get('type')}  KEYWORD:{ner.get('keywords')}")
         print(f"     최종 분류: {ner.get('decision')}")
         print(f"     매칭쌍: {stats['pairs']}개, 문서 발견: {stats['docs_found']}개, 스코어링 대상 페이지: {stats['pages_scored']}장")
 
         if ner.get("decision") != "문서탐색":
             print("     (문서탐색이 아니므로 검색 스킵)")
         else:
-            preview = [r for r in rows if r["page_index"] != -1][:3]
+            preview = [r for r in rows if r["page_index"] != -1][:12]
             for i, r in enumerate(preview, 1):
                 print(f"       - Top{i}: {os.path.basename(r['doc_path'])} | p.{r['page_index']} | score={r['score']:.4f} | kw={r['matched_keywords']}")
 
