@@ -40,9 +40,13 @@ COMPOSITE_MAP = {
 
 # 4) 조사/문장부호 제거
 JOSA_SUFFIXES = [
-    "은", "는", "이", "가", "을", "를", "과", "와", "랑", "도", "에서", "의", "까지", "만",
-    "는요", "인가요", "입니다"
+    "중에서",  
+    "중에",    
+    "는요", "인가요", "입니다",
+    "에서", "까지",
+    "은","는","이","가","을","를","과","와","랑","도","의","만",
 ]
+JOSA_SUFFIXES = sorted(JOSA_SUFFIXES, key=len, reverse=True)
 JOSA_SUFFIXES = sorted(JOSA_SUFFIXES, key=len, reverse=True)
 RX_TRAIL = re.compile(r"[^\w가-힣]+$")
 
