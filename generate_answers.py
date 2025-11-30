@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-generate_answers.py (오류 완전 제거 + NER 추출기 정상 연동 + 결정타입별 동작 분리)
+generate_answers.py (업데이트 버전)
+- NER 추출기 정상 연동
+- 최종 분류(decision)에 따라 재질문/답변생성/문서탐색 분리
+- 문서탐색:
+    * 실제로 매칭된 페이지가 없으면 → 일반 GPT 답변으로 Fallback
+    * 매칭된 페이지가 있으면 → RAG + 답변에 출처 포함
 """
 from dotenv import load_dotenv
 load_dotenv()
@@ -58,9 +63,16 @@ DOC_ANSWER_USER_TEMPLATE = """[질문]
 [문서 컨텍스트]
 {context}
 
+[출처 후보]
+{sources}
+
 [지시사항]
 - 위 컨텍스트 안에서만 근거를 찾아 답변하세요.
 - 컨텍스트에 없는 내용은 추정하지 말고 '제시된 컨텍스트에 없음'이라고 하세요.
+- 답변 마지막에 '출처:' 섹션을 추가하여 실제로 참고한 문서명을 1~3개 정도 bullet로 남기세요.
+  예시)
+  출처:
+  - 파일명 p.페이지
 """
 
 # ▶ 답변 생성(비문서)용
@@ -104,6 +116,22 @@ def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
         snip = r.get("snippet", "").strip()
         blocks.append(f"[{i}] {src} p.{page} (score={score:.4f})\n{snip}")
     return "\n\n".join(blocks) if blocks else "(컨텍스트 없음)"
+
+def build_sources_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
+    """
+    RAG 답변에 함께 넘길 '출처 후보' 문자열 생성
+    """
+    cands = [r for r in rows if r.get("page_index", -1) != -1]
+    if not cands:
+        return "(출처 후보 없음)"
+    cands.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+    lines = []
+    for r in cands[:topk]:
+        src = os.path.basename(r.get("doc_path", "")) or "unknown.txt"
+        page = r.get("page_index", "?")
+        score = r.get("score", 0.0)
+        lines.append(f"- {src} p.{page} (score={score:.4f})")
+    return "\n".join(lines)
 
 def print_pairwise_top(rows: List[Dict[str, Any]], topk: int = 3):
     by_pair: Dict[tuple, List[Dict[str, Any]]] = {}
@@ -169,7 +197,6 @@ def main():
             )
             print_pairwise_top(rows, topk=3)
         else:
-            # 재질문 / 답변생성인 경우에는 검색 결과를 사용하지 않음
             print("매칭쌍 : 0개 , 문서 발견 : 0개 , 스코어링 대상 페이지 : 0장")
 
         # -----------------------
@@ -190,12 +217,21 @@ def main():
             answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
 
         else:
-            # 3) 기본값(또는 '문서탐색'): 문서 컨텍스트 기반 RAG 답변
-            context = pick_context_from_rows(rows, topk=3)
-            user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
-                question=q, context=context
-            )
-            answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
+            # 3) 문서탐색: 문서 컨텍스트 기반 RAG + 출처
+            has_valid_page = any(r.get("page_index", -1) != -1 for r in rows)
+
+            if has_valid_page:
+                # ▶ 문서 탐색 성공: RAG + 출처
+                context = pick_context_from_rows(rows, topk=3)
+                sources = build_sources_from_rows(rows, topk=3)
+                user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
+                    question=q, context=context, sources=sources
+                )
+                answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
+            else:
+                # ▶ 문서 탐색은 시도했지만, 실제 매칭 페이지 없음 → 일반 답변으로 Fallback
+                fallback_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=q)
+                answer = gpt_chat(EXPERT_SYSTEM_PROMPT, fallback_prompt, model=args.model)
 
         dt = time.perf_counter() - t0
         times.append(dt)

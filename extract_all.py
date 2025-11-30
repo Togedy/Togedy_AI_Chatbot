@@ -11,10 +11,11 @@ extract_all.py — 로컬 utils 충돌 완전 해결판 (이 파일만 수정)
   (임포트 직전 'utils'를 KEYWORD 폴더 것으로 임시 바인딩; 필요 시)
 - Gemini 재분류, 최종 분류 규칙, 시간/평균/전체, TSV 저장
 
-최종 분류 규칙
-- UNI ∧ KEYWORD → "문서탐색"
-- ¬UNI ∧ KEYWORD → "재질문"
-- 그 외 → "답변 생성"
+최종 분류 규칙(업데이트)
+- UNI 1개 이상 ∧ KEYWORD 존재 → 기본적으로 "문서탐색"
+- UNI 여러 개 + KEYWORD 존재 → "재질문" (어느 대학인지 명확히 해야 함)
+- UNI 없음 ∧ KEYWORD 존재 → "재질문"
+- 그 외(정보 부족 / 단순 비교질문 등) → "답변 생성"
 """
 
 import argparse
@@ -81,6 +82,10 @@ class _LocalSwap:
             else:
                 sys.modules[name] = self._orig[name]
 
+class _NullCtx:
+    def __enter__(self): return self
+    def __exit__(self, *a): return False
+
 # ─────────────────────────────────────────────────────────────────────────────
 # .env
 # ─────────────────────────────────────────────────────────────────────────────
@@ -99,8 +104,6 @@ class UniExtractor:
     def __init__(self, max_len: int = 128):
         self.max_len = max_len
 
-        # test_uni.py가 'from utils/postprocess/lexicon import ...'를 쓰므로,
-        # 임포트 직전 UNI 디렉터리의 파일을 이름대로 바인딩
         with _LocalSwap({
             "utils":      os.path.join(UNI_DIR, "utils.py"),
             "postprocess":os.path.join(UNI_DIR, "postprocess.py"),
@@ -126,12 +129,11 @@ class UniExtractor:
             if not (callable(self.get_label_list) and callable(self.postprocess) and callable(self.constrain_tags)):
                 raise ImportError("UNI: get_label_list/postprocess_ner_output/constrain_tags 확인 필요.")
 
-        # 모델/라벨 로드(1회)
         self.tokenizer, self.model = self.load_model()
         labels, label_to_id, id_to_label = self.get_label_list(self.LABEL_PATH)
         self.id2lab = {i: l for i, l in enumerate(labels)}
 
-        import torch  # noqa: F401
+        import torch  # noqa
         self._torch = __import__("torch")
 
     def extract_uni(self, text: str) -> List[str]:
@@ -173,12 +175,11 @@ class UniExtractor:
         return list(result.get("UNI") or [])
 
 # ─────────────────────────────────────────────────────────────────────────────
-# TYPE 추출기: predict.py (로컬 utils 충돌 방지)
+# TYPE 추출기
 # ─────────────────────────────────────────────────────────────────────────────
 class TypeExtractor:
     def __init__(self):
         self._predict = None
-        # 임포트 직전 TYPE 디렉터리의 utils를 바인딩하여 load_label_list 충돌 방지
         with _LocalSwap({"utils": os.path.join(TYPE_DIR, "utils.py")}):
             mod = _safe_import("predict") or _safe_import("KORBERT_NER_TYPE.predict") \
                   or _import_by_path("predict", os.path.join(TYPE_DIR, "predict.py"))
@@ -199,13 +200,12 @@ class TypeExtractor:
         return []
 
 # ─────────────────────────────────────────────────────────────────────────────
-# KEYWORD 추출기: keyword_extractor.py (로컬 utils 충돌 방지)
+# KEYWORD 추출기
 # ─────────────────────────────────────────────────────────────────────────────
 class KeywordExtractorBridge:
     def __init__(self, topn: int = 10):
         self.topn = topn
         self.ke = None
-        # 임포트 직전 KEYWORD 디렉터리의 utils를 바인딩 (있을 때만)
         utils_path = os.path.join(KW_DIR, "utils.py")
         mapping = {"utils": utils_path} if os.path.exists(utils_path) else {}
         with _LocalSwap(mapping) if mapping else _NullCtx():
@@ -231,10 +231,6 @@ class KeywordExtractorBridge:
                 return list(self.ke.extract_model_only(text, topn=self.topn))
             except Exception:
                 return []
-
-class _NullCtx:
-    def __enter__(self): return self
-    def __exit__(self, *a): return False
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Gemini 재분류/정렬
@@ -281,17 +277,32 @@ def gemini_sort(api_key: str, model: str, uni: List[str], typ_list: List[str], k
         return default_pairs
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 최종 분류 규칙
+# 최종 분류 규칙 (업데이트: UNI + TYPE + KEYWORD 기반)
 # ─────────────────────────────────────────────────────────────────────────────
-def final_bucket(uni: List[str], keywords: List[str]) -> str:
-    if uni and keywords:
-        return "문서탐색"
-    if (not uni) and keywords:
+def final_bucket(uni: List[str], typ: List[str], keywords: List[str]) -> str:
+    """
+    - UNI가 여러 개이고 KEYWORD도 있으면: 어느 대학 문서인지 불명확 → 재질문
+    - UNI가 1개 이상이고 KEYWORD가 있으면: 기본적으로 문서탐색 (TYPE 유무와 무관)
+    - UNI가 전혀 없고 KEYWORD만 있으면: 어느 대학인지 물어봐야 함 → 재질문
+    - 그 외(정보 부족 / 비교질문 등): 답변 생성(비문서)
+    """
+    # UNI 여러 개 + 키워드 → 먼저 대상 대학을 좁혀야 함
+    if len(uni) >= 2 and keywords:
         return "재질문"
+
+    # UNI 1개 이상 + 키워드 → 문서 기반 탐색 시도
+    if len(uni) >= 1 and keywords:
+        return "문서탐색"
+
+    # UNI 없음 + 키워드만 → 어느 대학인지 물어보기
+    if not uni and keywords:
+        return "재질문"
+
+    # 나머지: 일반 상식/비교 질문 등 → 비문서 답변 생성
     return "답변 생성"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# I/O
+# I/O 및 한 문장 처리
 # ─────────────────────────────────────────────────────────────────────────────
 def read_questions(path: str) -> List[str]:
     if not os.path.exists(path):
@@ -311,17 +322,20 @@ def write_results(path: str, rows: List[Tuple[str, List[str], List[str], List[st
         for q, uni, typ, kwd, bucket, sec in rows:
             f.write(f"{q}\t{'|'.join(uni)}\t{'|'.join(typ)}\t{'|'.join(kwd)}\t{bucket}\t{sec:.3f}\n")
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 한 문장 처리
-# ─────────────────────────────────────────────────────────────────────────────
-def process_sentence(text: str, uni_ex: UniExtractor, type_ex: TypeExtractor, kw_ex: KeywordExtractorBridge,
-                     api_key: str, model: str) -> Dict[str, Any]:
+def process_sentence(
+    text: str,
+    uni_ex: UniExtractor,
+    type_ex: TypeExtractor,
+    kw_ex: KeywordExtractorBridge,
+    api_key: str,
+    model: str,
+) -> Dict[str, Any]:
     t0 = time.perf_counter()
     uni = uni_ex.extract_uni(text)
     typ = type_ex.extract_type(text)
     kwd = kw_ex.extract_keywords(text)
     pairs = gemini_sort(api_key, model, uni, typ, kwd)
-    bucket = final_bucket(uni, kwd)
+    bucket = final_bucket(uni, typ, kwd)
     elapsed = time.perf_counter() - t0
     return {
         "text": text,
@@ -332,7 +346,7 @@ def process_sentence(text: str, uni_ex: UniExtractor, type_ex: TypeExtractor, kw
     }
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 메인
+# main (기존과 동일)
 # ─────────────────────────────────────────────────────────────────────────────
 def main():
     ap = argparse.ArgumentParser()
