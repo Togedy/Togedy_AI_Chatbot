@@ -1,96 +1,153 @@
-# Togedy_AI_Chatbot
-
-> 대학교 입시 요강을 기반으로 사용자의 질문에 답변하는 AI 챗봇 프로젝트입니다.  
-> OCR → NER → 문서 검색 → GPT 응답의 구조로 구현되며, 사용자 질의에 정확한 정보를 제공합니다.
 
 ---
 
-## 🧠 프로젝트 개요
+# 🎓 Togedy AI Chatbot
 
-대학교별 수시/정시 모집 요강을 기반으로, 사용자가 자연어로 질문하면  
-GPT를 통해 정확한 정보를 답변하는 챗봇 시스템을 구현합니다.
+대학 입시 요강을 기반으로 **자연어 질문에 맞춤형으로 응답하는 AI 챗봇**입니다.
+OCR·NER·문서 검색·LLM을 결합하여, 복잡한 입시 요강을 **사람이 묻듯 질문하면 바로 답변**할 수 있도록 설계되었습니다.
+
+---
+
+## 📌 프로젝트 개요
+
+* **프로젝트명**: Togedy AI Chatbot
+* **목적**
+  대학별 입시 요강(PDF, 표, 텍스트)을 구조화하고
+  사용자의 자연어 질문에 대해 정확한 정보를 제공하는 질의응답 시스템 구현
+* **대상 질문 예시**
+
+  * “연세대 컴퓨터공학과 수시 전형 방법 알려줘”
+  * “고려대 정시 모집 인원은 몇 명이야?”
+  * “서강대 논술 전형 일정은 언제야?”
+
+---
+
+## 🧠 핵심 특징
+
+* **KoBERT 기반 NER**
+
+  * 대학명(UNI), 전형(TYPE), 핵심 키워드(KEYWORD) 자동 추출
+* **질문 유형 자동 분기**
+
+  * 답변 생성 / 문서 탐색 / 재질문 유도
+* **TF-IDF 기반 문서 검색**
+
+  * 대학별 요강 텍스트 및 표 데이터 검색
+* **LLM 이중 구조**
+
+  * Gemini: NER 및 탐색 보강
+  * GPT-4o: 최종 자연어 응답 생성
+* **OCR 기반 데이터 파이프라인**
+
+  * 입시 요강 PDF → 텍스트 / 테이블 구조화
+
+---
+
+## 🔄 전체 시스템 흐름
+
+1. 사용자 질문 입력
+2. KoBERT NER로 **UNI / TYPE / KEYWORD** 추출
+3. 키워드 조합에 따라 로직 분기
+
+   * UNI 없음 + KEYWORD 있음 → 재질문
+   * UNI 있음 + KEYWORD 있음 → 문서 탐색
+   * KEYWORD 없음 → 일반 답변 생성
+4. TF-IDF 기반 문서 검색
+5. 검색 결과 + 질문을 LLM에 전달
+6. 최종 자연어 답변 생성
 
 ---
 
 ## 📁 디렉토리 구조
 
-```
-
-Togedy\_AI\_Chatbot/
-├── OCR/                      # OCR 설정
-├── app/                      # FastAPI 라우팅 (현재는 미사용)
-├── data/                     # NER 라벨, 학습 데이터, TF-IDF 인덱스
-├── document\_retrieval/       # 문서 검색 (TF-IDF 기반)
-├── llm/                      # 프롬프트 생성 및 GPT 응답 생성
-├── ner/                      # NER 모델 학습, 추론, 후처리
-├── ocr/                      # 실제 텍스트 및 표 추출기
-├── test\_cases/               # 흐름 시뮬레이션 테스트
-├── university/               # 대학별 수시/정시 OCR 자료
-├── utils/                    # 공통 유틸 (현재 사용 안함)
-└── requirements.txt
-
-````
-
----
-
-## ⚙️ 주요 구성 요소
-
-### 1. OCR
-- PDF 기반 모집요강 파일에서 표 및 텍스트 추출
-- `ocr/text_extractor.py`, `ocr/table_extractor.py`로 처리
-- 결과는 대학별 `*_text.txt`, `*_tables_cleaned.csv` 파일로 저장됨
-
-### 2. NER (개체명 인식)
-- 입력 질문에서 대학명(UNI), 전형명(TYPE), 키워드(KEYWORD) 추출
-- BIO tagging 기반 `train.tsv`, `test.tsv` 구축
-- `trainer.py`로 모델 학습 → 저장 후 `test.py`로 추론 가능
-
-### 3. 문서 검색 (Retrieval)
-- `document_chunks.json` + `tfidf_index.pkl` 기반으로 관련 문서 검색
-- 추출된 NER 키워드를 기반으로 적절한 문서 스니펫을 반환
-
-### 4. GPT 프롬프트 구성 및 응답
-- `llm/prompt_builder.py`: GPT 입력 프롬프트 구성
-- `llm/inference.py`: GPT 모델 API를 통해 최종 응답 생성
-- 질문이 첫 질문인지, 후속 질문인지 구분하여 흐름 유지
-
----
-
-## 🧪 테스트 예시
-
-- `서울대 수시에서 모집인원이 궁금해요`
-- `연세대 정시 논술전형 제출서류 알려줘`
-- `성균관대 교과전형 일정이 어떻게 돼요?`
-
----
-
-## 🔧 학습 방법
-
-NER 모델 학습을 위해 아래 파일을 사용합니다:
-
-- 학습: `data/train.tsv`
-- 테스트: `data/test.tsv`
-
-```bash
-python ner/trainer.py
-````
-
-모델 저장 후 추론:
-
-```bash
-python ner/test.py --sentence "서울대 정시 모집인원 알려줘"
+```text
+.
+├─ main.py                  # 전체 파이프라인 실행
+├─ answer.py                # 답변 생성 로직
+├─ extract_all.py           # OCR 및 텍스트 추출
+├─ search_and_export.py     # 문서 탐색 및 결과 처리
+├─ document_retrieval/      # TF-IDF 기반 검색
+│  ├─ build_tfidf.py
+│  ├─ retriever.py
+│  └─ table_pick.py
+├─ KORBERT_NER_UNI/         # 대학명 NER
+├─ KORBERT_NER_TYPE/        # 전형 NER
+├─ KORBERT_NER_KEYWORD/     # 키워드 NER
+├─ llm/                     # LLM 프롬프트 및 추론
+├─ ocr/                     # OCR & 테이블 추출
+├─ university/              # 대학별 요강 데이터
+└─ app/                     # Flask API 서버
 ```
 
 ---
 
-## 🗂 참고 데이터
+## 🧩 NER 모델 설명
 
-* `university/` 내 각 학교별 수시 및 정시 PDF
-* OCR 추출 텍스트/표 기반 문서로 변환되어 사용됨
+* **모델**: `skt/kobert-base-v1`
+* **태깅 방식**: BIO tagging
+* **라벨 구성**
+
+  * `UNI` : 대학명
+  * `TYPE` : 전형 (수시, 정시, 논술 등)
+  * `KEYWORD` : 질문 핵심 개념
+* **활용 목적**
+
+  * 질문 의도 파악
+  * 문서 탐색 여부 및 대상 결정
 
 ---
 
-## 👨‍💻 Contributors
+## 🔍 문서 탐색 방식
 
-* NER 모델, LLM 프롬프트 파이프라인: 노진우
-* OCR 및 문서 전처리: 노진우
+* **기법**: TF-IDF + cosine similarity
+* **데이터**
+
+  * 대학별 `susi_text.txt`, `jungsi_text.txt`
+  * 전형별 CSV 테이블
+* **특징**
+
+  * 대학 단위로 탐색 범위 제한
+  * 표 데이터와 본문 텍스트 분리 처리
+
+---
+
+## 🤖 LLM 구성
+
+| 역할          | 사용 모델  |
+| ----------- | ------ |
+| NER / 탐색 보강 | Gemini |
+| 최종 답변 생성    | GPT-4o |
+
+* 검색된 문서 내용을 컨텍스트로 활용하여 **환각을 최소화**
+* 질문 유형에 따라 프롬프트 구조 분리
+
+---
+
+## ▶ 실행 방법
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+또는 Flask API 실행
+
+```bash
+python app/main.py
+```
+
+---
+
+## 📌 활용 목적
+
+* 대학 입시 정보 접근성 향상
+* 챗봇 기반 입시 상담 자동화
+* RAG + NER 결합 구조 실험 및 연구
+
+---
+
+## 📎 참고 사항
+
+* 본 프로젝트는 **깃허브 공개용**으로 정제되었습니다.
+* 실제 입시 상담 시에는 반드시 공식 요강을 함께 확인하시기 바랍니다.
+
