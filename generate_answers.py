@@ -6,7 +6,12 @@ generate_answers.py (업데이트 버전)
 - 문서탐색:
     * 실제로 매칭된 페이지가 없으면 → 일반 GPT 답변으로 Fallback
     * 매칭된 페이지가 있으면 → RAG + 답변에 출처 포함
+
+추가 규칙(2026-01):
+- 콘솔 Top1~Top3 출력은 score와 무관하게 그대로 출력한다.
+- 챗봇 답변의 출처/컨텍스트에는 score <= 0.01 인 항목을 포함하지 않는다.
 """
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -17,6 +22,11 @@ from statistics import mean
 THIS = os.path.dirname(os.path.abspath(__file__))
 if THIS not in sys.path:
     sys.path.insert(0, THIS)
+
+# -----------------------
+# 출처/컨텍스트 필터 기준
+# -----------------------
+MIN_SOURCE_SCORE = 0.01  # score > 0.01 인 페이지만 출처/컨텍스트에 포함
 
 # --- NER 추출기 불러오기 ---
 from extract_all import UniExtractor, TypeExtractor, KeywordExtractorBridge, load_env
@@ -106,43 +116,67 @@ def build_followup_prompt(ner_uni, ner_type, ner_kw):
     return FOLLOWUP_USER_TEMPLATE.format(uni=u, type_=t, kw=k)
 
 def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
-    cands = [r for r in rows if r.get("page_index", -1) != -1]
+    """
+    RAG 컨텍스트 블록 생성
+    - score <= MIN_SOURCE_SCORE 인 페이지는 컨텍스트에서 제외
+    """
+    cands = [
+        r for r in rows
+        if r.get("page_index", -1) != -1
+        and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
+    ]
     cands.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
     blocks = []
     for i, r in enumerate(cands[:topk], 1):
         src = os.path.basename(r.get("doc_path", "")) or "unknown.txt"
         page = r.get("page_index", "?")
-        score = r.get("score", 0.0)
-        snip = r.get("snippet", "").strip()
+        score = float(r.get("score", 0.0))
+        snip = (r.get("snippet", "") or "").strip()
         blocks.append(f"[{i}] {src} p.{page} (score={score:.4f})\n{snip}")
+
     return "\n\n".join(blocks) if blocks else "(컨텍스트 없음)"
 
 def build_sources_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
     """
     RAG 답변에 함께 넘길 '출처 후보' 문자열 생성
+    - score <= MIN_SOURCE_SCORE 인 페이지는 출처 후보에서 제외
+    - LLM이 그대로 복사하므로 score 표기는 제거
     """
-    cands = [r for r in rows if r.get("page_index", -1) != -1]
+    cands = [
+        r for r in rows
+        if r.get("page_index", -1) != -1
+        and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
+    ]
     if not cands:
         return "(출처 후보 없음)"
+
     cands.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
     lines = []
     for r in cands[:topk]:
         src = os.path.basename(r.get("doc_path", "")) or "unknown.txt"
         page = r.get("page_index", "?")
-        score = r.get("score", 0.0)
-        lines.append(f"- {src} p.{page} (score={score:.4f})")
+        lines.append(f"- {src} p.{page}")
+
     return "\n".join(lines)
 
 def print_pairwise_top(rows: List[Dict[str, Any]], topk: int = 3):
+    """
+    콘솔 출력용 TopN
+    - 요구사항: score에 상관없이 그대로 출력한다.
+    """
     by_pair: Dict[tuple, List[Dict[str, Any]]] = {}
     for r in rows:
         if r.get("page_index", -1) == -1:
             continue
         key = (r.get("matched_uni", ""), r.get("matched_type", ""))
         by_pair.setdefault(key, []).append(r)
+
     if not by_pair:
         print("     (검색 결과 없음)")
         return
+
     for (u, t), lst in by_pair.items():
         lst.sort(key=lambda x: float(x.get("score", 0.0)), reverse=True)
         print(f"     ▷ 페어: [{u or '-'} | {t or '-'}]  (Top{topk})")
@@ -195,6 +229,7 @@ def main():
                 f"문서 발견 : {stats.get('docs_found', 0)}개 , "
                 f"스코어링 대상 페이지 : {stats.get('pages_scored', 0)}장"
             )
+            # 콘솔 Top 출력은 score와 무관하게 유지
             print_pairwise_top(rows, topk=3)
         else:
             print("매칭쌍 : 0개 , 문서 발견 : 0개 , 스코어링 대상 페이지 : 0장")
@@ -218,18 +253,23 @@ def main():
 
         else:
             # 3) 문서탐색: 문서 컨텍스트 기반 RAG + 출처
-            has_valid_page = any(r.get("page_index", -1) != -1 for r in rows)
+            #    단, 답변에 보여줄 컨텍스트/출처는 score > MIN_SOURCE_SCORE 만 포함
+            has_valid_page = any(
+                r.get("page_index", -1) != -1 and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
+                for r in rows
+            )
 
             if has_valid_page:
                 # ▶ 문서 탐색 성공: RAG + 출처
                 context = pick_context_from_rows(rows, topk=3)
                 sources = build_sources_from_rows(rows, topk=3)
+
                 user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
                     question=q, context=context, sources=sources
                 )
                 answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
             else:
-                # ▶ 문서 탐색은 시도했지만, 실제 매칭 페이지 없음 → 일반 답변으로 Fallback
+                # ▶ 문서 탐색은 시도했지만, 실제로 출처로 삼을 만큼 유의미한 페이지 없음 → 일반 답변으로 Fallback
                 fallback_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=q)
                 answer = gpt_chat(EXPERT_SYSTEM_PROMPT, fallback_prompt, model=args.model)
 
