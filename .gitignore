@@ -1,5 +1,4 @@
 .env
-university/
 KORBERT_NER_KEYWORD/data/
 KORBERT_NER_TYPE/data/
 KORBERT_NER_UNI/data
