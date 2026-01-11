@@ -10,13 +10,19 @@ generate_answers.py (업데이트 버전)
 추가 규칙(2026-01):
 - 콘솔 Top1~Top3 출력은 score와 무관하게 그대로 출력한다.
 - 챗봇 답변의 출처/컨텍스트에는 score <= 0.01 인 항목을 포함하지 않는다.
+
+추가 반영(2026-01 최신):
+- 출처 표기 형식: "대학 , 타입 모집요강 p.10, p.72" 처럼 (대학, 타입)별로 한 줄에 페이지를 묶는다.
+- 페이지 표기 순서는 score가 아니라 페이지 오름차순으로 한다.
+- 페어가 여러 개(예: 정시+수시)인 경우, 특정 페어만 출처가 나오는 문제를 막기 위해 "페어별"로 출처를 구성한다.
+- LLM이 출처 섹션을 일부만 남기거나 누락하더라도, 최종 출력은 후처리로 출처를 고정한다.
 """
 
 from dotenv import load_dotenv
 load_dotenv()
 
 import os, sys, time, argparse
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 from statistics import mean
 
 THIS = os.path.dirname(os.path.abspath(__file__))
@@ -80,9 +86,6 @@ DOC_ANSWER_USER_TEMPLATE = """[질문]
 - 위 컨텍스트 안에서만 근거를 찾아 답변하세요.
 - 컨텍스트에 없는 내용은 추정하지 말고 '제시된 컨텍스트에 없음'이라고 하세요.
 - 답변 마지막에 '출처:' 섹션을 추가하여 실제로 참고한 문서명을 1~3개 정도 bullet로 남기세요.
-  예시)
-  출처:
-  - 파일명 p.페이지
 """
 
 # ▶ 답변 생성(비문서)용
@@ -115,20 +118,45 @@ def build_followup_prompt(ner_uni, ner_type, ner_kw):
     k = ", ".join(ner_kw) if ner_kw else "(파악 안 됨)"
     return FOLLOWUP_USER_TEMPLATE.format(uni=u, type_=t, kw=k)
 
-def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
-    """
-    RAG 컨텍스트 블록 생성
-    - score <= MIN_SOURCE_SCORE 인 페이지는 컨텍스트에서 제외
-    """
-    cands = [
+def _valid_source_rows(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    return [
         r for r in rows
         if r.get("page_index", -1) != -1
         and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
     ]
-    cands.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
+    """
+    RAG 컨텍스트 블록 생성
+    - score <= MIN_SOURCE_SCORE 인 페이지는 컨텍스트에서 제외
+    - 페어가 여러 개인 경우 한쪽만 쏠리지 않게 "페어별 1개"를 우선 담고, 남는 자리는 score 순으로 채운다.
+    """
+    cands = _valid_source_rows(rows)
+    if not cands:
+        return "(컨텍스트 없음)"
+
+    # (uni,type)별 그룹핑
+    grouped: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
+    for r in cands:
+        key = (r.get("matched_uni", ""), r.get("matched_type", ""))
+        grouped.setdefault(key, []).append(r)
+
+    # 페어별 1개씩 우선 선택(최고 점수)
+    chosen: List[Dict[str, Any]] = []
+    for key, lst in grouped.items():
+        lst.sort(key=lambda x: float(x.get("score", 0.0)), reverse=True)
+        chosen.append(lst[0])
+
+    # 남은 후보들(중복 제거)
+    chosen_ids = set((r.get("doc_path", ""), r.get("page_index", "")) for r in chosen)
+    rest = [r for r in cands if (r.get("doc_path", ""), r.get("page_index", "")) not in chosen_ids]
+    rest.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+    final = chosen + rest
+    final = final[:topk]
 
     blocks = []
-    for i, r in enumerate(cands[:topk], 1):
+    for i, r in enumerate(final, 1):
         src = os.path.basename(r.get("doc_path", "")) or "unknown.txt"
         page = r.get("page_index", "?")
         score = float(r.get("score", 0.0))
@@ -139,27 +167,63 @@ def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
 
 def build_sources_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
     """
-    RAG 답변에 함께 넘길 '출처 후보' 문자열 생성
-    - score <= MIN_SOURCE_SCORE 인 페이지는 출처 후보에서 제외
-    - LLM이 그대로 복사하므로 score 표기는 제거
+    출처 후보 문자열 생성 (요구사항 반영)
+    - 함수 시그니처는 기존과 동일하게 topk 유지 (호환성)
+    - (대학, 타입)별로 한 줄에 페이지를 묶어 표기
+    - 각 (대학, 타입) 그룹 내에서 score 상위 topk개만 사용(너무 길어지는 것 방지)
+    - 페이지 표기 순서는 score가 아니라 페이지 오름차순
     """
-    cands = [
-        r for r in rows
-        if r.get("page_index", -1) != -1
-        and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
-    ]
+    cands = _valid_source_rows(rows)
     if not cands:
         return "(출처 후보 없음)"
 
-    cands.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+    # (uni,type)별 그룹핑
+    grouped: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
+    for r in cands:
+        key = (r.get("matched_uni", ""), r.get("matched_type", ""))
+        grouped.setdefault(key, []).append(r)
 
-    lines = []
-    for r in cands[:topk]:
-        src = os.path.basename(r.get("doc_path", "")) or "unknown.txt"
-        page = r.get("page_index", "?")
-        lines.append(f"- {src} p.{page}")
+    lines: List[str] = []
+    for (uni, type_), lst in grouped.items():
+        # 대표성 확보: score 상위 topk개만 사용
+        lst.sort(key=lambda x: float(x.get("score", 0.0)), reverse=True)
+        lst = lst[:topk]
 
-    return "\n".join(lines)
+        # 페이지는 오름차순으로 출력 (중복 제거)
+        pages = []
+        for x in lst:
+            p = x.get("page_index", None)
+            try:
+                p_int = int(p)
+                pages.append(p_int)
+            except Exception:
+                continue
+        pages = sorted(set(pages))
+
+        if pages:
+            page_str = ", ".join([f"p.{p}" for p in pages])
+            lines.append(f"- {uni} , {type_} 모집요강 {page_str}")
+
+    # 출력 순서 안정화: uni, type 정렬
+    lines.sort()
+    return "\n".join(lines) if lines else "(출처 후보 없음)"
+
+def _strip_existing_sources(answer: str) -> str:
+    """
+    LLM이 만들어낸 '출처:' 섹션을 제거하고, 우리가 만든 출처로 고정하기 위한 전처리
+    """
+    if not answer:
+        return ""
+    idx = answer.rfind("출처:")
+    if idx == -1:
+        return answer.rstrip()
+    return answer[:idx].rstrip()
+
+def attach_fixed_sources(answer: str, sources: str) -> str:
+    base = _strip_existing_sources(answer)
+    if not sources or sources.strip() == "(출처 후보 없음)":
+        return base
+    return base + "\n\n출처:\n" + sources.strip()
 
 def print_pairwise_top(rows: List[Dict[str, Any]], topk: int = 3):
     """
@@ -194,7 +258,6 @@ def main():
     ap.add_argument("--model", default="gpt-4o-mini")
     args = ap.parse_args()
 
-    # ✅ NER 추출기 및 환경 불러오기
     api_key, gemini_model = load_env()
     uni_ex = UniExtractor(max_len=128)
     type_ex = TypeExtractor()
@@ -207,7 +270,6 @@ def main():
     for idx, q in enumerate(queries, 1):
         t0 = time.perf_counter()
 
-        # ✅ 통합 파이프라인: 여기서 NER + 최종 분류 + (필요 시) 문서 검색까지 수행
         rows, stats, ner = search_top_pages_for_query(
             q, uni_ex, type_ex, kw_ex, api_key, gemini_model, top_pages=3
         )
@@ -222,14 +284,12 @@ def main():
         )
         print(f"최종 분류 : {decision}")
 
-        # ▶ 문서 탐색일 때만 매칭쌍/문서 통계를 사용
         if decision == "문서탐색":
             print(
                 f"매칭쌍 : {stats.get('pairs', 0)}개 , "
                 f"문서 발견 : {stats.get('docs_found', 0)}개 , "
                 f"스코어링 대상 페이지 : {stats.get('pages_scored', 0)}장"
             )
-            # 콘솔 Top 출력은 score와 무관하게 유지
             print_pairwise_top(rows, topk=3)
         else:
             print("매칭쌍 : 0개 , 문서 발견 : 0개 , 스코어링 대상 페이지 : 0장")
@@ -238,7 +298,6 @@ def main():
         # 챗봇 답변 생성 분기
         # -----------------------
         if decision == "재질문":
-            # 1) 재질문: 매칭쌍/문서 사용 X, 바로 후속 질문 생성
             user_prompt = build_followup_prompt(
                 ner.get("uni"), ner.get("type"), ner.get("keywords")
             )
@@ -247,29 +306,29 @@ def main():
             )
 
         elif decision == "답변 생성":
-            # 2) 답변 생성: 매칭쌍/문서 사용 X, 질문만으로 답변 생성
             user_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=q)
             answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
 
         else:
-            # 3) 문서탐색: 문서 컨텍스트 기반 RAG + 출처
-            #    단, 답변에 보여줄 컨텍스트/출처는 score > MIN_SOURCE_SCORE 만 포함
             has_valid_page = any(
                 r.get("page_index", -1) != -1 and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
                 for r in rows
             )
 
             if has_valid_page:
-                # ▶ 문서 탐색 성공: RAG + 출처
                 context = pick_context_from_rows(rows, topk=3)
+
+                # 출처는 (uni,type)별로 묶어서 생성 (topk는 "페어별 최대 페이지 수"로 동작)
                 sources = build_sources_from_rows(rows, topk=3)
 
                 user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
                     question=q, context=context, sources=sources
                 )
                 answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
+
+                # LLM이 출처를 누락/편집해도 최종 출력은 고정
+                answer = attach_fixed_sources(answer, sources)
             else:
-                # ▶ 문서 탐색은 시도했지만, 실제로 출처로 삼을 만큼 유의미한 페이지 없음 → 일반 답변으로 Fallback
                 fallback_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=q)
                 answer = gpt_chat(EXPERT_SYSTEM_PROMPT, fallback_prompt, model=args.model)
 

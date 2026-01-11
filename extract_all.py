@@ -279,27 +279,15 @@ def gemini_sort(api_key: str, model: str, uni: List[str], typ_list: List[str], k
 # ─────────────────────────────────────────────────────────────────────────────
 # 최종 분류 규칙 (업데이트: UNI + TYPE + KEYWORD 기반)
 # ─────────────────────────────────────────────────────────────────────────────
-def final_bucket(uni: List[str], typ: List[str], keywords: List[str]) -> str:
-    """
-    - UNI가 여러 개이고 KEYWORD도 있으면: 어느 대학 문서인지 불명확 → 재질문
-    - UNI가 1개 이상이고 KEYWORD가 있으면: 기본적으로 문서탐색 (TYPE 유무와 무관)
-    - UNI가 전혀 없고 KEYWORD만 있으면: 어느 대학인지 물어봐야 함 → 재질문
-    - 그 외(정보 부족 / 비교질문 등): 답변 생성(비문서)
-    """
-    # UNI 여러 개 + 키워드 → 먼저 대상 대학을 좁혀야 함
-    if len(uni) >= 2 and keywords:
+def final_bucket(ner_uni, ner_type, ner_kw):
+    uni_list = ner_uni if isinstance(ner_uni, list) else ([ner_uni] if ner_uni else [])
+    type_list = ner_type if isinstance(ner_type, list) else ([ner_type] if ner_type else [])
+    kw_list = ner_kw if isinstance(ner_kw, list) else ([ner_kw] if ner_kw else [])
+
+    if not uni_list or not type_list or not kw_list:
         return "재질문"
+    return "문서탐색"
 
-    # UNI 1개 이상 + 키워드 → 문서 기반 탐색 시도
-    if len(uni) >= 1 and keywords:
-        return "문서탐색"
-
-    # UNI 없음 + 키워드만 → 어느 대학인지 물어보기
-    if not uni and keywords:
-        return "재질문"
-
-    # 나머지: 일반 상식/비교 질문 등 → 비문서 답변 생성
-    return "답변 생성"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # I/O 및 한 문장 처리
