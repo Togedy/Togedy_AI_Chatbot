@@ -1,5 +1,36 @@
+# =========================
+# Environment
+# =========================
 .env
-KORBERT_NER_KEYWORD/results_keyword/checkpoint-*
-venv
-KORBERT_NER_UNI/results/checkpoint-*
-KORBERT_NER_TYPE/results/checkpoint-*
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Training Data (ignore all data files)
+# =========================
+KORBERT_NER*/data/*
+
+# But always track label.txt
+!KORBERT_NER*/data/label.txt
+
+# =========================
+# Model checkpoints (large files)
+# =========================
+KORBERT_NER*/results*/checkpoint-*
+KORBERT_NER*/results*/runs/
+*.pt
+*.bin
+
+# =========================
+# VSCode / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+*.log
