@@ -1,261 +1,398 @@
+# generate_answers.py
 # -*- coding: utf-8 -*-
-"""
-generate_answers.py (업데이트 버전)
-- NER 추출기 정상 연동
-- 최종 분류(decision)에 따라 재질문/답변생성/문서탐색 분리
-- 문서탐색:
-    * 실제로 매칭된 페이지가 없으면 → 일반 GPT 답변으로 Fallback
-    * 매칭된 페이지가 있으면 → RAG + 답변에 출처 포함
 
-추가 규칙(2026-01):
-- 콘솔 Top1~Top3 출력은 score와 무관하게 그대로 출력한다.
-- 챗봇 답변의 출처/컨텍스트에는 score <= 0.01 인 항목을 포함하지 않는다.
+import os
+import re
+import time
+import argparse
+from collections import defaultdict
+from functools import lru_cache
+from typing import Any, Dict, List, Optional, Tuple
 
-추가 반영(2026-01 최신):
-- 출처 표기 형식: "대학 , 타입 모집요강 p.10, p.72" 처럼 (대학, 타입)별로 한 줄에 페이지를 묶는다.
-- 페이지 표기 순서는 score가 아니라 페이지 오름차순으로 한다.
-- 페어가 여러 개(예: 정시+수시)인 경우, 특정 페어만 출처가 나오는 문제를 막기 위해 "페어별"로 출처를 구성한다.
-- LLM이 출처 섹션을 일부만 남기거나 누락하더라도, 최종 출력은 후처리로 출처를 고정한다.
-"""
+from search_and_export import search_top_pages_for_query
 
-from dotenv import load_dotenv
-load_dotenv()
-
-import os, sys, time, argparse
-from typing import List, Dict, Any, Tuple
-from statistics import mean
-
-THIS = os.path.dirname(os.path.abspath(__file__))
-if THIS not in sys.path:
-    sys.path.insert(0, THIS)
-
-# -----------------------
-# 출처/컨텍스트 필터 기준
-# -----------------------
-MIN_SOURCE_SCORE = 0.01  # score > 0.01 인 페이지만 출처/컨텍스트에 포함
-
-# --- NER 추출기 불러오기 ---
-from extract_all import UniExtractor, TypeExtractor, KeywordExtractorBridge, load_env
-from search_and_export import search_top_pages_for_query, read_questions, fmt_sec
-
-# --- GPT 유틸 ---
-def gpt_enabled() -> bool:
-    return bool(os.getenv("OPENAI_API_KEY", "").strip())
-
-def gpt_chat(
-    system_prompt: str,
-    user_prompt: str,
-    model: str = "gpt-4o-mini",
-    temperature: float = 0.3,
-    max_tokens: int = 900,
-) -> str:
-    if not gpt_enabled():
-        return "[알림] OPENAI_API_KEY가 설정되지 않아 모델 호출을 생략했습니다."
-    try:
-        from openai import OpenAI
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
-        resp = client.chat.completions.create(
-            model=model,
-            temperature=temperature,
-            max_tokens=max_tokens,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-        )
-        return (resp.choices[0].message.content or "").strip()
-    except Exception as e:
-        return f"(GPT 호출 오류: {e})"
-
-# --- 프롬프트 ---
-EXPERT_SYSTEM_PROMPT = (
-    "당신은 대한민국 대입 제도와 각 대학 모집요강에 정통한 입시 전문가입니다. "
-    "최신 정보를 기준으로 간결하고 명확히 답하세요."
+from extract_all import (
+    UniExtractor,
+    TypeExtractor,
+    KeywordExtractorBridge,
+    load_env,
 )
 
-DOC_ANSWER_USER_TEMPLATE = """[질문]
-{question}
+try:
+    from openai import OpenAI
+except Exception:
+    OpenAI = None
 
-[문서 컨텍스트]
-{context}
 
-[출처 후보]
-{sources}
+PAGE_LABEL_RE = re.compile(r"^\s*={2,}\s*Page\s*(\d+)\s*={2,}\s*$", re.IGNORECASE)
 
-[지시사항]
-- 위 컨텍스트 안에서만 근거를 찾아 답변하세요.
-- 컨텍스트에 없는 내용은 추정하지 말고 '제시된 컨텍스트에 없음'이라고 하세요.
-- 답변 마지막에 '출처:' 섹션을 추가하여 실제로 참고한 문서명을 1~3개 정도 bullet로 남기세요.
-"""
 
-# ▶ 답변 생성(비문서)용
-DIRECT_ANSWER_USER_TEMPLATE = """[질문]
-{question}
-
-[지시사항]
-- 제공된 모집요강 PDF를 사용하지 않고, 일반적인 대입 제도와 대학 입시 상식을 바탕으로 답변하세요.
-- 가능하면 구체적인 예시나 조언을 간단히 제시하세요.
-- 확실하지 않은 내용은 단정적으로 말하지 말고 '일반적인 기준으로는 ~'처럼 완곡하게 표현하세요.
-"""
-
-FOLLOWUP_USER_TEMPLATE = """[현재 파악된 정보]
-- 대학: {uni}
-- 전형: {type_}
-- 키워드: {kw}
-
-[지시사항]
-- 빠진 정보를 물어보는 간결한 질문을 작성하세요.
-"""
-
-def build_followup_prompt(ner_uni, ner_type, ner_kw):
-    u = ", ".join(ner_uni) if ner_uni else "(파악 안 됨)"
-    t = (
-        ", ".join(ner_type)
-        if isinstance(ner_type, list) and ner_type
-        else ner_type
-        or "(파악 안 됨)"
-    )
-    k = ", ".join(ner_kw) if ner_kw else "(파악 안 됨)"
-    return FOLLOWUP_USER_TEMPLATE.format(uni=u, type_=t, kw=k)
-
-def _valid_source_rows(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    return [
-        r for r in rows
-        if r.get("page_index", -1) != -1
-        and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
+def is_quota_question(text: str) -> bool:
+    if not text:
+        return False
+    t = text.replace(" ", "")
+    triggers = [
+        "몇명", "몇명을", "몇명뽑", "몇명뽑는", "몇명뽑는지", "몇명뽑아", "몇명뽑아요",
+        "모집인원", "모집인원은", "모집인원알려", "모집인원알려줘",
+        "선발", "선발인원", "선발인원알려", "선발인원알려줘",
+        "정원", "정원은", "정원내", "정원외",
+        "인원", "인원수",
     ]
+    return any(k in t for k in triggers)
 
-def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
-    """
-    RAG 컨텍스트 블록 생성
-    - score <= MIN_SOURCE_SCORE 인 페이지는 컨텍스트에서 제외
-    - 페어가 여러 개인 경우 한쪽만 쏠리지 않게 "페어별 1개"를 우선 담고, 남는 자리는 score 순으로 채운다.
-    """
-    cands = _valid_source_rows(rows)
-    if not cands:
-        return "(컨텍스트 없음)"
 
-    # (uni,type)별 그룹핑
-    grouped: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
-    for r in cands:
-        key = (r.get("matched_uni", ""), r.get("matched_type", ""))
-        grouped.setdefault(key, []).append(r)
+def split_pages_with_label(raw: str) -> List[Dict[str, Any]]:
+    pages: List[Dict[str, Any]] = []
+    cur_label: Optional[int] = None
+    buf: List[str] = []
 
-    # 페어별 1개씩 우선 선택(최고 점수)
-    chosen: List[Dict[str, Any]] = []
-    for key, lst in grouped.items():
-        lst.sort(key=lambda x: float(x.get("score", 0.0)), reverse=True)
-        chosen.append(lst[0])
-
-    # 남은 후보들(중복 제거)
-    chosen_ids = set((r.get("doc_path", ""), r.get("page_index", "")) for r in chosen)
-    rest = [r for r in cands if (r.get("doc_path", ""), r.get("page_index", "")) not in chosen_ids]
-    rest.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
-
-    final = chosen + rest
-    final = final[:topk]
-
-    blocks = []
-    for i, r in enumerate(final, 1):
-        src = os.path.basename(r.get("doc_path", "")) or "unknown.txt"
-        page = r.get("page_index", "?")
-        score = float(r.get("score", 0.0))
-        snip = (r.get("snippet", "") or "").strip()
-        blocks.append(f"[{i}] {src} p.{page} (score={score:.4f})\n{snip}")
-
-    return "\n\n".join(blocks) if blocks else "(컨텍스트 없음)"
-
-def build_sources_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
-    """
-    출처 후보 문자열 생성 (요구사항 반영)
-    - 함수 시그니처는 기존과 동일하게 topk 유지 (호환성)
-    - (대학, 타입)별로 한 줄에 페이지를 묶어 표기
-    - 각 (대학, 타입) 그룹 내에서 score 상위 topk개만 사용(너무 길어지는 것 방지)
-    - 페이지 표기 순서는 score가 아니라 페이지 오름차순
-    """
-    cands = _valid_source_rows(rows)
-    if not cands:
-        return "(출처 후보 없음)"
-
-    # (uni,type)별 그룹핑
-    grouped: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
-    for r in cands:
-        key = (r.get("matched_uni", ""), r.get("matched_type", ""))
-        grouped.setdefault(key, []).append(r)
-
-    lines: List[str] = []
-    for (uni, type_), lst in grouped.items():
-        # 대표성 확보: score 상위 topk개만 사용
-        lst.sort(key=lambda x: float(x.get("score", 0.0)), reverse=True)
-        lst = lst[:topk]
-
-        # 페이지는 오름차순으로 출력 (중복 제거)
-        pages = []
-        for x in lst:
-            p = x.get("page_index", None)
-            try:
-                p_int = int(p)
-                pages.append(p_int)
-            except Exception:
-                continue
-        pages = sorted(set(pages))
-
-        if pages:
-            page_str = ", ".join([f"p.{p}" for p in pages])
-            lines.append(f"- {uni} , {type_} 모집요강 {page_str}")
-
-    # 출력 순서 안정화: uni, type 정렬
-    lines.sort()
-    return "\n".join(lines) if lines else "(출처 후보 없음)"
-
-def _strip_existing_sources(answer: str) -> str:
-    """
-    LLM이 만들어낸 '출처:' 섹션을 제거하고, 우리가 만든 출처로 고정하기 위한 전처리
-    """
-    if not answer:
-        return ""
-    idx = answer.rfind("출처:")
-    if idx == -1:
-        return answer.rstrip()
-    return answer[:idx].rstrip()
-
-def attach_fixed_sources(answer: str, sources: str) -> str:
-    base = _strip_existing_sources(answer)
-    if not sources or sources.strip() == "(출처 후보 없음)":
-        return base
-    return base + "\n\n출처:\n" + sources.strip()
-
-def print_pairwise_top(rows: List[Dict[str, Any]], topk: int = 3):
-    """
-    콘솔 출력용 TopN
-    - 요구사항: score에 상관없이 그대로 출력한다.
-    """
-    by_pair: Dict[tuple, List[Dict[str, Any]]] = {}
-    for r in rows:
-        if r.get("page_index", -1) == -1:
+    for line in (raw or "").splitlines():
+        m = PAGE_LABEL_RE.match(line.strip())
+        if m:
+            if buf:
+                text = "\n".join(buf).strip()
+                if text:
+                    pages.append({"label": cur_label, "text": text})
+                buf = []
+            cur_label = int(m.group(1))
             continue
-        key = (r.get("matched_uni", ""), r.get("matched_type", ""))
-        by_pair.setdefault(key, []).append(r)
+        buf.append(line)
 
-    if not by_pair:
-        print("     (검색 결과 없음)")
-        return
+    if buf:
+        text = "\n".join(buf).strip()
+        if text:
+            pages.append({"label": cur_label, "text": text})
 
-    for (u, t), lst in by_pair.items():
-        lst.sort(key=lambda x: float(x.get("score", 0.0)), reverse=True)
-        print(f"     ▷ 페어: [{u or '-'} | {t or '-'}]  (Top{topk})")
-        for i, r in enumerate(lst[:topk], 1):
-            kw = r.get("matched_keywords") or "-"
-            print(
-                f"       - Top{i}: {os.path.basename(r['doc_path'])} | "
-                f"p.{r['page_index']} | score={r['score']:.4f} | kw={kw}"
-            )
+    return pages
 
-# --- 메인 ---
+
+@lru_cache(maxsize=128)
+def load_doc_text(doc_path: str) -> str:
+    with open(doc_path, "r", encoding="utf-8") as f:
+        return f.read()
+
+
+def load_page_text(doc_path: str, page_label: int) -> str:
+    raw = load_doc_text(doc_path)
+    page_objs = split_pages_with_label(raw)
+    for p in page_objs:
+        if p["label"] == page_label:
+            return p["text"]
+    return ""
+
+
+def call_llm(prompt: str, model: str = "gpt-4o-mini", temperature: float = 0.1) -> str:
+    if OpenAI is None:
+        return "LLM 라이브러리(openai)가 설치되어 있지 않아 답변을 생성할 수 없습니다."
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        return "OPENAI_API_KEY 환경변수가 설정되어 있지 않아 답변을 생성할 수 없습니다."
+
+    client = OpenAI(api_key=api_key)
+    resp = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": "너는 한국 대학 입시 모집요강 텍스트를 기반으로 답하는 도우미다. 제공된 문서 내용 밖의 추측을 금지한다."},
+            {"role": "user", "content": prompt},
+        ],
+        temperature=temperature,
+    )
+    return (resp.choices[0].message.content or "").strip()
+
+
+def build_sources(pair_to_rows: Dict[Tuple[str, str], List[Dict[str, Any]]]) -> List[str]:
+    out: List[str] = []
+    for (uni, typ), rows in pair_to_rows.items():
+        pages: List[int] = []
+        for r in rows:
+            try:
+                pages.append(int(r.get("page_index")))
+            except Exception:
+                pass
+        pages = sorted(set(pages))
+        if pages:
+            pages_str = ", ".join([f"p.{p}" for p in pages])
+            out.append(f"- {uni} , {typ} 모집요강 {pages_str}")
+        else:
+            out.append(f"- {uni} , {typ} 모집요강 (페이지 정보 없음)")
+    return out
+
+
+def build_quota_sources(selected_pages: Dict[Tuple[str, str], List[int]]) -> List[str]:
+    out: List[str] = []
+    for (uni, typ), pages in selected_pages.items():
+        pages_sorted = sorted(set([int(p) for p in pages if isinstance(p, int) or str(p).isdigit()]))
+        if pages_sorted:
+            pages_str = ", ".join([f"p.{p}" for p in pages_sorted])
+            out.append(f"- {uni} , {typ} 모집요강 {pages_str}")
+        else:
+            out.append(f"- {uni} , {typ} 모집요강 (페이지 정보 없음)")
+    return out
+
+
+def pick_best_quota_pages(rows: List[Dict[str, Any]], majors: List[str], max_pages: int = 2) -> List[Dict[str, Any]]:
+    if not rows:
+        return []
+
+    majors = [m for m in (majors or []) if m and str(m).strip()]
+
+    def contains_major(snippet: str) -> bool:
+        if not majors:
+            return True
+        s = snippet or ""
+        return any(m in s for m in majors)
+
+    rows_sorted = sorted(rows, key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+    picked: List[Dict[str, Any]] = []
+    used_pages = set()
+
+    for r in rows_sorted:
+        try:
+            pno = int(r.get("page_index"))
+        except Exception:
+            continue
+        if pno in used_pages:
+            continue
+        if contains_major(r.get("snippet", "")):
+            picked.append(r)
+            used_pages.add(pno)
+        if len(picked) >= max_pages:
+            return picked
+
+    for r in rows_sorted:
+        try:
+            pno = int(r.get("page_index"))
+        except Exception:
+            continue
+        if pno in used_pages:
+            continue
+        picked.append(r)
+        used_pages.add(pno)
+        if len(picked) >= max_pages:
+            break
+
+    return picked
+
+
+def build_quota_prompt(
+    question: str,
+    uni: str,
+    typ: str,
+    majors: List[str],
+    page_texts: List[Tuple[int, str]],
+) -> str:
+    majors_str = ", ".join([m for m in majors if m]) if majors else "(학과/학부명 미추출)"
+    pages_info = ", ".join([f"p.{pno}" for pno, _ in page_texts if isinstance(pno, int)])
+
+    doc_block = []
+    for pno, txt in page_texts:
+        doc_block.append(f"[p.{pno}]\n{txt}")
+    doc_join = "\n\n".join(doc_block)
+
+    return (
+        "아래는 대학 모집요강 텍스트(페이지 발췌)이다.\n"
+        "반드시 제공된 텍스트 안의 정보만 근거로 답하라. 추측 금지.\n\n"
+        f"질문: {question}\n"
+        f"대학/전형: {uni} / {typ}\n"
+        f"대상 학과/학부: {majors_str}\n"
+        f"참고 페이지: {pages_info}\n\n"
+        "요구사항:\n"
+        "1) 대상 학과/학부의 모집인원 '합계'를 우선 제시하라.\n"
+        "2) 표에 전형별 항목(예: 지역균형/일반전형/기회균형특별전형 등)이 함께 있으면 전형별 인원도 함께 제시하라.\n"
+        "3) 표에서 확인할 수 없으면 '제공 문서에서 확인 불가'라고 말하라.\n"
+        "4) 가능한 한 간단히, 숫자 근거가 되는 열/항목을 짧게 언급하라.\n\n"
+        "제공 문서:\n"
+        "-----\n"
+        f"{doc_join}\n"
+        "-----\n"
+    )
+
+
+def answer_one(
+    text: str,
+    uni_ex: UniExtractor,
+    type_ex: TypeExtractor,
+    kw_ex: KeywordExtractorBridge,
+    api_key: str,
+    gemini_model: str,
+    llm_model: str = "gpt-4o-mini",
+    top_pages: int = 3,
+    quota_pages_per_pair: int = 2,
+) -> Dict[str, Any]:
+    rows, stats, ner = search_top_pages_for_query(
+        text,
+        uni_ex,
+        type_ex,
+        kw_ex,
+        api_key,
+        gemini_model,
+        top_pages=top_pages,
+    )
+
+    decision = ner.get("decision", "")
+
+    ner_uni = ner.get("uni") or []
+    ner_type = ner.get("type") or []
+    ner_kw = ner.get("keywords") or []
+    if not isinstance(ner_uni, list):
+        ner_uni = [ner_uni]
+    if not isinstance(ner_type, list):
+        ner_type = [ner_type]
+    if not isinstance(ner_kw, list):
+        ner_kw = [ner_kw]
+
+    pair_to_rows: Dict[Tuple[str, str], List[Dict[str, Any]]] = defaultdict(list)
+    for r in rows:
+        uni = (r.get("matched_uni") or "").strip()
+        typ = (r.get("matched_type") or "").strip()
+        if not uni or not typ:
+            continue
+        pair_to_rows[(uni, typ)].append(r)
+
+    answer_text = ""
+    sources_lines: List[str] = []
+
+    if decision != "문서탐색":
+        answer_text = "추가 정보가 필요합니다."
+        sources_lines = []
+        return {
+            "input": text,
+            "ner_uni": ner_uni,
+            "ner_type": ner_type,
+            "ner_kw": ner_kw,
+            "decision": decision,
+            "stats": stats,
+            "pair_to_rows": pair_to_rows,
+            "answer": answer_text,
+            "sources": sources_lines,
+        }
+
+    if is_quota_question(text):
+        majors = [k for k in ner_kw if k and str(k).strip()]
+        lines = ["모집 인원은 다음과 같습니다:\n"]
+        selected_pages: Dict[Tuple[str, str], List[int]] = {}
+
+        for (uni, typ), prows in pair_to_rows.items():
+            picks = pick_best_quota_pages(prows, majors, max_pages=quota_pages_per_pair)
+            if not picks:
+                lines.append(f"- {uni} {typ}: 제공 문서에서 확인 불가")
+                selected_pages[(uni, typ)] = []
+                continue
+
+            page_texts: List[Tuple[int, str]] = []
+            used_page_nums: List[int] = []
+
+            for p in picks:
+                doc_path = p.get("doc_path", "")
+                try:
+                    page_no = int(p.get("page_index"))
+                except Exception:
+                    continue
+                if not doc_path or not os.path.exists(doc_path):
+                    continue
+                page_txt = load_page_text(doc_path, page_no)
+                if not page_txt.strip():
+                    continue
+                page_texts.append((page_no, page_txt))
+                used_page_nums.append(page_no)
+
+            selected_pages[(uni, typ)] = used_page_nums
+
+            if not page_texts:
+                lines.append(f"- {uni} {typ}: 제공 문서에서 확인 불가")
+                continue
+
+            prompt = build_quota_prompt(text, uni, typ, majors, page_texts)
+            quota_ans = call_llm(prompt, model=llm_model, temperature=0.0)
+            lines.append(f"- {uni} {typ}: {quota_ans}")
+
+        answer_text = "\n".join(lines).strip()
+        sources_lines = build_quota_sources(selected_pages)
+
+        return {
+            "input": text,
+            "ner_uni": ner_uni,
+            "ner_type": ner_type,
+            "ner_kw": ner_kw,
+            "decision": decision,
+            "stats": stats,
+            "pair_to_rows": pair_to_rows,
+            "answer": answer_text,
+            "sources": sources_lines,
+        }
+
+    context_blocks: List[str] = []
+    for (uni, typ), prows in pair_to_rows.items():
+        prows_sorted = sorted(prows, key=lambda r: int(r.get("page_index", 10**9)))
+        snippet_join = "\n".join([f"[p.{r.get('page_index')}] {r.get('snippet','')}" for r in prows_sorted])
+        context_blocks.append(f"({uni}, {typ}) 컨텍스트:\n{snippet_join}")
+
+    prompt = (
+        f"질문:\n{text}\n\n"
+        "컨텍스트(모집요강 발췌):\n"
+        + "\n\n".join(context_blocks)
+        + "\n\n"
+        "요구사항:\n"
+        "- 컨텍스트에 있는 내용만 사용\n"
+        "- 표/숫자는 추측하지 말고, 컨텍스트에 근거가 없으면 '컨텍스트에서 확인 불가'라고 말할 것\n"
+    )
+
+    answer_text = call_llm(prompt, model=llm_model, temperature=0.1)
+    sources_lines = build_sources(pair_to_rows)
+
+    return {
+        "input": text,
+        "ner_uni": ner_uni,
+        "ner_type": ner_type,
+        "ner_kw": ner_kw,
+        "decision": decision,
+        "stats": stats,
+        "pair_to_rows": pair_to_rows,
+        "answer": answer_text,
+        "sources": sources_lines,
+    }
+
+
+def print_result_7lines(result: Dict[str, Any], dt: float) -> None:
+    print(f"입력문장: {result['input']}")
+    print(f"NER 추출 : UNI:{result['ner_uni']}  TYPE:{result['ner_type']}  KEYWORD:{result['ner_kw']}")
+    print(f"최종 분류 : {result['decision']}")
+
+    stats = result.get("stats") or {}
+    pairs_n = stats.get("pairs", 0)
+    docs_n = stats.get("docs_found", 0)
+    pages_n = stats.get("pages_scored", 0)
+    print(f"매칭쌍 : {pairs_n}개 , 문서 발견 : {docs_n}개 , 스코어링 대상 페이지 : {pages_n}장")
+
+    pair_to_rows = result.get("pair_to_rows") or {}
+    for (uni, typ), rows in pair_to_rows.items():
+        rows_sorted = sorted(rows, key=lambda r: float(r.get("score", 0.0)), reverse=True)[:3]
+        print(f"     ▷ 페어: [{uni} | {typ}]  (Top3)")
+        for i, r in enumerate(rows_sorted, 1):
+            doc = os.path.basename(r.get("doc_path", ""))
+            p = r.get("page_index")
+            sc = float(r.get("score", 0.0))
+            kw = r.get("matched_keywords", "")
+            print(f"       - Top{i}: {doc} | p.{p} | score={sc:.4f} | kw={kw}")
+
+    print("챗봇 답변:")
+    print(result.get("answer", ""))
+
+    print("출처:")
+    for s in (result.get("sources") or []):
+        print(s)
+
+    print(f"처리시간: {dt:.3f} s")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", default="test.txt")
-    ap.add_argument("--model", default="gpt-4o-mini")
+    ap.add_argument("--text", type=str, default="", help="단일 질문")
+    ap.add_argument("--file", type=str, default="test.txt", help="질문 파일(기본: test.txt)")
+    ap.add_argument("--llm_model", type=str, default="gpt-4o-mini")
+    ap.add_argument("--top_pages", type=int, default=3)
+    ap.add_argument("--quota_pages_per_pair", type=int, default=2)
     args = ap.parse_args()
 
     api_key, gemini_model = load_env()
@@ -263,87 +400,43 @@ def main():
     type_ex = TypeExtractor()
     kw_ex = KeywordExtractorBridge(topn=10)
 
-    queries = read_questions(args.input)
-    times: List[float] = []
-    total_start = time.perf_counter()
-
-    for idx, q in enumerate(queries, 1):
+    if args.text.strip():
+        q = args.text.strip()
         t0 = time.perf_counter()
-
-        rows, stats, ner = search_top_pages_for_query(
-            q, uni_ex, type_ex, kw_ex, api_key, gemini_model, top_pages=3
+        result = answer_one(
+            q,
+            uni_ex, type_ex, kw_ex,
+            api_key, gemini_model,
+            llm_model=args.llm_model,
+            top_pages=args.top_pages,
+            quota_pages_per_pair=args.quota_pages_per_pair,
         )
-
-        decision = ner.get("decision")
-
-        print(f"\n{idx}번 질문")
-        print(f"입력문장: {q}")
-        print(
-            f"NER 추출 : UNI:{ner.get('uni')}  "
-            f"TYPE:{ner.get('type')}  KEYWORD:{ner.get('keywords')}"
-        )
-        print(f"최종 분류 : {decision}")
-
-        if decision == "문서탐색":
-            print(
-                f"매칭쌍 : {stats.get('pairs', 0)}개 , "
-                f"문서 발견 : {stats.get('docs_found', 0)}개 , "
-                f"스코어링 대상 페이지 : {stats.get('pages_scored', 0)}장"
-            )
-            print_pairwise_top(rows, topk=3)
-        else:
-            print("매칭쌍 : 0개 , 문서 발견 : 0개 , 스코어링 대상 페이지 : 0장")
-
-        # -----------------------
-        # 챗봇 답변 생성 분기
-        # -----------------------
-        if decision == "재질문":
-            user_prompt = build_followup_prompt(
-                ner.get("uni"), ner.get("type"), ner.get("keywords")
-            )
-            answer = gpt_chat(
-                "너는 후속질문만 하는 한국어 비서다.", user_prompt, model=args.model
-            )
-
-        elif decision == "답변 생성":
-            user_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=q)
-            answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
-
-        else:
-            has_valid_page = any(
-                r.get("page_index", -1) != -1 and float(r.get("score", 0.0)) > MIN_SOURCE_SCORE
-                for r in rows
-            )
-
-            if has_valid_page:
-                context = pick_context_from_rows(rows, topk=3)
-
-                # 출처는 (uni,type)별로 묶어서 생성 (topk는 "페어별 최대 페이지 수"로 동작)
-                sources = build_sources_from_rows(rows, topk=3)
-
-                user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
-                    question=q, context=context, sources=sources
-                )
-                answer = gpt_chat(EXPERT_SYSTEM_PROMPT, user_prompt, model=args.model)
-
-                # LLM이 출처를 누락/편집해도 최종 출력은 고정
-                answer = attach_fixed_sources(answer, sources)
-            else:
-                fallback_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=q)
-                answer = gpt_chat(EXPERT_SYSTEM_PROMPT, fallback_prompt, model=args.model)
-
         dt = time.perf_counter() - t0
-        times.append(dt)
-        print("챗봇 답변:")
-        print(answer)
-        print(f"처리시간: {fmt_sec(dt)}")
+        print_result_7lines(result, dt)
+        return
 
-    total_dt = time.perf_counter() - total_start
-    print("\n=== 전체 처리 요약 ===")
-    print(f"총 질의 수: {len(queries)}")
-    print(f"총 처리시간: {fmt_sec(total_dt)}")
-    print(f"평균 처리시간: {fmt_sec(mean(times)) if times else 0}")
-    print(f"최대 처리시간: {fmt_sec(max(times)) if times else 0}")
+    file_path = args.file
+    if not os.path.exists(file_path):
+        print(f"질문 파일 없음: {file_path}")
+        return
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        questions = [line.strip() for line in f if line.strip()]
+
+    for q in questions:
+        t0 = time.perf_counter()
+        result = answer_one(
+            q,
+            uni_ex, type_ex, kw_ex,
+            api_key, gemini_model,
+            llm_model=args.llm_model,
+            top_pages=args.top_pages,
+            quota_pages_per_pair=args.quota_pages_per_pair,
+        )
+        dt = time.perf_counter() - t0
+        print_result_7lines(result, dt)
+        print()
+
 
 if __name__ == "__main__":
     main()

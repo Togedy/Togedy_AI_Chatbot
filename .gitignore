@@ -1,7 +1,4 @@
 .env
-KORBERT_NER_KEYWORD/data/
-KORBERT_NER_TYPE/data/
-KORBERT_NER_UNI/data
 KORBERT_NER_KEYWORD/results_keyword/checkpoint-*
 venv
 KORBERT_NER_UNI/results/checkpoint-*

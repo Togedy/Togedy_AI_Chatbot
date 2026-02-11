@@ -1,7 +1,7 @@
 # search_and_export.py
 # -*- coding: utf-8 -*-
 import os, re, sys, csv, time, argparse
-from typing import List, Tuple, Dict, Any
+from typing import List, Tuple, Dict, Any, Optional
 
 THIS = os.path.dirname(os.path.abspath(__file__))
 if THIS not in sys.path:
@@ -13,7 +13,7 @@ from extract_all import (
     load_env, gemini_sort, final_bucket
 )
 
-# === mapping_loader의 표준화/슬러그 사용 (별칭 없이 공식 한글명 기준) ===
+# === mapping_loader의 표준화/슬러그 사용 ===
 from utils.mapping_loader import (
     normalize_uni, normalize_type, uni_to_slug, type_to_slug
 )
@@ -23,7 +23,6 @@ from utils.mapping_loader import (
 # ---------------------------
 
 def _find_all_positions(text: str, token: str) -> List[int]:
-    """text 내에서 token이 등장하는 시작 인덱스 목록을 반환"""
     if not text or not token:
         return []
     return [m.start() for m in re.finditer(re.escape(token), text)]
@@ -35,38 +34,23 @@ def build_pairs_smart(
     ner_type: Any,
     ner_kw: List[str],
 ) -> List[Dict[str, Any]]:
-    """
-    NER 결과(uni/type)가 여러 개인 경우, 불필요한 카테시안 곱을 만들지 않기 위해
-    "문장 내 근접도"로 (UNI, TYPE) 페어를 우선 매칭한다.
-
-    우선순위
-    1) uni 2개 이상 & type 2개 이상: 질문 원문에서 type 토큰을 가장 가까운 uni에 매칭
-       예) "건국대 수시랑 연세대 정시" -> (건국대, 수시), (연세대, 정시)
-    2) uni 2개 이상 & type 1개: 모든 uni에 동일 type 부여
-       예) uni=[연세대, 고려대], type=[정시] -> (연세대, 정시), (고려대, 정시)
-    3) uni 1개 & type 2개 이상: 해당 uni에 모든 type 부여
-       예) uni=[서울대], type=[정시, 수시] -> (서울대, 정시), (서울대, 수시)
-
-    반환이 빈 리스트면(근접도 매칭 실패/정보 부족) 호출부에서 gemini_sort 또는
-    카테시안 곱으로 폴백하면 된다.
-    """
     uni_list = ner_uni if isinstance(ner_uni, list) else ([ner_uni] if ner_uni else [])
     type_list = ner_type if isinstance(ner_type, list) else ([ner_type] if ner_type else [])
 
     if not uni_list or not type_list:
         return []
 
-    # (2) uni 다수 + type 단일
+    # uni 다수 + type 단일
     if len(uni_list) > 1 and len(type_list) == 1:
         t = type_list[0]
         return [{"UNI": u, "TYPE": t, "KEYWORD": ner_kw} for u in uni_list]
 
-    # (3) uni 단일 + type 다수
+    # uni 단일 + type 다수
     if len(uni_list) == 1 and len(type_list) > 1:
         u = uni_list[0]
         return [{"UNI": u, "TYPE": t, "KEYWORD": ner_kw} for t in type_list]
 
-    # (1) uni 다수 + type 다수 -> 근접도 매칭
+    # uni 다수 + type 다수 -> 근접도 매칭
     if len(uni_list) > 1 and len(type_list) > 1:
         uni_pos: List[Tuple[str, int]] = []
         type_pos: List[Tuple[str, int]] = []
@@ -94,31 +78,54 @@ def build_pairs_smart(
 
         return [{"UNI": u, "TYPE": t, "KEYWORD": ner_kw} for (u, t) in sorted(pairs_set)]
 
-    # uni/type 모두 단일
     return [{"UNI": uni_list[0], "TYPE": type_list[0], "KEYWORD": ner_kw}]
 
 
 # ---------------------------
-# 텍스트 페이지 분할 & 스코어링
+# 라벨 기반 페이지 분할 (==== Page N ====)
 # ---------------------------
-PAGE_SEPS = [
-    r"\f",
-    r"^={3,}\s*page\s*\d+\s*=*$",
-    r"^-{3,}\s*page\s*\d+\s*-*$",
-    r"^\s*\[?page\s*\d+\]?\s*$",
-]
-SEP_REGEX = re.compile("|".join(f"(?:{p})" for p in PAGE_SEPS),
-                       re.IGNORECASE | re.MULTILINE)
 
+PAGE_LABEL_RE = re.compile(r"^\s*={2,}\s*Page\s*(\d+)\s*={2,}\s*$", re.IGNORECASE | re.MULTILINE)
 
-def split_text_into_pages(raw: str, fallback_chars: int = 1200) -> List[str]:
-    pages = [p.strip() for p in SEP_REGEX.split(raw) if p.strip()]
-    if len(pages) >= 2:
-        return pages
-    txt = raw.strip()
-    if not txt:
-        return []
-    return [txt[i:i + fallback_chars].strip() for i in range(0, len(txt), fallback_chars)]
+def split_text_into_labeled_pages(raw: str, fallback_chars: int = 1200) -> List[Dict[str, Any]]:
+    """
+    파일 내 '==== Page N ====' 라벨을 기준으로 페이지 분할.
+    반환: [{"label": N(int) 또는 None, "text": chunk_text(str)}...]
+    - label이 없는 구간이 존재할 수 있어 None 처리
+    - 라벨이 아예 없으면 fallback_chars로 등분하고 label=None
+    """
+    raw = raw or ""
+    matches = list(PAGE_LABEL_RE.finditer(raw))
+
+    # 라벨이 없으면 기존처럼 문자수 기준으로 분할
+    if not matches:
+        txt = raw.strip()
+        if not txt:
+            return []
+        chunks = [txt[i:i + fallback_chars].strip() for i in range(0, len(txt), fallback_chars)]
+        return [{"label": None, "text": c} for c in chunks if c]
+
+    pages: List[Dict[str, Any]] = []
+    for i, m in enumerate(matches):
+        label = None
+        try:
+            label = int(m.group(1))
+        except Exception:
+            label = None
+
+        start = m.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(raw)
+        chunk = raw[start:end].strip()
+
+        # 라벨 아래 내용이 비어있는 경우도 있을 수 있으니 방어
+        if chunk:
+            pages.append({"label": label, "text": chunk})
+        else:
+            pages.append({"label": label, "text": ""})
+
+    # 빈 text는 제거(인덱스 혼선 최소화)
+    pages = [p for p in pages if (p.get("text") or "").strip()]
+    return pages
 
 
 # ---------------------------
@@ -128,7 +135,6 @@ def split_text_into_pages(raw: str, fallback_chars: int = 1200) -> List[str]:
 _NORM_REMOVE = re.compile(r"[\s\.\,\(\)\[\]\{\}\-_/\\:;\"'`~!@#$%^&*+=|<>?·•ㆍ…]+")
 
 def normalize_for_match(s: str) -> str:
-    """띄어쓰기/특수문자/중점 등을 제거한 비교용 정규화 문자열"""
     if not s:
         return ""
     s = s.lower()
@@ -137,17 +143,12 @@ def normalize_for_match(s: str) -> str:
 
 
 def keyword_bonus_score(page_text: str, keywords: List[str]) -> float:
-    """
-    페이지에 키워드가 '정확히 포함'될수록 점수를 올려줌.
-    - 표/목록 페이지에서 TF-IDF가 흔들려도 '키워드 포함'을 강하게 반영하기 위한 보정.
-    """
     if not page_text or not keywords:
         return 0.0
 
     p_norm = normalize_for_match(page_text)
     bonus = 0.0
 
-    # 키워드별로 포함/등장 횟수 반영 (과도한 가중 방지 위해 cap)
     for kw in keywords:
         kw = (kw or "").strip()
         if not kw:
@@ -157,49 +158,36 @@ def keyword_bonus_score(page_text: str, keywords: List[str]) -> float:
             continue
 
         if k_norm in p_norm:
-            bonus += 0.030  # 포함 자체 보너스
-
-            # 등장횟수 보너스(최대 3회까지만)
+            bonus += 0.030
             cnt = p_norm.count(k_norm)
             cnt = min(cnt, 3)
             bonus += 0.008 * cnt
 
-    # 너무 커지지 않게 상한
     return min(bonus, 0.08)
 
 
-def extract_snippet_around_keywords(page_text: str, keywords: List[str], window: int = 600) -> str:
-    """
-    기존 pages[idx][:300] 대신,
-    키워드가 실제로 등장하는 위치 주변을 스니펫으로 잘라서 반환.
-    - 키워드가 없으면 앞부분 일부를 반환.
-    """
+def extract_snippet_around_keywords(page_text: str, keywords: List[str], window: int = 700) -> str:
     if not page_text:
         return ""
 
-    # 원문에서의 위치를 찾기 위해 원문 기반 탐색도 같이 수행
     best_pos = None
     for kw in keywords:
         kw = (kw or "").strip()
         if not kw:
             continue
 
-        # 원문에서 그대로 검색
         pos = page_text.find(kw)
         if pos != -1:
             if best_pos is None or pos < best_pos:
                 best_pos = pos
             continue
 
-        # 정규화 기반 매칭: 위치 정확도는 떨어지지만 "없음" 방지는 됨
         p_norm = normalize_for_match(page_text)
         k_norm = normalize_for_match(kw)
         if k_norm and k_norm in p_norm:
-            # 정규화 매칭은 원문 위치로 역매핑이 어렵다 → 앞부분에서 조금 더 길게 주는 방식
             best_pos = 0 if best_pos is None else min(best_pos, 0)
 
     if best_pos is None:
-        # 키워드가 정말로 안 잡히면 앞부분을 조금 더 길게
         snippet = page_text[:window]
     else:
         half = window // 2
@@ -207,19 +195,14 @@ def extract_snippet_around_keywords(page_text: str, keywords: List[str], window:
         end = min(best_pos + half, len(page_text))
         snippet = page_text[start:end]
 
-    snippet = snippet.replace("\n", " ").strip()
-    return snippet
+    return snippet.replace("\n", " ").strip()
 
 
-def score_pages(pages: List[str], keywords: List[str], k: int = 5) -> List[Tuple[int, float]]:
-    """
-    TF-IDF + 키워드 포함 보너스로 재랭킹
-    - 표/목록 페이지에서 '키워드가 있는데도' Top에 안 뜨는 문제를 완화
-    """
+def score_pages(pages_text: List[str], keywords: List[str], k: int = 5) -> List[Tuple[int, float]]:
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.metrics.pairwise import cosine_similarity
 
-    if not pages:
+    if not pages_text:
         return []
 
     kw_clean = [kw.strip() for kw in keywords if kw and kw.strip()]
@@ -227,7 +210,7 @@ def score_pages(pages: List[str], keywords: List[str], k: int = 5) -> List[Tuple
         return []
 
     vect = TfidfVectorizer(ngram_range=(1, 2), min_df=1, max_df=0.95)
-    X = vect.fit_transform(pages)
+    X = vect.fit_transform(pages_text)
 
     query_joined = " ".join(kw_clean)
     s_join = cosine_similarity(vect.transform([query_joined]), X)[0]
@@ -236,10 +219,9 @@ def score_pages(pages: List[str], keywords: List[str], k: int = 5) -> List[Tuple
 
     base = 0.6 * s_join + 0.4 * indiv_avg
 
-    # 키워드 포함 보너스 반영
     final_scores = []
     for i, b in enumerate(base.tolist()):
-        bonus = keyword_bonus_score(pages[i], kw_clean)
+        bonus = keyword_bonus_score(pages_text[i], kw_clean)
         final_scores.append((i, float(b) + bonus))
 
     final_scores.sort(key=lambda x: x[1], reverse=True)
@@ -272,7 +254,7 @@ def resolve_text_path(uni_slug: str, type_folder: str) -> str:
 
 
 # ---------------------------
-# 단일 질의 처리 (페어별 Top3 탐색 포함)
+# 단일 질의 처리
 # ---------------------------
 
 def search_top_pages_for_query(
@@ -285,18 +267,15 @@ def search_top_pages_for_query(
     top_pages: int = 5
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], Dict[str, Any]]:
 
-    # 1) NER 추출
     ner_uni = uni_ex.extract_uni(text)
     ner_type = type_ex.extract_type(text)
     ner_kw = kw_ex.extract_keywords(text)
 
-    # 2) 최종 분류 결정 (업데이트된 시그니처: UNI + TYPE + KEYWORD)
     decision = final_bucket(ner_uni, ner_type, ner_kw)
 
     rows: List[Dict[str, Any]] = []
     stats = {"pairs": 0, "docs_found": 0, "pages_scored": 0}
 
-    # ▶ 문서탐색이 아니면 여기서 바로 반환 (generate_answers.py에서 GPT만 사용)
     if decision != "문서탐색":
         rows.append({
             "input_query": text,
@@ -311,21 +290,12 @@ def search_top_pages_for_query(
             "page_index": -1,
             "score": 0.0,
             "snippet": f"(최종 분류: {decision} — 문서탐색 아님)",
+            "split_index": "",
         })
-        ner_dump = {
-            "uni": ner_uni,
-            "type": ner_type,
-            "keywords": ner_kw,
-            "decision": decision,
-        }
+        ner_dump = {"uni": ner_uni, "type": ner_type, "keywords": ner_kw, "decision": decision}
         return rows, stats, ner_dump
 
-    # ---- decision == "문서탐색" 인 경우: 페어별로 실제 문서 검색
-
-    # 3) (UNI, TYPE) 페어 생성
-    # - 우선: 문장 내 근접도 기반 스마트 매칭
-    # - 폴백: gemini_sort 결과
-    # - 최종 폴백: 카테시안 곱(모든 조합)
+    # 페어 생성
     smart_pairs = build_pairs_smart(text, ner_uni, ner_type, ner_kw)
     if smart_pairs:
         pairs = smart_pairs
@@ -335,7 +305,6 @@ def search_top_pages_for_query(
         uni_list = ner_uni if isinstance(ner_uni, list) else ([ner_uni] if ner_uni else [])
         type_list = ner_type if isinstance(ner_type, list) else ([ner_type] if ner_type else [])
 
-        # gemini_sort가 일부 페어만 반환하거나 비어있을 때 대비
         if (not pairs) and uni_list and type_list:
             pairs = [{"UNI": u, "TYPE": t, "KEYWORD": ner_kw} for u in uni_list for t in type_list]
 
@@ -352,7 +321,6 @@ def search_top_pages_for_query(
         type_folder = get_type_folder(t)
         doc_path = resolve_text_path(uni_slug, type_folder)
 
-        # (1) 경로 없거나 파일이 없으면 에러 메시지 row 추가
         if not doc_path or not os.path.exists(doc_path):
             rows.append({
                 "input_query": text,
@@ -367,23 +335,26 @@ def search_top_pages_for_query(
                 "page_index": -1,
                 "score": 0.0,
                 "snippet": "(문서 없음 — university/<uni_slug>/<type>_text.txt 확인)",
+                "split_index": "",
             })
             continue
 
-        # (2) 문서 존재 → 페이지 분할 후 스코어링
         stats["docs_found"] += 1
         with open(doc_path, "r", encoding="utf-8") as f:
             raw = f.read()
-        pages = split_text_into_pages(raw)
-        stats["pages_scored"] += len(pages)
 
-        # 여기서 top_pages는 내부 후보 수. 너무 작으면 p13 같은 페이지가 밀릴 수 있어 여유를 둔다.
+        labeled_pages = split_text_into_labeled_pages(raw)
+
+        # 스코어링 대상 페이지 수는 "라벨 페이지 개수" 기준으로 집계
+        stats["pages_scored"] += len(labeled_pages)
+
+        pages_text = [pp["text"] for pp in labeled_pages]
+        labels = [pp.get("label") for pp in labeled_pages]  # label may be None
+
         internal_k = max(top_pages, 12)
-
-        ranking = score_pages(pages, klist, k=internal_k)
+        ranking = score_pages(pages_text, klist, k=internal_k)
         ranking = ranking[:3] if ranking else []
 
-        # (3) 적합 페이지 없음
         if not ranking:
             rows.append({
                 "input_query": text,
@@ -398,11 +369,15 @@ def search_top_pages_for_query(
                 "page_index": -1,
                 "score": 0.0,
                 "snippet": "(적합 페이지 없음)",
+                "split_index": "",
             })
             continue
 
-        # (4) 상위 페이지들 rows에 추가
         for (idx, sc) in ranking:
+            label = labels[idx]
+            # label이 None이면 fallback: split 인덱스(1-based)를 사용
+            page_out = int(label) if isinstance(label, int) else (idx + 1)
+
             rows.append({
                 "input_query": text,
                 "ner_uni": "|".join(ner_uni) if ner_uni else "",
@@ -413,18 +388,15 @@ def search_top_pages_for_query(
                 "matched_type": t or "",
                 "matched_keywords": "|".join(klist),
                 "doc_path": doc_path,
-                "page_index": idx + 1,  # 1-based index
+                # 핵심: 이제 page_index는 "==== Page N ===="의 N(라벨)
+                "page_index": page_out,
                 "score": round(float(sc), 6),
-                # 기존 300자 고정 -> 키워드 주변 스니펫
-                "snippet": extract_snippet_around_keywords(pages[idx], klist, window=700),
+                "snippet": extract_snippet_around_keywords(pages_text[idx], klist, window=700),
+                # 디버그용 split 인덱스도 함께 보관(필요하면 generate_answers에서 출력 가능)
+                "split_index": idx + 1,
             })
 
-    ner_dump = {
-        "uni": ner_uni,
-        "type": ner_type,
-        "keywords": ner_kw,
-        "decision": decision,
-    }
+    ner_dump = {"uni": ner_uni, "type": ner_type, "keywords": ner_kw, "decision": decision}
     return rows, stats, ner_dump
 
 
@@ -438,6 +410,7 @@ def write_csv(path: str, rows: List[Dict[str, Any]]):
         "input_query", "ner_uni", "ner_type", "ner_keywords",
         "decision", "matched_uni", "matched_type", "matched_keywords",
         "doc_path", "page_index", "score", "snippet",
+        "split_index",
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols)
@@ -502,7 +475,7 @@ def main():
         print(
             f"     매칭쌍: {stats['pairs']}개, "
             f"문서 발견: {stats['docs_found']}개, "
-            f"스코어링 대상 페이지: {stats['pages_scored']}장"
+            f"스코어링 대상 페이지(라벨): {stats['pages_scored']}장"
         )
 
         if ner.get("decision") != "문서탐색":
@@ -512,12 +485,12 @@ def main():
             for i, r in enumerate(preview, 1):
                 print(
                     f"       - Top{i}: {os.path.basename(r['doc_path'])} | "
-                    f"p.{r['page_index']} | score={r['score']:.4f} | kw={r['matched_keywords']}"
+                    f"p.{r['page_index']} (split={r.get('split_index','')}) | "
+                    f"score={r['score']:.4f} | kw={r['matched_keywords']}"
                 )
 
         print(f"     처리 시간: {fmt_sec(dt)}")
 
-    # CSV 저장
     csv_t0 = time.perf_counter()
     write_csv(args.output, all_rows)
     csv_dt = time.perf_counter() - csv_t0
