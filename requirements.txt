@@ -1,2 +1,12 @@
+flask
+openai
+torch
+transformers
+datasets
+scikit-learn
+numpy
+pandas
+tqdm
+sentencepiece
 google-generativeai>=0.7.0
 python-dotenv>=1.0.1
