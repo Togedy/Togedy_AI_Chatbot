@@ -26,6 +26,163 @@ except Exception:
 
 PAGE_LABEL_RE = re.compile(r"^\s*={2,}\s*Page\s*(\d+)\s*={2,}\s*$", re.IGNORECASE)
 
+# =============================================================================
+# answer.py / main.py 호환 레이어 (중요)
+# - answer.py는 아래 심볼들이 존재한다고 가정하고 호출한다.
+#   EXPERT_SYSTEM_PROMPT, DIRECT_ANSWER_USER_TEMPLATE, DOC_ANSWER_USER_TEMPLATE,
+#   gpt_chat, build_followup_prompt, pick_context_from_rows, build_sources_from_rows
+# =============================================================================
+
+EXPERT_SYSTEM_PROMPT = (
+    "너는 한국 대학 입시 모집요강(문서 발췌 텍스트)을 근거로 답하는 전문가다. "
+    "반드시 제공된 컨텍스트/출처에 있는 정보만 사용하고, 문서에 없는 내용은 추측하지 말고 "
+    "'제공 문서에서 확인 불가'라고 말하라."
+)
+
+DIRECT_ANSWER_USER_TEMPLATE = (
+    "아래 질문에 답하라.\n"
+    "- 문서 컨텍스트가 주어지지 않았으므로, 확정적 수치/일정/규정은 추측하지 말고\n"
+    "  필요 시 사용자에게 어떤 정보가 추가로 필요한지 간단히 물어봐라.\n\n"
+    "질문:\n{question}\n"
+)
+
+DOC_ANSWER_USER_TEMPLATE = (
+    "아래는 모집요강 문서 발췌(컨텍스트)와 출처다.\n"
+    "반드시 컨텍스트에 있는 내용만 근거로 답하라. 추측 금지.\n\n"
+    "질문:\n{question}\n\n"
+    "컨텍스트:\n{context}\n\n"
+    "출처:\n{sources}\n\n"
+    "요구사항:\n"
+    "- 숫자/표 항목은 컨텍스트에서 근거를 찾아 짧게 언급\n"
+    "- 근거가 없으면 '제공 문서에서 확인 불가'\n"
+)
+
+def gpt_chat(
+    system_prompt: str,
+    user_prompt: str,
+    model: str = "gpt-4o-mini",
+    temperature: float = 0.1,
+) -> str:
+    """
+    answer.py / main.py에서 호출하는 공통 LLM 함수.
+    내부적으로 기존 call_llm()로 위임한다.
+    """
+    merged = f"[SYSTEM]\n{system_prompt}\n\n[USER]\n{user_prompt}".strip()
+    return call_llm(merged, model=model, temperature=temperature)
+
+
+def build_followup_prompt(ner_uni, ner_type, ner_keywords) -> str:
+    """
+    decision='재질문'일 때, 사용자에게 물어볼 한 문장 후속질문을 만들기 위한 프롬프트.
+    answer.py는 이 프롬프트를 gpt_chat으로 보내 후속질문 문장을 생성한다.
+    """
+    def to_list(x):
+        if x is None:
+            return []
+        if isinstance(x, list):
+            return x
+        return [x]
+
+    u = [str(v).strip() for v in to_list(ner_uni) if str(v).strip()]
+    t = [str(v).strip() for v in to_list(ner_type) if str(v).strip()]
+    k = [str(v).strip() for v in to_list(ner_keywords) if str(v).strip()]
+
+    u_str = ", ".join(u) if u else "(미추출)"
+    t_str = ", ".join(t) if t else "(미추출)"
+    k_str = ", ".join(k) if k else "(미추출)"
+
+    return (
+        "너는 사용자의 질문을 처리하기 위해 '추가로 필요한 정보'를 한 문장으로만 물어본다.\n"
+        "조건:\n"
+        "1) 한 문장으로 질문할 것\n"
+        "2) 너무 길게 설명하지 말 것\n"
+        "3) 사용자가 답하기 쉽게 '무엇을 알려달라' 형태로 물을 것\n\n"
+        f"현재 추출 결과:\n- UNI: {u_str}\n- TYPE: {t_str}\n- KEYWORD: {k_str}\n\n"
+        "사용자에게 가장 우선적으로 필요한 정보를 물어봐라."
+    )
+
+
+def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
+    """
+    answer.py가 문서탐색 결과 rows를 받아 컨텍스트 문자열을 만들 때 사용.
+    rows는 search_and_export.search_top_pages_for_query 반환 구조를 따른다.
+    """
+    if not rows:
+        return ""
+
+    valid = [r for r in rows if r.get("page_index", -1) != -1]
+    if not valid:
+        valid = rows[:]
+
+    valid = sorted(valid, key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+    blocks: List[str] = []
+    for r in valid[: max(1, int(topk))]:
+        doc_path = str(r.get("doc_path", "") or "")
+        page = r.get("page_index", -1)
+
+        body = r.get("text") or r.get("snippet") or r.get("content") or ""
+        body = str(body).strip()
+
+        meta_parts = []
+        if doc_path:
+            meta_parts.append(os.path.basename(doc_path))
+        if isinstance(page, int) and page != -1:
+            meta_parts.append(f"p.{page}")
+
+        meta = " | ".join(meta_parts).strip()
+        if meta:
+            blocks.append(f"[{meta}]\n{body}".strip())
+        else:
+            blocks.append(body)
+
+    return "\n\n".join([b for b in blocks if b]).strip()
+
+
+def build_sources_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
+    """
+    answer.py가 sources 문자열을 만들 때 사용.
+    - 문서명 + 페이지를 topk 기준으로 정리
+    """
+    if not rows:
+        return ""
+
+    valid = [r for r in rows if r.get("page_index", -1) != -1]
+    if not valid:
+        valid = rows[:]
+
+    valid = sorted(valid, key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+    seen = set()
+    lines: List[str] = []
+
+    for r in valid[: max(1, int(topk))]:
+        doc_path = str(r.get("doc_path", "") or "")
+        page = r.get("page_index", -1)
+
+        doc_name = os.path.basename(doc_path) if doc_path else "(unknown)"
+        page_str = f"p.{page}" if isinstance(page, int) and page != -1 else "(page unknown)"
+
+        key = (doc_name, page_str)
+        if key in seen:
+            continue
+        seen.add(key)
+
+        matched_uni = (r.get("matched_uni") or "").strip()
+        matched_type = (r.get("matched_type") or "").strip()
+
+        if matched_uni or matched_type:
+            ut = " / ".join([x for x in [matched_uni, matched_type] if x])
+            lines.append(f"- {ut}: {doc_name} {page_str}")
+        else:
+            lines.append(f"- {doc_name} {page_str}")
+
+    return "\n".join(lines).strip()
+
+
+# =============================================================================
+# 기존 generate_answers.py 로직 (이전 기능 유지)
+# =============================================================================
 
 def is_quota_question(text: str) -> bool:
     if not text:
@@ -92,7 +249,10 @@ def call_llm(prompt: str, model: str = "gpt-4o-mini", temperature: float = 0.1) 
     resp = client.chat.completions.create(
         model=model,
         messages=[
-            {"role": "system", "content": "너는 한국 대학 입시 모집요강 텍스트를 기반으로 답하는 도우미다. 제공된 문서 내용 밖의 추측을 금지한다."},
+            {
+                "role": "system",
+                "content": "너는 한국 대학 입시 모집요강 텍스트를 기반으로 답하는 도우미다. 제공된 문서 내용 밖의 추측을 금지한다.",
+            },
             {"role": "user", "content": prompt},
         ],
         temperature=temperature,
