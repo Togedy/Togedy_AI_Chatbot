@@ -45,6 +45,16 @@ Flask 서버 버전
 ※ 문서탐색이 아니거나 페이지가 없으면 location / NER_Page_*는 생략
 """
 
+# main.py
+# -*- coding: utf-8 -*-
+"""
+Flask 서버 버전
+
+- 로직 기준은 answer.py와 동일하다.
+- 재질문/문서탐색/답변생성 구분은 모두 기존 final_bucket 규칙
+  (KEYWORD 유무 + UNI 유무)에 따라 동작한다.
+"""
+
 import os
 import sys
 from typing import List, Dict, Any, Tuple, Optional
@@ -119,29 +129,53 @@ def extract_doc_meta(rows: List[Dict[str, Any]]) -> Tuple[Optional[str], List[in
     return location, pages
 
 
+def _normalize_ner_list(x: Any) -> List[str]:
+    if x is None:
+        return []
+    if isinstance(x, list):
+        return [str(v) for v in x if str(v).strip()]
+    s = str(x).strip()
+    return [s] if s else []
+
+
 def build_answer_response(
     answer: str,
     decision: str,
     rows: List[Dict[str, Any]],
+    ner: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """
     최종 JSON 응답 형식 구성.
-    - 재질문이면 reply=true, answer만.
+    - 재질문이면 reply=true, answer만 (기존 유지) + NER을 "추가 필드"로만 제공
     - 문서탐색/답변생성이면 reply=false,
       (문서탐색인 경우에만) location, NER_Page_i 추가.
     """
-    # 재질문
+    ner = ner or {}
+    ner_payload = {
+        "UNI": _normalize_ner_list(ner.get("uni")),
+        "TYPE": _normalize_ner_list(ner.get("type")),
+        "KEYWORD": _normalize_ner_list(ner.get("keywords")),
+    }
+
+    # 재질문: 기존 필드(answer, reply)는 그대로 유지하고, 호환성 깨지지 않게 NER만 추가
     if decision == "재질문":
-        return {
+        resp = {
             "answer": answer,
             "reply": True,
         }
+        # 기존 클라이언트가 무시해도 되는 "추가 필드"로 제공
+        resp["NER"] = ner_payload
+        return resp
 
     # 기본: 최종 답변 (문서탐색 or 답변 생성)
     resp: Dict[str, Any] = {
         "answer": answer,
         "reply": False,
     }
+
+    # 필요하면 reply=false에서도 NER을 보고 싶을 수 있으니,
+    # 호환성 문제 없게(추가 필드) 포함시키되, 원치 않으면 아래 1줄을 지워도 됨.
+    resp["NER"] = ner_payload
 
     # 문서탐색인 경우에만 location / 페이지 정보 추가 (있을 때만)
     if decision == "문서탐색":
@@ -189,7 +223,7 @@ def answer_endpoint():
         answer, decision, ner, rows, stats = ans.run_single_turn(
             q1.strip(), uni_ex, type_ex, kw_ex, api_key, gemini_model, model_name
         )
-        resp = build_answer_response(answer, decision, rows)
+        resp = build_answer_response(answer, decision, rows, ner)
         return jsonify(resp)
 
     # ----------------------
@@ -210,24 +244,26 @@ def answer_endpoint():
     # follow_q 가 비어 있으면 → 첫 질문만으로 답변 생성 (비문서)
     if not follow_q:
         combined_text = f"[사용자 첫 질문]\n{first_q}\n"
-        user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(
-            question=combined_text
-        )
+        user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(question=combined_text)
         final_answer = ga.gpt_chat(
             ga.EXPERT_SYSTEM_PROMPT,
             user_prompt,
             model=model_name,
         )
         # 이 경우도 최종 답변이므로 reply=false
+        # 기존 기능 유지 + (추가필드) NER 포함
         return jsonify({
             "answer": final_answer,
             "reply": False,
+            "NER": {
+                "UNI": _normalize_ner_list(first_ner.get("uni") if isinstance(first_ner, dict) else None),
+                "TYPE": _normalize_ner_list(first_ner.get("type") if isinstance(first_ner, dict) else None),
+                "KEYWORD": _normalize_ner_list(first_ner.get("keywords") if isinstance(first_ner, dict) else None),
+            }
         })
 
     # (2) 재질문(사용자 추가 입력)에 대해 NER 수행
     follow_uni = uni_ex.extract_uni(follow_q)
-    # follow_type = type_ex.extract_type(follow_q)
-    # follow_kw = kw_ex.extract_keywords(follow_q)
 
     # (2-1) 재질문에서 학교(UNI)가 감지된 경우
     if follow_uni:
@@ -238,7 +274,7 @@ def answer_endpoint():
             merged_q, uni_ex, type_ex, kw_ex, api_key, gemini_model, model_name
         )
 
-        resp = build_answer_response(final_answer, final_decision, final_rows)
+        resp = build_answer_response(final_answer, final_decision, final_rows, final_ner)
         return jsonify(resp)
 
     # (2-2) 재질문에서도 학교(UNI)가 감지되지 않은 경우
@@ -254,18 +290,22 @@ def answer_endpoint():
 {follow_q}
 """
 
-    user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(
-        question=combined_question_text
-    )
+    user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(question=combined_question_text)
     final_answer = ga.gpt_chat(
         ga.EXPERT_SYSTEM_PROMPT,
         user_prompt,
         model=model_name,
     )
 
+    # 기존 기능 유지 + (추가필드) NER 포함
     return jsonify({
         "answer": final_answer,
         "reply": False,
+        "NER": {
+            "UNI": _normalize_ner_list(first_ner.get("uni") if isinstance(first_ner, dict) else None),
+            "TYPE": _normalize_ner_list(first_ner.get("type") if isinstance(first_ner, dict) else None),
+            "KEYWORD": _normalize_ner_list(first_ner.get("keywords") if isinstance(first_ner, dict) else None),
+        }
     })
 
 
