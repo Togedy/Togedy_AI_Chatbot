@@ -27,35 +27,112 @@ except Exception:
 PAGE_LABEL_RE = re.compile(r"^\s*={2,}\s*Page\s*(\d+)\s*={2,}\s*$", re.IGNORECASE)
 
 # =============================================================================
-# answer.py / main.py 호환 레이어 (중요)
-# - answer.py는 아래 심볼들이 존재한다고 가정하고 호출한다.
-#   EXPERT_SYSTEM_PROMPT, DIRECT_ANSWER_USER_TEMPLATE, DOC_ANSWER_USER_TEMPLATE,
-#   gpt_chat, build_followup_prompt, pick_context_from_rows, build_sources_from_rows
+# Prompt templates
 # =============================================================================
 
 EXPERT_SYSTEM_PROMPT = (
-    "너는 한국 대학 입시 모집요강(문서 발췌 텍스트)을 근거로 답하는 전문가다. "
-    "반드시 제공된 컨텍스트/출처에 있는 정보만 사용하고, 문서에 없는 내용은 추측하지 말고 "
-    "'제공 문서에서 확인 불가'라고 말하라."
+    "당신은 한국 대학 입시(모집요강 기반) 질문에 답하는 챗봇입니다.\n"
+    "말투는 사용자를 이해하고 함께 성장하는 친구처럼 친근하되, 항상 공손한 존댓말을 사용합니다.\n"
+    "사용자가 불안해하거나 고민을 말해도 무시하지 말고, 핵심을 정리해서 차분히 안내합니다.\n\n"
+    "답변 원칙:\n"
+    "1) 모집요강 문서 컨텍스트/출처가 주어진 경우에는 반드시 그 내용만 근거로 답변합니다.\n"
+    "2) 문서 컨텍스트가 없거나 부족한 경우에도, 일반적인 입시 흐름/경향을 바탕으로 도움이 되는 설명을 먼저 제공합니다.\n"
+    "3) 문서가 없는 상태에서 수치/일정/규정/자격요건을 단정하지 않습니다.\n"
+    "4) 답변 마지막에는 더 정확한 안내를 위해 필요한 '정확한 키워드' 1~2개를 공손하게 요청합니다.\n\n"
+    "금지 규칙(출력에 포함하지 말 것):\n"
+    "- '문서 근거 없음', '컨텍스트에서 확인 불가', '정확한 확인 필요' 같은 문구\n"
+    "- 위와 유사한 형태의 직설적인 면책 문구\n\n"
+    "형식:\n"
+    "- 본문은 4~10문장 내외로 과도하게 길지 않게 작성합니다.\n"
+    "- 마지막 줄에는 질문 형태로 키워드 요청 1문장을 붙입니다.\n"
 )
 
 DIRECT_ANSWER_USER_TEMPLATE = (
-    "아래 질문에 답하라.\n"
-    "- 문서 컨텍스트가 주어지지 않았으므로, 확정적 수치/일정/규정은 추측하지 말고\n"
-    "  필요 시 사용자에게 어떤 정보가 추가로 필요한지 간단히 물어봐라.\n\n"
-    "질문:\n{question}\n"
+    "아래 질문에 대해 먼저 일반적인 입시 흐름/경향을 바탕으로 설명해 주세요.\n"
+    "단정적인 수치/일정/규정은 피하고, 사용자가 다음 행동을 할 수 있게 방향을 잡아주세요.\n\n"
+    "출력 규칙:\n"
+    "1) 설명: 4~8문장\n"
+    "2) 마지막: 더 정확한 안내를 위해 필요한 '정확한 키워드' 1~2개를 공손하게 질문 1문장으로 요청\n"
+    "3) 금지 문구는 절대 쓰지 말 것(문서/컨텍스트/정확 확인 관련 면책 문구)\n\n"
+    "질문:\n"
+    "{question}\n"
+)
+
+KEYWORD_ONLY_USER_TEMPLATE = (
+    "사용자의 질문에서 대학(UNI) 또는 전형(TYPE)은 명확하지 않고, 키워드(KEYWORD)만 있는 상태입니다.\n"
+    "따라서 먼저 키워드를 중심으로 일반적인 설명을 제공한 뒤, 더 정확한 안내를 위해 필요한 키워드를 요청하세요.\n\n"
+    "출력 규칙:\n"
+    "1) 키워드 중심 설명: 4~8문장\n"
+    "2) 마지막: 더 정확한 안내를 위해 필요한 '정확한 키워드' 1~2개를 공손하게 질문 1문장으로 요청\n"
+    "3) 금지 문구는 절대 쓰지 말 것(문서/컨텍스트/정확 확인 관련 면책 문구)\n\n"
+    "추출된 키워드:\n"
+    "{keywords}\n\n"
+    "사용자 질문:\n"
+    "{question}\n"
 )
 
 DOC_ANSWER_USER_TEMPLATE = (
-    "아래는 모집요강 문서 발췌(컨텍스트)와 출처다.\n"
-    "반드시 컨텍스트에 있는 내용만 근거로 답하라. 추측 금지.\n\n"
-    "질문:\n{question}\n\n"
-    "컨텍스트:\n{context}\n\n"
-    "출처:\n{sources}\n\n"
-    "요구사항:\n"
-    "- 숫자/표 항목은 컨텍스트에서 근거를 찾아 짧게 언급\n"
-    "- 근거가 없으면 '제공 문서에서 확인 불가'\n"
+    "아래는 모집요강 문서 발췌(컨텍스트)와 출처입니다.\n"
+    "반드시 컨텍스트에 있는 내용만 근거로 답하세요.\n"
+    "컨텍스트에 없는 정보는 추측하지 말고, 대신 사용자가 제공하면 좋은 키워드를 마지막에 1문장으로 요청하세요.\n\n"
+    "질문:\n"
+    "{question}\n\n"
+    "컨텍스트:\n"
+    "{context}\n\n"
+    "출처:\n"
+    "{sources}\n\n"
+    "출력 규칙:\n"
+    "1) 핵심 결론을 먼저 1~3문장으로 제시\n"
+    "2) 표/수치가 나오면, 컨텍스트에서 근거가 되는 항목을 짧게 언급\n"
+    "3) 마지막: 더 정확한 안내를 위해 필요한 '정확한 키워드' 1~2개를 공손하게 질문 1문장으로 요청\n"
+    "4) 금지 문구는 절대 쓰지 말 것(문서/컨텍스트/정확 확인 관련 면책 문구)\n"
 )
+
+FOLLOWUP_QUESTION_PROMPT_TEMPLATE = (
+    "당신의 목표는 사용자가 다음 턴에 바로 답할 수 있는 '재질문' 1문장만 만드는 것입니다.\n\n"
+    "규칙:\n"
+    "1) 반드시 한 문장 질문으로만 출력합니다.\n"
+    "2) 한 번에 1~2개의 정보만 요청합니다.\n"
+    "3) 공손한 존댓말로 질문합니다.\n"
+    "4) 다음 표현은 절대 쓰지 말 것: '문서 근거 없음', '컨텍스트에서 확인 불가', '정확한 확인 필요'.\n"
+    "5) 아래 NER 결과를 참고해, 가장 부족한 핵심정보를 우선으로 묻습니다.\n\n"
+    "우선순위:\n"
+    "- 대학(UNI)이 없으면: 대학명을 먼저 묻기\n"
+    "- 전형(TYPE)이 없으면: 전형명을 먼저 묻기\n"
+    "- 학과/모집단위(KEYWORD)가 없으면: 학과/모집단위를 묻기\n"
+    "- 일정/모집 관련이면 연도(예: 2026학년도)를 묻기\n\n"
+    "사용자 원문 질문:\n{question}\n\n"
+    "현재 NER 결과:\n"
+    "- UNI: {uni}\n"
+    "- TYPE: {typ}\n"
+    "- KEYWORD: {kw}\n\n"
+    "출력: 재질문 한 문장"
+)
+
+
+def call_llm(
+    user_prompt: str,
+    model: str = "gpt-4o-mini",
+    temperature: float = 0.1,
+    system_prompt: str = EXPERT_SYSTEM_PROMPT,
+) -> str:
+    if OpenAI is None:
+        return "현재 LLM 호출 환경이 준비되지 않아 답변을 생성하기 어렵습니다. 실행 환경을 먼저 확인해 주실 수 있을까요?"
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        return "현재 LLM 호출 키가 설정되어 있지 않아 답변을 생성하기 어렵습니다. 실행 환경을 먼저 확인해 주실 수 있을까요?"
+
+    client = OpenAI(api_key=api_key)
+    resp = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=temperature,
+    )
+    return (resp.choices[0].message.content or "").strip()
+
 
 def gpt_chat(
     system_prompt: str,
@@ -63,19 +140,15 @@ def gpt_chat(
     model: str = "gpt-4o-mini",
     temperature: float = 0.1,
 ) -> str:
-    """
-    answer.py / main.py에서 호출하는 공통 LLM 함수.
-    내부적으로 기존 call_llm()로 위임한다.
-    """
-    merged = f"[SYSTEM]\n{system_prompt}\n\n[USER]\n{user_prompt}".strip()
-    return call_llm(merged, model=model, temperature=temperature)
+    return call_llm(
+        user_prompt=user_prompt,
+        model=model,
+        temperature=temperature,
+        system_prompt=system_prompt,
+    )
 
 
-def build_followup_prompt(ner_uni, ner_type, ner_keywords) -> str:
-    """
-    decision='재질문'일 때, 사용자에게 물어볼 한 문장 후속질문을 만들기 위한 프롬프트.
-    answer.py는 이 프롬프트를 gpt_chat으로 보내 후속질문 문장을 생성한다.
-    """
+def build_followup_prompt(question: str, ner_uni, ner_type, ner_keywords) -> str:
     def to_list(x):
         if x is None:
             return []
@@ -87,102 +160,17 @@ def build_followup_prompt(ner_uni, ner_type, ner_keywords) -> str:
     t = [str(v).strip() for v in to_list(ner_type) if str(v).strip()]
     k = [str(v).strip() for v in to_list(ner_keywords) if str(v).strip()]
 
-    u_str = ", ".join(u) if u else "(미추출)"
-    t_str = ", ".join(t) if t else "(미추출)"
-    k_str = ", ".join(k) if k else "(미추출)"
+    uni_str = ", ".join(u) if u else "(없음)"
+    typ_str = ", ".join(t) if t else "(없음)"
+    kw_str = ", ".join(k) if k else "(없음)"
 
-    return (
-        "너는 사용자의 질문을 처리하기 위해 '추가로 필요한 정보'를 한 문장으로만 물어본다.\n"
-        "조건:\n"
-        "1) 한 문장으로 질문할 것\n"
-        "2) 너무 길게 설명하지 말 것\n"
-        "3) 사용자가 답하기 쉽게 '무엇을 알려달라' 형태로 물을 것\n\n"
-        f"현재 추출 결과:\n- UNI: {u_str}\n- TYPE: {t_str}\n- KEYWORD: {k_str}\n\n"
-        "사용자에게 가장 우선적으로 필요한 정보를 물어봐라."
+    return FOLLOWUP_QUESTION_PROMPT_TEMPLATE.format(
+        question=question,
+        uni=uni_str,
+        typ=typ_str,
+        kw=kw_str,
     )
 
-
-def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
-    """
-    answer.py가 문서탐색 결과 rows를 받아 컨텍스트 문자열을 만들 때 사용.
-    rows는 search_and_export.search_top_pages_for_query 반환 구조를 따른다.
-    """
-    if not rows:
-        return ""
-
-    valid = [r for r in rows if r.get("page_index", -1) != -1]
-    if not valid:
-        valid = rows[:]
-
-    valid = sorted(valid, key=lambda r: float(r.get("score", 0.0)), reverse=True)
-
-    blocks: List[str] = []
-    for r in valid[: max(1, int(topk))]:
-        doc_path = str(r.get("doc_path", "") or "")
-        page = r.get("page_index", -1)
-
-        body = r.get("text") or r.get("snippet") or r.get("content") or ""
-        body = str(body).strip()
-
-        meta_parts = []
-        if doc_path:
-            meta_parts.append(os.path.basename(doc_path))
-        if isinstance(page, int) and page != -1:
-            meta_parts.append(f"p.{page}")
-
-        meta = " | ".join(meta_parts).strip()
-        if meta:
-            blocks.append(f"[{meta}]\n{body}".strip())
-        else:
-            blocks.append(body)
-
-    return "\n\n".join([b for b in blocks if b]).strip()
-
-
-def build_sources_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
-    """
-    answer.py가 sources 문자열을 만들 때 사용.
-    - 문서명 + 페이지를 topk 기준으로 정리
-    """
-    if not rows:
-        return ""
-
-    valid = [r for r in rows if r.get("page_index", -1) != -1]
-    if not valid:
-        valid = rows[:]
-
-    valid = sorted(valid, key=lambda r: float(r.get("score", 0.0)), reverse=True)
-
-    seen = set()
-    lines: List[str] = []
-
-    for r in valid[: max(1, int(topk))]:
-        doc_path = str(r.get("doc_path", "") or "")
-        page = r.get("page_index", -1)
-
-        doc_name = os.path.basename(doc_path) if doc_path else "(unknown)"
-        page_str = f"p.{page}" if isinstance(page, int) and page != -1 else "(page unknown)"
-
-        key = (doc_name, page_str)
-        if key in seen:
-            continue
-        seen.add(key)
-
-        matched_uni = (r.get("matched_uni") or "").strip()
-        matched_type = (r.get("matched_type") or "").strip()
-
-        if matched_uni or matched_type:
-            ut = " / ".join([x for x in [matched_uni, matched_type] if x])
-            lines.append(f"- {ut}: {doc_name} {page_str}")
-        else:
-            lines.append(f"- {doc_name} {page_str}")
-
-    return "\n".join(lines).strip()
-
-
-# =============================================================================
-# 기존 generate_answers.py 로직 (이전 기능 유지)
-# =============================================================================
 
 def is_quota_question(text: str) -> bool:
     if not text:
@@ -238,26 +226,74 @@ def load_page_text(doc_path: str, page_label: int) -> str:
     return ""
 
 
-def call_llm(prompt: str, model: str = "gpt-4o-mini", temperature: float = 0.1) -> str:
-    if OpenAI is None:
-        return "LLM 라이브러리(openai)가 설치되어 있지 않아 답변을 생성할 수 없습니다."
-    api_key = os.getenv("OPENAI_API_KEY", "").strip()
-    if not api_key:
-        return "OPENAI_API_KEY 환경변수가 설정되어 있지 않아 답변을 생성할 수 없습니다."
+def pick_context_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
+    if not rows:
+        return ""
 
-    client = OpenAI(api_key=api_key)
-    resp = client.chat.completions.create(
-        model=model,
-        messages=[
-            {
-                "role": "system",
-                "content": "너는 한국 대학 입시 모집요강 텍스트를 기반으로 답하는 도우미다. 제공된 문서 내용 밖의 추측을 금지한다.",
-            },
-            {"role": "user", "content": prompt},
-        ],
-        temperature=temperature,
-    )
-    return (resp.choices[0].message.content or "").strip()
+    valid = [r for r in rows if r.get("page_index", -1) != -1]
+    if not valid:
+        valid = rows[:]
+
+    valid = sorted(valid, key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+    blocks: List[str] = []
+    for r in valid[: max(1, int(topk))]:
+        doc_path = str(r.get("doc_path", "") or "")
+        page = r.get("page_index", -1)
+
+        body = r.get("text") or r.get("snippet") or r.get("content") or ""
+        body = str(body).strip()
+
+        meta_parts = []
+        if doc_path:
+            meta_parts.append(os.path.basename(doc_path))
+        if isinstance(page, int) and page != -1:
+            meta_parts.append(f"p.{page}")
+
+        meta = " | ".join(meta_parts).strip()
+        if meta:
+            blocks.append(f"[{meta}]\n{body}".strip())
+        else:
+            blocks.append(body)
+
+    return "\n\n".join([b for b in blocks if b]).strip()
+
+
+def build_sources_from_rows(rows: List[Dict[str, Any]], topk: int = 3) -> str:
+    if not rows:
+        return ""
+
+    valid = [r for r in rows if r.get("page_index", -1) != -1]
+    if not valid:
+        valid = rows[:]
+
+    valid = sorted(valid, key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+    seen = set()
+    lines: List[str] = []
+
+    for r in valid[: max(1, int(topk))]:
+        doc_path = str(r.get("doc_path", "") or "")
+        page = r.get("page_index", -1)
+
+        doc_name = os.path.basename(doc_path) if doc_path else "(unknown)"
+        page_str = f"p.{page}" if isinstance(page, int) and page != -1 else "(page unknown)"
+
+        key = (doc_name, page_str)
+        if key in seen:
+            continue
+        seen.add(key)
+
+        matched_uni = (r.get("matched_uni") or "").strip()
+        matched_type = (r.get("matched_type") or "").strip()
+
+        if matched_uni or matched_type:
+            ut = " / ".join([x for x in [matched_uni, matched_type] if x])
+            lines.append(f"- {ut}: {doc_name} {page_str}")
+        else:
+            lines.append(f"- {doc_name} {page_str}")
+
+    return "\n".join(lines).strip()
 
 
 def build_sources(pair_to_rows: Dict[Tuple[str, str], List[Dict[str, Any]]]) -> List[str]:
@@ -285,8 +321,6 @@ def build_quota_sources(selected_pages: Dict[Tuple[str, str], List[int]]) -> Lis
         if pages_sorted:
             pages_str = ", ".join([f"p.{p}" for p in pages_sorted])
             out.append(f"- {uni} , {typ} 모집요강 {pages_str}")
-        else:
-            out.append(f"- {uni} , {typ} 모집요강 (페이지 정보 없음)")
     return out
 
 
@@ -351,22 +385,60 @@ def build_quota_prompt(
     doc_join = "\n\n".join(doc_block)
 
     return (
-        "아래는 대학 모집요강 텍스트(페이지 발췌)이다.\n"
-        "반드시 제공된 텍스트 안의 정보만 근거로 답하라. 추측 금지.\n\n"
+        "아래는 대학 모집요강 텍스트(페이지 발췌)입니다.\n"
+        "반드시 제공된 텍스트 안의 정보만 근거로 답변해 주세요.\n\n"
         f"질문: {question}\n"
         f"대학/전형: {uni} / {typ}\n"
         f"대상 학과/학부: {majors_str}\n"
         f"참고 페이지: {pages_info}\n\n"
         "요구사항:\n"
-        "1) 대상 학과/학부의 모집인원 '합계'를 우선 제시하라.\n"
-        "2) 표에 전형별 항목(예: 지역균형/일반전형/기회균형특별전형 등)이 함께 있으면 전형별 인원도 함께 제시하라.\n"
-        "3) 표에서 확인할 수 없으면 '제공 문서에서 확인 불가'라고 말하라.\n"
-        "4) 가능한 한 간단히, 숫자 근거가 되는 열/항목을 짧게 언급하라.\n\n"
+        "1) 대상 학과/학부의 모집인원 합계를 먼저 제시해 주세요.\n"
+        "2) 전형별 항목(예: 지역균형/일반전형/기회균형특별전형 등)이 있으면 함께 정리해 주세요.\n"
+        "3) 답변은 한두 문장으로 간단명료하게 작성해 주세요.\n"
+        "4) 추가 질문이나 안내 문구는 절대 덧붙이지 말고, 모집인원 답변만 작성해 주세요.\n\n"
         "제공 문서:\n"
         "-----\n"
         f"{doc_join}\n"
         "-----\n"
     )
+
+
+def sanitize_pair_answer(text: str) -> str:
+    if not text:
+        return ""
+
+    cleaned = text.strip()
+
+    split_patterns = [
+        r"\n\s*혹시",
+        r"\n\s*추가로",
+        r"\n\s*더 궁금",
+        r"\n\s*궁금한 점",
+        r"\n\s*필요한 키워드",
+    ]
+    for pat in split_patterns:
+        cleaned = re.split(pat, cleaned, maxsplit=1)[0].strip()
+
+    cleaned = cleaned.split("\n\n")[0].strip()
+    return cleaned
+
+
+def build_pair_doc_context(prows: List[Dict[str, Any]], max_items: int = 3) -> str:
+    if not prows:
+        return ""
+
+    rows_sorted = sorted(prows, key=lambda r: float(r.get("score", 0.0)), reverse=True)
+    lines: List[str] = []
+
+    for r in rows_sorted[:max(1, int(max_items))]:
+        page_index = r.get("page_index")
+        snippet = str(r.get("snippet", "") or "").strip()
+        if isinstance(page_index, int):
+            lines.append(f"[p.{page_index}] {snippet}")
+        else:
+            lines.append(snippet)
+
+    return "\n".join([x for x in lines if x]).strip()
 
 
 def answer_one(
@@ -390,7 +462,7 @@ def answer_one(
         top_pages=top_pages,
     )
 
-    decision = ner.get("decision", "")
+    decision = (ner.get("decision", "") or "").strip()
 
     ner_uni = ner.get("uni") or []
     ner_type = ner.get("type") or []
@@ -410,12 +482,74 @@ def answer_one(
             continue
         pair_to_rows[(uni, typ)].append(r)
 
+    has_uni = len([x for x in ner_uni if str(x).strip()]) > 0
+    has_type = len([x for x in ner_type if str(x).strip()]) > 0
+    has_kw = len([x for x in ner_kw if str(x).strip()]) > 0
+
+    if (not has_uni) and (not has_type) and has_kw:
+        decision = "키워드답변"
+
     answer_text = ""
     sources_lines: List[str] = []
 
-    if decision != "문서탐색":
-        answer_text = "추가 정보가 필요합니다."
+    if decision == "키워드답변":
+        keywords_str = ", ".join([str(k).strip() for k in ner_kw if str(k).strip()]) or "(미추출)"
+        user_prompt = KEYWORD_ONLY_USER_TEMPLATE.format(
+            question=text,
+            keywords=keywords_str,
+        )
+
+        main_answer = gpt_chat(
+            system_prompt=EXPERT_SYSTEM_PROMPT,
+            user_prompt=user_prompt,
+            model=llm_model,
+            temperature=0.3,
+        ).strip()
+
+        fu_prompt = build_followup_prompt(text, ner_uni, ner_type, ner_kw)
+        followup = gpt_chat(
+            system_prompt=EXPERT_SYSTEM_PROMPT,
+            user_prompt=fu_prompt,
+            model=llm_model,
+            temperature=0.2,
+        ).strip()
+
+        answer_text = (main_answer + "\n\n" + followup).strip()
         sources_lines = []
+
+        return {
+            "input": text,
+            "ner_uni": ner_uni,
+            "ner_type": ner_type,
+            "ner_kw": ner_kw,
+            "decision": decision,
+            "stats": stats,
+            "pair_to_rows": pair_to_rows,
+            "answer": answer_text,
+            "sources": sources_lines,
+        }
+
+    if decision != "문서탐색":
+        user_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=text)
+
+        main_answer = gpt_chat(
+            system_prompt=EXPERT_SYSTEM_PROMPT,
+            user_prompt=user_prompt,
+            model=llm_model,
+            temperature=0.3,
+        ).strip()
+
+        fu_prompt = build_followup_prompt(text, ner_uni, ner_type, ner_kw)
+        followup = gpt_chat(
+            system_prompt=EXPERT_SYSTEM_PROMPT,
+            user_prompt=fu_prompt,
+            model=llm_model,
+            temperature=0.2,
+        ).strip()
+
+        answer_text = (main_answer + "\n\n" + followup).strip()
+        sources_lines = []
+
         return {
             "input": text,
             "ner_uni": ner_uni,
@@ -430,13 +564,13 @@ def answer_one(
 
     if is_quota_question(text):
         majors = [k for k in ner_kw if k and str(k).strip()]
-        lines = ["모집 인원은 다음과 같습니다:\n"]
+        lines = ["모집 인원은 다음과 같습니다.\n"]
         selected_pages: Dict[Tuple[str, str], List[int]] = {}
 
         for (uni, typ), prows in pair_to_rows.items():
             picks = pick_best_quota_pages(prows, majors, max_pages=quota_pages_per_pair)
             if not picks:
-                lines.append(f"- {uni} {typ}: 제공 문서에서 확인 불가")
+                lines.append(f"- {uni} {typ}: 해당 항목을 정확히 보려면 학과나 모집단위 키워드를 조금 더 알려주세요.")
                 selected_pages[(uni, typ)] = []
                 continue
 
@@ -460,14 +594,25 @@ def answer_one(
             selected_pages[(uni, typ)] = used_page_nums
 
             if not page_texts:
-                lines.append(f"- {uni} {typ}: 제공 문서에서 확인 불가")
+                lines.append(f"- {uni} {typ}: 모집단위(학과/학부) 키워드를 조금 더 알려주시면 더 정확히 안내해 드릴 수 있습니다.")
                 continue
 
             prompt = build_quota_prompt(text, uni, typ, majors, page_texts)
-            quota_ans = call_llm(prompt, model=llm_model, temperature=0.0)
+            quota_ans = call_llm(
+                user_prompt=prompt,
+                model=llm_model,
+                temperature=0.0,
+                system_prompt=EXPERT_SYSTEM_PROMPT,
+            ).strip()
+
+            quota_ans = sanitize_pair_answer(quota_ans)
             lines.append(f"- {uni} {typ}: {quota_ans}")
 
         answer_text = "\n".join(lines).strip()
+
+        if not majors:
+            answer_text += "\n\n어느 학과나 모집단위를 기준으로 보시는지 알려주시면 더 정확하게 안내해 드릴 수 있습니다."
+
         sources_lines = build_quota_sources(selected_pages)
 
         return {
@@ -482,24 +627,63 @@ def answer_one(
             "sources": sources_lines,
         }
 
-    context_blocks: List[str] = []
+    # -------------------------------------------------------------------------
+    # 문서탐색 답변: 대학/전형 페어별로 각각 GPT 호출
+    # -------------------------------------------------------------------------
+    lines: List[str] = []
+
     for (uni, typ), prows in pair_to_rows.items():
-        prows_sorted = sorted(prows, key=lambda r: int(r.get("page_index", 10**9)))
-        snippet_join = "\n".join([f"[p.{r.get('page_index')}] {r.get('snippet','')}" for r in prows_sorted])
-        context_blocks.append(f"({uni}, {typ}) 컨텍스트:\n{snippet_join}")
+        pair_context = build_pair_doc_context(prows, max_items=top_pages)
+        pair_sources = build_sources_from_rows(prows, topk=top_pages)
 
-    prompt = (
-        f"질문:\n{text}\n\n"
-        "컨텍스트(모집요강 발췌):\n"
-        + "\n\n".join(context_blocks)
-        + "\n\n"
-        "요구사항:\n"
-        "- 컨텍스트에 있는 내용만 사용\n"
-        "- 표/숫자는 추측하지 말고, 컨텍스트에 근거가 없으면 '컨텍스트에서 확인 불가'라고 말할 것\n"
-    )
+        if not pair_context.strip():
+            continue
 
-    answer_text = call_llm(prompt, model=llm_model, temperature=0.1)
+        doc_user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
+            question=f"{text}\n\n단, 이번 답변은 반드시 {uni} {typ}에 대해서만 답변해 주세요.",
+            context=pair_context,
+            sources=pair_sources,
+        )
+
+        pair_answer = gpt_chat(
+            system_prompt=EXPERT_SYSTEM_PROMPT,
+            user_prompt=doc_user_prompt,
+            model=llm_model,
+            temperature=0.1,
+        ).strip()
+
+        pair_answer = sanitize_pair_answer(pair_answer)
+
+        if pair_answer:
+            lines.append(f"{uni} {typ}\n{pair_answer}")
+
+    # pair 결과가 하나도 없을 때만 기존 전체 컨텍스트 방식으로 fallback
+    if lines:
+        answer_text = "\n\n".join(lines).strip()
+    else:
+        context_blocks: List[str] = []
+        for (uni, typ), prows in pair_to_rows.items():
+            prows_sorted = sorted(prows, key=lambda r: int(r.get("page_index", 10**9)))
+            snippet_join = "\n".join([f"[p.{r.get('page_index')}] {r.get('snippet','')}" for r in prows_sorted])
+            context_blocks.append(f"({uni}, {typ}) 컨텍스트:\n{snippet_join}")
+
+        sources_str = "\n".join(build_sources(pair_to_rows))
+
+        doc_user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
+            question=text,
+            context="\n\n".join(context_blocks).strip(),
+            sources=sources_str.strip(),
+        )
+
+        answer_text = gpt_chat(
+            system_prompt=EXPERT_SYSTEM_PROMPT,
+            user_prompt=doc_user_prompt,
+            model=llm_model,
+            temperature=0.1,
+        ).strip()
+
     sources_lines = build_sources(pair_to_rows)
+    sources_lines = [s for s in sources_lines if "(페이지 정보 없음)" not in s]
 
     return {
         "input": text,
@@ -539,9 +723,11 @@ def print_result_7lines(result: Dict[str, Any], dt: float) -> None:
     print("챗봇 답변:")
     print(result.get("answer", ""))
 
-    print("출처:")
-    for s in (result.get("sources") or []):
-        print(s)
+    sources = result.get("sources") or []
+    if sources:
+        print("출처:")
+        for s in sources:
+            print(s)
 
     print(f"처리시간: {dt:.3f} s")
 
