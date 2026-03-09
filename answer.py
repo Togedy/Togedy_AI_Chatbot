@@ -53,7 +53,7 @@ def run_single_turn(
 
     내부 로직은 generate_answers.py 의 main() 루프와 동일:
       - search_top_pages_for_query() 호출
-      - decision(문서탐색/재질문/답변생성)에 따라 분기
+      - decision(문서탐색/재질문/답변 생성)에 따라 분기
       - GPT 호출 시 ga.gpt_chat 및 ga.*_TEMPLATE 그대로 사용
     """
     # 1) 검색 + NER + 최종 분류
@@ -62,10 +62,13 @@ def run_single_turn(
     )
     decision = ner.get("decision")
 
-    # 2) 분기 로직 (generate_answers.py 와 동일)
+    # 2) 분기 로직
     if decision == "재질문":
         user_prompt = ga.build_followup_prompt(
-            ner.get("uni"), ner.get("type"), ner.get("keywords")
+            question,
+            ner.get("uni"),
+            ner.get("type"),
+            ner.get("keywords"),
         )
         answer = ga.gpt_chat(
             "너는 후속질문만 하는 한국어 비서다.",
@@ -98,7 +101,7 @@ def run_single_turn(
                 model=model_name,
             )
         else:
-            # 문서탐색 시도했지만 실제 매칭 페이지 없음 → 일반 답변으로 Fallback
+            # 문서탐색 시도했지만 실제 매칭 페이지 없음 → 일반 답변으로 fallback
             fallback_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(question=question)
             answer = ga.gpt_chat(
                 ga.EXPERT_SYSTEM_PROMPT,
@@ -127,7 +130,7 @@ def main():
         print("질문이 비어 있습니다. 종료합니다.")
         return
 
-    # 2) 첫 질문 처리 (generate_answers 파이프라인과 동일)
+    # 2) 첫 질문 처리
     first_answer, first_decision, first_ner, first_rows, first_stats = run_single_turn(
         first_q, uni_ex, type_ex, kw_ex, api_key, gemini_model, model_name
     )
@@ -138,12 +141,12 @@ def main():
         print(first_answer)
         return
 
-    # 3) 재질문인 경우: first_answer 가 "추가로 물어볼 질문" 문장
+    # 3) 재질문인 경우
     print("\n[추가 질문]")
     print(first_answer)
     follow_q = input("추가 정보를 입력해 주세요: ").strip()
 
-    # 추가 정보가 전혀 없으면, 첫 질문만으로 답변 생성 (문서 탐색은 하지 않고 비문서 답변)
+    # 추가 정보가 전혀 없으면 문서 탐색 없이 답변 생성
     if not follow_q:
         combined_text = f"[사용자 첫 질문]\n{first_q}\n"
         user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(
@@ -165,11 +168,6 @@ def main():
 
     # 4-1) 재질문에서 학교(UNI)가 감지된 경우
     if follow_uni:
-        # 요구사항:
-        # - 첫 질문에서의 키워드/TYPE + 재질문에서의 학교를 합쳐 문서 탐색
-        # 구현 방법:
-        # - 텍스트 차원에서 "첫 질문 + 재질문 답변"을 합친 문장으로
-        #   다시 run_single_turn()을 호출 → NER가 자연스럽게 UNI/TYPE/KEYWORD를 통합 추출
         merged_q = first_q + "\n" + follow_q
 
         final_answer, final_decision, final_ner, final_rows, final_stats = run_single_turn(
@@ -181,8 +179,6 @@ def main():
         return
 
     # 4-2) 재질문에서도 학교(UNI)가 감지되지 않은 경우
-    #  → 문서 탐색 포기, "답변 생성"으로만 처리
-    #  (첫 질문 + 첫 답변(재질문 문장) + 추가 입력을 모두 포함)
     combined_question_text = f"""[사용자 첫 질문]
 {first_q}
 
