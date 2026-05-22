@@ -1,59 +1,5 @@
 # main.py
 # -*- coding: utf-8 -*-
-"""
-Flask 서버 버전
-
-- 로직 기준은 answer.py와 동일하다.
-- 재질문/문서탐색/답변생성 구분은 모두 기존 final_bucket 규칙
-  (KEYWORD 유무 + UNI 유무)에 따라 동작한다.
-
-요청(JSON) 예시:
-
-1) 첫 질문 (first = true)
-{
-  "question_1": "서울대 수시에서의 모집인원과 연세대 정시에서 모집 일정에 대해 궁금하다",
-  "question_2": "",
-  "first": true,
-  "NER_Keyword": {}
-}
-
-2) 재질문 이후 (first = false)
-{
-  "question_1": "수시에서의 모집인원에 대해 궁금하다",
-  "question_2": "건국대에 대해 궁금합니다",
-  "first": false,
-  "NER_Keyword": {}
-}
-
-응답(JSON) 형식:
-
-1) 재질문
-{
-  "answer": "어느 대학의 전형을 알고 싶으신가요?",
-  "reply": true
-}
-
-2) 문서탐색 또는 답변 생성
-{
-  "answer": "...",
-  "reply": false,
-  "location": "university/konkuk/susi.pdf",
-  "NER_Page_1": "p12",
-  "NER_Page_2": "p13",
-  "NER_Page_3": "p14"
-}
-※ 문서탐색이 아니거나 페이지가 없으면 location / NER_Page_*는 생략
-"""
-
-# main.py
-# -*- coding: utf-8 -*-
-"""
-Flask 서버 버전
-
-- 로직 기준은 answer.py와 동일하다.
-- 재질문/문서탐색/답변생성 구분은 모두 기존 final_bucket 규칙
-  (KEYWORD 유무 + UNI 유무)에 따라 동작한다.
-"""
 
 import os
 import sys
@@ -65,7 +11,6 @@ THIS = os.path.dirname(os.path.abspath(__file__))
 if THIS not in sys.path:
     sys.path.insert(0, THIS)
 
-# answer.py 의 run_single_turn 재사용
 import answer as ans
 import generate_answers as ga
 from extract_all import (
@@ -75,9 +20,6 @@ from extract_all import (
     load_env,
 )
 
-# --------------------------
-# 전역 초기화 (모델/환경 1회 로드)
-# --------------------------
 api_key, gemini_model = load_env()
 uni_ex = UniExtractor(max_len=128)
 type_ex = TypeExtractor()
@@ -85,57 +27,115 @@ kw_ex = KeywordExtractorBridge(topn=10)
 
 app = Flask(__name__)
 
-
-# --------------------------
-# 공통 유틸
-# --------------------------
-def extract_doc_meta(rows: List[Dict[str, Any]]) -> Tuple[Optional[str], List[int]]:
-    """
-    rows에서 최상위 문서 경로(location)와 상위 3개 페이지 번호 추출.
-    location: best doc_path
-    pages: [page1, page2, page3]
-    """
-    valid = [r for r in rows if r.get("page_index", -1) != -1]
-    if not valid:
-        return None, []
-
-    # 점수 기준 내림차순 정렬
-    valid.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
-    best_doc = valid[0]["doc_path"]
-
-    # 동일 문서에서 top3 페이지 가져오기
-    same_doc = [r for r in valid if r["doc_path"] == best_doc]
-    same_doc.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
-
-    pages: List[int] = []
-    for r in same_doc:
-        p = r.get("page_index")
-        if isinstance(p, int) and p not in pages:
-            pages.append(p)
-        if len(pages) >= 3:
-            break
-
-    # 상대 경로 정제
-    try:
-        location = os.path.relpath(best_doc, THIS)
-    except Exception:
-        location = best_doc
-
-    # 텍스트 파일명을 PDF로 변환
-    # 예: university/konkuk/susi_text.txt → university/konkuk/susi.pdf
-    if location.endswith("_text.txt"):
-        location = location.replace("_text.txt", ".pdf")
-
-    return location, pages
+MODEL_NAME = "gpt-4o-mini"
 
 
 def _normalize_ner_list(x: Any) -> List[str]:
     if x is None:
         return []
+
     if isinstance(x, list):
-        return [str(v) for v in x if str(v).strip()]
+        return [str(v).strip() for v in x if str(v).strip()]
+
     s = str(x).strip()
     return [s] if s else []
+
+
+def make_ner_payload(ner: Optional[Dict[str, Any]]) -> Dict[str, List[str]]:
+    ner = ner or {}
+
+    return {
+        "UNI": _normalize_ner_list(ner.get("UNI", ner.get("uni"))),
+        "TYPE": _normalize_ner_list(ner.get("TYPE", ner.get("type"))),
+        "KEYWORD": _normalize_ner_list(ner.get("KEYWORD", ner.get("keywords"))),
+    }
+
+
+def unique_extend(base: List[str], values: List[str]) -> List[str]:
+    out = list(base)
+    seen = set(out)
+
+    for v in values:
+        if v and v not in seen:
+            out.append(v)
+            seen.add(v)
+
+    return out
+
+
+def merge_ner_keyword(
+    prev_ner: Optional[Dict[str, Any]],
+    curr_ner: Optional[Dict[str, Any]],
+) -> Dict[str, List[str]]:
+    prev = make_ner_payload(prev_ner)
+    curr = make_ner_payload(curr_ner)
+
+    merged = {
+        "UNI": [],
+        "TYPE": [],
+        "KEYWORD": [],
+    }
+
+    merged["UNI"] = unique_extend(merged["UNI"], curr["UNI"])
+    merged["UNI"] = unique_extend(merged["UNI"], prev["UNI"])
+
+    merged["TYPE"] = unique_extend(merged["TYPE"], curr["TYPE"])
+    merged["TYPE"] = unique_extend(merged["TYPE"], prev["TYPE"])
+
+    merged["KEYWORD"] = unique_extend(merged["KEYWORD"], prev["KEYWORD"])
+    merged["KEYWORD"] = unique_extend(merged["KEYWORD"], curr["KEYWORD"])
+
+    return merged
+
+
+def build_query_from_ner(
+    merged_ner: Dict[str, List[str]],
+    fallback_question: str,
+) -> str:
+    parts: List[str] = []
+
+    parts.extend(merged_ner.get("UNI", []))
+    parts.extend(merged_ner.get("TYPE", []))
+    parts.extend(merged_ner.get("KEYWORD", []))
+
+    if parts:
+        return " ".join(parts).strip() + " 알려줘"
+
+    return fallback_question.strip()
+
+
+def extract_doc_meta(rows: List[Dict[str, Any]]) -> Tuple[Optional[str], List[int]]:
+    valid = [r for r in rows if r.get("page_index", -1) != -1]
+
+    if not valid:
+        return None, []
+
+    valid.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+    best_doc = valid[0]["doc_path"]
+
+    same_doc = [r for r in valid if r["doc_path"] == best_doc]
+    same_doc.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+    pages: List[int] = []
+
+    for r in same_doc:
+        p = r.get("page_index")
+
+        if isinstance(p, int) and p not in pages:
+            pages.append(p)
+
+        if len(pages) >= 3:
+            break
+
+    try:
+        location = os.path.relpath(best_doc, THIS)
+    except Exception:
+        location = best_doc
+
+    if location.endswith("_text.txt"):
+        location = location.replace("_text.txt", ".pdf")
+
+    return location, pages
 
 
 def build_answer_response(
@@ -144,171 +144,115 @@ def build_answer_response(
     rows: List[Dict[str, Any]],
     ner: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
-    """
-    최종 JSON 응답 형식 구성.
-    - 재질문이면 reply=true, answer만 (기존 유지) + NER을 "추가 필드"로만 제공
-    - 문서탐색/답변생성이면 reply=false,
-      (문서탐색인 경우에만) location, NER_Page_i 추가.
-    """
-    ner = ner or {}
-    ner_payload = {
-        "UNI": _normalize_ner_list(ner.get("uni")),
-        "TYPE": _normalize_ner_list(ner.get("type")),
-        "KEYWORD": _normalize_ner_list(ner.get("keywords")),
-    }
+    ner_payload = make_ner_payload(ner)
 
-    # 재질문: 기존 필드(answer, reply)는 그대로 유지하고, 호환성 깨지지 않게 NER만 추가
     if decision == "재질문":
-        resp = {
+        return {
             "answer": answer,
             "reply": True,
+            "NER_Keyword": ner_payload,
         }
-        # 기존 클라이언트가 무시해도 되는 "추가 필드"로 제공
-        resp["NER"] = ner_payload
-        return resp
 
-    # 기본: 최종 답변 (문서탐색 or 답변 생성)
     resp: Dict[str, Any] = {
         "answer": answer,
         "reply": False,
+        "NER_Keyword": ner_payload,
     }
 
-    # 필요하면 reply=false에서도 NER을 보고 싶을 수 있으니,
-    # 호환성 문제 없게(추가 필드) 포함시키되, 원치 않으면 아래 1줄을 지워도 됨.
-    resp["NER"] = ner_payload
-
-    # 문서탐색인 경우에만 location / 페이지 정보 추가 (있을 때만)
     if decision == "문서탐색":
         location, pages = extract_doc_meta(rows)
+
         if location:
             resp["location"] = location
+
             for i, p in enumerate(pages, start=1):
                 resp[f"NER_Page_{i}"] = f"p{p}"
 
     return resp
 
 
-# --------------------------
-# Flask 엔드포인트
-# --------------------------
+def run_turn(question: str):
+    return ans.run_single_turn(
+        question,
+        uni_ex,
+        type_ex,
+        kw_ex,
+        api_key,
+        gemini_model,
+        MODEL_NAME,
+    )
+
+
 @app.route("/answer", methods=["POST"])
 def answer_endpoint():
-    """
-    요청 JSON:
-    {
-      "question_1": "...",
-      "question_2": "...",
-      "first": true/false,
-      "NER_Keyword": {...}
-    }
-    """
     data = request.get_json(force=True) or {}
 
     q1: str = data.get("question_1", "") or ""
     q2: str = data.get("question_2", "") or ""
     first: bool = bool(data.get("first", True))
-    # NER_Keyword는 현재 사용하지 않지만 형식만 유지
-    # ner_kw = data.get("NER_Keyword", {}) or {}
+    prev_ner_keyword: Dict[str, Any] = data.get("NER_Keyword", {}) or {}
 
-    model_name = "gpt-4o-mini"
-
-    # ----------------------
-    # 1) 첫 질문(first = true)
-    # ----------------------
-    if first:
-        if not q1.strip():
-            return jsonify({"error": "question_1 이 비어 있습니다."}), 400
-
-        # answer.py 의 1턴 로직 그대로 사용
-        answer, decision, ner, rows, stats = ans.run_single_turn(
-            q1.strip(), uni_ex, type_ex, kw_ex, api_key, gemini_model, model_name
-        )
-        resp = build_answer_response(answer, decision, rows, ner)
-        return jsonify(resp)
-
-    # ----------------------
-    # 2) 재질문 이후(first = false)
-    #    answer.py 의 main() 에 있는 2턴 로직을 HTTP로 옮긴 것
-    # ----------------------
     first_q = q1.strip()
     follow_q = q2.strip()
+
+    if first:
+        if not first_q:
+            return jsonify({"error": "question_1 이 비어 있습니다."}), 400
+
+        answer, decision, ner, rows, stats = run_turn(first_q)
+        resp = build_answer_response(answer, decision, rows, ner)
+        return jsonify(resp)
 
     if not first_q:
         return jsonify({"error": "question_1 이 비어 있습니다."}), 400
 
-    # (1) 첫 질문에 대해 다시 1턴 처리해서 first_answer/first_decision 확보
-    first_answer, first_decision, first_ner, first_rows, first_stats = ans.run_single_turn(
-        first_q, uni_ex, type_ex, kw_ex, api_key, gemini_model, model_name
-    )
-
-    # follow_q 가 비어 있으면 → 첫 질문만으로 답변 생성 (비문서)
     if not follow_q:
-        combined_text = f"[사용자 첫 질문]\n{first_q}\n"
-        user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(question=combined_text)
+        prev_payload = make_ner_payload(prev_ner_keyword)
+
+        combined_text = f"""[사용자 첫 질문]
+{first_q}
+"""
+
+        user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(
+            question=combined_text
+        )
+
         final_answer = ga.gpt_chat(
             ga.EXPERT_SYSTEM_PROMPT,
             user_prompt,
-            model=model_name,
+            model=MODEL_NAME,
         )
-        # 이 경우도 최종 답변이므로 reply=false
-        # 기존 기능 유지 + (추가필드) NER 포함
+
         return jsonify({
             "answer": final_answer,
             "reply": False,
-            "NER": {
-                "UNI": _normalize_ner_list(first_ner.get("uni") if isinstance(first_ner, dict) else None),
-                "TYPE": _normalize_ner_list(first_ner.get("type") if isinstance(first_ner, dict) else None),
-                "KEYWORD": _normalize_ner_list(first_ner.get("keywords") if isinstance(first_ner, dict) else None),
-            }
+            "NER_Keyword": prev_payload,
         })
 
-    # (2) 재질문(사용자 추가 입력)에 대해 NER 수행
-    follow_uni = uni_ex.extract_uni(follow_q)
+    prev_payload = make_ner_payload(prev_ner_keyword)
 
-    # (2-1) 재질문에서 학교(UNI)가 감지된 경우
-    if follow_uni:
-        # "첫 질문 + 재질문" 을 합친 문장으로 다시 run_single_turn
-        merged_q = first_q + "\n" + follow_q
+    # 클라이언트가 NER_Keyword를 비워 보낸 경우 fallback으로 question_1 재분석
+    if not any(prev_payload.values()):
+        first_answer, first_decision, first_ner, first_rows, first_stats = run_turn(first_q)
+        prev_payload = make_ner_payload(first_ner)
 
-        final_answer, final_decision, final_ner, final_rows, final_stats = ans.run_single_turn(
-            merged_q, uni_ex, type_ex, kw_ex, api_key, gemini_model, model_name
-        )
+    # question_2 단독 NER 추출
+    follow_answer, follow_decision, follow_ner, follow_rows, follow_stats = run_turn(follow_q)
+    curr_payload = make_ner_payload(follow_ner)
 
-        resp = build_answer_response(final_answer, final_decision, final_rows, final_ner)
-        return jsonify(resp)
+    # 이전 NER_Keyword + 현재 question_2 NER 병합
+    merged_ner = merge_ner_keyword(prev_payload, curr_payload)
 
-    # (2-2) 재질문에서도 학교(UNI)가 감지되지 않은 경우
-    #  → 문서 탐색 포기, "답변 생성"으로만 처리
-    #  (첫 질문 + 첫 답변(재질문 문장) + 추가 입력을 모두 포함)
-    combined_question_text = f"""[사용자 첫 질문]
-{first_q}
+    # 병합된 NER 기반 최종 질의 생성
+    final_query = build_query_from_ner(merged_ner, follow_q)
 
-[시스템이 추가로 물어본 질문]
-{first_answer}
+    final_answer, final_decision, final_ner, final_rows, final_stats = run_turn(final_query)
 
-[사용자의 추가 답변]
-{follow_q}
-"""
+    # 후속 질문의 상태값은 최종 NER보다 merged_ner를 우선 사용
+    resp = build_answer_response(final_answer, final_decision, final_rows, merged_ner)
 
-    user_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(question=combined_question_text)
-    final_answer = ga.gpt_chat(
-        ga.EXPERT_SYSTEM_PROMPT,
-        user_prompt,
-        model=model_name,
-    )
-
-    # 기존 기능 유지 + (추가필드) NER 포함
-    return jsonify({
-        "answer": final_answer,
-        "reply": False,
-        "NER": {
-            "UNI": _normalize_ner_list(first_ner.get("uni") if isinstance(first_ner, dict) else None),
-            "TYPE": _normalize_ner_list(first_ner.get("type") if isinstance(first_ner, dict) else None),
-            "KEYWORD": _normalize_ner_list(first_ner.get("keywords") if isinstance(first_ner, dict) else None),
-        }
-    })
+    return jsonify(resp)
 
 
 if __name__ == "__main__":
-    # python main.py 로 실행
     app.run(host="0.0.0.0", port=5000, debug=True)
