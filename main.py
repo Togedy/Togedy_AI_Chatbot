@@ -63,7 +63,7 @@ def unique_extend(base: List[str], values: List[str]) -> List[str]:
     return out
 
 
-def merge_ner_keyword(
+def merge_ner(
     prev_ner: Optional[Dict[str, Any]],
     curr_ner: Optional[Dict[str, Any]],
 ) -> Dict[str, List[str]]:
@@ -150,13 +150,13 @@ def build_answer_response(
         return {
             "answer": answer,
             "reply": True,
-            "NER_Keyword": ner_payload,
+            "NER": ner_payload,
         }
 
     resp: Dict[str, Any] = {
         "answer": answer,
         "reply": False,
-        "NER_Keyword": ner_payload,
+        "NER": ner_payload,
     }
 
     if decision == "문서탐색":
@@ -190,7 +190,7 @@ def answer_endpoint():
     q1: str = data.get("question_1", "") or ""
     q2: str = data.get("question_2", "") or ""
     first: bool = bool(data.get("first", True))
-    prev_ner_keyword: Dict[str, Any] = data.get("NER_Keyword", {}) or {}
+    prev_ner: Dict[str, Any] = data.get("NER", {}) or {}
 
     first_q = q1.strip()
     follow_q = q2.strip()
@@ -207,7 +207,7 @@ def answer_endpoint():
         return jsonify({"error": "question_1 이 비어 있습니다."}), 400
 
     if not follow_q:
-        prev_payload = make_ner_payload(prev_ner_keyword)
+        prev_payload = make_ner_payload(prev_ner)
 
         combined_text = f"""[사용자 첫 질문]
 {first_q}
@@ -226,12 +226,12 @@ def answer_endpoint():
         return jsonify({
             "answer": final_answer,
             "reply": False,
-            "NER_Keyword": prev_payload,
+            "NER": prev_payload,
         })
 
-    prev_payload = make_ner_payload(prev_ner_keyword)
+    prev_payload = make_ner_payload(prev_ner)
 
-    # 클라이언트가 NER_Keyword를 비워 보낸 경우 fallback으로 question_1 재분석
+    # 클라이언트가 NER를 비워 보낸 경우 fallback으로 question_1 재분석
     if not any(prev_payload.values()):
         first_answer, first_decision, first_ner, first_rows, first_stats = run_turn(first_q)
         prev_payload = make_ner_payload(first_ner)
@@ -240,8 +240,8 @@ def answer_endpoint():
     follow_answer, follow_decision, follow_ner, follow_rows, follow_stats = run_turn(follow_q)
     curr_payload = make_ner_payload(follow_ner)
 
-    # 이전 NER_Keyword + 현재 question_2 NER 병합
-    merged_ner = merge_ner_keyword(prev_payload, curr_payload)
+    # 이전 NER + 현재 question_2 NER 병합
+    merged_ner = merge_ner(prev_payload, curr_payload)
 
     # 병합된 NER 기반 최종 질의 생성
     final_query = build_query_from_ner(merged_ner, follow_q)
