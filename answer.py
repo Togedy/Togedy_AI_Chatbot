@@ -101,8 +101,14 @@ def run_single_turn(
                 model=model_name,
             )
         else:
-            # 문서탐색 시도했지만 실제 매칭 페이지 없음 → 일반 답변으로 fallback
-            fallback_prompt = ga.DIRECT_ANSWER_USER_TEMPLATE.format(question=question)
+            # 문서탐색 시도했지만 실제 매칭 페이지 없음
+            # → 일반 안내를 먼저 제공하고, 마지막에는 사용자가 대학명(UNI)을 포함해 다시 질문하도록 유도
+            fallback_prompt = ga.DOC_SEARCH_FAIL_USER_TEMPLATE.format(
+                question=question,
+                uni=ner.get("uni"),
+                typ=ner.get("type"),
+                keywords=ner.get("keywords"),
+            )
             answer = ga.gpt_chat(
                 ga.EXPERT_SYSTEM_PROMPT,
                 fallback_prompt,

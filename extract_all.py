@@ -169,7 +169,18 @@ class UniExtractor:
             out = self.model(input_ids=input_ids, attention_mask=attention_mask)
         preds = out.logits[0].argmax(-1).tolist()
 
-        per_word = [self.id2lab[preds[idx]] for idx in word_first_wp]
+        # 안전 처리: 모델이 label.txt에 없는 label_id를 예측하거나,
+        # wordpiece 인덱스가 preds 길이를 벗어나도 전체 실행이 중단되지 않도록 O 처리
+        per_word = []
+        for idx in word_first_wp:
+            if idx >= len(preds):
+                per_word.append("O")
+                continue
+
+            label_id = preds[idx]
+            label = self.id2lab.get(label_id, "O")
+            per_word.append(label)
+
         per_word = self.constrain_tags(words, per_word)
         result = self.postprocess(words, per_word)
         return list(result.get("UNI") or [])
