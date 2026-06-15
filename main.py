@@ -26,7 +26,7 @@ type_ex = TypeExtractor()
 kw_ex = KeywordExtractorBridge(topn=10)
 
 app = Flask(__name__)
-
+app.json.ensure_ascii = False
 MODEL_NAME = "gpt-4o-mini"
 
 

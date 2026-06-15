@@ -295,9 +295,10 @@ def final_bucket(ner_uni, ner_type, ner_kw):
     type_list = ner_type if isinstance(ner_type, list) else ([ner_type] if ner_type else [])
     kw_list = ner_kw if isinstance(ner_kw, list) else ([ner_kw] if ner_kw else [])
 
-    if not uni_list or not type_list or not kw_list:
-        return "재질문"
-    return "문서탐색"
+    if uni_list and type_list and kw_list:
+        return "문서탐색"
+
+    return "답변 생성"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -333,7 +334,19 @@ def process_sentence(
     uni = uni_ex.extract_uni(text)
     typ = type_ex.extract_type(text)
     kwd = kw_ex.extract_keywords(text)
-    pairs = gemini_sort(api_key, model, uni, typ, kwd)
+
+    # Gemini 호출 최적화
+    # - UNI/TYPE이 각각 0~1개인 단순 질문은 Gemini 재분류를 건너뜀
+    # - UNI가 여러 개이거나 TYPE 후보가 여러 개인 경우에만 Gemini로 정렬
+    if len(uni) <= 1 and len(typ) <= 1:
+        pairs = [{
+            "UNI": uni[0] if len(uni) > 0 else "",
+            "TYPE": typ[0] if len(typ) > 0 else "",
+            "KEYWORD": kwd[:],
+        }]
+    else:
+        pairs = gemini_sort(api_key, model, uni, typ, kwd)
+
     bucket = final_bucket(uni, typ, kwd)
     elapsed = time.perf_counter() - t0
     return {
