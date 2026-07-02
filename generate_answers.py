@@ -171,6 +171,156 @@ def gpt_chat(
     )
 
 
+def clean_rewritten_question(text: str) -> str:
+    """
+    LLM이 재작성 결과를 코드블록/라벨 형태로 반환했을 때 정리한다.
+    """
+    text = (text or "").strip()
+
+    text = re.sub(r"^```(?:text|json)?", "", text).strip()
+    text = re.sub(r"```$", "", text).strip()
+
+    prefixes = [
+        "재작성된 질문:",
+        "최종 질문:",
+        "질문:",
+        "resolved_question:",
+        "출력:",
+    ]
+
+    for p in prefixes:
+        if text.startswith(p):
+            text = text[len(p):].strip()
+
+    return text.strip('"').strip("'").strip()
+
+
+def _format_prev_ner_for_prompt(prev_ner: Optional[Dict[str, Any]]) -> str:
+    """
+    프론트가 넘긴 NER 또는 서버 내부 NER를 후속 질문 재작성 프롬프트에 넣기 좋게 정리한다.
+    """
+    prev_ner = prev_ner or {}
+
+    def pick(*keys):
+        for k in keys:
+            v = prev_ner.get(k)
+            if v:
+                return v
+        return []
+
+    def to_list(v):
+        if v is None:
+            return []
+        if isinstance(v, list):
+            return [str(x).strip() for x in v if str(x).strip()]
+        s = str(v).strip()
+        return [s] if s else []
+
+    uni = to_list(pick("UNI", "uni"))
+    typ = to_list(pick("TYPE", "type"))
+    kw = to_list(pick("KEYWORD", "keywords"))
+
+    return (
+        f"- UNI: {', '.join(uni) if uni else '(없음)'}\n"
+        f"- TYPE: {', '.join(typ) if typ else '(없음)'}\n"
+        f"- KEYWORD: {', '.join(kw) if kw else '(없음)'}"
+    )
+
+
+def rewrite_followup_question(
+    bot_question: str,
+    user_input: str,
+    prev_ner: Optional[Dict[str, Any]] = None,
+    model: str = "gpt-4o-mini",
+) -> str:
+    """
+    first=false일 때 사용한다.
+
+    입력 의미:
+    - bot_question: 직전 챗봇 질문(question_1)
+    - user_input: 사용자의 두 번째 입력(question_2)
+    - prev_ner: 프론트가 유지하고 있던 이전 NER 값
+
+    출력:
+    - 기존 NER/검색 파이프라인에 넣을 수 있는 최종 질문 1문장
+    - 사용자가 명확히 거절하면 "추가 질문 없음"
+    """
+    bot_question = (bot_question or "").strip()
+    user_input = (user_input or "").strip()
+
+    if not user_input:
+        return ""
+
+    prev_ner_text = _format_prev_ner_for_prompt(prev_ner)
+
+    system_prompt = """너는 한국 대학 입시 챗봇의 후속 입력 재작성기다.
+직전 챗봇 질문과 사용자 입력을 보고, 서버가 실제로 답변해야 할 질문을 한국어 한 문장으로 재작성한다.
+설명, JSON, 코드블록 없이 최종 질문 한 문장만 출력한다."""
+
+    user_prompt = f"""
+[직전 챗봇 질문]
+{bot_question}
+
+[이전 턴 NER 정보]
+{prev_ner_text}
+
+[사용자 입력]
+{user_input}
+
+재작성 규칙:
+1. 사용자가 "어", "응", "네", "예", "알려줘", "좋아"처럼 답하면 직전 챗봇 질문에서 물어본 정보를 요청한 것으로 재작성한다.
+2. 사용자가 직전 챗봇 질문에 조건을 추가하면, 직전 챗봇 질문과 사용자 입력을 합쳐서 재작성한다.
+3. 사용자가 "그럼", "그러면", "정시는?", "수시는?", "제출서류는?", "일정은?"처럼 이전 맥락에 의존하는 질문을 하면 이전 턴 NER 정보를 반영해 재작성한다.
+4. 사용자가 완전히 다른 주제를 말하면, 사용자 입력을 새 질문으로 재작성한다.
+5. 사용자가 "아니", "아니요", "필요 없어", "괜찮아"처럼 부정만 말하면 "추가 질문 없음"이라고만 출력한다.
+6. 단, "아니 연세대", "아니 정시", "아니 제출서류", "아니 건국대 컴퓨터공학부"처럼 부정 뒤에 새로운 정보가 있으면 거절이 아니라 기존 질문을 수정한 것으로 판단해 재작성한다.
+7. 출력은 반드시 최종 질문 한 문장만 한다.
+
+예시:
+직전 챗봇 질문: 수능 날짜에 대한 정보가 필요하신가요?
+사용자 입력: 어
+출력: 수능 날짜에 대한 정보를 알려줘
+
+직전 챗봇 질문: 수능 날짜에 대한 정보가 필요하신가요?
+사용자 입력: 2026년 기준으로 알려줘
+출력: 2026년 수능 날짜에 대한 정보를 알려줘
+
+직전 챗봇 질문: 수능 날짜에 대한 정보가 필요하신가요?
+사용자 입력: 나는 건국대 컴퓨터공학부 입시 정보가 궁금해
+출력: 건국대 컴퓨터공학부 입시 정보를 알려줘
+
+직전 챗봇 질문: 어느 대학의 정시 전형방법을 알려드릴까요?
+이전 턴 NER 정보:
+- UNI: 건국대
+- TYPE: 정시
+- KEYWORD: 전형방법
+사용자 입력: 제출서류도 알려줘
+출력: 건국대 정시 제출서류를 알려줘
+
+직전 챗봇 질문: 건국대 수시 전형방법이 궁금하신가요?
+이전 턴 NER 정보:
+- UNI: 건국대
+- TYPE: 수시
+- KEYWORD: 전형방법
+사용자 입력: 아니 연세대
+출력: 연세대 수시 전형방법을 알려줘
+"""
+
+    raw = gpt_chat(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        model=model,
+        temperature=0.0,
+    )
+
+    rewritten = clean_rewritten_question(raw)
+
+    if not rewritten:
+        return user_input
+
+    return rewritten
+
+
 def build_followup_prompt(question: str, ner_uni, ner_type, ner_keywords) -> str:
     def to_list(x):
         if x is None:
