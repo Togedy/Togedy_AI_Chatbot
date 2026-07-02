@@ -18,7 +18,7 @@ answer.py
 import os
 import sys
 import argparse
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 THIS = os.path.dirname(os.path.abspath(__file__))
 if THIS not in sys.path:
@@ -116,6 +116,86 @@ def run_single_turn(
             )
 
     return answer, decision, ner, rows, stats
+
+
+def _normalize_ner_list(x: Any) -> List[str]:
+    if x is None:
+        return []
+    if isinstance(x, list):
+        return [str(v).strip() for v in x if str(v).strip()]
+    s = str(x).strip()
+    return [s] if s else []
+
+
+def make_ner_payload(ner: Optional[Dict[str, Any]]) -> Dict[str, List[str]]:
+    ner = ner or {}
+    return {
+        "UNI": _normalize_ner_list(ner.get("UNI", ner.get("uni"))),
+        "TYPE": _normalize_ner_list(ner.get("TYPE", ner.get("type"))),
+        "KEYWORD": _normalize_ner_list(ner.get("KEYWORD", ner.get("keywords"))),
+    }
+
+
+def run_followup_turn(
+    bot_question: str,
+    user_input: str,
+    prev_ner: Optional[Dict[str, Any]],
+    uni_ex: UniExtractor,
+    type_ex: TypeExtractor,
+    kw_ex: KeywordExtractorBridge,
+    api_key: str,
+    gemini_model: str,
+    model_name: str = "gpt-4o-mini",
+):
+    """
+    서버의 first=false 요청 처리용 함수.
+
+    입력 의미:
+    - bot_question: question_1, 직전 챗봇이 사용자에게 물어본 질문
+    - user_input: question_2, 사용자의 현재 입력
+    - prev_ner: 이전 턴에서 프론트가 유지하고 있던 NER
+
+    처리 순서:
+    1) GPT가 bot_question + user_input + prev_ner를 바탕으로 실제 질문을 1문장으로 재작성
+    2) 재작성된 질문을 기존 run_single_turn()에 넣어 기존 NER/검색/답변 파이프라인 그대로 실행
+
+    출력:
+    - (answer, decision, ner, rows, stats)
+    """
+    rewritten_question = ga.rewrite_followup_question(
+        bot_question=bot_question,
+        user_input=user_input,
+        prev_ner=prev_ner,
+        model=model_name,
+    )
+
+    if rewritten_question == "추가 질문 없음":
+        ner_payload = make_ner_payload(prev_ner)
+        return (
+            "알겠습니다. 다른 궁금한 입시 정보가 있으면 질문해 주세요.",
+            "답변 생성",
+            {
+                "uni": ner_payload["UNI"],
+                "type": ner_payload["TYPE"],
+                "keywords": ner_payload["KEYWORD"],
+                "decision": "답변 생성",
+            },
+            [],
+            {"pairs": 0, "docs_found": 0, "pages_scored": 0},
+        )
+
+    if not rewritten_question.strip():
+        rewritten_question = user_input.strip()
+
+    return run_single_turn(
+        rewritten_question,
+        uni_ex,
+        type_ex,
+        kw_ex,
+        api_key,
+        gemini_model,
+        model_name,
+    )
 
 
 def main():
