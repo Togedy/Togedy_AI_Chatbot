@@ -3,6 +3,7 @@
 
 import os
 import sys
+import re
 from typing import List, Dict, Any, Tuple, Optional
 
 from flask import Flask, request, jsonify
@@ -183,14 +184,98 @@ def run_turn(question: str):
     )
 
 
+def clean_rewritten_question(text: str) -> str:
+    text = text.strip()
+
+    text = re.sub(r"^```(?:text|json)?", "", text).strip()
+    text = re.sub(r"```$", "", text).strip()
+
+    prefixes = [
+        "재작성된 질문:",
+        "최종 질문:",
+        "질문:",
+        "resolved_question:",
+    ]
+
+    for p in prefixes:
+        if text.startswith(p):
+            text = text[len(p):].strip()
+
+    text = text.strip('"').strip("'").strip()
+
+    return text
+
+
+def rewrite_followup_question(bot_question: str, user_input: str) -> str:
+    """
+    first=false일 때 사용.
+    question_1 = 직전 챗봇 질문
+    question_2 = 사용자 입력
+
+    두 문장을 바탕으로 실제 서버가 처리해야 할 질문을 1문장으로 재작성한다.
+    """
+
+    system_prompt = """너는 대학 입시 챗봇의 후속 입력 재작성기다.
+직전 챗봇 질문과 사용자 입력을 보고, 서버가 실제로 답변해야 할 질문을 한국어 한 문장으로 재작성한다.
+설명하지 말고 최종 질문 한 문장만 출력한다."""
+
+    user_prompt = f"""
+[직전 챗봇 질문]
+{bot_question}
+
+[사용자 입력]
+{user_input}
+
+규칙:
+1. 사용자가 "어", "응", "네", "알려줘", "좋아"처럼 답하면 직전 챗봇 질문에서 물어본 정보를 요청한 것으로 재작성한다.
+2. 사용자가 직전 챗봇 질문에 조건을 추가하면 두 내용을 합쳐서 재작성한다.
+3. 사용자가 완전히 다른 주제를 말하면 사용자 입력을 새 질문으로 재작성한다.
+4. 사용자가 부정하면 "추가 질문 없음"이라고만 출력한다.
+5. 출력은 반드시 최종 질문 한 문장만 한다.
+
+예시:
+직전 챗봇 질문: 수능 날짜에 대한 정보가 필요하신가요?
+사용자 입력: 어
+출력: 수능 날짜에 대한 정보를 알려줘
+
+직전 챗봇 질문: 수능 날짜에 대한 정보가 필요하신가요?
+사용자 입력: 2026년 기준으로 알려줘
+출력: 2026년 수능 날짜에 대한 정보를 알려줘
+
+직전 챗봇 질문: 수능 날짜에 대한 정보가 필요하신가요?
+사용자 입력: 나는 건국대 컴퓨터공학부 입시 정보가 궁금해
+출력: 건국대 컴퓨터공학부 입시 정보를 알려줘
+"""
+
+    raw = ga.gpt_chat(
+        system_prompt,
+        user_prompt,
+        model=MODEL_NAME,
+    )
+
+    rewritten = clean_rewritten_question(raw)
+
+    if not rewritten:
+        return user_input.strip()
+
+    return rewritten
+
+
 @app.route("/answer", methods=["POST"])
 def answer_endpoint():
     data = request.get_json(force=True) or {}
 
     q1: str = data.get("question_1", "") or ""
     q2: str = data.get("question_2", "") or ""
+
+    # 프론트에서 NER 또는 NER_Keyword 둘 다 올 수 있게 처리
+    prev_ner: Dict[str, Any] = (
+        data.get("NER")
+        or data.get("NER_Keyword")
+        or {}
+    )
+
     first: bool = bool(data.get("first", True))
-    prev_ner: Dict[str, Any] = data.get("NER", {}) or {}
 
     first_q = q1.strip()
     follow_q = q2.strip()
@@ -231,26 +316,34 @@ def answer_endpoint():
 
     prev_payload = make_ner_payload(prev_ner)
 
-    # 클라이언트가 NER를 비워 보낸 경우 fallback으로 question_1 재분석
-    if not any(prev_payload.values()):
-        first_answer, first_decision, first_ner, first_rows, first_stats = run_turn(first_q)
-        prev_payload = make_ner_payload(first_ner)
+    # first=false일 때:
+    # question_1 = 직전 챗봇 질문
+    # question_2 = 사용자 입력
+    rewritten_question = rewrite_followup_question(first_q, follow_q)
 
-    # question_2 단독 NER 추출
-    follow_answer, follow_decision, follow_ner, follow_rows, follow_stats = run_turn(follow_q)
-    curr_payload = make_ner_payload(follow_ner)
+    if rewritten_question == "추가 질문 없음":
+        return jsonify({
+            "answer": "알겠습니다. 다른 궁금한 입시 정보가 있으면 질문해 주세요.",
+            "reply": False,
+            "NER": prev_payload,
+        })
 
-    # 이전 NER + 현재 question_2 NER 병합
-    merged_ner = merge_ner(prev_payload, curr_payload)
+    # 재작성된 질문으로 먼저 실행
+    answer, decision, ner, rows, stats = run_turn(rewritten_question)
 
-    # 병합된 NER 기반 최종 질의 생성
-    final_query = build_query_from_ner(merged_ner, follow_q)
+    curr_payload = make_ner_payload(ner)
 
-    final_answer, final_decision, final_ner, final_rows, final_stats = run_turn(final_query)
+    # 이전 NER가 있으면 보강
+    if any(prev_payload.values()):
+        merged_ner = merge_ner(prev_payload, curr_payload)
 
-    # 후속 질문의 상태값은 최종 NER보다 merged_ner를 우선 사용
-    resp = build_answer_response(final_answer, final_decision, final_rows, merged_ner)
+        if any(merged_ner.values()):
+            final_query = build_query_from_ner(merged_ner, rewritten_question)
+            final_answer, final_decision, final_ner, final_rows, final_stats = run_turn(final_query)
+            resp = build_answer_response(final_answer, final_decision, final_rows, merged_ner)
+            return jsonify(resp)
 
+    resp = build_answer_response(answer, decision, rows, curr_payload)
     return jsonify(resp)
 
 
