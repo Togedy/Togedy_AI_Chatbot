@@ -679,15 +679,9 @@ def answer_one(
             temperature=0.3,
         ).strip()
 
-        fu_prompt = build_followup_prompt(text, ner_uni, ner_type, ner_kw)
-        followup = gpt_chat(
-            system_prompt=EXPERT_SYSTEM_PROMPT,
-            user_prompt=fu_prompt,
-            model=llm_model,
-            temperature=0.2,
-        ).strip()
-
-        answer_text = (main_answer + "\n\n" + followup).strip()
+        # 재질문은 run_single_turn/run_followup_turn에서 부족 슬롯을 기준으로
+        # 한 번만 붙인다. 여기서는 본문만 반환해 중복 질문을 방지한다.
+        answer_text = main_answer.strip()
         sources_lines = []
 
         return {
@@ -712,15 +706,9 @@ def answer_one(
             temperature=0.3,
         ).strip()
 
-        fu_prompt = build_followup_prompt(text, ner_uni, ner_type, ner_kw)
-        followup = gpt_chat(
-            system_prompt=EXPERT_SYSTEM_PROMPT,
-            user_prompt=fu_prompt,
-            model=llm_model,
-            temperature=0.2,
-        ).strip()
-
-        answer_text = (main_answer + "\n\n" + followup).strip()
+        # 재질문은 run_single_turn/run_followup_turn에서 부족 슬롯을 기준으로
+        # 한 번만 붙인다. 여기서는 본문만 반환해 중복 질문을 방지한다.
+        answer_text = main_answer.strip()
         sources_lines = []
 
         return {
@@ -870,6 +858,609 @@ def answer_one(
         "sources": sources_lines,
     }
 
+
+
+# =============================================================================
+# 서버 연동용 대화 문맥 처리
+# =============================================================================
+
+ADMISSION_TERMS = [
+    "입시", "대학", "대학교", "수시", "정시", "전형", "학과", "학부",
+    "모집", "지원", "합격", "경쟁률", "등급", "내신", "수능", "논술",
+    "학생부", "교과", "종합", "면접", "자소서", "자기소개서", "원서",
+    "등록", "추가합격", "충원", "모집요강", "전공", "입학", "편입",
+]
+
+PROMPT_INJECTION_TERMS = [
+    "앞선 모든", "앞의 모든", "이전 지시", "기존 지시", "모든 설명",
+    "프롬프트를 무시", "규칙을 무시", "지시를 무시", "역할을 무시",
+    "시스템 프롬프트", "명령을 무시",
+]
+
+OUT_OF_DOMAIN_TERMS = [
+    "데이트", "맛집", "여행", "날씨", "주식", "코인", "연애", "영화",
+    "게임", "요리", "식당", "배고파", "배고프", "점심", "저녁메뉴",
+]
+
+NEGATIVE_ONLY_PATTERNS = [
+    r"^\s*(아니|아니요|됐어|괜찮아|필요\s*없어|필요없어|그만)\s*[.!?]*\s*$"
+]
+
+
+def _slot_list(value: Any) -> List[str]:
+    if value is None:
+        return []
+    if isinstance(value, list):
+        values = value
+    else:
+        values = [value]
+
+    out: List[str] = []
+    for item in values:
+        s = str(item).strip()
+        if s and s not in out:
+            out.append(s)
+    return out
+
+
+def normalize_ner(ner: Optional[Dict[str, Any]]) -> Dict[str, List[str]]:
+    ner = ner or {}
+    return {
+        "UNI": _slot_list(ner.get("UNI", ner.get("uni", ner.get("UNT")))),
+        "TYPE": _slot_list(ner.get("TYPE", ner.get("type"))),
+        "KEYWORD": _slot_list(ner.get("KEYWORD", ner.get("keywords"))),
+    }
+
+
+# 짧은 후속 질문에서 모델이 놓치기 쉬운 명시적 표현을 보정한다.
+# 현재 질문에 직접 적힌 값은 이전 NER보다 우선되어야 하므로,
+# 모델 결과를 만든 직후 이 규칙을 적용한다.
+EXPLICIT_KEYWORD_RULES = [
+    ("제출서류", ["제출서류", "제출 서류", "서류도", "서류는", "필요서류", "필요 서류"]),
+    ("전형방법", ["전형방법", "전형 방법", "평가방법", "평가 방법", "평가방식", "평가 방식"]),
+    ("모집인원", ["모집인원", "모집 인원", "선발인원", "선발 인원", "몇명", "몇 명", "정원"]),
+    ("모집일정", ["모집일정", "모집 일정", "원서접수", "원서 접수", "접수일정", "접수 일정", "일정은", "일정도"]),
+    ("지원자격", ["지원자격", "지원 자격", "자격요건", "자격 요건"]),
+    ("경쟁률", ["경쟁률"]),
+    ("합격자발표", ["합격자발표", "합격자 발표", "합격발표", "합격 발표"]),
+    ("등록기간", ["등록기간", "등록 기간", "등록일정", "등록 일정"]),
+    ("추가합격", ["추가합격", "추가 합격", "충원합격", "충원 합격"]),
+]
+
+
+def apply_explicit_followup_rules(
+    text: str,
+    ner: Optional[Dict[str, Any]],
+) -> Dict[str, List[str]]:
+    """
+    '정시는?', '제출서류도 알려줘'처럼 짧고 명확한 후속 입력을 보정한다.
+
+    규칙으로 발견된 TYPE/KEYWORD는 사용자가 현재 문장에 직접 적은 값이므로
+    모델 결과를 덮어쓴다. 대학명은 기존 UNI 모델 결과를 그대로 사용한다.
+    """
+    result = normalize_ner(ner)
+    raw = (text or "").strip()
+    compact = re.sub(r"\s+", "", raw).lower()
+
+    # 전형명은 짧은 조사 결합 표현도 확실하게 인식한다.
+    if "정시" in compact:
+        result["TYPE"] = ["정시"]
+    elif "수시" in compact:
+        result["TYPE"] = ["수시"]
+
+    for canonical, variants in EXPLICIT_KEYWORD_RULES:
+        if any(re.sub(r"\s+", "", v).lower() in compact for v in variants):
+            result["KEYWORD"] = [canonical]
+            break
+
+    return result
+
+
+def _extract_ner_direct(
+    text: str,
+    uni_ex: UniExtractor,
+    type_ex: TypeExtractor,
+    kw_ex: KeywordExtractorBridge,
+) -> Dict[str, List[str]]:
+    try:
+        uni = _slot_list(uni_ex.extract_uni(text))
+    except Exception:
+        uni = []
+
+    try:
+        typ = _slot_list(type_ex.extract_type(text))
+    except Exception:
+        typ = []
+
+    try:
+        keywords = _slot_list(kw_ex.extract_keywords(text))
+    except Exception:
+        keywords = []
+
+    extracted = {
+        "UNI": uni,
+        "TYPE": typ,
+        "KEYWORD": keywords,
+    }
+
+    return apply_explicit_followup_rules(text, extracted)
+
+
+def _contains_any(text: str, terms: List[str]) -> bool:
+    compact = (text or "").replace(" ", "").lower()
+    return any(term.replace(" ", "").lower() in compact for term in terms)
+
+
+def is_negative_only(text: str) -> bool:
+    return any(re.match(pattern, text or "", re.IGNORECASE) for pattern in NEGATIVE_ONLY_PATTERNS)
+
+
+def is_admission_related(text: str, ner: Optional[Dict[str, Any]] = None) -> bool:
+    """
+    현재 사용자 입력 자체가 입시 질문인지 판단한다.
+
+    이전 NER이 존재한다는 이유만으로 데이트·맛집 같은 새 질문을 입시 질문으로
+    강제 변환하지 않도록, 현재 문장의 표현과 현재 문장에서 추출된 NER만 사용한다.
+    """
+    text = (text or "").strip()
+    cur = normalize_ner(ner)
+
+    if cur["UNI"] or cur["TYPE"]:
+        return True
+
+    if _contains_any(text, ADMISSION_TERMS):
+        return True
+
+    # 학과명처럼 KEYWORD만 추출된 경우도 입시 문맥으로 본다.
+    if cur["KEYWORD"] and not _contains_any(text, OUT_OF_DOMAIN_TERMS):
+        return True
+
+    return False
+
+
+def is_out_of_domain_or_injection(text: str, ner: Optional[Dict[str, Any]] = None) -> bool:
+    text = (text or "").strip()
+
+    has_injection = _contains_any(text, PROMPT_INJECTION_TERMS)
+    has_out_domain = _contains_any(text, OUT_OF_DOMAIN_TERMS)
+    admission = is_admission_related(text, ner)
+
+    # 입시 질문이 함께 들어 있으면 입시 부분은 처리할 수 있으므로 차단하지 않는다.
+    return (has_injection or has_out_domain) and not admission
+
+
+def build_domain_redirect_answer(text: str) -> str:
+    text = (text or "").strip()
+
+    if "배고" in text or any(k in text for k in ["점심", "저녁메뉴", "식사"]):
+        return (
+            "배가 고프시군요. 우선 식사를 잘 챙겨 드세요!\n"
+            "저는 대학 입시 정보를 안내하는 챗봇입니다. "
+            "궁금한 대학명, 학과, 수시·정시전형 또는 모집일정을 말씀해 주세요. "
+            "예: 건국대 경영학과 수시전형 알려줘"
+        )
+
+    return (
+        "저는 대학 입시 정보를 안내하는 챗봇이므로 요청하신 일반 주제 대신 "
+        "대학별 수시·정시전형, 학과, 모집요강, 입시 일정에 대해 안내해 드릴 수 있습니다. "
+        "예: 건국대 경영학과 수시전형 알려줘"
+    )
+
+
+def _is_uni_like_keyword(keyword: str, unis: List[str]) -> bool:
+    k = (keyword or "").replace(" ", "")
+    if not k:
+        return False
+
+    for uni in unis:
+        u = (uni or "").replace(" ", "")
+        if not u:
+            continue
+        if k == u or k in u or u in k:
+            return True
+
+    return k.endswith("대") or k.endswith("대학교")
+
+
+def merge_ner_context(
+    previous: Optional[Dict[str, Any]],
+    current: Optional[Dict[str, Any]],
+) -> Dict[str, List[str]]:
+    """
+    현재 질문에서 추출된 값이 있으면 현재 값을 우선하고,
+    현재 질문에 없는 슬롯만 이전 NER에서 이어받는다.
+
+    예:
+    - 이전: UNI=건국대
+      현재: TYPE=수시, KEYWORD=경영학과
+      결과: 건국대 + 수시 + 경영학과
+
+    - 이전: TYPE=수시, KEYWORD=경영학과
+      현재: UNI=건국대
+      결과: 건국대 + 수시 + 경영학과
+    """
+    prev = normalize_ner(previous)
+    cur = normalize_ner(current)
+
+    merged = {
+        "UNI": cur["UNI"] if cur["UNI"] else prev["UNI"],
+        "TYPE": cur["TYPE"] if cur["TYPE"] else prev["TYPE"],
+        "KEYWORD": cur["KEYWORD"] if cur["KEYWORD"] else prev["KEYWORD"],
+    }
+
+    # UNI가 KEYWORD에도 중복 추출된 경우 제거한다.
+    merged["KEYWORD"] = [
+        kw for kw in merged["KEYWORD"]
+        if not _is_uni_like_keyword(kw, merged["UNI"])
+    ]
+
+    return merged
+
+
+def build_resolved_question(
+    user_input: str,
+    merged_ner: Optional[Dict[str, Any]],
+) -> str:
+    """
+    병합된 NER를 검색 파이프라인에 안정적으로 전달할 수 있는 한 문장으로 만든다.
+    """
+    ner = normalize_ner(merged_ner)
+    parts: List[str] = []
+
+    parts.extend(ner["UNI"])
+    parts.extend(ner["TYPE"])
+    parts.extend(ner["KEYWORD"])
+
+    # 원문에 NER로 잡히지 않은 일정, 서류, 경쟁률 등의 의도가 있을 수 있어 보존한다.
+    raw = (user_input or "").strip()
+    if raw and raw not in parts:
+        parts.append(raw)
+
+    deduped: List[str] = []
+    for part in parts:
+        p = str(part).strip()
+        if p and p not in deduped:
+            deduped.append(p)
+
+    return " ".join(deduped).strip()
+
+
+def missing_slots_for_followup(ner: Optional[Dict[str, Any]]) -> List[str]:
+    """
+    문서 탐색형 입시 답변에 필요한 핵심 슬롯을 반환한다.
+    """
+    n = normalize_ner(ner)
+    missing: List[str] = []
+
+    if not n["UNI"]:
+        missing.append("UNI")
+    if not n["TYPE"]:
+        missing.append("TYPE")
+    if not n["KEYWORD"]:
+        missing.append("KEYWORD")
+
+    return missing
+
+
+def deterministic_followup_question(ner: Optional[Dict[str, Any]]) -> str:
+    n = normalize_ner(ner)
+    missing = missing_slots_for_followup(n)
+
+    if not missing:
+        return ""
+
+    if missing[0] == "UNI":
+        if n["TYPE"] and n["KEYWORD"]:
+            return (
+                f"어느 대학의 {n['TYPE'][0]} {n['KEYWORD'][0]} 정보를 확인해 드릴까요?"
+            )
+        return "어느 대학을 기준으로 확인해 드릴까요?"
+
+    if missing[0] == "TYPE":
+        if n["UNI"]:
+            return (
+                f"{n['UNI'][0]}의 수시와 정시 중 어떤 전형을 확인해 드릴까요?"
+            )
+        return "수시와 정시 중 어떤 전형을 확인해 드릴까요?"
+
+    if missing[0] == "KEYWORD":
+        if n["UNI"] and n["TYPE"]:
+            return (
+                f"{n['UNI'][0]} {n['TYPE'][0]}에서 궁금한 학과나 항목을 말씀해 주세요."
+            )
+        return "궁금한 학과나 모집 항목을 말씀해 주세요."
+
+    return ""
+
+
+def _flatten_rows(pair_to_rows: Dict[Tuple[str, str], List[Dict[str, Any]]]) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    for values in (pair_to_rows or {}).values():
+        rows.extend(values or [])
+    return rows
+
+
+def _append_followup_once(answer: str, followup: str) -> str:
+    answer = (answer or "").strip()
+    followup = (followup or "").strip()
+
+    if not followup:
+        return answer
+    if followup in answer:
+        return answer
+
+    return f"{answer}\n\n{followup}".strip()
+
+
+def decision_from_ner(ner: Optional[Dict[str, Any]]) -> str:
+    """병합·규칙 보정이 끝난 최종 NER로 분류를 다시 계산한다."""
+    n = normalize_ner(ner)
+    if n["UNI"] and n["TYPE"] and n["KEYWORD"]:
+        return "문서탐색"
+    return "답변 생성"
+
+
+def _retry_document_search_if_needed(
+    result: Dict[str, Any],
+    resolved_question: str,
+    final_ner: Optional[Dict[str, Any]],
+    uni_ex: UniExtractor,
+    type_ex: TypeExtractor,
+    kw_ex: KeywordExtractorBridge,
+    api_key: str,
+    gemini_model: str,
+    llm_model: str,
+) -> Dict[str, Any]:
+    """
+    명시 규칙으로 완성된 NER는 UNI/TYPE/KEYWORD를 모두 갖지만,
+    answer_one 내부 NER 모델이 짧은 키워드를 놓쳐 일반 답변으로 분류한 경우
+    한 번 더 모집요강 검색형 질문으로 재시도한다.
+    """
+    if decision_from_ner(final_ner) != "문서탐색":
+        return result
+    if (result.get("decision") or "").strip() == "문서탐색":
+        return result
+
+    n = normalize_ner(final_ner)
+    canonical = " ".join(n["UNI"] + n["TYPE"] + n["KEYWORD"] + ["모집요강"]).strip()
+    retry = answer_one(
+        canonical or resolved_question,
+        uni_ex, type_ex, kw_ex,
+        api_key, gemini_model,
+        llm_model=llm_model,
+    )
+    if (retry.get("decision") or "").strip() == "문서탐색":
+        return retry
+    return result
+
+
+def run_single_turn(
+    question: str,
+    uni_ex: UniExtractor,
+    type_ex: TypeExtractor,
+    kw_ex: KeywordExtractorBridge,
+    api_key: str,
+    gemini_model: str,
+    llm_model: str = "gpt-4o-mini",
+):
+    """
+    main.py에서 호출하는 첫 질문 처리 함수.
+
+    반환 형식:
+    answer, decision, ner, rows, stats
+    """
+    question = (question or "").strip()
+    current_ner = _extract_ner_direct(question, uni_ex, type_ex, kw_ex)
+
+    if is_out_of_domain_or_injection(question, current_ner):
+        return (
+            build_domain_redirect_answer(question),
+            "답변 생성",
+            current_ner,
+            [],
+            {},
+        )
+
+    result = answer_one(
+        question,
+        uni_ex,
+        type_ex,
+        kw_ex,
+        api_key,
+        gemini_model,
+        llm_model=llm_model,
+    )
+
+    result_ner = {
+        "UNI": _slot_list(result.get("ner_uni")),
+        "TYPE": _slot_list(result.get("ner_type")),
+        "KEYWORD": _slot_list(result.get("ner_kw")),
+    }
+
+    # 직접 추출 결과가 더 잘 잡힌 슬롯은 보완한다.
+    result_ner = merge_ner_context(result_ner, current_ner)
+
+    result = _retry_document_search_if_needed(
+        result, question, result_ner,
+        uni_ex, type_ex, kw_ex, api_key, gemini_model, llm_model,
+    )
+    retry_ner = {
+        "UNI": _slot_list(result.get("ner_uni")),
+        "TYPE": _slot_list(result.get("ner_type")),
+        "KEYWORD": _slot_list(result.get("ner_kw")),
+    }
+    result_ner = merge_ner_context(result_ner, retry_ner)
+
+    missing = missing_slots_for_followup(result_ner)
+    answer = (result.get("answer") or "").strip()
+    decision = decision_from_ner(result_ner) if not missing else "재질문"
+
+    if missing:
+        followup = deterministic_followup_question(result_ner)
+        answer = _append_followup_once(answer, followup)
+        decision = "재질문"
+
+    rows = _flatten_rows(result.get("pair_to_rows") or {})
+    stats = result.get("stats") or {}
+
+    return answer, decision, result_ner, rows, stats
+
+
+AFFIRMATIVE_ONLY = {
+    "응", "어", "네", "예", "넵", "좋아", "그래", "맞아",
+    "알려줘", "해줘", "진행해줘", "확인해줘"
+}
+
+
+def is_affirmative_only(text: str) -> bool:
+    normalized = re.sub(r"[\s.!?~]+", "", (text or "").strip().lower())
+    return normalized in {re.sub(r"[\s.!?~]+", "", x.lower()) for x in AFFIRMATIVE_ONLY}
+
+
+def build_followup_resolved_question(
+    previous_user_question: str,
+    user_input: str,
+    merged_ner: Optional[Dict[str, Any]],
+    current_ner: Optional[Dict[str, Any]],
+) -> str:
+    """
+    question_1은 직전 사용자의 질문이고 question_2는 현재 사용자의 질문이다.
+
+    이전 문맥은 전달받은 NER에서 복원하므로, 정상 상황에서는
+    question_1을 다시 분석하거나 LLM에 전달하지 않는다.
+
+    - 현재 입력에 새로운 정보가 있으면 현재 입력을 보존한다.
+    - 현재 입력이 '응/네/알려줘'처럼 긍정만 있으면 병합된 NER로 질문을 만든다.
+    - NER로 잡히지 않는 연도·조건은 현재 입력 원문을 함께 보존한다.
+    """
+    user_input = (user_input or "").strip()
+    current = normalize_ner(current_ner)
+
+    if is_affirmative_only(user_input):
+        return build_resolved_question("알려줘", merged_ner)
+
+    has_current_slot = any(current.values())
+    if not has_current_slot and user_input:
+        return build_resolved_question(user_input, merged_ner)
+
+    return build_resolved_question(user_input, merged_ner)
+
+def run_followup_turn(
+    previous_text: str,
+    user_input: str,
+    prev_ner: Optional[Dict[str, Any]],
+    uni_ex: UniExtractor,
+    type_ex: TypeExtractor,
+    kw_ex: KeywordExtractorBridge,
+    api_key: str,
+    gemini_model: str,
+    llm_model: str = "gpt-4o-mini",
+):
+    """
+    직전 사용자 질문(question_1), 현재 사용자 질문(question_2), 이전 NER를 연결한다.
+
+    처리 우선순위:
+    1) 프론트가 전달한 이전 NER를 즉시 사용한다.
+    2) 현재 질문(question_2)만 NER 모델로 분석한다.
+    3) 이전 NER와 현재 NER를 Python 코드로 병합한다.
+    4) 이전 NER가 비어 있을 때만 question_1을 NER 모델로 분석한다.
+
+    따라서 정상 요청에서는 question_1에 대한 추가 NER·GPT 호출이 발생하지 않는다.
+    """
+    previous_text = (previous_text or "").strip()
+    user_input = (user_input or "").strip()
+
+    if is_negative_only(user_input):
+        return (
+            "알겠습니다. 다른 대학 입시 정보가 궁금하실 때 말씀해 주세요.",
+            "답변 생성",
+            normalize_ner(prev_ner),
+            [],
+            {},
+        )
+
+    current_ner = _extract_ner_direct(user_input, uni_ex, type_ex, kw_ex)
+
+    if is_out_of_domain_or_injection(user_input, current_ner):
+        return (
+            build_domain_redirect_answer(user_input),
+            "답변 생성",
+            current_ner,
+            [],
+            {},
+        )
+
+    # 이전 NER를 최우선 사용한다.
+    # 정상적인 요청에서는 question_1(이전 사용자 질문)을 다시 분석하지 않는다.
+    previous_ner = normalize_ner(prev_ner)
+    used_question_1_fallback = False
+    if not any(previous_ner.values()) and previous_text:
+        previous_ner = _extract_ner_direct(previous_text, uni_ex, type_ex, kw_ex)
+        used_question_1_fallback = True
+
+    merged_ner = merge_ner_context(previous_ner, current_ner)
+    resolved_question = build_followup_resolved_question(
+        previous_text,
+        user_input,
+        merged_ner,
+        current_ner,
+    )
+
+    # 현재 입력과 이전 NER 어느 쪽에도 입시 정보가 없다면 입시 챗봇 안내로 전환한다.
+    if not is_admission_related(user_input, current_ner) and not any(merged_ner.values()):
+        return (
+            build_domain_redirect_answer(user_input),
+            "답변 생성",
+            merged_ner,
+            [],
+            {},
+        )
+
+    result = answer_one(
+        resolved_question,
+        uni_ex,
+        type_ex,
+        kw_ex,
+        api_key,
+        gemini_model,
+        llm_model=llm_model,
+    )
+
+    result_ner = {
+        "UNI": _slot_list(result.get("ner_uni")),
+        "TYPE": _slot_list(result.get("ner_type")),
+        "KEYWORD": _slot_list(result.get("ner_kw")),
+    }
+
+    # 재작성 문장에서 추출이 누락되더라도 이미 병합한 NER가 사라지지 않게 한다.
+    final_ner = merge_ner_context(merged_ner, result_ner)
+
+    result = _retry_document_search_if_needed(
+        result, resolved_question, final_ner,
+        uni_ex, type_ex, kw_ex, api_key, gemini_model, llm_model,
+    )
+    retry_ner = {
+        "UNI": _slot_list(result.get("ner_uni")),
+        "TYPE": _slot_list(result.get("ner_type")),
+        "KEYWORD": _slot_list(result.get("ner_kw")),
+    }
+    final_ner = merge_ner_context(final_ner, retry_ner)
+
+    missing = missing_slots_for_followup(final_ner)
+    answer = (result.get("answer") or "").strip()
+    decision = decision_from_ner(final_ner) if not missing else "재질문"
+
+    if missing:
+        followup = deterministic_followup_question(final_ner)
+        answer = _append_followup_once(answer, followup)
+        decision = "재질문"
+
+    rows = _flatten_rows(result.get("pair_to_rows") or {})
+    stats = result.get("stats") or {}
+    stats["resolved_question"] = resolved_question
+    stats["used_question_1_fallback"] = used_question_1_fallback
+
+    return answer, decision, final_ner, rows, stats
 
 def print_result_7lines(result: Dict[str, Any], dt: float) -> None:
     print(f"입력문장: {result['input']}")

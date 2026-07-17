@@ -11,7 +11,7 @@ THIS = os.path.dirname(os.path.abspath(__file__))
 if THIS not in sys.path:
     sys.path.insert(0, THIS)
 
-import answer as ans
+import generate_answers as ans
 from extract_all import (
     UniExtractor,
     TypeExtractor,
@@ -44,7 +44,7 @@ def make_ner_payload(ner: Optional[Dict[str, Any]]) -> Dict[str, List[str]]:
     ner = ner or {}
 
     return {
-        "UNI": _normalize_ner_list(ner.get("UNI", ner.get("uni"))),
+        "UNI": _normalize_ner_list(ner.get("UNI", ner.get("uni", ner.get("UNT")))),
         "TYPE": _normalize_ner_list(ner.get("TYPE", ner.get("type"))),
         "KEYWORD": _normalize_ner_list(ner.get("KEYWORD", ner.get("keywords"))),
     }
@@ -84,6 +84,71 @@ def extract_doc_meta(rows: List[Dict[str, Any]]) -> Tuple[Optional[str], List[in
     return location, pages
 
 
+def extract_doc_metas(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    여러 대학/전형이 검색된 경우 문서별 위치와 상위 페이지를 반환한다.
+
+    기존 location/NER_Page_* 필드는 하위 호환을 위해 유지하고,
+    다중 대학 응답에서는 documents 배열을 추가한다.
+    """
+    valid = [r for r in rows if r.get("page_index", -1) != -1 and r.get("doc_path")]
+    if not valid:
+        return []
+
+    grouped: Dict[str, List[Dict[str, Any]]] = {}
+    for row in valid:
+        grouped.setdefault(str(row["doc_path"]), []).append(row)
+
+    documents: List[Dict[str, Any]] = []
+    for doc_path, doc_rows in grouped.items():
+        doc_rows.sort(key=lambda r: float(r.get("score", 0.0)), reverse=True)
+
+        pages: List[int] = []
+        for row in doc_rows:
+            page = row.get("page_index")
+            if isinstance(page, int) and page not in pages:
+                pages.append(page)
+            if len(pages) >= 3:
+                break
+
+        try:
+            location = os.path.relpath(doc_path, THIS)
+        except Exception:
+            location = doc_path
+        if location.endswith("_text.txt"):
+            location = location.replace("_text.txt", ".pdf")
+
+        best = doc_rows[0]
+        documents.append({
+            "UNI": str(best.get("matched_uni", "") or ""),
+            "TYPE": str(best.get("matched_type", "") or ""),
+            "location": location,
+            "pages": [f"p{page}" for page in pages],
+            "score": float(best.get("score", 0.0)),
+        })
+
+    documents.sort(key=lambda item: float(item.get("score", 0.0)), reverse=True)
+    return documents
+
+
+def extract_followup_question(answer: str, decision: str) -> str:
+    """
+    재질문 응답의 마지막 비어 있지 않은 줄을 꼬리 질문으로 반환한다.
+
+    generate_answers.py에서는 재질문을 항상 답변의 마지막 줄에 붙이므로
+    프론트는 이 값을 다음 요청의 question_1로 그대로 전달하면 된다.
+    """
+    if decision != "재질문":
+        return ""
+
+    lines = [
+        line.strip()
+        for line in (answer or "").splitlines()
+        if line.strip()
+    ]
+    return lines[-1] if lines else ""
+
+
 def build_answer_response(
     answer: str,
     decision: str,
@@ -91,28 +156,43 @@ def build_answer_response(
     ner: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     ner_payload = make_ner_payload(ner)
+    followup_question = extract_followup_question(answer, decision)
 
     if decision == "재질문":
         return {
             "answer": answer,
+            "followup_question": followup_question,
             "reply": True,
             "NER": ner_payload,
         }
 
     resp: Dict[str, Any] = {
         "answer": answer,
+        "followup_question": "",
         "reply": False,
         "NER": ner_payload,
     }
 
     if decision == "문서탐색":
-        location, pages = extract_doc_meta(rows)
+        documents = extract_doc_metas(rows)
 
-        if location:
-            resp["location"] = location
+        # 다중 대학/전형용 신규 필드
+        if documents:
+            resp["documents"] = [
+                {
+                    "UNI": doc["UNI"],
+                    "TYPE": doc["TYPE"],
+                    "location": doc["location"],
+                    "pages": doc["pages"],
+                }
+                for doc in documents
+            ]
 
-            for i, p in enumerate(pages, start=1):
-                resp[f"NER_Page_{i}"] = f"p{p}"
+            # 기존 프론트와의 하위 호환: 가장 점수가 높은 문서를 기존 필드로도 반환
+            best = documents[0]
+            resp["location"] = best["location"]
+            for i, page in enumerate(best["pages"], start=1):
+                resp[f"NER_Page_{i}"] = page
 
     return resp
 
@@ -130,12 +210,12 @@ def run_turn(question: str):
 
 
 def run_followup_turn(
-    bot_question: str,
+    previous_user_question: str,
     user_input: str,
     prev_ner: Optional[Dict[str, Any]],
 ):
     return ans.run_followup_turn(
-        bot_question,
+        previous_user_question,
         user_input,
         prev_ner,
         uni_ex,
@@ -174,15 +254,21 @@ def answer_endpoint():
         resp = build_answer_response(answer, decision, rows, ner)
         return jsonify(resp)
 
-    # first=false일 때의 의미:
-    # question_1 = 직전 챗봇 질문
-    # question_2 = 사용자의 현재 입력
+    # first=false일 때:
+    # question_1 = 직전 사용자의 질문
+    # question_2 = 현재 사용자의 질문
+    # NER = 직전 서버 응답에서 받은 이전 질문의 NER
+    #
+    # 응답 속도를 위해 전달받은 NER를 가장 먼저 사용한다.
+    # NER가 정상적으로 전달되면 question_1은 다시 분석하지 않는다.
+    # NER가 비어 있을 때만 question_1을 fallback으로 분석한다.
     if not question_1:
         return jsonify({"error": "question_1 이 비어 있습니다."}), 400
 
     if not question_2:
         return jsonify({
             "answer": "추가로 궁금한 내용을 입력해 주시면 이어서 안내해 드릴게요.",
+            "followup_question": question_1,
             "reply": True,
             "NER": make_ner_payload(prev_ner),
         })
