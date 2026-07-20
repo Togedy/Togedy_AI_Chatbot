@@ -155,47 +155,44 @@ def build_answer_response(
     rows: List[Dict[str, Any]],
     ner: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
+    """
+    기존 Spring 서버의 AiAnswerResponse DTO와 호환되는 필드만 반환한다.
+
+    반환 허용 필드:
+    - answer
+    - reply
+    - NER
+    - location
+    - NER_Page_1~3
+
+    followup_question, documents처럼 서버 DTO에 없는 필드는 반환하지 않는다.
+    다중 대학 질문도 answer와 NER에는 모두 반영되지만, 문서 메타데이터는
+    기존 규격에 맞춰 가장 점수가 높은 문서 1개만 location/NER_Page_*로 반환한다.
+    """
     ner_payload = make_ner_payload(ner)
-    followup_question = extract_followup_question(answer, decision)
 
     if decision == "재질문":
         return {
             "answer": answer,
-            "followup_question": followup_question,
             "reply": True,
             "NER": ner_payload,
         }
 
     resp: Dict[str, Any] = {
         "answer": answer,
-        "followup_question": "",
         "reply": False,
         "NER": ner_payload,
     }
 
     if decision == "문서탐색":
-        documents = extract_doc_metas(rows)
+        location, pages = extract_doc_meta(rows)
 
-        # 다중 대학/전형용 신규 필드
-        if documents:
-            resp["documents"] = [
-                {
-                    "UNI": doc["UNI"],
-                    "TYPE": doc["TYPE"],
-                    "location": doc["location"],
-                    "pages": doc["pages"],
-                }
-                for doc in documents
-            ]
-
-            # 기존 프론트와의 하위 호환: 가장 점수가 높은 문서를 기존 필드로도 반환
-            best = documents[0]
-            resp["location"] = best["location"]
-            for i, page in enumerate(best["pages"], start=1):
-                resp[f"NER_Page_{i}"] = page
+        if location:
+            resp["location"] = location
+            for i, page in enumerate(pages, start=1):
+                resp[f"NER_Page_{i}"] = f"p{page}"
 
     return resp
-
 
 def run_turn(question: str):
     return ans.run_single_turn(
