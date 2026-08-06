@@ -31,105 +31,60 @@ PAGE_LABEL_RE = re.compile(r"^\s*={2,}\s*Page\s*(\d+)\s*={2,}\s*$", re.IGNORECAS
 # =============================================================================
 
 EXPERT_SYSTEM_PROMPT = (
-    "당신은 한국 대학 입시(모집요강 기반) 질문에 답하는 챗봇입니다.\n"
-    "말투는 사용자를 이해하고 함께 성장하는 친구처럼 친근하되, 항상 공손한 존댓말을 사용합니다.\n"
-    "사용자가 불안해하거나 고민을 말해도 무시하지 말고, 핵심을 정리해서 차분히 안내합니다.\n\n"
+    "당신은 한국 대학 입시 모집요강 문서에 근거해 답하는 챗봇입니다.\n"
+    "항상 공손한 존댓말을 사용하고, 사용자가 묻는 내용에만 간결하게 답합니다.\n\n"
     "답변 원칙:\n"
-    "1) 모집요강 문서 컨텍스트/출처가 주어진 경우에는 반드시 그 내용만 근거로 답변합니다.\n"
-    "2) 문서 컨텍스트가 없거나 부족한 경우에도, 일반적인 입시 흐름/경향을 바탕으로 도움이 되는 설명을 먼저 제공합니다.\n"
-    "3) 문서가 없는 상태에서 수치/일정/규정/자격요건을 단정하지 않습니다.\n"
-    "4) 답변 마지막에는 더 정확한 안내를 위해 필요한 '정확한 키워드' 1~2개를 공손하게 요청합니다.\n\n"
-    "금지 규칙(출력에 포함하지 말 것):\n"
-    "- '문서 근거 없음', '컨텍스트에서 확인 불가', '정확한 확인 필요' 같은 문구\n"
-    "- 위와 유사한 형태의 직설적인 면책 문구\n\n"
+    "1) 모집요강 컨텍스트가 주어지면 반드시 제공된 내용만 근거로 답합니다.\n"
+    "2) 모집인원, 일정, 전형방법, 제출서류, 지원자격, 경쟁률 등 대학별 정보는 일반 지식으로 추측하지 않습니다.\n"
+    "3) 근거에서 찾을 수 없는 수치·일정·규정은 만들어 내지 않습니다.\n"
+    "4) 답변 마지막에 추가 질문, 선택지 제안, 되묻기, '더 궁금한 사항' 문구를 붙이지 않습니다.\n"
+    "5) 답변은 평서문으로 자연스럽게 끝냅니다.\n\n"
     "형식:\n"
-    "- 본문은 4~10문장 내외로 과도하게 길지 않게 작성합니다.\n"
-    "- 마지막 줄에는 질문 형태로 키워드 요청 1문장을 붙입니다.\n"
+    "- 핵심 결론을 먼저 제시합니다.\n"
+    "- 필요한 범위에서만 근거 항목을 설명합니다.\n"
+    "- 문장 끝에 물음표를 사용하지 않습니다.\n"
 )
 
 DIRECT_ANSWER_USER_TEMPLATE = (
-    "아래 질문에 대해 일반적인 입시 흐름/경향 또는 일반 상식을 바탕으로 답변해 주세요.\n"
-    "사용자가 이미 연도, 대상, 키워드를 충분히 제공했다면 추가 질문을 하지 말고 바로 답변을 마무리하세요.\n"
-    "정보가 부족할 때만 마지막에 필요한 정보를 1문장으로 질문하세요.\n\n"
-    "출력 규칙:\n"
-    "1) 설명: 4~8문장\n"
-    "2) 사용자가 이미 충분한 정보를 제공했다면 추가 질문을 절대 하지 말 것\n"
-    "3) 추가 질문이 필요한 경우에만 마지막에 1문장으로 질문할 것\n"
-    "4) 이미 질문에 포함된 표현을 다시 물어보지 말 것\n"
-    "5) 금지 문구는 절대 쓰지 말 것(문서/컨텍스트/정확 확인 관련 면책 문구)\n\n"
+    "아래 질문에 답해 주세요.\n"
+    "대학별 수치·일정·규정은 추측하지 말고, 질문에 포함된 범위만 설명합니다.\n"
+    "추가 질문이나 다음 질문 유도 문구 없이 평서문으로 종료합니다.\n\n"
     "질문:\n"
     "{question}\n"
 )
 
 DOC_SEARCH_FAIL_USER_TEMPLATE = (
-    "사용자가 특정 대학 또는 입시 정보를 물어봤지만, 현재 가지고 있는 모집요강 자료에서 충분히 답변할 근거를 찾기 어려운 상황입니다.\n"
-    "사용자의 질문 의도를 바탕으로 일반적인 입시 안내를 먼저 제공하세요.\n"
-    "단, 답변 마지막에는 반드시 사용자가 다음 질문에서 대학명(UNI)을 포함하도록 자연스럽게 유도하는 질문을 붙이세요.\n\n"
-    "출력 규칙:\n"
-    "1) 일반 설명: 3~6문장\n"
-    "2) '문서', '컨텍스트', '검색 실패', '근거 없음', '확인 불가' 같은 표현은 직접적으로 쓰지 말 것\n"
-    "3) 마지막 문장은 반드시 대학명(UNI)을 포함해서 다시 질문하도록 유도하는 질문이어야 함\n"
-    "4) 마지막 질문에는 사용자의 질문 의도를 반영한 예시를 1개 포함할 것\n"
-    "5) 예시 형식:\n"
-    "   - 어느 대학 기준으로 확인해 드릴까요? 예: 건국대 수시 모집일정\n"
-    "   - 대학명을 포함해서 다시 질문해 주시면 더 정확히 안내해 드릴게요. 예: 연세대 정시 제출서류 알려줘\n\n"
-    "사용자 질문:\n"
-    "{question}\n\n"
-    "현재 추출된 정보:\n"
-    "- UNI: {uni}\n"
-    "- TYPE: {typ}\n"
-    "- KEYWORD: {keywords}\n"
+    "현재 보유한 모집요강 자료에서 사용자의 질문에 해당하는 내용을 찾지 못했습니다. "
+    "일반적인 입시 정보로 추측하지 말고, 자료에서 해당 항목을 찾지 못했다는 사실만 간결한 평서문으로 안내합니다.\n\n"
+    "사용자 질문:\n{question}\n"
 )
 
 KEYWORD_ONLY_USER_TEMPLATE = (
-    "사용자의 질문에서 대학(UNI) 또는 전형(TYPE)은 명확하지 않고, 키워드(KEYWORD)만 있는 상태입니다.\n"
-    "따라서 먼저 키워드를 중심으로 일반적인 설명을 제공한 뒤, 더 정확한 안내를 위해 필요한 키워드를 요청하세요.\n\n"
-    "출력 규칙:\n"
-    "1) 키워드 중심 설명: 4~8문장\n"
-    "2) 마지막: 더 정확한 안내를 위해 필요한 '정확한 키워드' 1~2개를 공손하게 질문 1문장으로 요청\n"
-    "3) 금지 문구는 절대 쓰지 말 것(문서/컨텍스트/정확 확인 관련 면책 문구)\n\n"
-    "추출된 키워드:\n"
-    "{keywords}\n\n"
-    "사용자 질문:\n"
-    "{question}\n"
+    "아래 키워드의 일반적인 의미만 간단히 설명해 주세요.\n"
+    "특정 대학의 수치·일정·규정은 추측하지 않습니다.\n"
+    "추가 질문 없이 평서문으로 종료합니다.\n\n"
+    "추출된 키워드: {keywords}\n"
+    "사용자 질문: {question}\n"
 )
 
 DOC_ANSWER_USER_TEMPLATE = (
-    "아래는 모집요강 문서 발췌(컨텍스트)와 출처입니다.\n"
-    "반드시 컨텍스트에 있는 내용만 근거로 답하세요.\n"
-    "컨텍스트에 없는 정보는 추측하지 말고, 대신 사용자가 제공하면 좋은 키워드를 마지막에 1문장으로 요청하세요.\n\n"
-    "질문:\n"
-    "{question}\n\n"
-    "컨텍스트:\n"
-    "{context}\n\n"
-    "출처:\n"
-    "{sources}\n\n"
+    "아래 모집요강 발췌 내용만 근거로 사용자의 질문에 답해 주세요.\n"
+    "발췌 내용에 없는 정보는 추측하거나 일반적인 입시 지식으로 보완하지 않습니다.\n"
+    "추가 질문, 선택지 제안, 재질문 유도 문구 없이 평서문으로 종료합니다.\n\n"
+    "질문:\n{question}\n\n"
+    "모집요강 발췌:\n{context}\n\n"
+    "출처:\n{sources}\n\n"
     "출력 규칙:\n"
-    "1) 핵심 결론을 먼저 1~3문장으로 제시\n"
-    "2) 표/수치가 나오면, 컨텍스트에서 근거가 되는 항목을 짧게 언급\n"
-    "3) 마지막: 더 정확한 안내를 위해 필요한 '정확한 키워드' 1~2개를 공손하게 질문 1문장으로 요청\n"
-    "4) 금지 문구는 절대 쓰지 말 것(문서/컨텍스트/정확 확인 관련 면책 문구)\n"
+    "1) 핵심 결론을 먼저 제시합니다.\n"
+    "2) 표나 수치가 있으면 근거 항목을 짧게 설명합니다.\n"
+    "3) 물음표로 끝나는 문장을 작성하지 않습니다.\n"
+    "4) '더 궁금한 사항', '확인해 드릴까요', '알려주세요' 같은 후속 유도 문구를 작성하지 않습니다.\n"
 )
 
 FOLLOWUP_QUESTION_PROMPT_TEMPLATE = (
-    "당신의 목표는 사용자가 다음 턴에 바로 답할 수 있는 '재질문' 1문장만 만드는 것입니다.\n\n"
-    "규칙:\n"
-    "1) 반드시 한 문장 질문으로만 출력합니다.\n"
-    "2) 한 번에 1~2개의 정보만 요청합니다.\n"
-    "3) 공손한 존댓말로 질문합니다.\n"
-    "4) 다음 표현은 절대 쓰지 말 것: '문서 근거 없음', '컨텍스트에서 확인 불가', '정확한 확인 필요'.\n"
-    "5) 아래 NER 결과를 참고해, 가장 부족한 핵심정보를 우선으로 묻습니다.\n\n"
-    "우선순위:\n"
-    "- 대학(UNI)이 없으면: 대학명을 먼저 묻기\n"
-    "- 전형(TYPE)이 없으면: 전형명을 먼저 묻기\n"
-    "- 학과/모집단위(KEYWORD)가 없으면: 학과/모집단위를 묻기\n"
-    "- 일정/모집 관련이면 연도(예: 2026학년도)를 묻기\n\n"
-    "사용자 원문 질문:\n{question}\n\n"
-    "현재 NER 결과:\n"
-    "- UNI: {uni}\n"
-    "- TYPE: {typ}\n"
-    "- KEYWORD: {kw}\n\n"
-    "출력: 재질문 한 문장"
+    "추가 질문을 생성하지 않습니다. 사용자의 현재 입력만 처리합니다.\n"
+    "사용자 원문 질문: {question}\n"
+    "UNI: {uni}\nTYPE: {typ}\nKEYWORD: {kw}\n"
 )
 
 
@@ -596,6 +551,27 @@ def sanitize_pair_answer(text: str) -> str:
     return cleaned
 
 
+def sanitize_final_answer(text: str) -> str:
+    """LLM이 붙인 후속 질문·질문형 마무리를 최종 응답에서 제거한다."""
+    cleaned = (text or "").strip()
+    if not cleaned:
+        return cleaned
+
+    stop_patterns = [
+        r"\n\s*혹시", r"\n\s*더 궁금", r"\n\s*추가로",
+        r"\n\s*어떤 전형", r"\n\s*확인해 드릴까요",
+        r"\n\s*알려주시면", r"\n\s*말씀해 주시면",
+    ]
+    for pattern in stop_patterns:
+        cleaned = re.split(pattern, cleaned, maxsplit=1)[0].strip()
+
+    lines = [line.rstrip() for line in cleaned.splitlines()]
+    while lines and lines[-1].strip().endswith("?"):
+        lines.pop()
+    cleaned = "\n".join(lines).strip()
+    return cleaned
+
+
 def build_pair_doc_context(prows: List[Dict[str, Any]], max_items: int = 3) -> str:
     if not prows:
         return ""
@@ -772,7 +748,7 @@ def answer_one(
         answer_text = "\n".join(lines).strip()
 
         if not majors:
-            answer_text += "\n\n어느 학과나 모집단위를 기준으로 보시는지 알려주시면 더 정확하게 안내해 드릴 수 있습니다."
+            answer_text += "\n\n학과 또는 모집단위가 지정되지 않아 문서에 확인되는 범위만 정리했습니다."
 
         sources_lines = build_quota_sources(selected_pages)
 
@@ -791,6 +767,23 @@ def answer_one(
     # -------------------------------------------------------------------------
     # 문서탐색 답변: 대학/전형 페어별로 각각 GPT 호출
     # -------------------------------------------------------------------------
+    valid_document_rows = [
+        r for r in rows
+        if r.get("page_index", -1) != -1 and str(r.get("snippet", "") or "").strip()
+    ]
+    if not pair_to_rows or not valid_document_rows:
+        return {
+            "input": text,
+            "ner_uni": ner_uni,
+            "ner_type": ner_type,
+            "ner_kw": ner_kw,
+            "decision": decision,
+            "stats": stats,
+            "pair_to_rows": pair_to_rows,
+            "answer": "현재 보유한 모집요강 자료에서 해당 항목을 찾지 못했습니다.",
+            "sources": [],
+        }
+
     lines: List[str] = []
 
     for (uni, typ), prows in pair_to_rows.items():
@@ -843,6 +836,7 @@ def answer_one(
             temperature=0.1,
         ).strip()
 
+    answer_text = sanitize_final_answer(answer_text)
     sources_lines = build_sources(pair_to_rows)
     sources_lines = [s for s in sources_lines if "(페이지 정보 없음)" not in s]
 
@@ -1291,14 +1285,8 @@ def run_single_turn(
     }
     result_ner = merge_ner_context(result_ner, retry_ner)
 
-    missing = missing_slots_for_followup(result_ner)
-    answer = (result.get("answer") or "").strip()
-    decision = decision_from_ner(result_ner) if not missing else "재질문"
-
-    if missing:
-        followup = deterministic_followup_question(result_ner)
-        answer = _append_followup_once(answer, followup)
-        decision = "재질문"
+    answer = sanitize_final_answer(result.get("answer") or "")
+    decision = decision_from_ner(result_ner)
 
     rows = _flatten_rows(result.get("pair_to_rows") or {})
     stats = result.get("stats") or {}
@@ -1446,14 +1434,8 @@ def run_followup_turn(
     }
     final_ner = merge_ner_context(final_ner, retry_ner)
 
-    missing = missing_slots_for_followup(final_ner)
-    answer = (result.get("answer") or "").strip()
-    decision = decision_from_ner(final_ner) if not missing else "재질문"
-
-    if missing:
-        followup = deterministic_followup_question(final_ner)
-        answer = _append_followup_once(answer, followup)
-        decision = "재질문"
+    answer = sanitize_final_answer(result.get("answer") or "")
+    decision = decision_from_ner(final_ner)
 
     rows = _flatten_rows(result.get("pair_to_rows") or {})
     stats = result.get("stats") or {}
