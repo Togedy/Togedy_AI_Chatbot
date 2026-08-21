@@ -3,6 +3,8 @@
 
 import os
 import sys
+from dataclasses import dataclass
+from functools import lru_cache
 from typing import List, Dict, Any, Tuple, Optional
 
 from flask import Flask, request, jsonify
@@ -12,21 +14,37 @@ if THIS not in sys.path:
     sys.path.insert(0, THIS)
 
 import generate_answers as ans
+from admission_calendar import answer_calendar_question
 from extract_all import (
     UniExtractor,
     TypeExtractor,
     KeywordExtractorBridge,
-    load_env,
 )
+from settings import Settings
 
-api_key, gemini_model = load_env()
-uni_ex = UniExtractor(max_len=128)
-type_ex = TypeExtractor()
-kw_ex = KeywordExtractorBridge(topn=10)
 
-app = Flask(__name__)
-app.json.ensure_ascii = False
-MODEL_NAME = "gpt-4o-mini"
+@dataclass(frozen=True)
+class Pipeline:
+    uni_ex: UniExtractor
+    type_ex: TypeExtractor
+    kw_ex: KeywordExtractorBridge
+    api_key: str
+    gemini_model: str
+    openai_model: str
+
+
+@lru_cache(maxsize=1)
+def get_pipeline() -> Pipeline:
+    """Load the heavy NER models once, on the first API request."""
+    config = Settings.from_env()
+    return Pipeline(
+        uni_ex=UniExtractor(max_len=128),
+        type_ex=TypeExtractor(),
+        kw_ex=KeywordExtractorBridge(topn=10),
+        api_key=config.google_api_key,
+        gemini_model=config.gemini_model,
+        openai_model=config.openai_model,
+    )
 
 
 def _normalize_ner_list(x: Any) -> List[str]:
@@ -195,14 +213,19 @@ def build_answer_response(
     return resp
 
 def run_turn(question: str):
+    calendar_answer = answer_calendar_question(question)
+    if calendar_answer:
+        return calendar_answer, "답변 생성", {"UNI": [], "TYPE": [], "KEYWORD": ["수능 일정"] if "수능" in question else []}, [], {"handler": "calendar"}
+
+    pipeline = get_pipeline()
     return ans.run_single_turn(
         question,
-        uni_ex,
-        type_ex,
-        kw_ex,
-        api_key,
-        gemini_model,
-        MODEL_NAME,
+        pipeline.uni_ex,
+        pipeline.type_ex,
+        pipeline.kw_ex,
+        pipeline.api_key,
+        pipeline.gemini_model,
+        pipeline.openai_model,
     )
 
 
@@ -211,20 +234,24 @@ def run_followup_turn(
     user_input: str,
     prev_ner: Optional[Dict[str, Any]],
 ):
+    calendar_answer = answer_calendar_question(user_input)
+    if calendar_answer:
+        return calendar_answer, "답변 생성", {"UNI": [], "TYPE": [], "KEYWORD": ["수능 일정"] if "수능" in user_input else []}, [], {"handler": "calendar"}
+
+    pipeline = get_pipeline()
     return ans.run_followup_turn(
         previous_user_question,
         user_input,
         prev_ner,
-        uni_ex,
-        type_ex,
-        kw_ex,
-        api_key,
-        gemini_model,
-        MODEL_NAME,
+        pipeline.uni_ex,
+        pipeline.type_ex,
+        pipeline.kw_ex,
+        pipeline.api_key,
+        pipeline.gemini_model,
+        pipeline.openai_model,
     )
 
 
-@app.route("/answer", methods=["POST"])
 def answer_endpoint():
     data = request.get_json(force=True) or {}
 
@@ -280,10 +307,26 @@ def answer_endpoint():
     return jsonify(resp)
 
 
+def create_app() -> Flask:
+    application = Flask(__name__)
+    application.json.ensure_ascii = False
+    application.add_url_rule("/answer", view_func=answer_endpoint, methods=["POST"])
+
+    @application.get("/health")
+    def health():
+        return jsonify({"status": "ok", "models_loaded": get_pipeline.cache_info().currsize > 0})
+
+    return application
+
+
+app = create_app()
+
+
 if __name__ == "__main__":
+    config = Settings.from_env()
     app.run(
-        host="0.0.0.0",
-        port=5000,
-        debug=False,
+        host=config.host,
+        port=config.port,
+        debug=config.debug,
         use_reloader=False
     )

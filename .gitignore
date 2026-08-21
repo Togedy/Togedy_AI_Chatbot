@@ -7,6 +7,9 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.pytest_cache/
+.coverage
+htmlcov/
 
 # =========================
 # Training Data (ignore all data files)
@@ -34,3 +37,8 @@ KORBERT_NER*/results*/runs/
 # Logs
 # =========================
 *.log
+
+# Local outputs
+hits.csv
+results.tsv
+structure_clean.txt

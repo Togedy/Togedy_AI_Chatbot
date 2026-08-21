@@ -90,12 +90,10 @@ class _NullCtx:
 # .env
 # ─────────────────────────────────────────────────────────────────────────────
 def load_env():
-    try:
-        from dotenv import load_dotenv
-        load_dotenv()
-    except Exception:
-        pass
-    return os.getenv("GOOGLE_API_KEY", ""), os.getenv("GEMINI_MODEL", "gemini-1.5-pro")
+    from settings import Settings
+
+    settings = Settings.from_env()
+    return settings.google_api_key, settings.gemini_model
 
 # ─────────────────────────────────────────────────────────────────────────────
 # UNI 추출기: test_uni 파이프라인 그대로
