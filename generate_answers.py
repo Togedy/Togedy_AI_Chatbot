@@ -43,7 +43,7 @@ EXPERT_SYSTEM_PROMPT = (
     "- 이 점검 과정은 출력하지 않고 최종 답변만 작성합니다.\n\n"
     "[근거 사용 원칙]\n"
     "1) 모집요강 발췌가 제공되면 발췌에 명시된 사실만 대학별 사실의 근거로 사용합니다.\n"
-    "2) 대학명, 전형명, 모집단위, 학년도 중 하나라도 질문과 다른 자료를 정답 근거로 사용하지 않습니다.\n"
+    "2) 대학명, 전형명, 학년도가 질문과 다른 자료를 정답 근거로 사용하지 않습니다. 모집단위명이 다르더라도 문서에 통합 모집과 세부전공 선택 관계가 직접 명시된 경우에는 그 관계를 설명하되 같은 모집단위로 단정하지 않습니다.\n"
     "3) 수치, 날짜, 비율, 등급, 과목명, 서류명은 근거의 표현을 정확히 옮기며 임의로 반올림하거나 합치지 않습니다.\n"
     "4) 표의 열과 행 관계가 불명확하면 주변 숫자를 해당 항목의 값으로 추정하지 않습니다.\n"
     "5) 여러 발췌가 충돌하면 하나를 임의로 선택하지 말고 자료상 내용이 서로 다르다고 밝힙니다.\n"
@@ -509,7 +509,14 @@ def pick_best_quota_pages(rows: List[Dict[str, Any]], majors: List[str], max_pag
         s = snippet or ""
         return any(m in s for m in majors)
 
-    rows_sorted = sorted(rows, key=lambda r: float(r.get("score", 0.0)), reverse=True)
+    rows_sorted = sorted(
+        rows,
+        key=lambda r: (
+            int(r.get("major_alias_priority", 0) or 0),
+            float(r.get("score", 0.0)),
+        ),
+        reverse=True,
+    )
 
     picked: List[Dict[str, Any]] = []
     used_pages = set()
@@ -548,6 +555,7 @@ def build_quota_prompt(
     typ: str,
     majors: List[str],
     page_texts: List[Tuple[int, str]],
+    alias_notes: Optional[List[str]] = None,
 ) -> str:
     majors_str = ", ".join([m for m in majors if m]) if majors else "(학과/학부명 미추출)"
     pages_info = ", ".join([f"p.{pno}" for pno, _ in page_texts if isinstance(pno, int)])
@@ -556,6 +564,7 @@ def build_quota_prompt(
     for pno, txt in page_texts:
         doc_block.append(f"[p.{pno}]\n{txt}")
     doc_join = "\n\n".join(doc_block)
+    alias_info = "\n".join(alias_notes or []) or "(별도 모집단위 명칭 정보 없음)"
 
     return (
         "다음 모집요강 발췌에서 대상 모집단위의 모집인원을 정확히 확인하세요.\n"
@@ -565,13 +574,15 @@ def build_quota_prompt(
         f"<target_admission_type>{typ}</target_admission_type>\n"
         f"<target_major>{majors_str}</target_major>\n"
         f"<candidate_pages>{pages_info}</candidate_pages>\n\n"
+        f"<admission_unit_relation>\n{alias_info}\n</admission_unit_relation>\n\n"
         "[검증 규칙]\n"
-        "1) 대상 대학, 전형, 학과·학부가 모두 일치하는 행만 사용합니다.\n"
+        "1) 대상 대학과 전형이 일치하고, 대상 학과와 직접 일치하거나 문서에 통합 모집 관계가 명시된 행만 사용합니다.\n"
         "2) 모집인원과 예비번호, 경쟁률, 배점, 연도 등의 다른 숫자를 혼동하지 않습니다.\n"
         "3) 동일 모집단위가 여러 전형에 있으면 전형별 인원을 구분합니다.\n"
         "4) 합계는 서로 중복되지 않는 모집인원만 더하고, 어떤 값들을 합산했는지 답변에 표시합니다.\n"
         "5) 대상 모집단위를 직접 확인할 수 없거나 표 구조가 불명확하면 값을 추정하지 않고 발췌에서 확인되지 않는다고 답합니다.\n"
-        "6) 답변은 확인된 모집인원 결론과 꼭 필요한 산출 근거만 한두 문장으로 작성합니다.\n\n"
+        "6) 요청한 학과가 직접 모집되지 않고 다른 학부로 통합 모집된다면, 직접 모집 인원처럼 표현하지 말고 실제 모집단위와 전공 선택 관계를 설명합니다.\n"
+        "7) 답변은 확인된 모집인원 결론과 꼭 필요한 산출 근거만 한두 문장으로 작성합니다.\n\n"
         "<admission_document>\n"
         f"{doc_join}\n"
         "</admission_document>\n"
@@ -626,6 +637,15 @@ def build_pair_doc_context(prows: List[Dict[str, Any]], max_items: int = 3) -> s
     rows_sorted = sorted(prows, key=lambda r: float(r.get("score", 0.0)), reverse=True)
     lines: List[str] = []
 
+    alias_notes: List[str] = []
+    for row in rows_sorted:
+        for note in str(row.get("major_alias_notes", "") or "").split("|"):
+            clean_note = note.strip()
+            if clean_note and clean_note not in alias_notes:
+                alias_notes.append(clean_note)
+    for note in alias_notes:
+        lines.append(f"[모집단위 명칭 참고] {note}")
+
     for r in rows_sorted[:max(1, int(max_items))]:
         page_index = r.get("page_index")
         snippet = str(r.get("snippet", "") or "").strip()
@@ -635,6 +655,69 @@ def build_pair_doc_context(prows: List[Dict[str, Any]], max_items: int = 3) -> s
             lines.append(snippet)
 
     return "\n".join([x for x in lines if x]).strip()
+
+
+def collect_major_alias_info(rows: List[Dict[str, Any]]) -> Tuple[List[str], List[str]]:
+    terms: List[str] = []
+    notes: List[str] = []
+    for row in rows or []:
+        for value, target in (
+            (row.get("major_alias_terms", ""), terms),
+            (row.get("major_alias_notes", ""), notes),
+        ):
+            for item in str(value or "").split("|"):
+                clean_item = item.strip()
+                if clean_item and clean_item not in target:
+                    target.append(clean_item)
+    return terms, notes
+
+
+def extract_requested_major_terms(question: str, keywords: List[str]) -> List[str]:
+    """Extract department/unit-like terms without depending only on NER."""
+    candidates: List[str] = []
+    for keyword in keywords or []:
+        clean_keyword = str(keyword).strip()
+        if clean_keyword.endswith(("학과", "학부", "전공")) and clean_keyword not in candidates:
+            candidates.append(clean_keyword)
+
+    for match in re.findall(r"([가-힣A-Za-z0-9·]+(?:학과|학부|전공))", question or ""):
+        clean_match = match.strip()
+        if clean_match and clean_match not in candidates:
+            candidates.append(clean_match)
+    return candidates
+
+
+def missing_major_terms_in_documents(
+    requested_majors: List[str],
+    rows: List[Dict[str, Any]],
+) -> List[str]:
+    """Return requested unit names absent from every selected source document."""
+    if not requested_majors:
+        return []
+
+    documents: List[str] = []
+    seen_paths = set()
+    for row in rows or []:
+        doc_path = str(row.get("doc_path", "") or "")
+        if not doc_path or doc_path in seen_paths or not os.path.isfile(doc_path):
+            continue
+        seen_paths.add(doc_path)
+        documents.append(load_doc_text(doc_path))
+
+    compact_document = re.sub(r"\s+", "", "\n".join(documents))
+    return [
+        major for major in requested_majors
+        if re.sub(r"\s+", "", major) not in compact_document
+    ]
+
+
+def build_missing_major_answer(uni: str, missing_majors: List[str]) -> str:
+    quoted = ", ".join(f"'{major}'" for major in missing_majors)
+    university = f"{uni} " if uni else "해당 대학 "
+    return (
+        f"지금 검색한 단어인 {quoted}는 {university}모집요강에서 찾을 수 없습니다. "
+        "해당 대학에서 사용하는 다른 학과·학부 또는 모집단위 명칭으로 검색해 주세요."
+    )
 
 
 def answer_one(
@@ -687,6 +770,34 @@ def answer_one(
 
     answer_text = ""
     sources_lines: List[str] = []
+
+    # 모든 문서 검색형 질문에 공통 적용한다. 요청 모집단위가 해당 대학의
+    # 전체 모집요강에 없고 확인된 별칭도 없다면 LLM이 유사 학과를
+    # 추측하기 전에 결정적인 안내문을 반환한다.
+    requested_major_terms = extract_requested_major_terms(text, ner_kw)
+    missing_major_answers: List[str] = []
+    missing_major_pairs = set()
+    for (uni, typ), prows in pair_to_rows.items():
+        alias_terms, _ = collect_major_alias_info(prows)
+        missing_terms = missing_major_terms_in_documents(requested_major_terms, prows)
+        if missing_terms and not alias_terms:
+            missing_major_answers.append(
+                f"- {uni} {typ}: {build_missing_major_answer(uni, missing_terms)}"
+            )
+            missing_major_pairs.add((uni, typ))
+
+    if pair_to_rows and len(missing_major_pairs) == len(pair_to_rows):
+        return {
+            "input": text,
+            "ner_uni": ner_uni,
+            "ner_type": ner_type,
+            "ner_kw": ner_kw,
+            "decision": decision,
+            "stats": stats,
+            "pair_to_rows": {pair: [] for pair in pair_to_rows},
+            "answer": "\n".join(missing_major_answers).strip(),
+            "sources": [],
+        }
 
     if decision == "키워드답변":
         keywords_str = ", ".join([str(k).strip() for k in ner_kw if str(k).strip()]) or "(미추출)"
@@ -748,10 +859,20 @@ def answer_one(
 
     if is_quota_question(text):
         majors = [k for k in ner_kw if k and str(k).strip()]
+        requested_majors = extract_requested_major_terms(text, majors)
         lines = ["모집 인원은 다음과 같습니다.\n"]
         selected_pages: Dict[Tuple[str, str], List[int]] = {}
+        missing_major_pairs = set()
 
         for (uni, typ), prows in pair_to_rows.items():
+            alias_terms, _ = collect_major_alias_info(prows)
+            missing_majors = missing_major_terms_in_documents(requested_majors, prows)
+            if missing_majors and not alias_terms:
+                lines.append(f"- {uni} {typ}: {build_missing_major_answer(uni, missing_majors)}")
+                selected_pages[(uni, typ)] = []
+                missing_major_pairs.add((uni, typ))
+                continue
+
             picks = pick_best_quota_pages(prows, majors, max_pages=quota_pages_per_pair)
             if not picks:
                 lines.append(f"- {uni} {typ}: 해당 항목을 정확히 보려면 학과나 모집단위 키워드를 조금 더 알려주세요.")
@@ -781,7 +902,8 @@ def answer_one(
                 lines.append(f"- {uni} {typ}: 모집단위(학과/학부) 키워드를 조금 더 알려주시면 더 정확히 안내해 드릴 수 있습니다.")
                 continue
 
-            prompt = build_quota_prompt(text, uni, typ, majors, page_texts)
+            _, alias_notes = collect_major_alias_info(prows)
+            prompt = build_quota_prompt(text, uni, typ, majors, page_texts, alias_notes=alias_notes)
             quota_ans = call_llm(
                 user_prompt=prompt,
                 model=llm_model,
@@ -790,9 +912,16 @@ def answer_one(
             ).strip()
 
             quota_ans = sanitize_pair_answer(quota_ans)
+            if alias_notes and not ("통합 모집" in quota_ans and "2학년" in quota_ans):
+                quota_ans = f"{alias_notes[0]}\n{quota_ans}".strip()
             lines.append(f"- {uni} {typ}: {quota_ans}")
 
         answer_text = "\n".join(lines).strip()
+
+        # 존재하지 않는 모집단위 안내에는 관련 없는 검색 페이지를 API
+        # 근거로 반환하지 않는다.
+        for pair in missing_major_pairs:
+            pair_to_rows[pair] = []
 
         if not majors:
             answer_text += "\n\n학과 또는 모집단위가 지정되지 않아 문서에 확인되는 범위만 정리했습니다."
@@ -819,6 +948,16 @@ def answer_one(
         if r.get("page_index", -1) != -1 and str(r.get("snippet", "") or "").strip()
     ]
     if not pair_to_rows or not valid_document_rows:
+        alias_terms, alias_notes = collect_major_alias_info(rows)
+        if alias_terms:
+            suggested = ", ".join(f"'{term}'" for term in alias_terms)
+            relation = f" {' '.join(alias_notes)}" if alias_notes else ""
+            missing_answer = (
+                f"요청한 학과명으로 직접 모집하는 항목은 확인하지 못했습니다.{relation} "
+                f"모집요강의 실제 모집단위인 {suggested} 키워드로 확인해 주세요."
+            ).strip()
+        else:
+            missing_answer = "현재 보유한 모집요강 자료에서 해당 항목을 찾지 못했습니다."
         return {
             "input": text,
             "ner_uni": ner_uni,
@@ -827,7 +966,7 @@ def answer_one(
             "decision": decision,
             "stats": stats,
             "pair_to_rows": pair_to_rows,
-            "answer": "현재 보유한 모집요강 자료에서 해당 항목을 찾지 못했습니다.",
+            "answer": missing_answer,
             "sources": [],
         }
 
@@ -854,6 +993,10 @@ def answer_one(
         ).strip()
 
         pair_answer = sanitize_pair_answer(pair_answer)
+
+        _, alias_notes = collect_major_alias_info(prows)
+        if alias_notes and not ("통합 모집" in pair_answer and "2학년" in pair_answer):
+            pair_answer = f"{alias_notes[0]}\n{pair_answer}".strip()
 
         if pair_answer:
             lines.append(f"{uni} {typ}\n{pair_answer}")

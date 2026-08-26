@@ -17,6 +17,7 @@ from extract_all import (
 from utils.mapping_loader import (
     normalize_uni, normalize_type, uni_to_slug, type_to_slug
 )
+from utils.major_aliases import expand_major_keywords, discover_document_major_aliases
 
 # ---------------------------
 # (UNI, TYPE) 페어 생성 보정
@@ -318,6 +319,9 @@ def search_top_pages_for_query(
             klist = [klist] if klist else []
 
         uni_slug = get_uni_slug(u) if u else ""
+        original_klist = list(klist)
+        klist, alias_notes = expand_major_keywords(uni_slug, klist, question=text)
+        alias_terms = [term for term in klist if term not in original_klist]
         type_folder = get_type_folder(t)
         doc_path = resolve_text_path(uni_slug, type_folder)
 
@@ -331,6 +335,8 @@ def search_top_pages_for_query(
                 "matched_uni": u or "",
                 "matched_type": t or "",
                 "matched_keywords": "|".join(klist),
+                "major_alias_notes": "|".join(alias_notes),
+                "major_alias_terms": "|".join(alias_terms),
                 "doc_path": doc_path or "(경로 생성 실패)",
                 "page_index": -1,
                 "score": 0.0,
@@ -343,6 +349,20 @@ def search_top_pages_for_query(
         with open(doc_path, "r", encoding="utf-8") as f:
             raw = f.read()
 
+        # Curated mapping이 없는 대학도 해당 대학의 실제 모집요강에 존재하는
+        # 관련 모집단위 명칭을 찾아 검색어를 확장한다.
+        if not alias_terms:
+            discovered_klist, discovered_notes = discover_document_major_aliases(
+                klist,
+                question=text,
+                document_text=raw,
+            )
+            discovered_terms = [term for term in discovered_klist if term not in klist]
+            if discovered_terms:
+                klist = discovered_klist
+                alias_terms.extend(discovered_terms)
+                alias_notes.extend(note for note in discovered_notes if note not in alias_notes)
+
         labeled_pages = split_text_into_labeled_pages(raw)
 
         # 스코어링 대상 페이지 수는 "라벨 페이지 개수" 기준으로 집계
@@ -353,6 +373,21 @@ def search_top_pages_for_query(
 
         internal_k = max(top_pages, 12)
         ranking = score_pages(pages_text, klist, k=internal_k)
+
+        # 대학별 실제 모집단위 별칭이 적용된 모집인원 질문은 별칭이 직접
+        # 등장하고 숫자 근거가 풍부한 페이지를 우선한다. 일반 질문의
+        # 기존 TF-IDF 순서는 변경하지 않는다.
+        compact_query = re.sub(r"\s+", "", text or "")
+        is_quota_query = any(term in compact_query for term in ("모집인원", "모집인원은", "몇명", "몇 명", "뽑아", "선발인원"))
+        if alias_terms and is_quota_query:
+            def alias_page_priority(item):
+                idx, score = item
+                page = pages_text[idx]
+                alias_hit = any(term in page for term in alias_terms)
+                number_count = len(re.findall(r"\d+", page))
+                return (1 if alias_hit else 0, min(number_count, 100), float(score))
+
+            ranking = sorted(ranking, key=alias_page_priority, reverse=True)
         ranking = ranking[:3] if ranking else []
 
         if not ranking:
@@ -365,6 +400,9 @@ def search_top_pages_for_query(
                 "matched_uni": u or "",
                 "matched_type": t or "",
                 "matched_keywords": "|".join(klist),
+                "major_alias_notes": "|".join(alias_notes),
+                "major_alias_terms": "|".join(alias_terms),
+                "major_alias_priority": 0,
                 "doc_path": doc_path,
                 "page_index": -1,
                 "score": 0.0,
@@ -387,11 +425,16 @@ def search_top_pages_for_query(
                 "matched_uni": u or "",
                 "matched_type": t or "",
                 "matched_keywords": "|".join(klist),
+                "major_alias_notes": "|".join(alias_notes),
+                "major_alias_terms": "|".join(alias_terms),
+                "major_alias_priority": 1 if any(term in pages_text[idx] for term in alias_terms) else 0,
                 "doc_path": doc_path,
                 # 핵심: 이제 page_index는 "==== Page N ===="의 N(라벨)
                 "page_index": page_out,
                 "score": round(float(sc), 6),
-                "snippet": extract_snippet_around_keywords(pages_text[idx], klist, window=700),
+                "snippet": extract_snippet_around_keywords(
+                    pages_text[idx], alias_terms or klist, window=700
+                ),
                 # 디버그용 split 인덱스도 함께 보관(필요하면 generate_answers에서 출력 가능)
                 "split_index": idx + 1,
             })
@@ -409,6 +452,7 @@ def write_csv(path: str, rows: List[Dict[str, Any]]):
     cols = [
         "input_query", "ner_uni", "ner_type", "ner_keywords",
         "decision", "matched_uni", "matched_type", "matched_keywords",
+        "major_alias_notes", "major_alias_terms", "major_alias_priority",
         "doc_path", "page_index", "score", "snippet",
         "split_index",
     ]

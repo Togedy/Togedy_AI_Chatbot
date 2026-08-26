@@ -19,6 +19,7 @@
 ├── generate_answers.py        # 단일/후속 질문 답변 파이프라인
 ├── extract_all.py             # NER 모델 통합
 ├── search_and_export.py       # 페이지 검색과 결과 구성
+├── config/major_aliases.json  # 대학별 요청 학과명과 실제 모집단위 관계
 ├── document_retrieval/        # TF-IDF 검색 모듈
 ├── KORBERT_NER_UNI/           # 대학명 NER 모델
 ├── KORBERT_NER_TYPE/          # 전형 NER 모델
@@ -94,4 +95,6 @@ python -m pytest
 - 파일 경로는 실행 위치가 아니라 저장소 루트를 기준으로 해석합니다.
 - API 키와 개인 설정은 `.env`에만 두고 커밋하지 않습니다.
 - 생성 결과와 캐시는 Git에 추가하지 않습니다.
+- 일반적인 컴퓨터 계열 학과명 차이는 선택된 대학 모집요강에서 실제 모집단위를 자동 탐색합니다.
+- 통합 모집 후 전공 선택처럼 단순 명칭 차이가 아닌 관계는 `config/major_aliases.json`에 대학 slug별 검색어와 관계 설명을 추가합니다.
 - 입시 정보는 실제 서비스에 사용하기 전에 반드시 해당 대학의 최신 공식 모집요강과 대조합니다.
