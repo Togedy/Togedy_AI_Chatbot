@@ -4,12 +4,15 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List, Dict, Any, Tuple, Optional, Iterable
 import os, json, glob, pickle, re
+from pathlib import Path
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from utils.mapping_loader import (
     normalize_uni, normalize_type, uni_to_slug, type_to_slug
 )
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 @dataclass
 class DocItem:
@@ -38,7 +41,7 @@ class TfidfRetriever:
                         uni_keys: Optional[Iterable[str]] = None,
                         type_keys: Optional[Iterable[str]] = None) -> List[DocItem]:
         items: List[DocItem] = []
-        root = os.getcwd()
+        root = str(PROJECT_ROOT)
         uni_root = os.path.join(root, "university")
         if not os.path.isdir(uni_root):
             return items
@@ -74,7 +77,7 @@ class TfidfRetriever:
                     uni_keys: Optional[Iterable[str]] = None,
                     type_keys: Optional[Iterable[str]] = None) -> List[DocItem]:
         items: List[DocItem] = []
-        root = os.getcwd()
+        root = str(PROJECT_ROOT)
         uni_keys = set(uni_keys or [])
         type_keys = set(type_keys or [])
 

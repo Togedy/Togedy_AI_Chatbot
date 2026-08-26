@@ -4,10 +4,22 @@ from __future__ import annotations
 import json
 import os
 from functools import lru_cache
+from pathlib import Path
 from typing import Dict
 
-NORMAL_PATH = os.getenv("NORMALIZATION_PATH", "data/normalization_dict.json")
-SLUG_PATH   = os.getenv("SLUG_MAP_PATH",       "data/slug_map.json")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+
+def _config_path(env_name: str, default_name: str) -> str:
+    value = os.getenv(env_name)
+    if value:
+        path = Path(value).expanduser()
+        return str(path if path.is_absolute() else PROJECT_ROOT / path)
+    return str(PROJECT_ROOT / "data" / default_name)
+
+
+NORMAL_PATH = _config_path("NORMALIZATION_PATH", "normalization_dict.json")
+SLUG_PATH = _config_path("SLUG_MAP_PATH", "slug_map.json")
 
 # ===== [1] 기본 내장 매핑 딕셔너리 =====
 # 공식 한글 대학명만 포함 (별칭/약칭 제외)
