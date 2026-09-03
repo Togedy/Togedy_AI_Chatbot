@@ -605,7 +605,6 @@ def sanitize_pair_answer(text: str) -> str:
     for pat in split_patterns:
         cleaned = re.split(pat, cleaned, maxsplit=1)[0].strip()
 
-    cleaned = cleaned.split("\n\n")[0].strip()
     return cleaned
 
 
@@ -648,11 +647,22 @@ def build_pair_doc_context(prows: List[Dict[str, Any]], max_items: int = 3) -> s
 
     for r in rows_sorted[:max(1, int(max_items))]:
         page_index = r.get("page_index")
-        snippet = str(r.get("snippet", "") or "").strip()
+        doc_path = str(r.get("doc_path", "") or "").strip()
+        page_text = ""
+        if doc_path and isinstance(page_index, int):
+            try:
+                page_text = load_page_text(doc_path, page_index).strip()
+            except (OSError, UnicodeError):
+                page_text = ""
+
+        # 원문 페이지를 읽을 수 없는 행만 검색 스니펫으로 대체한다.
+        # 일정표·제출서류표의 행과 열 관계를 보존하려면 줄바꿈이 있는
+        # 페이지 원문을 LLM에 전달해야 한다.
+        body = page_text or str(r.get("snippet", "") or "").strip()
         if isinstance(page_index, int):
-            lines.append(f"[p.{page_index}] {snippet}")
+            lines.append(f"[p.{page_index}]\n{body}")
         else:
-            lines.append(snippet)
+            lines.append(body)
 
     return "\n".join([x for x in lines if x]).strip()
 
@@ -1132,10 +1142,15 @@ def apply_explicit_followup_rules(
     elif "수시" in compact:
         result["TYPE"] = ["수시"]
 
+    explicit_keywords: List[str] = []
     for canonical, variants in EXPLICIT_KEYWORD_RULES:
         if any(re.sub(r"\s+", "", v).lower() in compact for v in variants):
-            result["KEYWORD"] = [canonical]
-            break
+            explicit_keywords.append(canonical)
+
+    # 현재 문장에 직접 적힌 항목은 NER 추정보다 우선하되, 복합 질문의
+    # 모든 항목을 보존한다(예: "전형방법과 제출 서류").
+    if explicit_keywords:
+        result["KEYWORD"] = explicit_keywords
 
     return result
 

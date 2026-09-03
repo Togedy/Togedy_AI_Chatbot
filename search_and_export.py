@@ -196,7 +196,9 @@ def extract_snippet_around_keywords(page_text: str, keywords: List[str], window:
         end = min(best_pos + half, len(page_text))
         snippet = page_text[start:end]
 
-    return snippet.replace("\n", " ").strip()
+    # 일정표·제출서류표의 행/열 관계가 사라지지 않도록 원문의 줄바꿈을
+    # 유지한다. 공백 정리는 최종 답변 생성기가 담당한다.
+    return snippet.strip()
 
 
 def score_pages(pages_text: List[str], keywords: List[str], k: int = 5) -> List[Tuple[int, float]]:
