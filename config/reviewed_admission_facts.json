@@ -1,0 +1,101 @@
+{
+  "review_note": "2026-10-03: 원본 PDF의 병합 셀, 단계, 적용 모집단위를 직접 확인. 원문 해시가 달라지면 사용하지 않음. 전국 전형의 완전한 목록이 아님.",
+  "facts": [
+    {
+      "id": "seoul-susi-design-general",
+      "university": "서울대",
+      "round": "수시",
+      "document": "university/seoul/susi_text.txt",
+      "page": 24,
+      "track": "학생부종합전형(일반전형)",
+      "major": "미술대학 디자인과",
+      "stages": [
+        {
+          "name": "1단계",
+          "components": {
+            "서류평가": 100
+          },
+          "selection": "2배수"
+        },
+        {
+          "name": "2단계",
+          "components": {
+            "면접 및 구술고사": 100
+          },
+          "selection": "최종 선발"
+        }
+      ],
+      "practical_required": false,
+      "notes": "수능 응시영역기준과 최저학력기준 적용: 국어·수학·영어·탐구 중 3개 영역 등급 합 7 이내. 탐구는 2과목 평균. 외국 소재 고교 전 과정 이수자는 해당 수능 기준 적용 제외.",
+      "anchors": [
+        "미술대학 디자인과",
+        "1단계 성적",
+        "면접 및 구술고사",
+        "3개 영역 등급 합이 7등급 이내"
+      ],
+      "source_sha256": "fbb011dda81c5b801f2995dc275773af45018998290290ac8cc6eb0507c182cc"
+    },
+    {
+      "id": "hanyang-susi-art-talent",
+      "university": "한양대",
+      "round": "수시",
+      "document": "university/hanyang/susi_text.txt",
+      "page": 39,
+      "track": "실기/실적(미술특기자)",
+      "major": "응용미술교육과",
+      "stages": [
+        {
+          "name": "1단계",
+          "components": {
+            "학생부종합평가": 100
+          },
+          "selection": "20배수 내외"
+        },
+        {
+          "name": "2단계",
+          "components": {
+            "실기": 100
+          },
+          "selection": "최종 선발"
+        }
+      ],
+      "practical_required": true,
+      "notes": "수능 면제. 국내 정규 고교 졸업(예정)자가 대상이며 학교생활기록부가 없는 검정고시·외국고교 졸업자 등은 지원할 수 없음. 실기는 기초 디자인.",
+      "anchors": [
+        "응용미술교육과",
+        "학생부종합평가 100",
+        "실기 100",
+        "20배수 내외"
+      ],
+      "source_sha256": "6aa4acbb8c5ea36213e962e3eece96b429c613d72761e1593f0beac4d5a105ef"
+    },
+    {
+      "id": "konkuk-jungsi-modern-art",
+      "university": "건국대",
+      "round": "정시",
+      "document": "university/konkuk/jungsi_text.txt",
+      "page": 18,
+      "track": "수능(KU일반학생) 가군",
+      "major": "현대미술학과",
+      "stages": [
+        {
+          "name": "일괄합산",
+          "components": {
+            "수능": 60,
+            "실기": 40
+          },
+          "selection": "최종 선발"
+        }
+      ],
+      "practical_required": true,
+      "notes": "수능 600점과 실기 400점, 합계 1,000점 기준. 실기 반영비율은 40%이므로 실기 60% 이상 조건에는 해당하지 않음.",
+      "anchors": [
+        "현대미술학과",
+        "600(60%)",
+        "400(40%)",
+        "전형방법: 일괄합산"
+      ],
+      "source_sha256": "26d78b7d60fd52df92b0d6d752f59d5083ea666a840e22df87a1b5fa61729056"
+    }
+  ]
+}

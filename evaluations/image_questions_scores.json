@@ -1,0 +1,330 @@
+{
+  "summary": {
+    "denominator": 22,
+    "counts": {
+      "partial": 3,
+      "abstained": 17,
+      "incorrect": 2,
+      "excluded": 1
+    },
+    "strict_complete_percent": 0.0,
+    "at_least_partial_percent": 13.636363636363635,
+    "abstained_percent": 77.27272727272727,
+    "incorrect_or_unsupported_percent": 9.090909090909092,
+    "retrieval_route_ids": [
+      1,
+      2,
+      4,
+      5,
+      9
+    ],
+    "llm_calls": 28,
+    "document_claims": 23,
+    "accepted_document_claims": 6,
+    "seconds_total_excluding_pipeline_init": 176.52299999999997,
+    "median_seconds": 2.862
+  },
+  "reviews": [
+    {
+      "id": 1,
+      "verdict": "partial",
+      "reason": "서류제출·합격자 발표 일부만 답함. 원서접수·논술·면접 일정이 빠지고 전형별 예외도 구분하지 않음."
+    },
+    {
+      "id": 2,
+      "verdict": "abstained",
+      "reason": "전형방법과 제출서류를 검색했으나 생성된 두 문장 모두 인용 검증에서 탈락."
+    },
+    {
+      "id": 3,
+      "verdict": "abstained",
+      "reason": "KU일반학생을 건국대 전형으로 연결하지 못해 문서 검색 없이 확인 불가로 응답."
+    },
+    {
+      "id": 4,
+      "verdict": "partial",
+      "reason": "4개 대학은 인식. 건국대 일부 일정과 서울대 지역균형 접수·서류 일정만 답하고 연세대·고려대는 보류."
+    },
+    {
+      "id": 5,
+      "verdict": "partial",
+      "reason": "수시 컴퓨터공학부 49명은 원문과 일치. 정시 36명은 원문에 있으나 인용문 재작성으로 검증 탈락."
+    },
+    {
+      "id": 6,
+      "verdict": "abstained",
+      "reason": "부산 거주자의 주거·비용·전공 선택 기준 없이 주관적이라 답할 수 없다고만 함."
+    },
+    {
+      "id": 7,
+      "verdict": "abstained",
+      "reason": "대학 비교를 보류하고 전공·진로·선호 기준을 안내하지 않음."
+    },
+    {
+      "id": 8,
+      "verdict": "abstained",
+      "reason": "연고대 인식은 성공했으나 지원 판단에 필요한 조건 안내 없이 거절."
+    },
+    {
+      "id": 9,
+      "verdict": "abstained",
+      "reason": "연세대 정시·고려대 수시 매칭은 맞지만 일정 문장이 모두 검증 탈락. 합격 가능성 비교도 해결하지 못함."
+    },
+    {
+      "id": 10,
+      "verdict": "abstained",
+      "reason": "합격 가능성 단정은 피했지만 본인 성적·환산점수 등 비교 기준은 제시하지 않음."
+    },
+    {
+      "id": 11,
+      "verdict": "incorrect",
+      "reason": "'논술 최저학력기준이 없습니다'라고 답함. 보유 건국대 수시 요강 p.43은 '수능최저학력기준 있음'을 명시. 검색 경로에 진입하지 않음."
+    },
+    {
+      "id": 12,
+      "verdict": "excluded",
+      "reason": "'작년' 자료를 묻는 질문이므로 사용자 지정 제외 범위. 실제 실행 응답은 확인 불가."
+    },
+    {
+      "id": 13,
+      "verdict": "abstained",
+      "reason": "실기 없는 미대의 대학·학과·전형 예시를 하나도 제시하지 못함."
+    },
+    {
+      "id": 14,
+      "verdict": "abstained",
+      "reason": "예비번호 비교를 보류. 실제 모집단위 확인이나 충원자료 비교 방법을 제공하지 않음."
+    },
+    {
+      "id": 15,
+      "verdict": "abstained",
+      "reason": "6:1과 유사한 모집단위나 경쟁률 자료를 제시하지 못함."
+    },
+    {
+      "id": 16,
+      "verdict": "abstained",
+      "reason": "실기 60% 이상 조건에 맞는 전형을 제시하지 못함."
+    },
+    {
+      "id": 17,
+      "verdict": "abstained",
+      "reason": "수능 60% 이상 조건에 맞는 전형을 제시하지 못함."
+    },
+    {
+      "id": 18,
+      "verdict": "abstained",
+      "reason": "전형 분류가 비어 문서 검색 없이 확인 불가. 실제 요강의 공과대학자유전공학부로도 연결하지 못함."
+    },
+    {
+      "id": 19,
+      "verdict": "incorrect",
+      "reason": "'타학교 산업공학과 목표'를 건국대 산업공학과 질문으로 바꿈. 문서 근거 없이 물리 미이수 불이익이 클 수 있다고 답함. 허위로 확정된 사실과 구분하여 근거 없는 답변으로 판정."
+    },
+    {
+      "id": 20,
+      "verdict": "abstained",
+      "reason": "합격 백분위를 임의 생성하지 않았지만 입결·환산점수 정보를 제공하지 못함."
+    },
+    {
+      "id": 21,
+      "verdict": "abstained",
+      "reason": "위치·시설은 보류하고 공식 사이트 문의를 권함. 안전한 보류이지만 실제 질문 해결은 아님."
+    },
+    {
+      "id": 22,
+      "verdict": "abstained",
+      "reason": "대학과 전형을 특정하지 못해 기타과목 중요도에 대한 근거를 제공하지 못함."
+    },
+    {
+      "id": 23,
+      "verdict": "abstained",
+      "reason": "심심하다는 말에 '확인할 수 없는 사항'이라고 응답. 자연스러운 입시 안내로 전환하지 못함."
+    }
+  ],
+  "claim_diagnostics": [
+    {
+      "question_id": 1,
+      "text": "2026학년도 건국대학교 서울캠퍼스 수시모집의 원서접수는 2025년 9월 9일 화요일 10:00부터 9월 12일 금요일 17:00까지입니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\konkuk\\susi_text.txt"
+    },
+    {
+      "question_id": 1,
+      "text": "서류 제출은 2025년 9월 9일 화요일 10:00부터 9월 16일 화요일 17:00까지 가능합니다.",
+      "accepted": true,
+      "quote_matches": true,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\konkuk\\susi_text.txt"
+    },
+    {
+      "question_id": 1,
+      "text": "최초 합격자 발표는 2025년 12월 12일 금요일 14:00 예정입니다.",
+      "accepted": true,
+      "quote_matches": true,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\konkuk\\susi_text.txt"
+    },
+    {
+      "question_id": 2,
+      "text": "연세대학교 정시 전형은 대학수학능력시험과 실기고사를 일괄합산하여 선발하며, 총점은 1,000점입니다.",
+      "accepted": false,
+      "quote_matches": false,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\jungsi_text.txt"
+    },
+    {
+      "question_id": 2,
+      "text": "연세대학교 정시 전형의 제출서류는 학교생활기록부와 검정고시 합격증명서이며, 온라인으로 제출해야 합니다.",
+      "accepted": false,
+      "quote_matches": false,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\jungsi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "2026학년도 건국대학교 서울캠퍼스 수시모집의 원서접수는 2025년 9월 9일 화요일 10:00부터 9월 12일 금요일 17:00까지입니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\konkuk\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "서류 제출은 2025년 9월 9일 화요일 10:00부터 9월 16일 화요일 17:00까지 가능합니다.",
+      "accepted": true,
+      "quote_matches": true,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\konkuk\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "최초 합격자 발표는 2025년 12월 12일 금요일 14:00 예정입니다.",
+      "accepted": true,
+      "quote_matches": true,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\konkuk\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "서울대학교 학생부종합전형(지역균형전형)의 수시 전형 일정은 다음과 같습니다: 지원서 접수는 2025년 9월 8일(월) 10:00부터 9월 10일(수) 18:00까지이며, 서류 제출은 2025년 9월 8일(월)부터 9월 11일(목) 10:00부터 18:00까지입니다.",
+      "accepted": true,
+      "quote_matches": true,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\seoul\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "연세대학교 서울캠퍼스의 수시 전형 일정은 다음과 같습니다: 학생부교과전형[추천형]의 원서접수는 2025년 9월 9일(화) 10:00부터 9월 11일(목) 17:00까지이며, 학생부종합전형의 활동우수형(인문·통합)은 11월 15일(토), 활동우수형(자연)은 11월 16일(일) 시험이 있습니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "학생부종합전형의 국제형은 국내고의 경우 11월 17일(월) 1단계 합격자 발표 후 11월 22일(토)에 면접평가가 진행되며, 최종합격자는 12월 12일(금) 18:00에 발표됩니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "논술전형의 원서접수는 2025년 9월 9일(화) 10:00부터 9월 11일(목) 17:00까지이며, 논술시험은 9월 27일(토)에 실시됩니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "고려대학교 수시 전형의 원서접수는 2026년 9월 8일(월) 10:00부터 9월 10일(수) 17:00까지 진행됩니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\korea\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "서류 제출은 온라인으로 2026년 9월 8일(월) 10:00부터 9월 10일(수) 19:00까지 가능합니다.",
+      "accepted": false,
+      "quote_matches": false,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\korea\\susi_text.txt"
+    },
+    {
+      "question_id": 4,
+      "text": "최종합격자 발표는 2026년 11월 25일(화) 17:00에 이루어집니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\korea\\susi_text.txt"
+    },
+    {
+      "question_id": 5,
+      "text": "서울대학교 정시모집에서 컴퓨터공학부는 36명을 모집합니다.",
+      "accepted": false,
+      "quote_matches": false,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\seoul\\jungsi_text.txt"
+    },
+    {
+      "question_id": 5,
+      "text": "서울대학교 컴퓨터공학부의 수시모집 인원은 49명입니다.",
+      "accepted": true,
+      "quote_matches": true,
+      "numbers_match": true,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\seoul\\susi_text.txt"
+    },
+    {
+      "question_id": 9,
+      "text": "고려대학교 수시 전형의 원서접수는 2026년 9월 8일 10:00부터 9월 10일 17:00까지입니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\korea\\susi_text.txt"
+    },
+    {
+      "question_id": 9,
+      "text": "고려대학교 수시 전형의 최종합격자 발표는 2026년 11월 25일 17:00입니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\korea\\susi_text.txt"
+    },
+    {
+      "question_id": 9,
+      "text": "연세대학교 정시 전형의 인터넷 원서접수는 2025년 12월 29일 10:00부터 12월 31일 17:00까지입니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\jungsi_text.txt"
+    },
+    {
+      "question_id": 9,
+      "text": "서류 제출 기간은 2025년 12월 29일 10:00부터 2026년 1월 2일 14:00까지입니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\jungsi_text.txt"
+    },
+    {
+      "question_id": 9,
+      "text": "합격자 발표는 2026년 2월 2일 14:00에 이루어집니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\jungsi_text.txt"
+    },
+    {
+      "question_id": 9,
+      "text": "합격자 등록은 2026년 2월 3일 09:30부터 2월 5일 16:00까지입니다.",
+      "accepted": false,
+      "quote_matches": true,
+      "numbers_match": false,
+      "document": "D:\\Git\\Togedy_AI_Chatbot\\university\\yonsei\\jungsi_text.txt"
+    }
+  ]
+}

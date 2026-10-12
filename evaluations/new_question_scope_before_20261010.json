@@ -1,0 +1,816 @@
+{
+  "mode": "local component benchmark; no NER model or LLM API",
+  "cases": 28,
+  "passed": 4,
+  "items": [
+    {
+      "question": "실기 60% 이하인 미대 전형",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "konkuk-jungsi-modern-art"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 60% 미만인 미대 전형",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "konkuk-jungsi-modern-art"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 100% 이상인 미대",
+      "passed": true,
+      "failures": {},
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 100% 미만인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "konkuk-jungsi-modern-art"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "수능 60% 초과인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "수능 60% 이상인 미대",
+      "passed": true,
+      "failures": {},
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "konkuk-jungsi-modern-art"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "수능 60% 이하인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "konkuk-jungsi-modern-art"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "수능 60% 이상이고 실기 40% 이하인 미대",
+      "passed": true,
+      "failures": {},
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "konkuk-jungsi-modern-art"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "수능 60% 이상이고 실기 40% 초과인 미대",
+      "passed": false,
+      "failures": {
+        "intent": {
+          "expected": "clarify_constraints",
+          "actual": "discovery"
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "konkuk-jungsi-modern-art"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 80% 이상이고 실기 40% 이하인 미대",
+      "passed": false,
+      "failures": {
+        "intent": {
+          "expected": "clarify_constraints",
+          "actual": "discovery"
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 101퍼센트 이상인 미대",
+      "passed": false,
+      "failures": {
+        "intent": {
+          "expected": "clarify_constraints",
+          "actual": "discovery"
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 100% 초과인 미대",
+      "passed": false,
+      "failures": {
+        "intent": {
+          "expected": "clarify_constraints",
+          "actual": "discovery"
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "60% 이상인 미대 찾아줘",
+      "passed": false,
+      "failures": {
+        "intent": {
+          "expected": "clarify_constraints",
+          "actual": "discovery"
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "건대 빼고 수능 60% 이상인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [],
+          "actual": [
+            "konkuk-jungsi-modern-art"
+          ]
+        },
+        "excluded_universities": {
+          "expected": [
+            "건국대"
+          ],
+          "actual": []
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "konkuk-jungsi-modern-art"
+        ],
+        "universities": [
+          "건국대"
+        ],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "서울대 제외하고 실기 없는 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [],
+          "actual": [
+            "seoul-susi-design-general"
+          ]
+        },
+        "excluded_universities": {
+          "expected": [
+            "서울대"
+          ],
+          "actual": []
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "seoul-susi-design-general"
+        ],
+        "universities": [
+          "서울대"
+        ],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "건국대 말고 한양대 실기 100%인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "hanyang-susi-art-talent"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art"
+          ]
+        },
+        "universities": {
+          "expected": [
+            "한양대"
+          ],
+          "actual": [
+            "건국대",
+            "한양대"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art"
+        ],
+        "universities": [
+          "건국대",
+          "한양대"
+        ],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "서울대 논술 일반전형 실기 없는 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [],
+          "actual": [
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "seoul-susi-design-general"
+        ],
+        "universities": [
+          "서울대"
+        ],
+        "rounds": [
+          "수시"
+        ],
+        "tracks": [
+          "논술",
+          "일반전형"
+        ],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "서울대 미대 실기 없이 모집인원 알려줘",
+      "passed": false,
+      "failures": {
+        "shortcut": {
+          "expected": false,
+          "actual": true
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "seoul-susi-design-general"
+        ],
+        "universities": [
+          "서울대"
+        ],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "모집인원",
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": [],
+        "shortcut": true
+      }
+    },
+    {
+      "question": "실기 비중 100퍼센트 이상인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "hanyang-susi-art-talent"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 반영 40프로 이하인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "konkuk-jungsi-modern-art"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "응용미술교육과 빼고 실기 100%인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [],
+          "actual": [
+            "hanyang-susi-art-talent"
+          ]
+        },
+        "excluded_majors": {
+          "expected": [
+            "응용미술교육과"
+          ],
+          "actual": []
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "연세대 고른기회전형 전형방법",
+      "passed": false,
+      "failures": {
+        "tracks": {
+          "expected": [
+            "고른기회전형"
+          ],
+          "actual": []
+        }
+      },
+      "actual": {
+        "intent": "fact",
+        "records": [],
+        "universities": [
+          "연세대"
+        ],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "건국대 KU자기추천 제출서류",
+      "passed": false,
+      "failures": {
+        "rounds": {
+          "expected": [
+            "수시"
+          ],
+          "actual": []
+        },
+        "tracks": {
+          "expected": [
+            "KU자기추천"
+          ],
+          "actual": []
+        }
+      },
+      "actual": {
+        "intent": "fact",
+        "records": [],
+        "universities": [
+          "건국대"
+        ],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "제출서류"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "연세대 학생부 종합 서류평가",
+      "passed": false,
+      "failures": {
+        "topics": {
+          "expected": [
+            "서류평가"
+          ],
+          "actual": []
+        }
+      },
+      "actual": {
+        "intent": "clarify",
+        "records": [],
+        "universities": [
+          "연세대"
+        ],
+        "rounds": [
+          "수시"
+        ],
+        "tracks": [
+          "학생부종합"
+        ],
+        "topics": [],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 40%인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "konkuk-jungsi-modern-art"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "실기 40% 초과인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [
+            "hanyang-susi-art-talent"
+          ],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "수능 반영비율이 60프로 미만인 미대",
+      "passed": false,
+      "failures": {
+        "records": {
+          "expected": [],
+          "actual": [
+            "hanyang-susi-art-talent",
+            "konkuk-jungsi-modern-art",
+            "seoul-susi-design-general"
+          ]
+        }
+      },
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent",
+          "konkuk-jungsi-modern-art",
+          "seoul-susi-design-general"
+        ],
+        "universities": [],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    },
+    {
+      "question": "한양대 실기 80% 이상인 미대",
+      "passed": true,
+      "failures": {},
+      "actual": {
+        "intent": "discovery",
+        "records": [
+          "hanyang-susi-art-talent"
+        ],
+        "universities": [
+          "한양대"
+        ],
+        "rounds": [],
+        "tracks": [],
+        "topics": [
+          "전형방법"
+        ],
+        "excluded_universities": [],
+        "excluded_majors": []
+      }
+    }
+  ]
+}

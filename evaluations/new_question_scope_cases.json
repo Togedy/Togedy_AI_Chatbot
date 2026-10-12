@@ -1,0 +1,164 @@
+[
+  {
+    "question": "실기 60% 이하인 미대 전형",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "실기 60% 미만인 미대 전형",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "실기 100% 이상인 미대",
+    "records": [
+      "hanyang-susi-art-talent"
+    ]
+  },
+  {
+    "question": "실기 100% 미만인 미대",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "수능 60% 초과인 미대",
+    "records": []
+  },
+  {
+    "question": "수능 60% 이상인 미대",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "수능 60% 이하인 미대",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "수능 60% 이상이고 실기 40% 이하인 미대",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "수능 60% 이상이고 실기 40% 초과인 미대",
+    "intent": "clarify_constraints"
+  },
+  {
+    "question": "실기 80% 이상이고 실기 40% 이하인 미대",
+    "intent": "clarify_constraints"
+  },
+  {
+    "question": "실기 101퍼센트 이상인 미대",
+    "intent": "clarify_constraints"
+  },
+  {
+    "question": "실기 100% 초과인 미대",
+    "intent": "clarify_constraints"
+  },
+  {
+    "question": "60% 이상인 미대 찾아줘",
+    "intent": "clarify_constraints"
+  },
+  {
+    "question": "건대 빼고 수능 60% 이상인 미대",
+    "records": [],
+    "excluded_universities": [
+      "건국대"
+    ]
+  },
+  {
+    "question": "서울대 제외하고 실기 없는 미대",
+    "records": [],
+    "excluded_universities": [
+      "서울대"
+    ]
+  },
+  {
+    "question": "건국대 말고 한양대 실기 100%인 미대",
+    "records": [
+      "hanyang-susi-art-talent"
+    ],
+    "universities": [
+      "한양대"
+    ]
+  },
+  {
+    "question": "서울대 논술 일반전형 실기 없는 미대",
+    "records": []
+  },
+  {
+    "question": "서울대 미대 실기 없이 모집인원 알려줘",
+    "shortcut": false
+  },
+  {
+    "question": "실기 비중 100퍼센트 이상인 미대",
+    "records": [
+      "hanyang-susi-art-talent"
+    ]
+  },
+  {
+    "question": "실기 반영 40프로 이하인 미대",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "응용미술교육과 빼고 실기 100%인 미대",
+    "records": [],
+    "excluded_majors": [
+      "응용미술교육과"
+    ]
+  },
+  {
+    "question": "연세대 고른기회전형 전형방법",
+    "tracks": [
+      "고른기회전형"
+    ]
+  },
+  {
+    "question": "건국대 KU자기추천 제출서류",
+    "rounds": [
+      "수시"
+    ],
+    "tracks": [
+      "KU자기추천"
+    ]
+  },
+  {
+    "question": "연세대 학생부 종합 서류평가",
+    "topics": [
+      "서류평가"
+    ],
+    "rounds": [
+      "수시"
+    ]
+  },
+  {
+    "question": "실기 40%인 미대",
+    "records": [
+      "konkuk-jungsi-modern-art"
+    ]
+  },
+  {
+    "question": "실기 40% 초과인 미대",
+    "records": [
+      "hanyang-susi-art-talent"
+    ]
+  },
+  {
+    "question": "수능 반영비율이 60프로 미만인 미대",
+    "records": []
+  },
+  {
+    "question": "한양대 실기 80% 이상인 미대",
+    "records": [
+      "hanyang-susi-art-talent"
+    ]
+  }
+]

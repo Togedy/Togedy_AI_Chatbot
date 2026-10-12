@@ -18,6 +18,7 @@ from utils.mapping_loader import (
     normalize_uni, normalize_type, uni_to_slug, type_to_slug
 )
 from utils.major_aliases import expand_major_keywords, discover_document_major_aliases
+from question_plan import build_question_plan, UNIVERSITIES
 
 # ---------------------------
 # (UNI, TYPE) 페어 생성 보정
@@ -135,6 +136,18 @@ def split_text_into_labeled_pages(raw: str, fallback_chars: int = 1200) -> List[
 
 _NORM_REMOVE = re.compile(r"[\s\.\,\(\)\[\]\{\}\-_/\\:;\"'`~!@#$%^&*+=|<>?·•ㆍ…]+")
 
+# Alternate document headings, not department-equivalence assumptions.
+TOPIC_TERMS = (
+    ("모집인원", "선발인원"),
+    ("제출서류", "서류제출", "구비서류"),
+    ("지원자격", "지원자격요건"),
+    ("전형방법", "전형요소", "반영비율"),
+    ("수능최저", "최저학력기준"),
+    ("전형일정", "모집일정", "입학전형일정표", "원서접수", "지원서접수"),
+    ("영어등급", "영어", "등급별반영점수", "등급별환산점수"),
+    ("서류평가", "학업역량", "진로역량", "평가요소"),
+)
+
 def normalize_for_match(s: str) -> str:
     if not s:
         return ""
@@ -205,15 +218,23 @@ def score_pages(pages_text: List[str], keywords: List[str], k: int = 5) -> List[
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.metrics.pairwise import cosine_similarity
 
-    if not pages_text:
+    if not pages_text or k <= 0:
         return []
 
-    kw_clean = [kw.strip() for kw in keywords if kw and kw.strip()]
+    kw_clean = list(dict.fromkeys(normalize_for_match(kw) for kw in keywords if kw and normalize_for_match(kw)))
     if not kw_clean:
         return []
 
-    vect = TfidfVectorizer(ngram_range=(1, 2), min_df=1, max_df=0.95)
-    X = vect.fit_transform(pages_text)
+    topic_groups = [group for group in TOPIC_TERMS if any(term in kw for term in group for kw in kw_clean)]
+    for group in topic_groups:
+        kw_clean.extend(term for term in group if term not in kw_clean)
+
+    # A single page and terms shared by all pages are valid evidence too.
+    vect = TfidfVectorizer(ngram_range=(1, 2), min_df=1, max_df=1.0)
+    try:
+        X = vect.fit_transform(pages_text)
+    except ValueError:  # Empty/OCR-only pages have no indexable vocabulary.
+        return []
 
     query_joined = " ".join(kw_clean)
     s_join = cosine_similarity(vect.transform([query_joined]), X)[0]
@@ -224,11 +245,43 @@ def score_pages(pages_text: List[str], keywords: List[str], k: int = 5) -> List[
 
     final_scores = []
     for i, b in enumerate(base.tolist()):
+        normalized_page = normalize_for_match(pages_text[i])
+        heading = normalize_for_match(pages_text[i][:350])
+        hits = sum(kw in normalized_page for kw in kw_clean)
+        # Token overlap alone (e.g. only '인원') is not a complete query match.
+        if not hits or is_contents_page(pages_text[i]):
+            continue
+        major_hits = any(kw.endswith(("학과", "학부", "전공")) and kw in normalized_page for kw in kw_clean)
+        quota_table = major_hits and "모집인원" in kw_clean and any(t in normalized_page for t in ("합계", "정원내", "모집단위"))
+        if topic_groups and not quota_table and not any(term in normalized_page for group in topic_groups for term in group):
+            continue
+        # Admission guides also contain dormitory quotas, scholarships and forms.
+        # Their repeated topic words must not outrank admission requirements.
+        auxiliary = (("생활관", "기숙사"), ("장학",), ("각종서식", "개인정보수집", "지원자격확인서"))
+        if any(any(term in heading for term in group) and not any(term in kw for term in group for kw in kw_clean) for group in auxiliary):
+            continue
         bonus = keyword_bonus_score(pages_text[i], kw_clean)
-        final_scores.append((i, float(b) + bonus))
+        coverage = hits / len(kw_clean)
+        heading_bonus = 0.0
+        for group in topic_groups:
+            # Prefer an actual section heading over incidental body references.
+            for line in pages_text[i].splitlines()[:35]:
+                compact = normalize_for_match(line)
+                compact = re.sub(r"^[\dⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ가나다라마바사]+", "", compact)
+                if compact in group or (group[0] == "모집인원" and compact in ("모집단위및모집인원", "모집단위별모집인원", "전형별모집단위모집인원", "모집인원총괄표")):
+                    heading_bonus = 0.35
+        final_scores.append((i, float(b) + bonus + 0.2 * coverage + heading_bonus + (0.6 if major_hits else 0)))
 
     final_scores.sort(key=lambda x: x[1], reverse=True)
     return final_scores[:k]
+
+
+def is_contents_page(text: str) -> bool:
+    """Do not treat dotted table-of-contents entries as factual evidence."""
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    entries = sum(bool(re.search(r"[.·ㆍ…]{3,}\s*\d+\s*$", line)) for line in lines)
+    leading_pages = sum(bool(re.match(r"^\d+\s+[가-힣]", line)) for line in lines)
+    return (entries >= 3 and entries >= len(lines) / 2) or (leading_pages >= 3 and leading_pages >= len(lines) / 2)
 
 
 # ---------------------------
@@ -267,14 +320,26 @@ def search_top_pages_for_query(
     kw_ex: KeywordExtractorBridge,
     api_key: str,
     gemini_model: str,
-    top_pages: int = 5
+    top_pages: int = 5,
+    query_plan=None,
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], Dict[str, Any]]:
 
-    ner_uni = uni_ex.extract_uni(text)
-    ner_type = type_ex.extract_type(text)
-    ner_kw = kw_ex.extract_keywords(text)
+    plan = query_plan
+    if plan is None:
+        plan = build_question_plan(text, {
+            "UNI": uni_ex.extract_uni(text), "TYPE": type_ex.extract_type(text),
+            "KEYWORD": kw_ex.extract_keywords(text),
+        })
+    ner_uni = plan.universities
+    ner_type = plan.rounds
+    ner_kw = list(plan.keywords)
+    # Preserve explicit requested topics even when the keyword model misses them.
+    compact_question = normalize_for_match(text)
+    for group in TOPIC_TERMS:
+        if any(term in compact_question for term in group) and group[0] not in ner_kw:
+            ner_kw.append(group[0])
 
-    decision = final_bucket(ner_uni, ner_type, ner_kw)
+    decision = "문서탐색" if plan.intent in {"fact", "discovery"} else "답변 생성"
 
     rows: List[Dict[str, Any]] = []
     stats = {"pairs": 0, "docs_found": 0, "pages_scored": 0}
@@ -299,17 +364,21 @@ def search_top_pages_for_query(
         return rows, stats, ner_dump
 
     # 페어 생성
-    smart_pairs = build_pairs_smart(text, ner_uni, ner_type, ner_kw)
+    search_unis = [u for u in (ner_uni or list(UNIVERSITIES))
+                   if u not in plan.constraints.get("excluded_universities", [])]
+    search_types = ner_type or ["수시", "정시"]
+    pair_text = text
+    for canonical, aliases in UNIVERSITIES.items():
+        for alias in aliases:
+            pair_text = pair_text.replace(alias, canonical)
+    smart_pairs = build_pairs_smart(pair_text, search_unis, search_types, ner_kw)
     if smart_pairs:
         pairs = smart_pairs
     else:
-        pairs = gemini_sort(api_key, gemini_model, ner_uni, ner_type, ner_kw)
-
-        uni_list = ner_uni if isinstance(ner_uni, list) else ([ner_uni] if ner_uni else [])
-        type_list = ner_type if isinstance(ner_type, list) else ([ner_type] if ner_type else [])
-
-        if (not pairs) and uni_list and type_list:
-            pairs = [{"UNI": u, "TYPE": t, "KEYWORD": ner_kw} for u in uni_list for t in type_list]
+        # Broad discovery or an unspecified round searches the available corpus.
+        # Explicit ambiguous multi-university/multi-round relations are not guessed.
+        pairs = ([{"UNI": u, "TYPE": t, "KEYWORD": ner_kw} for u in search_unis for t in search_types]
+                 if not ner_uni or not ner_type else [])
 
     stats["pairs"] = len(pairs)
 
@@ -374,7 +443,26 @@ def search_top_pages_for_query(
         labels = [pp.get("label") for pp in labeled_pages]  # label may be None
 
         internal_k = max(top_pages, 12)
-        ranking = score_pages(pages_text, klist, k=internal_k)
+        rankings = []
+        for topic in plan.topics or [None]:
+            focus = ([topic] if topic in ("전형일정", "영어등급", "제출서류") else
+                     [kw for kw in klist if kw not in plan.topics] + ([topic] if topic else []))
+            rankings.append(score_pages(pages_text, focus, k=len(pages_text)))
+        ranking = []
+        seen = set()
+        # Reserve evidence for each requested topic before filling remaining slots.
+        for rank in range(internal_k):
+            for candidates in rankings:
+                if rank < len(candidates) and candidates[rank][0] not in seen:
+                    index, score = candidates[rank]
+                    page = normalize_for_match(pages_text[index])
+                    if plan.constraints.get("art") and not any(x in page for x in ("미술", "회화", "조소", "디자인", "조형")):
+                        continue
+                    if plan.tracks and not any(t in plan.topics for t in ("영어등급", "전형일정", "제출서류")) and not any(normalize_for_match(t) in page for t in plan.tracks):
+                        # A named track is a real constraint, not a score bonus.
+                        continue
+                    seen.add(index)
+                    ranking.append((index, score))
 
         # 대학별 실제 모집단위 별칭이 적용된 모집인원 질문은 별칭이 직접
         # 등장하고 숫자 근거가 풍부한 페이지를 우선한다. 일반 질문의
@@ -386,11 +474,12 @@ def search_top_pages_for_query(
                 idx, score = item
                 page = pages_text[idx]
                 alias_hit = any(term in page for term in alias_terms)
-                number_count = len(re.findall(r"\d+", page))
-                return (1 if alias_hit else 0, min(number_count, 100), float(score))
+                return (1 if alias_hit else 0, float(score))
 
             ranking = sorted(ranking, key=alias_page_priority, reverse=True)
-        ranking = ranking[:3] if ranking else []
+        # Unlabelled text chunks are not PDF page numbers.
+        ranking = [(idx, score) for idx, score in ranking if isinstance(labels[idx], int)]
+        ranking = ranking[:max(0, top_pages)]
 
         if not ranking:
             rows.append({

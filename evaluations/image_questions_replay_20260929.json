@@ -1,0 +1,615 @@
+{
+  "mode": "recorded NER and LLM replay; no external API",
+  "source": "evaluations\\image_questions_final_localner_20260929.json",
+  "items": [
+    {
+      "id": 1,
+      "answer": "건국대 수시\n건국대학교 수시 전형의 원서접수는 2025년 9월 9일(화) 10:00부터 9월 12일(금) 17:00까지 진행됩니다.\n서류 제출(PDF 업로드)은 2025년 9월 9일(화) 10:00부터 9월 16일(화) 17:00까지 가능합니다.\n학교장 추천 명단 입력은 2025년 9월 15일(월) 9:00부터 9월 19일(금) 18:00까지 이루어집니다.\n최초합격자 발표는 2025년 12월 12일(금) 14:00 예정입니다.",
+      "changed": false,
+      "sources": [
+        "- 건국대 , 수시 모집요강 p.19"
+      ],
+      "stats": {
+        "pairs": 1,
+        "docs_found": 1,
+        "pages_scored": 82,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              24,
+              52,
+              19
+            ],
+            "cited_pages": [
+              19
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "answer": "연세대 정시\n연세대학교 정시 전형 방법은 모든 전형요소를 일괄합산하여 선발하는 방식입니다.\n연세대학교 정시 전형의 제출서류는 학교생활기록부, 합격증명서/졸업(예정)증명서, 지원자격 증빙서류, 기타서류로 구분됩니다.",
+      "changed": false,
+      "sources": [
+        "- 연세대 , 정시 모집요강 p.16, p.18, p.19, p.28"
+      ],
+      "stats": {
+        "pairs": 1,
+        "docs_found": 1,
+        "pages_scored": 64,
+        "evidence": [
+          {
+            "university": "연세대",
+            "round": "정시",
+            "candidate_pages": [
+              16,
+              6,
+              19,
+              28,
+              18,
+              44
+            ],
+            "cited_pages": [
+              28,
+              16,
+              19,
+              18
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "answer": "건국대 정시\n제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": true,
+      "sources": [],
+      "stats": {
+        "pairs": 1,
+        "docs_found": 1,
+        "pages_scored": 47,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "정시",
+            "candidate_pages": [
+              5,
+              34,
+              23,
+              35,
+              26,
+              33
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "answer": "건국대 수시\n건국대학교의 2026학년도 수시 전형 일정은 다음과 같습니다: 원서접수는 2025년 9월 9일(화) 10:00부터 9월 12일(금) 17:00까지이며, 서류 제출은 2025년 9월 9일(화) 10:00부터 9월 16일(화) 17:00까지입니다.\n최초합격자 발표는 2025년 12월 12일(금) 14:00 예정입니다.\n\n서울대 수시\n서울대학교 학생부종합전형(지역균형전형)의 수시 전형 일정은 다음과 같습니다: 지원서 접수는 2025년 9월 8일(월) 10:00부터 9월 10일(수) 18:00까지이며, 서류 제출은 2025년 9월 8일(월)부터 9월 11일(목) 10:00부터 18:00까지입니다. 1단계 합격자 발표는 2025년 11월 21일(금) 18:00 이후이며, 면접은 2025년 11월 28일(금) 전 모집단위에서 실시됩니다.\n\n연세대 수시\n연세대학교의 논술전형 수시 전형 일정은 다음과 같습니다: 인터넷 원서접수는 2025년 9월 9일(화) 10:00부터 9월 11일(목) 17:00까지이며, 서류 제출은 2025년 9월 9일(화) 10:00부터 9월 12일(금) 17:00까지입니다. 논술시험은 2025년 9월 27일(토)에 실시되며, 최종합격자 발표는 2025년 12월 12일(금) 18:00입니다.\n\n고려대 수시\n제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": false,
+      "sources": [
+        "- 건국대 , 수시 모집요강 p.19",
+        "- 서울대 , 수시 모집요강 p.5, p.17",
+        "- 연세대 , 수시 모집요강 p.46"
+      ],
+      "stats": {
+        "pairs": 4,
+        "docs_found": 4,
+        "pages_scored": 355,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              24,
+              52,
+              19
+            ],
+            "cited_pages": [
+              19
+            ]
+          },
+          {
+            "university": "서울대",
+            "round": "수시",
+            "candidate_pages": [
+              5,
+              13,
+              17
+            ],
+            "cited_pages": [
+              5,
+              17
+            ]
+          },
+          {
+            "university": "연세대",
+            "round": "수시",
+            "candidate_pages": [
+              46,
+              49,
+              13
+            ],
+            "cited_pages": [
+              46
+            ]
+          },
+          {
+            "university": "고려대",
+            "round": "수시",
+            "candidate_pages": [
+              22,
+              8,
+              26
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "answer": "서울대 수시\n컴퓨터공학부: 정원 내 지역균형전형 9명, 정원 내 일반전형 36명, 정원 내 기회균형특별전형 4명, 정원 내 합계 49명.\n\n서울대 정시\n컴퓨터공학부: 정원 내 일반전형 36명, 정원 내 합계 36명.",
+      "changed": false,
+      "sources": [
+        "- 서울대 , 수시 모집요강 p.10",
+        "- 서울대 , 정시 모집요강 p.13"
+      ],
+      "stats": {
+        "pairs": 2,
+        "docs_found": 2,
+        "pages_scored": 172,
+        "evidence": [
+          {
+            "university": "서울대",
+            "round": "수시",
+            "cited_pages": [
+              10
+            ],
+            "handler": "verified_table"
+          },
+          {
+            "university": "서울대",
+            "round": "정시",
+            "cited_pages": [
+              13
+            ],
+            "handler": "verified_table"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "answer": "대학 선택은 희망 전공과 진로, 교육과정, 생활비·주거비, 통학 또는 이주 가능성을 기준으로 비교하는 것이 좋습니다. 지원 가능성은 성적과 지원 전형을 함께 확인해야 판단할 수 있습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "counseling"
+      }
+    },
+    {
+      "id": 7,
+      "answer": "대학 선택은 희망 전공과 진로, 교육과정, 생활비·주거비, 통학 또는 이주 가능성을 기준으로 비교하는 것이 좋습니다. 지원 가능성은 성적과 지원 전형을 함께 확인해야 판단할 수 있습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "counseling"
+      }
+    },
+    {
+      "id": 8,
+      "answer": "대학 선택은 희망 전공과 진로, 교육과정, 생활비·주거비, 통학 또는 이주 가능성을 기준으로 비교하는 것이 좋습니다. 지원 가능성은 성적과 지원 전형을 함께 확인해야 판단할 수 있습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "counseling"
+      }
+    },
+    {
+      "id": 9,
+      "answer": "어느 대학이 더 합격하기 쉬운지는 현재 정보만으로 판단할 수 없습니다. 본인의 영역별 성적을 각 대학의 반영 방식으로 환산하고, 같은 전형·모집단위의 공식 입시결과와 모집인원을 비교해야 합니다.\n\n고려대 수시\n제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.\n\n연세대 정시\n제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "pairs": 2,
+        "docs_found": 2,
+        "pages_scored": 166,
+        "evidence": [
+          {
+            "university": "고려대",
+            "round": "수시",
+            "candidate_pages": [
+              22,
+              8,
+              26
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "연세대",
+            "round": "정시",
+            "candidate_pages": [
+              15,
+              20,
+              22
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "answer": "어느 대학이 더 합격하기 쉬운지는 현재 정보만으로 판단할 수 없습니다. 본인의 영역별 성적을 각 대학의 반영 방식으로 환산하고, 같은 전형·모집단위의 공식 입시결과와 모집인원을 비교해야 합니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "counseling"
+      }
+    },
+    {
+      "id": 11,
+      "answer": "건국대 수시\n건국대학교 컴퓨터공학부의 논술 전형은 수능최저학력기준이 있습니다.\n질문하신 내용 중 일부는 발췌 근거로 확인하지 못했습니다.",
+      "changed": false,
+      "sources": [
+        "- 건국대 , 수시 모집요강 p.43"
+      ],
+      "stats": {
+        "pairs": 1,
+        "docs_found": 1,
+        "pages_scored": 82,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              43,
+              7,
+              44
+            ],
+            "cited_pages": [
+              43
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "answer": "모집요강만으로는 경쟁률·충원 결과·합격 백분위나 미달 여부를 비교하기 어렵습니다. 해당 대학 입학처의 전형·모집단위별 공식 입시결과가 필요합니다. 합격 가능성은 본인 성적을 대학별 반영 방식으로 환산한 뒤 비교해야 합니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "external_data"
+      }
+    },
+    {
+      "id": 13,
+      "answer": "제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "pairs": 14,
+        "docs_found": 14,
+        "pages_scored": 1053,
+        "discovery_pairs_considered": 14,
+        "discovery_pairs_answered": 6,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              46
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "서울대",
+            "round": "정시",
+            "candidate_pages": [
+              53,
+              28,
+              67
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "한양대",
+            "round": "정시",
+            "candidate_pages": [
+              46,
+              19,
+              30
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "서울대",
+            "round": "수시",
+            "candidate_pages": [
+              24,
+              35,
+              44
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "한양대",
+            "round": "수시",
+            "candidate_pages": [
+              12,
+              39,
+              21
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "연세대",
+            "round": "수시",
+            "candidate_pages": [
+              45
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "answer": "모집요강만으로는 경쟁률·충원 결과·합격 백분위나 미달 여부를 비교하기 어렵습니다. 해당 대학 입학처의 전형·모집단위별 공식 입시결과가 필요합니다. 합격 가능성은 본인 성적을 대학별 반영 방식으로 환산한 뒤 비교해야 합니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "external_data"
+      }
+    },
+    {
+      "id": 15,
+      "answer": "모집요강만으로는 경쟁률·충원 결과·합격 백분위나 미달 여부를 비교하기 어렵습니다. 해당 대학 입학처의 전형·모집단위별 공식 입시결과가 필요합니다. 합격 가능성은 본인 성적을 대학별 반영 방식으로 환산한 뒤 비교해야 합니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "external_data"
+      }
+    },
+    {
+      "id": 16,
+      "answer": "제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "pairs": 14,
+        "docs_found": 14,
+        "pages_scored": 1053,
+        "discovery_pairs_considered": 14,
+        "discovery_pairs_answered": 6,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              46
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "서울대",
+            "round": "정시",
+            "candidate_pages": [
+              53,
+              28,
+              67
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "한양대",
+            "round": "정시",
+            "candidate_pages": [
+              46,
+              19,
+              30
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "서울대",
+            "round": "수시",
+            "candidate_pages": [
+              24,
+              35,
+              44
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "한양대",
+            "round": "수시",
+            "candidate_pages": [
+              12,
+              39,
+              21
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "연세대",
+            "round": "수시",
+            "candidate_pages": [
+              45
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "answer": "제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "pairs": 14,
+        "docs_found": 14,
+        "pages_scored": 1053,
+        "discovery_pairs_considered": 14,
+        "discovery_pairs_answered": 6,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              46
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "서울대",
+            "round": "수시",
+            "candidate_pages": [
+              24,
+              44,
+              35
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "서울대",
+            "round": "정시",
+            "candidate_pages": [
+              53,
+              28,
+              67
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "한양대",
+            "round": "정시",
+            "candidate_pages": [
+              46,
+              19,
+              30
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "한양대",
+            "round": "수시",
+            "candidate_pages": [
+              12,
+              39,
+              21
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "연세대",
+            "round": "수시",
+            "candidate_pages": [
+              45
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "answer": "건국대 수시\n제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.\n\n건국대 정시\n제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": true,
+      "sources": [],
+      "stats": {
+        "pairs": 2,
+        "docs_found": 2,
+        "pages_scored": 129,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              37,
+              31,
+              26
+            ],
+            "cited_pages": []
+          },
+          {
+            "university": "건국대",
+            "round": "정시",
+            "candidate_pages": [
+              23,
+              5,
+              26
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "answer": "물리 미이수나 내신 등급만으로 합격·불합격 또는 불이익의 크기를 판단할 수 없습니다. 지원 전형의 교과 이수·서류평가 기준과 실제 이수 과목, 진로 관련 활동을 함께 확인해야 합니다.\n\n건국대 수시\n제공된 모집요강 발췌에서는 해당 내용을 확인하지 못했습니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "pairs": 1,
+        "docs_found": 1,
+        "pages_scored": 82,
+        "evidence": [
+          {
+            "university": "건국대",
+            "round": "수시",
+            "candidate_pages": [
+              62,
+              61
+            ],
+            "cited_pages": []
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "answer": "모집요강만으로는 경쟁률·충원 결과·합격 백분위나 미달 여부를 비교하기 어렵습니다. 해당 대학 입학처의 전형·모집단위별 공식 입시결과가 필요합니다. 합격 가능성은 본인 성적을 대학별 반영 방식으로 환산한 뒤 비교해야 합니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "external_data"
+      }
+    },
+    {
+      "id": 21,
+      "answer": "건물 위치와 시설은 모집요강으로 확인하기 어렵습니다. 해당 대학의 공식 캠퍼스 지도와 시설 안내에서 확인해야 합니다.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "campus"
+      }
+    },
+    {
+      "id": 22,
+      "answer": "어느 대학의 전형을 확인해 드릴까요?",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "clarify"
+      }
+    },
+    {
+      "id": 23,
+      "answer": "궁금했던 학과나 대학 이야기를 해볼까요? 저는 대학 입시와 전형 정보를 함께 살펴드릴 수 있어요.",
+      "changed": false,
+      "sources": [],
+      "stats": {
+        "handler": "smalltalk"
+      }
+    }
+  ]
+}

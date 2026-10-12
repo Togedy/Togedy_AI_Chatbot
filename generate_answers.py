@@ -11,7 +11,8 @@ from collections import defaultdict
 from functools import lru_cache
 from typing import Any, Dict, List, Optional, Tuple
 
-from search_and_export import search_top_pages_for_query
+from search_and_export import search_top_pages_for_query, normalize_for_match
+from llm.evidence import EVIDENCE_INSTRUCTIONS, NO_EVIDENCE, validate_document_answer
 
 from extract_all import (
     UniExtractor,
@@ -498,16 +499,19 @@ def build_quota_sources(selected_pages: Dict[Tuple[str, str], List[int]]) -> Lis
 
 
 def pick_best_quota_pages(rows: List[Dict[str, Any]], majors: List[str], max_pages: int = 2) -> List[Dict[str, Any]]:
+    rows = usable_document_rows(rows)
     if not rows:
         return []
 
-    majors = [m for m in (majors or []) if m and str(m).strip()]
+    majors = extract_requested_major_terms("", majors)
+    alias_terms, _ = collect_major_alias_info(rows)
+    targets = majors + alias_terms
 
     def contains_major(snippet: str) -> bool:
-        if not majors:
+        if not targets:
             return True
-        s = snippet or ""
-        return any(m in s for m in majors)
+        s = normalize_for_match(snippet or "")
+        return any(normalize_for_match(m) in s for m in targets)
 
     rows_sorted = sorted(
         rows,
@@ -528,23 +532,11 @@ def pick_best_quota_pages(rows: List[Dict[str, Any]], majors: List[str], max_pag
             continue
         if pno in used_pages:
             continue
-        if contains_major(r.get("snippet", "")):
+        if contains_major(load_page_text(r["doc_path"], pno)):
             picked.append(r)
             used_pages.add(pno)
         if len(picked) >= max_pages:
             return picked
-
-    for r in rows_sorted:
-        try:
-            pno = int(r.get("page_index"))
-        except Exception:
-            continue
-        if pno in used_pages:
-            continue
-        picked.append(r)
-        used_pages.add(pno)
-        if len(picked) >= max_pages:
-            break
 
     return picked
 
@@ -630,6 +622,7 @@ def sanitize_final_answer(text: str) -> str:
 
 
 def build_pair_doc_context(prows: List[Dict[str, Any]], max_items: int = 3) -> str:
+    prows = usable_document_rows(prows)
     if not prows:
         return ""
 
@@ -655,16 +648,35 @@ def build_pair_doc_context(prows: List[Dict[str, Any]], max_items: int = 3) -> s
             except (OSError, UnicodeError):
                 page_text = ""
 
-        # 원문 페이지를 읽을 수 없는 행만 검색 스니펫으로 대체한다.
-        # 일정표·제출서류표의 행과 열 관계를 보존하려면 줄바꿈이 있는
-        # 페이지 원문을 LLM에 전달해야 한다.
-        body = page_text or str(r.get("snippet", "") or "").strip()
+        # Keep the original page and table line breaks; snippets are not evidence.
+        body = page_text
         if isinstance(page_index, int):
             lines.append(f"[p.{page_index}]\n{body}")
         else:
             lines.append(body)
 
     return "\n".join([x for x in lines if x]).strip()
+
+
+def usable_document_rows(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Error placeholders and unavailable pages are never evidence."""
+    valid = []
+    seen = set()
+    for row in rows:
+        page, path = row.get("page_index"), row.get("doc_path")
+        if type(page) is not int or page <= 0 or not path or float(row.get("score", 0)) <= 0:
+            continue
+        key = (path, page)
+        if key in seen:
+            continue
+        try:
+            if not load_page_text(path, page).strip():
+                continue
+        except (OSError, UnicodeError):
+            continue
+        seen.add(key)
+        valid.append(row)
+    return valid
 
 
 def collect_major_alias_info(rows: List[Dict[str, Any]]) -> Tuple[List[str], List[str]]:
@@ -730,333 +742,13 @@ def build_missing_major_answer(uni: str, missing_majors: List[str]) -> str:
     )
 
 
-def answer_one(
-    text: str,
-    uni_ex: UniExtractor,
-    type_ex: TypeExtractor,
-    kw_ex: KeywordExtractorBridge,
-    api_key: str,
-    gemini_model: str,
-    llm_model: str = "gpt-4o-mini",
-    top_pages: int = 3,
-    quota_pages_per_pair: int = 2,
-) -> Dict[str, Any]:
-    rows, stats, ner = search_top_pages_for_query(
-        text,
-        uni_ex,
-        type_ex,
-        kw_ex,
-        api_key,
-        gemini_model,
-        top_pages=top_pages,
-    )
+def answer_one(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
+               llm_model="gpt-4o-mini", top_pages=3, quota_pages_per_pair=2,
+               ner_override=None):
+    from llm.document_pipeline import answer_with_plan
+    return answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
+                            llm_model, top_pages, quota_pages_per_pair, ner_override)
 
-    decision = (ner.get("decision", "") or "").strip()
-
-    ner_uni = ner.get("uni") or []
-    ner_type = ner.get("type") or []
-    ner_kw = ner.get("keywords") or []
-    if not isinstance(ner_uni, list):
-        ner_uni = [ner_uni]
-    if not isinstance(ner_type, list):
-        ner_type = [ner_type]
-    if not isinstance(ner_kw, list):
-        ner_kw = [ner_kw]
-
-    pair_to_rows: Dict[Tuple[str, str], List[Dict[str, Any]]] = defaultdict(list)
-    for r in rows:
-        uni = (r.get("matched_uni") or "").strip()
-        typ = (r.get("matched_type") or "").strip()
-        if not uni or not typ:
-            continue
-        pair_to_rows[(uni, typ)].append(r)
-
-    has_uni = len([x for x in ner_uni if str(x).strip()]) > 0
-    has_type = len([x for x in ner_type if str(x).strip()]) > 0
-    has_kw = len([x for x in ner_kw if str(x).strip()]) > 0
-
-    if (not has_uni) and (not has_type) and has_kw:
-        decision = "키워드답변"
-
-    answer_text = ""
-    sources_lines: List[str] = []
-
-    # 모든 문서 검색형 질문에 공통 적용한다. 요청 모집단위가 해당 대학의
-    # 전체 모집요강에 없고 확인된 별칭도 없다면 LLM이 유사 학과를
-    # 추측하기 전에 결정적인 안내문을 반환한다.
-    requested_major_terms = extract_requested_major_terms(text, ner_kw)
-    missing_major_answers: List[str] = []
-    missing_major_pairs = set()
-    for (uni, typ), prows in pair_to_rows.items():
-        alias_terms, _ = collect_major_alias_info(prows)
-        missing_terms = missing_major_terms_in_documents(requested_major_terms, prows)
-        if missing_terms and not alias_terms:
-            missing_major_answers.append(
-                f"- {uni} {typ}: {build_missing_major_answer(uni, missing_terms)}"
-            )
-            missing_major_pairs.add((uni, typ))
-
-    if pair_to_rows and len(missing_major_pairs) == len(pair_to_rows):
-        return {
-            "input": text,
-            "ner_uni": ner_uni,
-            "ner_type": ner_type,
-            "ner_kw": ner_kw,
-            "decision": decision,
-            "stats": stats,
-            "pair_to_rows": {pair: [] for pair in pair_to_rows},
-            "answer": "\n".join(missing_major_answers).strip(),
-            "sources": [],
-        }
-
-    if decision == "키워드답변":
-        keywords_str = ", ".join([str(k).strip() for k in ner_kw if str(k).strip()]) or "(미추출)"
-        user_prompt = KEYWORD_ONLY_USER_TEMPLATE.format(
-            question=text,
-            keywords=keywords_str,
-        )
-
-        main_answer = gpt_chat(
-            system_prompt=EXPERT_SYSTEM_PROMPT,
-            user_prompt=user_prompt,
-            model=llm_model,
-            temperature=0.3,
-        ).strip()
-
-        # 재질문은 run_single_turn/run_followup_turn에서 부족 슬롯을 기준으로
-        # 한 번만 붙인다. 여기서는 본문만 반환해 중복 질문을 방지한다.
-        answer_text = main_answer.strip()
-        sources_lines = []
-
-        return {
-            "input": text,
-            "ner_uni": ner_uni,
-            "ner_type": ner_type,
-            "ner_kw": ner_kw,
-            "decision": decision,
-            "stats": stats,
-            "pair_to_rows": pair_to_rows,
-            "answer": answer_text,
-            "sources": sources_lines,
-        }
-
-    if decision != "문서탐색":
-        user_prompt = DIRECT_ANSWER_USER_TEMPLATE.format(question=text)
-
-        main_answer = gpt_chat(
-            system_prompt=EXPERT_SYSTEM_PROMPT,
-            user_prompt=user_prompt,
-            model=llm_model,
-            temperature=0.3,
-        ).strip()
-
-        # 재질문은 run_single_turn/run_followup_turn에서 부족 슬롯을 기준으로
-        # 한 번만 붙인다. 여기서는 본문만 반환해 중복 질문을 방지한다.
-        answer_text = main_answer.strip()
-        sources_lines = []
-
-        return {
-            "input": text,
-            "ner_uni": ner_uni,
-            "ner_type": ner_type,
-            "ner_kw": ner_kw,
-            "decision": decision,
-            "stats": stats,
-            "pair_to_rows": pair_to_rows,
-            "answer": answer_text,
-            "sources": sources_lines,
-        }
-
-    if is_quota_question(text):
-        majors = [k for k in ner_kw if k and str(k).strip()]
-        requested_majors = extract_requested_major_terms(text, majors)
-        lines = ["모집 인원은 다음과 같습니다.\n"]
-        selected_pages: Dict[Tuple[str, str], List[int]] = {}
-        missing_major_pairs = set()
-
-        for (uni, typ), prows in pair_to_rows.items():
-            alias_terms, _ = collect_major_alias_info(prows)
-            missing_majors = missing_major_terms_in_documents(requested_majors, prows)
-            if missing_majors and not alias_terms:
-                lines.append(f"- {uni} {typ}: {build_missing_major_answer(uni, missing_majors)}")
-                selected_pages[(uni, typ)] = []
-                missing_major_pairs.add((uni, typ))
-                continue
-
-            picks = pick_best_quota_pages(prows, majors, max_pages=quota_pages_per_pair)
-            if not picks:
-                lines.append(f"- {uni} {typ}: 해당 항목을 정확히 보려면 학과나 모집단위 키워드를 조금 더 알려주세요.")
-                selected_pages[(uni, typ)] = []
-                continue
-
-            page_texts: List[Tuple[int, str]] = []
-            used_page_nums: List[int] = []
-
-            for p in picks:
-                doc_path = p.get("doc_path", "")
-                try:
-                    page_no = int(p.get("page_index"))
-                except Exception:
-                    continue
-                if not doc_path or not os.path.exists(doc_path):
-                    continue
-                page_txt = load_page_text(doc_path, page_no)
-                if not page_txt.strip():
-                    continue
-                page_texts.append((page_no, page_txt))
-                used_page_nums.append(page_no)
-
-            selected_pages[(uni, typ)] = used_page_nums
-
-            if not page_texts:
-                lines.append(f"- {uni} {typ}: 모집단위(학과/학부) 키워드를 조금 더 알려주시면 더 정확히 안내해 드릴 수 있습니다.")
-                continue
-
-            _, alias_notes = collect_major_alias_info(prows)
-            prompt = build_quota_prompt(text, uni, typ, majors, page_texts, alias_notes=alias_notes)
-            quota_ans = call_llm(
-                user_prompt=prompt,
-                model=llm_model,
-                temperature=0.0,
-                system_prompt=EXPERT_SYSTEM_PROMPT,
-            ).strip()
-
-            quota_ans = sanitize_pair_answer(quota_ans)
-            if alias_notes and not ("통합 모집" in quota_ans and "2학년" in quota_ans):
-                quota_ans = f"{alias_notes[0]}\n{quota_ans}".strip()
-            lines.append(f"- {uni} {typ}: {quota_ans}")
-
-        answer_text = "\n".join(lines).strip()
-
-        # 존재하지 않는 모집단위 안내에는 관련 없는 검색 페이지를 API
-        # 근거로 반환하지 않는다.
-        for pair in missing_major_pairs:
-            pair_to_rows[pair] = []
-
-        if not majors:
-            answer_text += "\n\n학과 또는 모집단위가 지정되지 않아 문서에 확인되는 범위만 정리했습니다."
-
-        sources_lines = build_quota_sources(selected_pages)
-
-        return {
-            "input": text,
-            "ner_uni": ner_uni,
-            "ner_type": ner_type,
-            "ner_kw": ner_kw,
-            "decision": decision,
-            "stats": stats,
-            "pair_to_rows": pair_to_rows,
-            "answer": answer_text,
-            "sources": sources_lines,
-        }
-
-    # -------------------------------------------------------------------------
-    # 문서탐색 답변: 대학/전형 페어별로 각각 GPT 호출
-    # -------------------------------------------------------------------------
-    valid_document_rows = [
-        r for r in rows
-        if r.get("page_index", -1) != -1 and str(r.get("snippet", "") or "").strip()
-    ]
-    if not pair_to_rows or not valid_document_rows:
-        alias_terms, alias_notes = collect_major_alias_info(rows)
-        if alias_terms:
-            suggested = ", ".join(f"'{term}'" for term in alias_terms)
-            relation = f" {' '.join(alias_notes)}" if alias_notes else ""
-            missing_answer = (
-                f"요청한 학과명으로 직접 모집하는 항목은 확인하지 못했습니다.{relation} "
-                f"모집요강의 실제 모집단위인 {suggested} 키워드로 확인해 주세요."
-            ).strip()
-        else:
-            missing_answer = "현재 보유한 모집요강 자료에서 해당 항목을 찾지 못했습니다."
-        return {
-            "input": text,
-            "ner_uni": ner_uni,
-            "ner_type": ner_type,
-            "ner_kw": ner_kw,
-            "decision": decision,
-            "stats": stats,
-            "pair_to_rows": pair_to_rows,
-            "answer": missing_answer,
-            "sources": [],
-        }
-
-    lines: List[str] = []
-
-    for (uni, typ), prows in pair_to_rows.items():
-        pair_context = build_pair_doc_context(prows, max_items=top_pages)
-        pair_sources = build_sources_from_rows(prows, topk=top_pages)
-
-        if not pair_context.strip():
-            continue
-
-        doc_user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
-            question=f"{text}\n\n단, 이번 답변은 반드시 {uni} {typ}에 대해서만 답변해 주세요.",
-            context=pair_context,
-            sources=pair_sources,
-        )
-
-        pair_answer = gpt_chat(
-            system_prompt=EXPERT_SYSTEM_PROMPT,
-            user_prompt=doc_user_prompt,
-            model=llm_model,
-            temperature=0.1,
-        ).strip()
-
-        pair_answer = sanitize_pair_answer(pair_answer)
-
-        _, alias_notes = collect_major_alias_info(prows)
-        if alias_notes and not ("통합 모집" in pair_answer and "2학년" in pair_answer):
-            pair_answer = f"{alias_notes[0]}\n{pair_answer}".strip()
-
-        if pair_answer:
-            lines.append(f"{uni} {typ}\n{pair_answer}")
-
-    # pair 결과가 하나도 없을 때만 기존 전체 컨텍스트 방식으로 fallback
-    if lines:
-        answer_text = "\n\n".join(lines).strip()
-    else:
-        context_blocks: List[str] = []
-        for (uni, typ), prows in pair_to_rows.items():
-            prows_sorted = sorted(prows, key=lambda r: int(r.get("page_index", 10**9)))
-            snippet_join = "\n".join([f"[p.{r.get('page_index')}] {r.get('snippet','')}" for r in prows_sorted])
-            context_blocks.append(f"({uni}, {typ}) 컨텍스트:\n{snippet_join}")
-
-        sources_str = "\n".join(build_sources(pair_to_rows))
-
-        doc_user_prompt = DOC_ANSWER_USER_TEMPLATE.format(
-            question=text,
-            context="\n\n".join(context_blocks).strip(),
-            sources=sources_str.strip(),
-        )
-
-        answer_text = gpt_chat(
-            system_prompt=EXPERT_SYSTEM_PROMPT,
-            user_prompt=doc_user_prompt,
-            model=llm_model,
-            temperature=0.1,
-        ).strip()
-
-    answer_text = sanitize_final_answer(answer_text)
-    sources_lines = build_sources(pair_to_rows)
-    sources_lines = [s for s in sources_lines if "(페이지 정보 없음)" not in s]
-
-    return {
-        "input": text,
-        "ner_uni": ner_uni,
-        "ner_type": ner_type,
-        "ner_kw": ner_kw,
-        "decision": decision,
-        "stats": stats,
-        "pair_to_rows": pair_to_rows,
-        "answer": answer_text,
-        "sources": sources_lines,
-    }
-
-
-
-# =============================================================================
-# 서버 연동용 대화 문맥 처리
-# =============================================================================
 
 ADMISSION_TERMS = [
     "입시", "대학", "대학교", "수시", "정시", "전형", "학과", "학부",
@@ -1137,10 +829,9 @@ def apply_explicit_followup_rules(
     compact = re.sub(r"\s+", "", raw).lower()
 
     # 전형명은 짧은 조사 결합 표현도 확실하게 인식한다.
-    if "정시" in compact:
-        result["TYPE"] = ["정시"]
-    elif "수시" in compact:
-        result["TYPE"] = ["수시"]
+    explicit_rounds = [round_name for round_name in ("수시", "정시") if round_name in compact]
+    if explicit_rounds:
+        result["TYPE"] = explicit_rounds
 
     explicit_keywords: List[str] = []
     for canonical, variants in EXPLICIT_KEYWORD_RULES:
@@ -1150,7 +841,7 @@ def apply_explicit_followup_rules(
     # 현재 문장에 직접 적힌 항목은 NER 추정보다 우선하되, 복합 질문의
     # 모든 항목을 보존한다(예: "전형방법과 제출 서류").
     if explicit_keywords:
-        result["KEYWORD"] = explicit_keywords
+        result["KEYWORD"] = list(dict.fromkeys(result["KEYWORD"] + explicit_keywords))
 
     return result
 
@@ -1286,6 +977,23 @@ def merge_ner_context(
         "TYPE": cur["TYPE"] if cur["TYPE"] else prev["TYPE"],
         "KEYWORD": cur["KEYWORD"] if cur["KEYWORD"] else prev["KEYWORD"],
     }
+
+    # A unit correction changes the unit, not the requested topic; a new topic
+    # alone likewise keeps the previously selected unit.
+    if cur["KEYWORD"]:
+        from question_plan import TOPICS, TRACKS
+        previous_topics = [k for k in prev["KEYWORD"] if k in TOPICS]
+        current_topics = [k for k in cur["KEYWORD"] if k in TOPICS]
+        is_major = lambda k: bool(re.search(r"(?:학과|학부|전공|예과|미술과|화과|조소과|디자인과|교육과)$", k))
+        current_majors = [k for k in cur["KEYWORD"] if is_major(k)]
+        if current_majors and not current_topics:
+            merged["KEYWORD"] = list(dict.fromkeys(cur["KEYWORD"] + previous_topics))
+        elif current_topics and not current_majors:
+            previous_majors = [k for k in prev["KEYWORD"] if is_major(k)]
+            merged["KEYWORD"] = list(dict.fromkeys(previous_majors + cur["KEYWORD"]))
+        elif any(k in TRACKS for k in cur["KEYWORD"]) and not current_topics and not current_majors:
+            previous_majors = [k for k in prev["KEYWORD"] if is_major(k)]
+            merged["KEYWORD"] = list(dict.fromkeys(previous_majors + previous_topics + cur["KEYWORD"]))
 
     # UNI가 KEYWORD에도 중복 추출된 경우 제거한다.
     merged["KEYWORD"] = [
@@ -1468,6 +1176,7 @@ def run_single_turn(
         api_key,
         gemini_model,
         llm_model=llm_model,
+        ner_override=current_ner,
     )
 
     result_ner = {
@@ -1476,22 +1185,8 @@ def run_single_turn(
         "KEYWORD": _slot_list(result.get("ner_kw")),
     }
 
-    # 직접 추출 결과가 더 잘 잡힌 슬롯은 보완한다.
-    result_ner = merge_ner_context(result_ner, current_ner)
-
-    result = _retry_document_search_if_needed(
-        result, question, result_ner,
-        uni_ex, type_ex, kw_ex, api_key, gemini_model, llm_model,
-    )
-    retry_ner = {
-        "UNI": _slot_list(result.get("ner_uni")),
-        "TYPE": _slot_list(result.get("ner_type")),
-        "KEYWORD": _slot_list(result.get("ner_kw")),
-    }
-    result_ner = merge_ner_context(result_ner, retry_ner)
-
-    answer = sanitize_final_answer(result.get("answer") or "")
-    decision = decision_from_ner(result_ner)
+    answer = result.get("answer") or ""
+    decision = result.get("decision") or "답변 생성"
 
     rows = _flatten_rows(result.get("pair_to_rows") or {})
     stats = result.get("stats") or {}
@@ -1573,6 +1268,10 @@ def run_followup_turn(
         )
 
     current_ner = _extract_ner_direct(user_input, uni_ex, type_ex, kw_ex)
+    from question_plan import build_question_plan
+    current_plan = build_question_plan(user_input, current_ner)
+    current_ner = current_plan.ner()
+    current_ner["KEYWORD"] = list(dict.fromkeys(current_ner["KEYWORD"] + current_plan.tracks))
 
     if is_out_of_domain_or_injection(user_input, current_ner):
         return (
@@ -1617,6 +1316,7 @@ def run_followup_turn(
         api_key,
         gemini_model,
         llm_model=llm_model,
+        ner_override=merged_ner,
     )
 
     result_ner = {
@@ -1625,22 +1325,9 @@ def run_followup_turn(
         "KEYWORD": _slot_list(result.get("ner_kw")),
     }
 
-    # 재작성 문장에서 추출이 누락되더라도 이미 병합한 NER가 사라지지 않게 한다.
-    final_ner = merge_ner_context(merged_ner, result_ner)
-
-    result = _retry_document_search_if_needed(
-        result, resolved_question, final_ner,
-        uni_ex, type_ex, kw_ex, api_key, gemini_model, llm_model,
-    )
-    retry_ner = {
-        "UNI": _slot_list(result.get("ner_uni")),
-        "TYPE": _slot_list(result.get("ner_type")),
-        "KEYWORD": _slot_list(result.get("ner_kw")),
-    }
-    final_ner = merge_ner_context(final_ner, retry_ner)
-
-    answer = sanitize_final_answer(result.get("answer") or "")
-    decision = decision_from_ner(final_ner)
+    final_ner = result_ner
+    answer = result.get("answer") or ""
+    decision = result.get("decision") or "답변 생성"
 
     rows = _flatten_rows(result.get("pair_to_rows") or {})
     stats = result.get("stats") or {}
