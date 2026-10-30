@@ -36,6 +36,14 @@ def compact(text):
     return re.sub(r"\s+", "", text or "")
 
 
+def normalize_question_text(question):
+    """Remove retry-form label help before both NER and rule interpretation."""
+    return re.sub(
+        r"(?m)^(\s*(?:대학|전형|학과·모집단위|희망 학과·전공|궁금한 내용))\([^\n]*?\)(?=\s*[:：])",
+        r"\1", question,
+    )
+
+
 def values(ner, key):
     value = (ner or {}).get(key, (ner or {}).get({"UNI": "uni", "TYPE": "type", "KEYWORD": "keywords"}[key], []))
     return list(dict.fromkeys(str(x).strip() for x in (value if isinstance(value, list) else [value]) if x))
@@ -53,12 +61,16 @@ class QuestionPlan:
     intent: str = "fact"
     advice: str = ""
     constraints: dict = field(default_factory=dict)
+    conversation_context: object = None
 
     def ner(self):
         return {"UNI": self.universities, "TYPE": self.rounds, "KEYWORD": self.keywords}
 
 
 def build_question_plan(question, ner=None):
+    # The retry form's examples are label help, not selected values. Leaving
+    # '전형(수시·정시):' blank must not count as requesting both rounds.
+    question = normalize_question_text(question)
     text = compact(question)
     plan = QuestionPlan(question)
     explicit = [u for u, names in UNIVERSITIES.items() if any(name in text for name in names)]
@@ -79,6 +91,8 @@ def build_question_plan(question, ner=None):
     if not plan.rounds and any(t in plan.tracks for t in ("논술", "학생부종합", "학생부교과", "KU자기추천", "학교추천전형", "학업우수전형", "계열적합전형", "미술특기자")):
         plan.rounds = ["수시"]
     plan.topics = [topic for topic, variants in TOPICS.items() if any(v in text for v in variants)]
+    if not plan.topics:
+        plan.topics = [k for k in values(ner, "KEYWORD") if k in TOPICS]
 
     # Background goals and explicitly excluded units must not become targets.
     target_text = re.sub(r"타\s*학교.*?목표[^,?.]*?건국", "건국", question)
@@ -129,14 +143,14 @@ def build_question_plan(question, ner=None):
                 "입력하신 반영 비율 조건을 함께 만족할 수 없습니다. 0~100% 범위에서 실기·수능 조건을 다시 말씀해 주세요."
             )
 
-    counseling = any(s in text for s in ("메리트", "더좋", "고민", "붙기쉬", "잘붙", "불이익", "힘들까"))
+    counseling = any(s in text for s in ("메리트", "더좋", "고민", "붙기쉬", "잘붙", "불이익", "불리", "괜찮을까", "가능할까", "힘들까"))
     if counseling:
         if "물리" in text or "불이익" in text:
-            plan.advice = "물리 미이수나 내신 등급만으로 합격·불합격 또는 불이익의 크기를 판단할 수 없습니다. 지원 전형의 교과 이수·서류평가 기준과 실제 이수 과목, 진로 관련 활동을 함께 확인해야 합니다."
+            plan.advice = "특정 과목을 이수하지 않은 점이 지원에 걸림돌이 될지 고민하고 계시는군요. 다만 과목 미이수나 내신 등급만으로 합격·불합격 또는 불이익의 크기를 판단할 수 없습니다. 어떤 과목을 선택했고 그 안에서 진로와 관련된 학습을 어떻게 이어왔는지, 지원 전형의 평가 기준과 함께 살펴보는 게 좋아요."
         elif any(s in text for s in ("붙기쉬", "잘붙", "정시")):
-            plan.advice = "어느 대학이 더 합격하기 쉬운지는 현재 정보만으로 판단할 수 없습니다. 본인의 영역별 성적을 각 대학의 반영 방식으로 환산하고, 같은 전형·모집단위의 공식 입시결과와 모집인원을 비교해야 합니다."
+            plan.advice = "지원 가능성을 비교하고 싶으시군요. 어느 대학이 더 합격하기 쉬운지는 현재 정보만으로 판단할 수 없습니다. 먼저 영역별 성적을 대학별 반영 방식으로 환산한 뒤, 같은 전형과 모집단위의 공식 입시결과를 함께 비교해 보는 게 좋아요."
         else:
-            plan.advice = "대학 선택은 희망 전공과 진로, 교육과정, 생활비·주거비, 통학 또는 이주 가능성을 기준으로 비교하는 것이 좋습니다. 지원 가능성은 성적과 지원 전형을 함께 확인해야 판단할 수 있습니다."
+            plan.advice = "대학을 고를 때는 희망 전공과 진로에 맞는 교육과정부터 비교해 보면 좋아요. 생활비와 통학·이주 가능성도 함께 생각해 보고요. 지원 가능성은 성적과 지원 전형을 확인한 뒤 따로 살펴볼게요."
         if not plan.topics:
             plan.intent = "counseling"
     if any(s in text for s in ("경쟁률", "백분위", "예비번호", "미달")) and not plan.topics:

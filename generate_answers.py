@@ -34,9 +34,10 @@ PAGE_LABEL_RE = re.compile(r"^\s*={2,}\s*Page\s*(\d+)\s*={2,}\s*$", re.IGNORECAS
 # =============================================================================
 
 EXPERT_SYSTEM_PROMPT = (
-    "당신은 한국 대학 입시 정보를 정확하게 안내하는 근거 중심 챗봇입니다.\n"
+    "당신은 학생과 대화하며 지원 준비를 돕는 한국 대학 입시 상담사입니다.\n"
     "목표는 그럴듯한 답변이 아니라, 사용자의 질문에 직접 대응하면서 확인 가능한 내용만 전달하는 것입니다.\n"
-    "항상 공손한 존댓말을 사용합니다.\n\n"
+    "따뜻하고 차분한 해요체로 말합니다. 사용자가 말한 고민에 직접 답하고, 감정을 추측하거나 과장된 위로를 하지 않습니다.\n"
+    "모집요강을 낭독하기보다 질문에 필요한 결론과 조건을 이해하기 쉽게 연결합니다. 짧은 사실 질문에는 짧게 답합니다.\n\n"
     "[답변 전 내부 점검]\n"
     "- 사용자가 요구한 대상, 대학, 전형, 학년도, 항목을 식별합니다.\n"
     "- 질문이 요구한 답의 종류가 정의, 날짜, 수치, 자격, 서류, 절차, 비교 중 무엇인지 식별합니다.\n"
@@ -57,8 +58,8 @@ EXPERT_SYSTEM_PROMPT = (
     "- 질문하지 않은 배경 설명과 반복 표현은 생략합니다.\n"
     "- 조건이나 예외가 결론에 영향을 주는 경우에만 뒤에 설명합니다.\n"
     "- 확인할 수 없음과 해당 사항 없음을 구분합니다.\n"
-    "- 추가 질문, 선택지 제안, 되묻기, 후속 질문 유도 문구를 붙이지 않습니다.\n"
-    "- 답변은 자연스러운 평서문으로 끝냅니다.\n"
+    "- 대학별 사실과 일반적인 준비 조언을 구분하고, 근거 없는 합격 예측이나 유불리 판단은 하지 않습니다.\n"
+    "- 근거 검증용 응답에는 확인된 사실만 작성합니다. 상황 확인 질문은 대화 단계에서 별도로 연결합니다.\n"
 )
 
 DIRECT_ANSWER_USER_TEMPLATE = (
@@ -744,10 +745,11 @@ def build_missing_major_answer(uni: str, missing_majors: List[str]) -> str:
 
 def answer_one(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
                llm_model="gpt-4o-mini", top_pages=3, quota_pages_per_pair=2,
-               ner_override=None):
+               ner_override=None, conversation_context=None):
     from llm.document_pipeline import answer_with_plan
     return answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
-                            llm_model, top_pages, quota_pages_per_pair, ner_override)
+                            llm_model, top_pages, quota_pages_per_pair, ner_override,
+                            conversation_context=conversation_context)
 
 
 ADMISSION_TERMS = [
@@ -852,6 +854,8 @@ def _extract_ner_direct(
     type_ex: TypeExtractor,
     kw_ex: KeywordExtractorBridge,
 ) -> Dict[str, List[str]]:
+    from question_plan import normalize_question_text
+    text = normalize_question_text(text)
     try:
         uni = _slot_list(uni_ex.extract_uni(text))
     except Exception:
@@ -992,6 +996,11 @@ def merge_ner_context(
             previous_majors = [k for k in prev["KEYWORD"] if is_major(k)]
             merged["KEYWORD"] = list(dict.fromkeys(previous_majors + cur["KEYWORD"]))
         elif any(k in TRACKS for k in cur["KEYWORD"]) and not current_topics and not current_majors:
+            previous_majors = [k for k in prev["KEYWORD"] if is_major(k)]
+            merged["KEYWORD"] = list(dict.fromkeys(previous_majors + previous_topics + cur["KEYWORD"]))
+        elif not current_topics and not current_majors:
+            # A university name or filler emitted as a keyword is not a new
+            # requested item. Keep the original topic while filling its target.
             previous_majors = [k for k in prev["KEYWORD"] if is_major(k)]
             merged["KEYWORD"] = list(dict.fromkeys(previous_majors + previous_topics + cur["KEYWORD"]))
 
@@ -1168,6 +1177,13 @@ def run_single_turn(
             {},
         )
 
+    from question_plan import build_question_plan
+    from llm.clarification import clarification_answer
+    plan = build_question_plan(question, current_ner)
+    clarification = clarification_answer(plan)
+    if clarification:
+        return clarification, "재질문", plan.ner(), [], {"handler": "missing_document_fields"}
+
     result = answer_one(
         question,
         uni_ex,
@@ -1214,8 +1230,8 @@ def build_followup_resolved_question(
     """
     question_1은 직전 사용자의 질문이고 question_2는 현재 사용자의 질문이다.
 
-    이전 문맥은 전달받은 NER에서 복원하므로, 정상 상황에서는
-    question_1을 다시 분석하거나 LLM에 전달하지 않는다.
+    검색 대상은 병합 NER와 현재 입력으로 복원한다. 개인 상담 문맥은
+    별도 ConversationContext로 전달해 이전 검색 조건과 분리한다.
 
     - 현재 입력에 새로운 정보가 있으면 현재 입력을 보존한다.
     - 현재 입력이 '응/네/알려줘'처럼 긍정만 있으면 병합된 NER로 질문을 만든다.
@@ -1290,6 +1306,14 @@ def run_followup_turn(
         previous_ner = _extract_ner_direct(previous_text, uni_ex, type_ex, kw_ex)
         used_question_1_fallback = True
 
+    # Recover deterministic slots from question_1 as well: a partial NER payload
+    # must not discard the item the user originally asked about.
+    previous_plan = build_question_plan(previous_text, previous_ner)
+    previous_ner["UNI"] = previous_ner["UNI"] or previous_plan.universities
+    previous_ner["TYPE"] = previous_ner["TYPE"] or previous_plan.rounds
+    previous_ner["KEYWORD"] = list(dict.fromkeys(
+        previous_ner["KEYWORD"] + previous_plan.topics + previous_plan.majors + previous_plan.tracks))
+
     merged_ner = merge_ner_context(previous_ner, current_ner)
     resolved_question = build_followup_resolved_question(
         previous_text,
@@ -1297,9 +1321,28 @@ def run_followup_turn(
         merged_ner,
         current_ner,
     )
+    from llm.conversation import build_conversation_context
+    conversation_context = build_conversation_context(previous_text, user_input)
+
+    from llm.clarification import clarification_answer, missing_document_fields, counseling_reprompt
+    from llm.conversation import counseling_followup
+    resolved_plan = build_question_plan(resolved_question, merged_ner)
+    resolved_plan.conversation_context = conversation_context
+    counseling_retry = counseling_reprompt(previous_plan, current_plan, resolved_plan, conversation_context, previous_text)
+    if counseling_retry:
+        return counseling_retry, "재질문", resolved_plan.ner(), [], {"handler": "counseling_reprompt"}
+    clarification = None if counseling_followup(resolved_plan) else clarification_answer(
+        resolved_plan, repeated=bool(missing_document_fields(previous_plan)))
+    if clarification:
+        return clarification, "재질문", resolved_plan.ner(), [], {
+            "handler": "missing_document_fields", "resolved_question": resolved_question,
+            "used_question_1_fallback": used_question_1_fallback,
+        }
 
     # 현재 입력과 이전 NER 어느 쪽에도 입시 정보가 없다면 입시 챗봇 안내로 전환한다.
-    if not is_admission_related(user_input, current_ner) and not any(merged_ner.values()):
+    if (not is_admission_related(user_input, current_ner)
+            and not any(merged_ner.values())
+            and not conversation_context.continuing_counseling):
         return (
             build_domain_redirect_answer(user_input),
             "답변 생성",
@@ -1317,6 +1360,7 @@ def run_followup_turn(
         gemini_model,
         llm_model=llm_model,
         ner_override=merged_ner,
+        conversation_context=conversation_context,
     )
 
     result_ner = {
