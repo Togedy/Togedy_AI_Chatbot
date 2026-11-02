@@ -144,7 +144,7 @@ def test_missing_university_never_reaches_llm(tmp_path, monkeypatch, quota):
     monkeypatch.setattr(answers, "gpt_chat", llm)
     question = "연세대 고려대 수시 경영학과 모집인원" if quota else "연세대 고려대 수시 제출서류"
     result = answers.answer_one(question, None, None, None, "", "")
-    assert len(calls) == 1
+    assert len(calls) == 2  # Grounded generation, then a separate unverified reference attempt.
     assert body in result["answer"]
     assert NO_EVIDENCE in result["answer"]
     assert result["pair_to_rows"][("고려대", "수시")] == []

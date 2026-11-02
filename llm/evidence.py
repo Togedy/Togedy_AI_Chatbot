@@ -51,7 +51,13 @@ def _subjects(text):
 
 def _relations_match(text, quotes, university=""):
     source = "\n".join(quotes)
+    from llm.calendar_evidence import calendar_claim_matches
+    if not calendar_claim_matches(text, source):
+        return False
     normalized = _compact(source)
+    for component in ("논술", "면접", "교과정량", "교과정성"):
+        if component in _compact(text) and component not in normalized:
+            return False
     components = re.findall(r"[가-힣]+역량\s*\(?\s*(\d[\d,]*)\s*점", text)
     total = re.search(r"총\s*([\d,]+)\s*점", text)
     if total and len(components) > 1:

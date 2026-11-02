@@ -42,3 +42,14 @@ KORBERT_NER*/results*/runs/
 hits.csv
 results.tsv
 structure_clean.txt
+/tmp/
+/output/
+/local_artifacts/
+
+# Evaluation outputs (keep reusable inputs and runners)
+/evaluations/*.json
+!/evaluations/new_question_scope_cases.json
+!/evaluations/expected_questions_source_20261102.json
+!/evaluations/image_questions_rubric.json
+/evaluations/*.png
+/evaluations/*.md

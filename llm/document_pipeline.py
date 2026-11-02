@@ -11,6 +11,8 @@ from llm.major_resolution import major_name_clarification
 from llm.semantic_review import review_document_answer
 from llm.reviewed_topics import load_topics, select_topic, render_topic, source_rows as reviewed_source_rows
 from llm.counselor import present_answer
+from llm.calendar_evidence import calendar_text_answer
+from llm.reference_answer import reference_answer
 
 
 def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
@@ -29,12 +31,35 @@ def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
 
     def result(answer, decision="답변 생성", pairs=None, stats=None):
         pairs = pairs or {}
-        if (stats or {}).get("handler") != "counseling_followup":
+        stats = dict(stats or {})
+        if (decision != "재질문" and ("기타과목" in plan.keywords or "기타과목" in text.replace(" ", ""))
+                and not any(c.get("status") == "reviewed_table" and c.get("topic") == "서류평가"
+                            for c in stats.get("coverage", []))):
+            # Generic evaluation prose does not establish a subject's importance.
+            answer = NO_EVIDENCE
+            pairs = {}
+        needs_reference = decision != "재질문" and (
+            plan.intent in ("external_data", "campus") or NO_EVIDENCE in answer
+            or "질문하신 내용 중 일부는 발췌 근거로 확인하지 못했습니다." in answer)
+        if needs_reference:
+            unresolved = list(dict.fromkeys(c.get("topic", "") for c in stats.get("coverage", [])
+                                           if c.get("status") == "unanswered"))
+            reference, reference_status = reference_answer(
+                plan, ans.call_llm, llm_model, topic=" / ".join(unresolved))
+            stats["reference_answer"] = reference_status
+            if reference:
+                if any(pairs.values()):
+                    answer += "\n\n" + reference
+                else:
+                    answer = reference
+                    decision = "답변 생성"
+                stats["handler"] = "gpt_reference"
+        if stats.get("handler") not in ("counseling_followup", "gpt_reference"):
             answer = present_answer(answer, plan, decision, has_sources=any(pairs.values()))
         return {
             "input": text, "ner_uni": plan.universities, "ner_type": plan.rounds,
             "ner_kw": plan.keywords, "decision": decision, "answer": answer,
-            "pair_to_rows": pairs, "stats": stats or {},
+            "pair_to_rows": pairs, "stats": stats,
             "sources": ans.build_sources({p: rows for p, rows in pairs.items() if rows}),
         }
 
@@ -48,6 +73,9 @@ def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
     clarification = major_name_clarification(plan)
     if clarification:
         return result(clarification, "재질문", stats={"handler": "major_clarification"})
+    if "전형방법" in plan.topics and plan.majors and not plan.tracks:
+        return result("같은 학과도 세부 전형마다 평가 방법이 달라요. 학생부교과·학생부종합·논술 중 어떤 전형인지 알려주시겠어요?", "재질문",
+                      stats={"handler": "track_clarification"})
 
     reviewed = discovery_answer(plan)
     if reviewed:
@@ -63,6 +91,8 @@ def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
         if row.get("matched_uni") and row.get("matched_type"):
             groups[(row["matched_uni"], row["matched_type"])].append(row)
     if not groups:
+        if plan.universities and plan.rounds and plan.topics:
+            return result(NO_EVIDENCE, stats=stats)
         return result("확인할 대학과 전형의 연결이 불명확합니다. 대학별로 어떤 전형을 확인할지 알려주시겠어요?", "재질문", stats=stats)
 
     if plan.intent == "discovery":
@@ -115,10 +145,14 @@ def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
                 continue
             if topic == "전형일정":
                 direct, direct_pages = calendar_table_answer(valid[0]["doc_path"], pages, plan.tracks)
+                schedule_handler = "verified_csv_excerpt"
+                if not direct_pages:
+                    direct, direct_pages = calendar_text_answer(pages, plan.tracks)
+                    schedule_handler = "verified_text_excerpt"
                 if direct_pages:
                     topic_answers.append(f"[전형일정]\n{direct}")
                     all_cited.extend(direct_pages)
-                    stats.setdefault("coverage", []).append({"university": uni, "round": typ, "topic": topic, "status": "verified_csv_excerpt"})
+                    stats.setdefault("coverage", []).append({"university": uni, "round": typ, "topic": topic, "status": schedule_handler})
                     continue
             if topic == "영어등급":
                 direct, direct_pages = english_grade_answer(pages)

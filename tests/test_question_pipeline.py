@@ -43,8 +43,6 @@ def test_background_major_does_not_become_target():
 
 @pytest.mark.parametrize("question,intent", [
     ("나 심심해", "smalltalk"), ("연세대랑 고려대중 어디가 더 좋아?", "counseling"),
-    ("건대 경영 정시 백분위 몇 정도?", "external_data"),
-    ("건국대 경영관 시설 좋은가요?", "campus"),
     ("현대미술과 학생부종합 기타과목 중요도가 궁금해", "clarify"),
 ])
 def test_nondocument_answers_do_not_call_llm(monkeypatch, question, intent):
