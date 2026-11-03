@@ -261,7 +261,9 @@ def gemini_sort(api_key: str, model: str, uni: List[str], typ_list: List[str], k
             "규칙:\n- UNI가 여러 개면 각 UNI마다 한 줄씩.\n- KEYWORD는 배열 유지.\n"
             "- TYPE은 가장 적합한 하나만.\n- 값 없으면 빈 문자열/배열."
         )
-        resp = genai.GenerativeModel(model).generate_content(prompt)
+        from settings import llm_timeout_seconds
+        resp = genai.GenerativeModel(model).generate_content(
+            prompt, request_options={"timeout": llm_timeout_seconds(), "retry": None})
         text = (resp.text or "").strip()
         if not text:
             return default_pairs

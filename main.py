@@ -3,11 +3,13 @@
 
 import os
 import sys
+import logging
+import time
 from dataclasses import dataclass
 from functools import lru_cache
 from typing import List, Dict, Any, Tuple, Optional
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, g
 
 THIS = os.path.dirname(os.path.abspath(__file__))
 if THIS not in sys.path:
@@ -21,6 +23,7 @@ from extract_all import (
     KeywordExtractorBridge,
 )
 from settings import Settings
+from werkzeug.exceptions import BadRequest, UnsupportedMediaType
 
 
 @dataclass(frozen=True)
@@ -253,7 +256,28 @@ def run_followup_turn(
 
 
 def answer_endpoint():
-    data = request.get_json(force=True) or {}
+    try:
+        data = request.get_json()
+    except (BadRequest, UnsupportedMediaType):
+        return jsonify({"error": "올바른 JSON 객체를 전달해 주세요."}), 400
+    if not isinstance(data, dict):
+        return jsonify({"error": "요청 본문은 JSON 객체여야 합니다."}), 400
+    for field in ("question_1", "question_2"):
+        if field in data and not isinstance(data[field], str):
+            return jsonify({"error": f"{field} 은 문자열이어야 합니다."}), 400
+        if len(data.get(field, "")) > 10000:
+            return jsonify({"error": f"{field} 은 10000자 이하여야 합니다."}), 400
+    if "first" in data and not isinstance(data["first"], bool):
+        return jsonify({"error": "first 는 JSON boolean이어야 합니다."}), 400
+    for field in ("NER", "NER_Keyword"):
+        if field not in data:
+            continue
+        value = data[field]
+        if not isinstance(value, dict) or any(
+            not isinstance(v, str) and not (isinstance(v, list) and all(isinstance(x, str) for x in v))
+            for v in value.values()
+        ):
+            return jsonify({"error": f"{field} 는 문자열 또는 문자열 배열을 값으로 갖는 객체여야 합니다."}), 400
 
     q1: str = data.get("question_1", "") or ""
     q2: str = data.get("question_2", "") or ""
@@ -275,6 +299,8 @@ def answer_endpoint():
             return jsonify({"error": "question_1 이 비어 있습니다."}), 400
 
         answer, decision, ner, rows, stats = run_turn(question_1)
+        g.answer_stats = stats
+        g.answer_decision = decision
         resp = build_answer_response(answer, decision, rows, ner)
         return jsonify(resp)
 
@@ -292,7 +318,6 @@ def answer_endpoint():
     if not question_2:
         return jsonify({
             "answer": "추가로 궁금한 내용을 입력해 주시면 이어서 안내해 드릴게요.",
-            "followup_question": question_1,
             "reply": True,
             "NER": make_ner_payload(prev_ner),
         })
@@ -302,6 +327,8 @@ def answer_endpoint():
         question_2,
         prev_ner,
     )
+    g.answer_stats = stats
+    g.answer_decision = decision
 
     resp = build_answer_response(answer, decision, rows, ner)
     return jsonify(resp)
@@ -310,7 +337,31 @@ def answer_endpoint():
 def create_app() -> Flask:
     application = Flask(__name__)
     application.json.ensure_ascii = False
+    application.logger.setLevel(logging.INFO)
     application.add_url_rule("/answer", view_func=answer_endpoint, methods=["POST"])
+
+    @application.before_request
+    def start_timer():
+        if request.path == "/answer":
+            g.answer_started = time.perf_counter()
+
+    @application.after_request
+    def record_answer_metrics(response):
+        if request.path == "/answer":
+            stats = getattr(g, "answer_stats", None) or {}
+            coverage = stats.get("coverage", [])
+            # Only operational categories/counts: never log questions, student
+            # profiles, generated claims, source excerpts or API credentials.
+            application.logger.info("answer_metrics %s", {
+                "http_status": response.status_code,
+                "elapsed_ms": round((time.perf_counter() - g.answer_started) * 1000),
+                "decision": getattr(g, "answer_decision", ""),
+                "handler": stats.get("handler", ""),
+                "reference_status": stats.get("reference_answer", {}).get("status", ""),
+                "answered_topics": sum(c.get("status") != "unanswered" for c in coverage),
+                "unanswered_topics": sum(c.get("status") == "unanswered" for c in coverage),
+            })
+        return response
 
     @application.get("/health")
     def health():

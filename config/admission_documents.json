@@ -1,0 +1,102 @@
+{
+  "documents": [
+    {
+      "academic_year": 2026,
+      "text_path": "university/hanyang/jungsi_text.txt",
+      "text_sha256": "96c2f3c6235a315ac09e477637b7c96a66f881f180f834f2173094624f49ab3d",
+      "pdf_path": "university/hanyang/jungsi.pdf",
+      "pdf_sha256": "7a5d4b3f38a659b6a58062f8f74790e26bfbf9aea2e6206dab5f0c5929677cb7"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/hanyang/susi_text.txt",
+      "text_sha256": "7f4658822e26ab16de7fa623b2e4df81509238e39d316296cff0ce7b0cf46aae",
+      "pdf_path": "university/hanyang/susi.pdf",
+      "pdf_sha256": "b615e71a14a8d420421d8c0550ebbe216d874e9e0cb1be073da31ad08dafce3a"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/konkuk/jungsi_text.txt",
+      "text_sha256": "e2ae7b3792690f16706f8ba75625223c7661033219f20e8a24a167cac16e53c0",
+      "pdf_path": "university/konkuk/jungsi.pdf",
+      "pdf_sha256": "85e2f9477ab1053f5ad9b0cd597952e6d4f5eeee0f363bf1f9066d2733838215"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/konkuk/susi_text.txt",
+      "text_sha256": "eb2aadbb3d0b17eb7919f71a3624f17c57ed169c13d2e2cba1258762849b1478",
+      "pdf_path": "university/konkuk/susi.pdf",
+      "pdf_sha256": "6d4c87697ada4ab9ab9572821b578da5e9a58a931d1b09787cc7b6d041ef0fec"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/korea/jungsi_text.txt",
+      "text_sha256": "313f764da6a82afba5ed6ab1182686f61321a6d4452df279ae6e8639671e27b6",
+      "pdf_path": "university/korea/jungsi.pdf",
+      "pdf_sha256": "3ba87964c474f5b9c4596e9fee176c757629ea0be19ccebbce42d32d571f0f0f"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/korea/susi_text.txt",
+      "text_sha256": "60494ef0b7ddc6a0e84a0178b32ef36fe2d9eded7313e7ca8e0218f45c1d9811",
+      "pdf_path": "university/korea/susi.pdf",
+      "pdf_sha256": "193bb4cfc2006b67d27aefcc8a867222c79a1ee4774a4d45978d308a61fbc952"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/seoul/jungsi_text.txt",
+      "text_sha256": "2af72e7afb2e4d4a30647eaa9c39105be238e902744a957163ae3216e13b37f8",
+      "pdf_path": "university/seoul/jungsi.pdf",
+      "pdf_sha256": "0d57c25e79cb914626d14acef128bf78d4bfa19439102a6da62820c97260eec8"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/seoul/susi_text.txt",
+      "text_sha256": "12daa856748f4aa0ba1ee7d0a3b0f7f406192e3af5b9aaa698240092b3031b85",
+      "pdf_path": "university/seoul/susi.pdf",
+      "pdf_sha256": "33c3022ef442d486d95ef3861a5889e196d946432fa1bc815a081bf5d372f3ca"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/skku/jungsi_text.txt",
+      "text_sha256": "8b44e31df39bc3bec2602f3257af6fc87cd0d70dc95f602715ab051932d56548",
+      "pdf_path": "university/skku/jungsi.pdf",
+      "pdf_sha256": "c52b56b6c71bd84caa81d1fc0f5a63894f0a8f5a84d27906156deee9e7920d05"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/skku/susi_text.txt",
+      "text_sha256": "c58cccc5c495c10372e16d9f0fd946a963f4e15d110208381abf3e186d2ff2e7",
+      "pdf_path": "university/skku/susi.pdf",
+      "pdf_sha256": "8ae689748b4ddd0241314e875519a7ca8c59c502c182800fe50fd48971f4d4fa"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/sogang/jungsi_text.txt",
+      "text_sha256": "45b56b975a2b8bbd1bc774787e30d0c0036bb489935805d10812e4e82ef65310",
+      "pdf_path": "university/sogang/jungsi.pdf",
+      "pdf_sha256": "c83324c627ecb961f56bf2e2fe1bd0b10e90c4f1088ab429d6b989c963e53c48"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/sogang/susi_text.txt",
+      "text_sha256": "7e543a1f8d00affe0ef7bedad1b46c81470b7bf86a87a064b5e87fba1babfe11",
+      "pdf_path": "university/sogang/susi.pdf",
+      "pdf_sha256": "fc866d49c2dfcd3e39d8e511433015e04e5724a5919a3cb51b5d298cc663ccc2"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/yonsei/jungsi_text.txt",
+      "text_sha256": "f9a948e55ad569b4fa0174a535a74bdaf548d278e0764619f75cc9e78621b5c8",
+      "pdf_path": "university/yonsei/jungsi.pdf",
+      "pdf_sha256": "2095a00819a077eaa9f94c6c1d79b22378252c79c15f483dd7af582d44a60a4d"
+    },
+    {
+      "academic_year": 2026,
+      "text_path": "university/yonsei/susi_text.txt",
+      "text_sha256": "085442aebc79906cba8c84c8476160c75bb86ccb9c86361278ee02a54ae0ba00",
+      "pdf_path": "university/yonsei/susi.pdf",
+      "pdf_sha256": "9333ca52905b30e7d2a9c7e57035e2e84b1695d02cb5345f362b0fafb09d4389"
+    }
+  ]
+}

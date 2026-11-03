@@ -141,7 +141,8 @@ def call_llm(
     if not api_key:
         return "현재 LLM 호출 키가 설정되어 있지 않아 답변을 생성하기 어렵습니다. 실행 환경을 먼저 확인해 주실 수 있을까요?"
 
-    client = OpenAI(api_key=api_key)
+    from settings import llm_timeout_seconds
+    client = OpenAI(api_key=api_key, timeout=llm_timeout_seconds(), max_retries=0)
     today = datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y년 %m월 %d일")
     runtime_context = (
         f"\n\n[실행 기준]\n현재 날짜는 대한민국 표준시 기준 {today}입니다. "
@@ -1243,6 +1244,13 @@ def build_followup_resolved_question(
     """
     user_input = (user_input or "").strip()
     current = normalize_ner(current_ner)
+
+    # Year is deliberately absent from the legacy NER DTO. Carry it from the
+    # previous question, while an explicit correction in this turn takes priority.
+    if not re.search(r"20\d{2}\s*(?:학년도|년)|올해|내년|금년|최신|최근|작년|지난해|전년도", user_input):
+        previous_years = re.findall(r"20\d{2}\s*학년도", previous_user_question or "")
+        if previous_years:
+            user_input = " ".join(dict.fromkeys(previous_years)) + " " + user_input
 
     if is_affirmative_only(user_input):
         return build_resolved_question("알려줘", merged_ner)

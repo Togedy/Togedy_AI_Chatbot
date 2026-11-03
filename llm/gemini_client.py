@@ -2,6 +2,7 @@
 import os
 from typing import Any, Dict
 import google.generativeai as genai
+from settings import llm_timeout_seconds
 
 class GeminiClient:
     def __init__(self, api_key: str = None, model: str = None):
@@ -25,6 +26,7 @@ class GeminiClient:
                 "temperature": 0.0,
                 "response_mime_type": "application/json",
             },
+            request_options={"timeout": llm_timeout_seconds(), "retry": None},
         )
         # safety/blocked 대응
         if not hasattr(resp, "text") or not resp.text:

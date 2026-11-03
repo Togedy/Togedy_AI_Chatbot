@@ -7,6 +7,7 @@ Flask server behave the same regardless of the current working directory.
 from __future__ import annotations
 
 import os
+import math
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -14,6 +15,13 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent
 UNIVERSITY_DIR = PROJECT_ROOT / "university"
 DATA_DIR = PROJECT_ROOT / "data"
+
+
+def llm_timeout_seconds() -> float:
+    value = float(os.getenv("LLM_TIMEOUT_SECONDS", "45"))
+    if not math.isfinite(value) or not 0 < value <= 300:
+        raise ValueError("LLM_TIMEOUT_SECONDS must be between 0 and 300 seconds")
+    return value
 
 
 def load_dotenv_file() -> None:

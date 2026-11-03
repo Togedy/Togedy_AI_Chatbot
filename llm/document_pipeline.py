@@ -13,6 +13,7 @@ from llm.reviewed_topics import load_topics, select_topic, render_topic, source_
 from llm.counselor import present_answer
 from llm.calendar_evidence import calendar_text_answer
 from llm.reference_answer import reference_answer
+from admission_year import year_clarification, source_year_notice
 
 
 def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
@@ -56,6 +57,10 @@ def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
                 stats["handler"] = "gpt_reference"
         if stats.get("handler") not in ("counseling_followup", "gpt_reference"):
             answer = present_answer(answer, plan, decision, has_sources=any(pairs.values()))
+        if any(pairs.values()):
+            notice = source_year_notice(pairs)
+            if notice:
+                answer = notice + "\n\n" + answer
         return {
             "input": text, "ner_uni": plan.universities, "ner_type": plan.rounds,
             "ner_kw": plan.keywords, "decision": decision, "answer": answer,
@@ -70,6 +75,9 @@ def answer_with_plan(text, uni_ex, type_ex, kw_ex, api_key, gemini_model,
     local = local_response(plan)
     if local:
         return result(*local, stats={"handler": plan.intent})
+    year_question = year_clarification(plan)
+    if year_question:
+        return result(year_question, "재질문", stats={"handler": "academic_year_clarification"})
     clarification = major_name_clarification(plan)
     if clarification:
         return result(clarification, "재질문", stats={"handler": "major_clarification"})
