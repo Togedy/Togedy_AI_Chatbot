@@ -23,7 +23,7 @@ from extract_all import (
     KeywordExtractorBridge,
 )
 from settings import Settings
-from werkzeug.exceptions import BadRequest, UnsupportedMediaType
+from werkzeug.exceptions import BadRequest
 
 
 @dataclass(frozen=True)
@@ -257,31 +257,36 @@ def run_followup_turn(
 
 def answer_endpoint():
     try:
-        data = request.get_json()
-    except (BadRequest, UnsupportedMediaType):
+        # Legacy callers may send a JSON body without a JSON Content-Type.
+        data = request.get_json(force=True)
+    except BadRequest:
         return jsonify({"error": "올바른 JSON 객체를 전달해 주세요."}), 400
     if not isinstance(data, dict):
         return jsonify({"error": "요청 본문은 JSON 객체여야 합니다."}), 400
-    for field in ("question_1", "question_2"):
-        if field in data and not isinstance(data[field], str):
+    q1 = data.get("question_1", "")
+    q2 = data.get("question_2")
+    if q2 is None:
+        q2 = ""
+    for field, value in (("question_1", q1), ("question_2", q2)):
+        if not isinstance(value, str):
             return jsonify({"error": f"{field} 은 문자열이어야 합니다."}), 400
-        if len(data.get(field, "")) > 10000:
+        if len(value) > 10000:
             return jsonify({"error": f"{field} 은 10000자 이하여야 합니다."}), 400
     if "first" in data and not isinstance(data["first"], bool):
         return jsonify({"error": "first 는 JSON boolean이어야 합니다."}), 400
     for field in ("NER", "NER_Keyword"):
-        if field not in data:
+        value = data.get(field)
+        if value is None:
             continue
-        value = data[field]
         if not isinstance(value, dict) or any(
-            not isinstance(v, str) and not (isinstance(v, list) and all(isinstance(x, str) for x in v))
+            v is not None
+            and not isinstance(v, str)
+            and not (isinstance(v, list) and all(isinstance(x, str) for x in v))
             for v in value.values()
         ):
             return jsonify({"error": f"{field} 는 문자열 또는 문자열 배열을 값으로 갖는 객체여야 합니다."}), 400
 
-    q1: str = data.get("question_1", "") or ""
-    q2: str = data.get("question_2", "") or ""
-    first: bool = bool(data.get("first", True))
+    first: bool = data.get("first", True)
 
     # 기존 서버 연결 방식 유지:
     # 프론트가 NER 또는 NER_Keyword 중 어떤 이름으로 보내도 수용한다.
